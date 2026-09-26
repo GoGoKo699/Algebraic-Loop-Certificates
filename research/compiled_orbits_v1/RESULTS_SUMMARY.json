@@ -1,0 +1,32 @@
+{
+  "counts": {
+    "changed_source_rejected": 1,
+    "compiled_sources": 657,
+    "connected_but_incomplete_graph_rejected": 1,
+    "connected_graph_source_queries": 430,
+    "graph_cases": 1728,
+    "graph_residue_assignments": 74088,
+    "hub_graphs_checked": 216,
+    "induction_checks": 2325,
+    "large_characteristic_queries": 240,
+    "malformed_or_incomplete_certificates_rejected": 18,
+    "malformed_queries_rejected": 4,
+    "offline_base_alignments": 5,
+    "query_only_dependency_control": 1,
+    "reachable_queries": 2325,
+    "recurrences": 100,
+    "repeated_or_extension_sources": 4,
+    "target_free_input_enforced": 1,
+    "target_queries": 5354,
+    "unknown_control": 1,
+    "unreachable_queries": 3029
+  },
+  "full_report": {
+    "path": "expected.json.gz",
+    "uncompressed_bytes": 9658,
+    "uncompressed_sha256": "36db899aa5db33914851291cc1e5c0ec75ebe9cb22f81814fe75dfafa2bad6f5"
+  },
+  "outcomes_sha256": "6218883e9808df4a3b95cfa0a9801c6a9b5fe8f232c2259e6136365bf0e7514b",
+  "schema": 1,
+  "scope": "Exact source compilation and graph-completeness audit. Small enumeration and large closed-form controls; no native invariant benchmark, general synthesis speedup, or novelty clearance."
+}

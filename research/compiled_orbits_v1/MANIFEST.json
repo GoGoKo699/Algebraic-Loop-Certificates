@@ -1,0 +1,25 @@
+{
+  "base_commit": "1b8ee8dd2b30390b9d6cfbd86142487acb9b78bd",
+  "schema": 1,
+  "scope": "Additive source-only exact-orbit research and explicitly used dependencies. No existing fixture overwritten.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "research/EXACT_ORBIT_COMPILATION_04.md": "e53fd441700bac14a72c976ec04043976871609ff00078513cfc93705ad16e9c",
+    "research/compiled_orbits_v1/README.md": "2cbc7aff8959772885c6aa81170ad5c4be357c50d7ace627da2afa7e4ee34531",
+    "research/compiled_orbits_v1/RESULTS_SUMMARY.json": "44ebe06c065771f82e87fa4bdcf41699e1af09abf6440cd4d9bfa76da24fea56",
+    "research/compiled_orbits_v1/SOURCES.md": "d5f9ffabb17680d69e56cddd21f87e51079bfcc520a920b829088080dd5ef059",
+    "research/compiled_orbits_v1/THEORY.md": "012cec578967f136e22689333bc1441118e578d6a9a8c63283a7a09f9248985a",
+    "research/compiled_orbits_v1/__init__.py": "faf6eed0fec69a9d2805555c268cc90cc6461dfead7285f7b8d487bfe63e0b77",
+    "research/compiled_orbits_v1/check.py": "49ab6f8a435d7633f5567eeb59a4cd24dfabfacee23d8df4db4c254ca9ba3f02",
+    "research/compiled_orbits_v1/checker.py": "1336e982c8a43159cf6fca9f0e815839d5b51c8cff4ca6767eb74210f1159f23",
+    "research/compiled_orbits_v1/expected.json.gz": "9e7aa9a8d820dae94177058ffd2afa94d13db25bf70fd8fe27d83ba2faf8d300",
+    "research/compiled_orbits_v1/producer.py": "8f0ddba5efee03a4a86199fac3645a9a7252aff990591ab390e13f1f24e3c6cd",
+    "research/compiled_orbits_v1/verify.py": "d270314ae29668dd52e3a3bb4704ab3d6f53aea7409582aab422b008be201645",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/separating_invariants_v1/checker.py": "b7aae0a1540224de4e6c6357689a7abe0bc438cee0bd926e01cb24b51eb04420",
+    "research/separating_invariants_v1/producer.py": "1377b8351a79ddd8b554b9d40ef30d01c90cf7759c4ae7d47c35dfa408bdf553",
+    "tests/test_compiled_orbits_research.py": "b2aa4ea2c246b9b5b0abcd12ddcb0d1b4fadf9680f82c2270260251ca36b0623"
+  }
+}
