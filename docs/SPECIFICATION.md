@@ -1,83 +1,66 @@
-# Mathematical and certificate specification
+# Mathematical specification and proof
 
-## 1. Exact input model
+## Exact problem
 
-An instance contains a prime integer `p`, an invertible square matrix `A` over `F_p`, a translation vector `c`, an initial vector `a`, and a full-state target `b`. The recurrence is
+Let `p` be prime and `A` an invertible `d x d` matrix over `F_p`. Fix vectors `c`, `a`, and `b`. Define
 
-$$x_{t+1}=Ax_t+c,\qquad x_0=a,\qquad t\in\{0,1,2,\ldots\}.$$
+$$
+x_0=a,\qquad x_{t+1}=Ax_t+c,\qquad t\in\mathbb Z_{\geq0}.
+$$
 
-All residues must be canonical integers in `[0,p)`. Booleans are not accepted as integers. Empty/ragged matrices, singular maps, composite moduli, extra fields, and schema mismatches are rejected. Prime fields are the **implemented** scope; the abstract ideas extend further, but an integer `p^k` does not implement an extension field.
+The target is equality of the **entire state** with `b`. All entries use canonical residues `0,...,p-1`. Prime fields are not arbitrary finite fields, and `F_(2^w)` is not integer arithmetic modulo `2^w`.
 
-The exact JSON fields are `schema`, `modulus`, `matrix`, `translation`, `initial`, `target`. The schema is `alc-instance-1`; translation is explicit even when zero. The supplied [Fibonacci instance](../examples/fibonacci.json) is an executable format example.
+An invertible affine transformation permutes the finite state space, so the trajectory of `a` is a cycle with no transient tail. Its least period `r` is at most `p^d`. If `b` is reachable, its occurrences are exactly `t0+j*r` with `0 <= t0 < r` and integer `j >= 0`. The period of this **point** need not equal the matrix order. A linear zero initial state is fixed; an affine zero initial state need not be.
 
-Affine dynamics are lifted to ordinary linear dynamics:
+## What the positive certificate contains
 
-$$T=\begin{pmatrix}A&c\\0&1\end{pmatrix},\qquad v=(a,1),\qquad w=(b,1).$$
+The certificate supplies `t0`, `r`, a complete factorization of `r`, an inverse matrix for `A`, and primality witnesses for the field characteristic and the primes used in the factorization. It also records the fingerprint of the independently supplied problem.
 
-The checker creates this lift itself. Its dimension is `d+1`. Invertibility ensures pure periodicity from the initial state; the code does not silently assume this for a singular map.
+The checker first proves the arithmetic domain and inverse witness. It then checks
 
-## 2. Instance binding and prime proofs
+$$
+x_r=a,\qquad x_{r/q}\ne a\quad\text{for every distinct prime }q\mid r,\qquad x_{t_0}=b.
+$$
 
-A certificate has exactly `schema`, `instance_sha256`, `prime_proofs`, and `claim`. Its schema is `alc-certificate-1`. The digest is SHA-256 of the instance serialized with Python JSON options `sort_keys=True`, `separators=(',', ':')`, and `ensure_ascii=True`. It binds a certificate to its declared instance; it is not an external signature, proof of authorship, or replacement for the mathematical checks.
+**Soundness.** Let `s` be the true least return period. The first identity implies `s | r`. If `s < r`, choose a prime divisor `q` of `r/s`. Then `s | r/q`, contradicting the corresponding exclusion. Thus `s=r`. Invertibility and minimality imply that the `r` states within one period are distinct, so the verified offset gives every target occurrence, and no others.
 
-The CLI rejects duplicate JSON keys. It parses at most four MiB per file. By default the checker limits matrix dimension to 32, integer bit length to 4096, prime-proof count to 2048, and explicit cycle length to 100000. Exceeding a policy limit is a `VerificationLimit`, not a mathematical rejection. These limits are not a complete denial-of-service defense.
+This is ordinary order certification, not a claimed new theorem. The proof depends on **primality** of the supplied factors and on completeness of their product. It does not follow from a list of convenient divisors alone.
 
-Each entry in `prime_proofs` is a Lucas/Pratt-style certificate. Entries are sorted strictly by the proposed prime. The base case is `{"n":2}`. A larger number has fields `n`, `base`, and `factors`, where `factors` is a sorted list of distinct `[q,e]` pairs factoring `n-1`. Each `q` must have an earlier valid proof. The checker tests
+## A counterfeit certificate that superficial checks would accept
 
-$$g^{n-1}=1\pmod n,\qquad \gcd(g^{(n-1)/q}-1,n)=1\quad\text{for each prime }q\mid n-1.$$
+The Fibonacci example over `F_7` has point period 16. The claimed return 32 is also a return. If a checker trusts the purported factorization `32 = 4 * 8`, it checks nonreturns at `32/4=8` and `32/8=4`. Both pass. It would wrongly accept period 32 and omit every other real hit.
 
-**Why sufficient:** for every prime divisor `r` of `n`, these tests force the order of `g mod r` to contain the full prime-power factorization of `n-1`. Thus `n-1` divides `r-1`, implying `r>=n`, so `n` is prime. Generating the proof may require expensive factorization. Verifying a supplied proof does not call a factorization routine. The method is classical prior art; see [the audit](PRIOR_WORK.md).
+Our checker rejects the purported factors: 4 and 8 have no valid prime proofs. Even with the genuine factorization `32=2^5`, the period is rejected because the state already returns at 16. These are separate regression tests.
 
-No unsupported probabilistic-primality flag is accepted. The factorization of a claimed period is likewise checked for complete product, distinct sorted prime factors, positive exponents, and primality proofs.
+## Lucas-Pratt primality proofs
 
-## 3. Positive hit schedules
+The certificate contains a sorted directed acyclic collection of records. The base case is 2. For a candidate `p>2`, a record supplies the **complete** factorization of `p-1` into previously proved primes and a witness `a` satisfying
 
-A hit claim contains `kind: "hit"`, `offset: t0`, `period: r`, and a complete `factors` list for `r`. Require `0 <= t0 < r`. The checker verifies
+$$
+a^{p-1}\equiv1\pmod p,\qquad
+\gcd\left(a^{(p-1)/q}-1,p\right)=1
+\quad\text{for each distinct prime }q\mid p-1.
+$$
 
-$$T^{t_0}v=w,\qquad T^rv=v,$$
+These conditions force the residue class of `a` to have order `p-1` in the unit group modulo `p`, and hence force `p` to be prime. Recursing over smaller primes terminates at 2. This is an established primality-certificate method [Pratt 1975](https://doi.org/10.1137/0204018), not a probabilistic primality heuristic. The [Archive of Formal Proofs entry](https://isa-afp.org/entries/Pratt_Certificate.html) formalizes a Pratt proof system; **our Python implementation has not been formally verified by that project**.
 
-and, for every distinct prime `q` dividing `r`,
+Producing the factorizations and witnesses can be expensive. The reference producer uses bounded trial division; the checker only verifies them. The existence of short proofs is not an efficient discovery algorithm.
 
-$$T^{r/q}v\ne v.$$
+## Affine powering and costs
 
-**Least-period proof.** The actual period `s` divides `r`. If `s<r`, some prime divisor `q` of `r/s` would make `s` divide `r/q`, contradicting the exclusion. Thus `s=r`. Within one period, distinct times give distinct states, since the dynamics are invertible. Therefore the hit set is exactly
+For the checker, introduce homogeneous coordinates:
 
-$$\{t_0+jr:j\geq0\}.$$
+$$
+T=\begin{pmatrix}A&c\\0&1\end{pmatrix},\qquad
+v=\begin{pmatrix}a\\1\end{pmatrix}.
+$$
 
-The period-one case has an empty factorization and is supported. Zero initial vectors and nonzero translations are handled through the same lift; there is no special unjustified nonzero-state assumption.
+The first `d` coordinates of `T^t v` give `x_t`. Repeated squaring evaluates a supplied exponent in time polynomial in its bit length, matrix dimension, and field bit length. The checker makes one period check, one hit check, and one exclusion check per distinct period prime. It does not factor `r` or iterate through `r` states. Primality proof verification and matrix-inverse products are additionally charged.
 
-Checking requires binary matrix powering, not enumerating `r` states. With dense matrices, the simple kernel uses polynomially many field operations in `d`, the number of supplied factors, and the exponent bit lengths. This is not a new period theorem or a claim of an optimal matrix algorithm.
+This establishes polynomial verification in the explicit input and supplied proof size. It is not a wall-clock superiority claim over existing algebra systems, and it does not make discovery polynomial. The producer, proof checker, and downstream consumer have different costs.
 
-## 4. Two negative certificate classes
+## Trust boundaries
 
-### Outside the cyclic span
+The caller supplies the trusted recurrence separately. The digest prevents accidental reuse against a different recurrence under the collision-resistance assumption for SHA-256; it is not a signature or a certificate that the recurrence models a real program. The proof's mathematical obligations are checked against that supplied recurrence.
 
-A claim with `kind: "outside-span"` supplies a row vector `separator` of length `d+1`. The checker tests
-
-$$uT^jv=0\quad (0\leq j\leq d),\qquad uw\ne0.$$
-
-Cayley-Hamilton implies that all higher powers applied to `v` lie in the span of those first `d+1` Krylov vectors. Consequently `u` annihilates every reachable lifted state but not the target. This proves the hit set is empty. A separating functional exists whenever the target is outside that span, but not for every unreachable target.
-
-The checker recomputes the short Krylov prefix; it does not trust a producer's rank calculation or an unsupported claim that a subspace is invariant. The producer obtains a separator by solving a linear system; the checker does not import that search.
-
-### Explicit cycle exclusion
-
-A claim with `kind: "cycle-exclusion"` supplies a nonempty list of original, unlifted `states`. The checker verifies that the list starts at `a`, every step follows the recurrence, the final next state returns to `a`, and no listed state equals `b`. Determinism then implies all future states repeat the listed trajectory.
-
-Distinctness is not needed for this *negative* proof; repeating a closed trajectory cannot introduce a missed target. The certificate is linear in the supplied trajectory length. It is useful for small instances and as a reference, not a compact or polynomial-size guarantee for all finite-field nonmembership problems.
-
-No certificate is emitted when a bounded producer merely fails to finish. An `unknown` result is not accepted by the checker as any sort of proof.
-
-## 5. Consumers and their exact contracts
-
-`first_at_least(summary, H)` returns the least hit at or after a nonnegative integer `H`, or `None` for a verified empty set. `count_interval(summary, low, high)` counts hits in the **inclusive** interval. Negative bounds and reversed intervals are rejected.
-
-`synchronize(left, right)` intersects two certified arithmetic progressions on the same integer time axis using the generalized Chinese remainder theorem. With residues `a mod m` and `b mod n`, the intersection is empty exactly when `gcd(m,n)` does not divide `b-a`; otherwise it has period `lcm(m,n)`. The synthesized summary is an arithmetic consequence of its verified parents, not a new external certificate for a new loop.
-
-Synchronization does not summarize two sequentially composed loops, arbitrary guards, asynchronous clocks, resets, or nondeterministic choices. There are no implicit extra semantics. Python callers must pass verified summaries; the JSON CLI rechecks the input certificate before every query.
-
-## 6. Trust and correctness boundaries
-
-The trusted executable core is the checker, the shared exact arithmetic, JSON parsing, Python's integer operations, and the operating environment. The code is independently organized, not formally verified. Producer and checker share the arithmetic kernel; independent trajectory enumeration in the tests does **not** use that kernel.
-
-The proof system checks claims about the supplied model. It does not establish that a program was translated into that model correctly. Whole-program semantics, a verified frontend, optimized algebra backends, extension fields, succinct general nonmembership, and published performance gains remain open development/research tasks.
+No positive certificate means no conclusion. Invalid input, failed proof, unsupported domain, and resource exhaustion must never be interpreted as unreachability. The reference producer can exhaust a small orbit and report that it did not hit the target, but v1 provides no independently checkable general negative-certificate format.

@@ -1,0 +1,16 @@
+{
+  "arithmetic": "exact Python integers; no quantum or native algebra backend",
+  "by_field": {
+    "F2": 384,
+    "F3": 3888,
+    "F5": 500
+  },
+  "case_sha256": "50de7994d64ddd415a881a2fff0ecabd7589b18f09b2fbcec444f363b09f7eba",
+  "cases": 4772,
+  "maximum_period": 8,
+  "positive_certificates": 2240,
+  "schedule_intersections": 13440,
+  "scope": "exhaustive over the three declared finite families, not every prime field or recurrence",
+  "unreachable_enumerated": 2532,
+  "window_queries": 8960
+}

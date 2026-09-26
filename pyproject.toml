@@ -4,16 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "algebraic-loop-certificates"
-version = "0.1.0.dev0"
-description = "Exact prime-field loop summaries with independently checkable certificates"
-requires-python = ">=3.10"
-authors = [{name = "Ruge Lin"}]
-license = {file = "LICENSE"}
+version = "0.1.0"
+description = "Exact positive-hit certificates for prime-field affine recurrences"
 readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Ruge Lin"}]
 dependencies = []
 
-[project.urls]
-Repository = "https://github.com/GoGoKo699/Algebraic-Loop-Certificates"
+[project.scripts]
+alc = "alc.__main__:main"
 
-[tool.setuptools]
-packages = ["alc"]
+[tool.setuptools.packages.find]
+include = ["alc*"]

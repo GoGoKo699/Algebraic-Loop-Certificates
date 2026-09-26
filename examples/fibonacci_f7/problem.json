@@ -1,0 +1,29 @@
+{
+  "field": {
+    "kind": "prime",
+    "modulus": 7
+  },
+  "initial": [
+    1,
+    0
+  ],
+  "matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "offset": [
+    0,
+    0
+  ],
+  "schema": "alc.problem.v1",
+  "target": [
+    4,
+    5
+  ]
+}

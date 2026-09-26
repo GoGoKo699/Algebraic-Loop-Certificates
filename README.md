@@ -1,72 +1,65 @@
 # Algebraic Loop Certificates
 
-**Discover a loop summary. Check its proof independently. Reuse the result without replaying the loop.**
+**Exact summaries and independently checkable certificates for finite-field recurrences.**
 
-This research repository studies exact summaries for invertible linear and affine recurrences. The current implementation uses **prime fields** and a specified initial state and full-state target. A verified positive answer describes every hit time as one arithmetic progression. Negative answers carry explicit evidence; exhausting a computation budget means **unknown**, not unreachable.
+A loop may run for an enormous number of iterations while its visits to one target have a short description:
 
-**Status:** working, independently checked reference implementation. The mathematics is established; a new algorithmic contribution, production performance advantage, and quantum advantage have not been established. Manuscript preparation is on hold. This classical spinoff has no quantum backend requirement and no selected journal.
+$$
+\{t\geq0:x_t=b\}=\{t_0+jr:j\geq0\}.
+$$
 
-## Try a complete verified example
+This project separates **finding that description**, **checking its proof**, and **using it**. A producer may be slow or untrusted. The checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
-Python 3.10 or later; no third-party runtime dependencies. Run from the repository root:
+**Status:** working research prototype, not a new fast classical orbit algorithm, a quantum-advantage result, or a production program verifier. The certificate ingredients are established mathematics. Research novelty and a consequential advantage over existing analysis tools remain open. Manuscript preparation is on hold; no journal is selected for this spinoff.
+
+## Try a complete example
+
+Requires Python 3.10 or later. The commands run directly from a checkout with no third-party runtime dependencies.
 
 ```sh
+python -m alc verify --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json
+python -m alc query --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json --from 1000000000000000000000000000000 --through 1000000000000000000000000000100
+```
+
+The recurrence is `(x,y) -> (x+y,x) mod 7`, starting at `(1,0)`, with target `(4,5)`. The checker establishes the **complete** hit set `11 + 16j`, not just one observed hit. The second command reports six hits in the inclusive interval: the first is `10^30 + 11` and the last is `10^30 + 91`.
+
+To regenerate a candidate, choose a new output path:
+
+```sh
+python -m alc produce --problem examples/fibonacci_f7/problem.json --output /tmp/fibonacci-candidate.json --max-steps 1000
+python -m alc verify --problem examples/fibonacci_f7/problem.json --certificate /tmp/fibonacci-candidate.json
 python verify.py
-python -m alc check examples/fibonacci.json examples/fibonacci.certificate.json
-python -m alc query examples/fibonacci.json examples/fibonacci.certificate.json --low 0 --high 100
-python examples/consumer_demo.py
 ```
 
-Over the field with seven elements, the recurrence is
+The producer uses bounded classical enumeration and trial division. It refuses to overwrite a file. Exhausting its budget is **inconclusive**, never a proof of unreachability.
 
-$$
-\begin{pmatrix}x_{t+1}\\y_{t+1}\end{pmatrix}
-=
-\begin{pmatrix}1&1\\1&0\end{pmatrix}
-\begin{pmatrix}x_t\\y_t\end{pmatrix},\qquad
-(x_0,y_0)=(1,0).
-$$
+## Read in this order
 
-The target `(4,5)` occurs exactly at **11, 27, 43, 59, ...**: offset 11 and least period 16. The certificate proves the target hit, proves the return at 16, and excludes the necessary smaller period. The query above returns **six** hits in the inclusive interval `[0,100]`.
+| Document | What it establishes |
+|---|---|
+| [Mathematical specification and proof](docs/SPECIFICATION.md) | Exact domain, complete positive-hit theorem, and the role of primality proofs |
+| [Certificate and command-line interface](docs/FORMAT.md) | Trusted input, untrusted certificate, validation rules, exit codes, and limits |
+| [Research assessment](docs/RESEARCH.md) | Prior work, current contribution boundary, and the next substantive research question |
+| [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
+| [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
+| [Current work order](work_orders/CURRENT.md) | Scope for the next research session |
 
-The consumer demo verifies a second affine clock, combines the two schedules, and counts simultaneous hits through `10^30` using integer arithmetic. It does not simulate that many iterations. This is a demonstration of the summary interface, **not** a benchmark against a competent classical analyzer.
+## Supported now
 
-To generate a new certificate with the bounded reference producer:
+The executable implementation covers invertible linear and affine maps `x -> A x + c` over **prime fields** `F_p`, with a supplied initial state and a **full-state target**. It checks the modulus by a Lucas-Pratt proof, matrix invertibility by an inverse witness, and the least point period using a complete proved-prime factorization. The certificate is bound to a separately supplied canonical problem document.
 
-```sh
-python -m alc produce examples/fibonacci.json --output /tmp/alc-new-certificate.json
-```
+Extension fields, composite-modulus arithmetic, machine-word overflow, singular maps with transient tails, arbitrary guards, and general negative certificates are **not implemented**. The mathematics can be discussed more broadly than this implementation; unsupported encodings are rejected, not silently reinterpreted.
 
-The output must not already exist. The CLI verifies its own candidate before writing a certificate. It exits with code 3, without a certificate, when the producer exhausts its limit. Use `python -m alc --help` for the interface.
+A positive certificate says nothing about whether the recurrence was faithfully extracted from a larger program. That extraction and the trusted problem specification are outside the current checker.
 
-## What is trusted, and what is not?
+## Repository structure
 
-| Component | Responsibility | Boundary |
-|---|---|---|
-| [Producer](alc/producers.py) | Find evidence | Uses bounded orbit enumeration and trial arithmetic; no fast order/discrete-log algorithm is claimed. |
-| [Checker](alc/checker.py) | Validate evidence against the exact input | Imports no producer or search code. Checks primality, field semantics, invertibility, witness equations, and instance binding. |
-| [Consumers](alc/consumers.py) | Count hits, find the next hit, intersect schedules | Operate on verified summaries. Synchronization is not arbitrary program composition. |
+`alc/producer.py` creates candidate proofs. `alc/checker.py` is independent of the producer and performs no discovery. `alc/consumer.py` uses accepted summaries. `tests/` includes independently stepped orbits and deliberately false proofs. `examples/` contains linear, affine, and fixed-point cases. GitHub Actions runs the same local verifier.
 
-The checker uses integer arithmetic, not numerical tolerances. Period factors come with recursively checkable Lucas/Pratt primality proofs; neither a factor label nor a probable-prime claim is trusted. This is a reference implementation, **not a formally verified checker or hardened public service**.
+The first milestone is a reproducible producer-checker-consumer interface with explicit trust boundaries. It is not an acceptance claim for a future paper. In particular, the finite-field orbit reduction and loop acceleration precede this project; see the [source-by-source assessment](docs/RESEARCH.md).
 
-## Evidence supported today
+## Relationship to the original project
 
-A **hit certificate** proves the complete arithmetic progression. An **outside-span certificate** proves that a linear functional annihilates all reachable states but not the target. A **cycle-exclusion certificate** lists a complete closed trajectory containing no target; its size and checking time grow with the trajectory, so it is not a compact general solution to unreachability.
+This is an independent classical spinoff of [Quantum-Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery). A quantum producer could supply certificates later, but neither the checker nor the consumer requires quantum hardware. The original project and its research branches are unchanged.
 
-The bundled [examples](examples/README.md) cover all three forms. The tests check **4,834 state/target cases across 100 small recurrences**, **6,084 schedule intersections**, malformed inputs, altered periods, composite-modulus controls, and resource exhaustion. See [the recorded scope](reports/expected.json) and [reproducibility instructions](docs/REPRODUCIBILITY.md). These are newly run bootstrap tests, not a replay of the unavailable original scout archive.
-
-## Read the research
-
-Start with [the specification and proofs](docs/SPECIFICATION.md), then [the prior-work and contribution audit](docs/PRIOR_WORK.md). The [current research task](work_orders/CURRENT.md) prioritizes a defensible contribution and a useful consumer before manuscript work.
-
-This implementation does **not** cover extension-field encodings, ordinary machine-word overflow, singular recurrences with transients, noisy inputs, arbitrary guards, or uncontrolled program branches. A point target is not a general safety predicate. Large example horizons do not establish faster discovery. The original quantum-discovery project remains separate.
-
-## Origin and collaboration
-
-The idea arose during [Quantum-Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery). The published predecessor note is preserved byte-for-byte, with pinned provenance. The original conversation ZIP is not currently available for import; it has not been reconstructed or represented as preserved. [Provenance](provenance/README.md) distinguishes the authentic source snapshot, the missing archive, and newly written code.
-
-Manuscript writing is on hold. For collaboration, questions, or corrections, contact **Ruge Lin** at **gogoko699@gmail.com**.
-
-## License
-
-[MIT](LICENSE), Copyright (c) 2026 Ruge Lin. The repository's original license is unchanged.
+[MIT license](LICENSE), Copyright (c) 2026 Ruge Lin. The license supplied when this repository was created is preserved byte-for-byte.

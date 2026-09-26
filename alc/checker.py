@@ -1,204 +1,149 @@
-"""Independent deterministic certificate checker. Does NOT import producers.
+"""Independent positive-certificate checker: no orbit enumeration or factoring.
 
-The JSON objects are untrusted. This is an auditable reference checker, not a
-formally verified or denial-of-service-hardened service. Limits bound its input.
+Trusted computation uses exact integer arithmetic, explicit matrix products,
+modular powering, and supplied Lucas-Pratt primality proofs. It never imports
+producer.py. A rejected certificate says nothing about target unreachability.
 """
 from __future__ import annotations
 from dataclasses import dataclass
-import hashlib
-import json
 from math import gcd
-from .arithmetic import dot, mv, power_apply, rank
+from .schema import DEFAULT_LIMITS, Invalid, Limits, ResourceLimit, Problem, integer, keys, matrix
 
 
-class InvalidCertificate(ValueError):
-    pass
+def product(A, B, p):
+    cols = tuple(zip(*B))
+    return tuple(tuple(sum(a*b for a, b in zip(row, col)) % p for col in cols) for row in A)
 
 
-class VerificationLimit(ValueError):
-    """A verifier resource policy was exceeded; this is not mathematical falsity."""
+def identity(n):
+    return tuple(tuple(int(i == j) for j in range(n)) for i in range(n))
 
 
-@dataclass(frozen=True)
-class Limits:
-    max_dimension: int = 32
-    max_integer_bits: int = 4096
-    max_prime_proofs: int = 2048
-    max_cycle_states: int = 100000
+def advance(problem: Problem, exponent: int, stats: dict) -> tuple[int, ...]:
+    """Homogeneous-coordinate powering, logarithmic in the supplied exponent."""
+    n = len(problem.A)
+    power = tuple(tuple(row) + (c,) for row, c in zip(problem.A, problem.c))
+    power += ((0,)*n + (1,),)
+    state = problem.initial + (1,)
+    stats['power_checks'] += 1
+    while exponent:
+        if exponent & 1:
+            state = tuple(sum(a*b for a, b in zip(row, state)) % problem.p for row in power)
+            stats['matrix_vector_products'] += 1
+        exponent >>= 1
+        if exponent:
+            power = product(power, power, problem.p)
+            stats['matrix_squares'] += 1
+    if state[-1] != 1:
+        raise Invalid('affine-coordinate invariant failed')
+    return state[:-1]
 
 
-@dataclass(frozen=True)
-class VerifiedSummary:
-    """Trusted result returned after checking a certificate for a bound instance."""
-    instance_sha256: str
-    evidence_kind: str
-    offset: int | None = None
-    period: int | None = None
-
-    @property
-    def is_empty(self) -> bool:
-        return self.offset is None
-
-    def as_dict(self) -> dict:
-        return dict(instance_sha256=self.instance_sha256, evidence_kind=self.evidence_kind,
-                    hit_set='empty' if self.is_empty else 'arithmetic_progression',
-                    offset=self.offset, period=self.period)
-
-
-def integer(value, name: str, limits: Limits, minimum=0) -> int:
-    if type(value) is not int or value < minimum:
-        raise InvalidCertificate(f'{name}: integer >= {minimum} required; bool is not accepted.')
-    if value.bit_length() > limits.max_integer_bits:
-        raise VerificationLimit(f'{name}: integer bit limit exceeded.')
-    return value
-
-
-def fields(obj, expected, name):
-    if type(obj) is not dict or set(obj) != set(expected):
-        raise InvalidCertificate(f'{name}: exact fields {sorted(expected)} required.')
-
-
-def vector(obj, size, p, name, limits):
-    if type(obj) is not list or len(obj) != size:
-        raise InvalidCertificate(f'{name}: list of length {size} required.')
-    answer = tuple(integer(v, name, limits) for v in obj)
-    if any(v >= p for v in answer):
-        raise InvalidCertificate(f'{name}: noncanonical residue (must be 0 <= x < p).')
-    return answer
-
-
-def parse_instance(obj, limits=Limits()):
-    fields(obj, ('schema', 'modulus', 'matrix', 'translation', 'initial', 'target'), 'instance')
-    if obj['schema'] != 'alc-instance-1':
-        raise InvalidCertificate('Unsupported instance schema.')
-    p = integer(obj['modulus'], 'modulus', limits, 2)
-    a = obj['matrix']
-    if type(a) is not list or not a:
-        raise InvalidCertificate('Nonempty square matrix required.')
-    n = len(a)
-    if n > limits.max_dimension:
-        raise VerificationLimit('Matrix dimension limit exceeded.')
-    a = tuple(vector(row, n, p, 'matrix row', limits) for row in a)
-    c = vector(obj['translation'], n, p, 'translation', limits)
-    x = vector(obj['initial'], n, p, 'initial', limits)
-    y = vector(obj['target'], n, p, 'target', limits)
-    return p, a, c, x, y
-
-
-def instance_hash(obj) -> str:
-    return hashlib.sha256(json.dumps(obj, sort_keys=True, separators=(',', ':'),
-                                     ensure_ascii=True).encode()).hexdigest()
-
-
-def factorization(items, expected, certified_primes, limits):
-    if type(items) is not list or len(items) > expected.bit_length():
-        raise InvalidCertificate('Factor list malformed or unnecessarily long.')
-    product, previous, primes = 1, 1, []
-    for item in items:
-        if type(item) is not list or len(item) != 2:
-            raise InvalidCertificate('Each factor must be [prime, exponent].')
-        q = integer(item[0], 'factor prime', limits, 2)
-        e = integer(item[1], 'factor exponent', limits, 1)
-        if q <= previous or q not in certified_primes or e > expected.bit_length():
-            raise InvalidCertificate('Factors must be sorted, distinct, and proven prime.')
-        previous = q
-        product *= q ** e
-        if product > expected:
-            raise InvalidCertificate('Factor product exceeds claimed integer.')
+def factorization(value: int, data, proven: set[int], limits: Limits) -> tuple[int, ...]:
+    if type(data) is not list:
+        raise Invalid('factor list required')
+    if len(data) > limits.max_factors:
+        raise ResourceLimit('factor list limit exceeded')
+    remaining = value
+    last = 1
+    primes = []
+    for pair in data:
+        if type(pair) is not list or len(pair) != 2:
+            raise Invalid('each factor is [proved_prime, positive_exponent]')
+        q = integer(pair[0], 'factor prime', 2, limits=limits)
+        e = integer(pair[1], 'factor exponent', 1, limits=limits)
+        if q <= last or q not in proven:
+            raise Invalid('factors must be distinct, sorted, and already proved prime')
+        if e > value.bit_length():
+            raise Invalid('factor exponent cannot divide the claimed integer')
+        for _ in range(e):
+            if remaining % q:
+                raise Invalid('factorization is not exact')
+            remaining //= q
+        last = q
         primes.append(q)
-    if product != expected:
-        raise InvalidCertificate('Incomplete or incorrect factorization.')
-    return primes
+    if remaining != 1:
+        raise Invalid('incomplete factorization')
+    return tuple(primes)
 
 
-def check_primes(proofs, limits=Limits()):
-    """Lucas/Pratt certificates with fully factored n-1 and a common witness."""
-    if type(proofs) is not list:
-        raise InvalidCertificate('prime_proofs must be a list.')
-    if len(proofs) > limits.max_prime_proofs:
-        raise VerificationLimit('Too many prime proofs.')
-    proven, last = set(), 1
-    for proof in proofs:
-        if type(proof) is not dict or 'n' not in proof:
-            raise InvalidCertificate('Malformed prime proof.')
-        n = integer(proof['n'], 'prime', limits, 2)
-        if n <= last:
-            raise InvalidCertificate('Prime proofs must be distinct and sorted.')
-        if n == 2:
-            fields(proof, ('n',), 'base prime proof')
+def prime_proofs(records, limits: Limits, stats: dict) -> set[int]:
+    """Check an ascending proof DAG; leaves and every factor must be justified."""
+    if type(records) is not list:
+        raise Invalid('prime_proofs must be a list')
+    if len(records) > limits.max_prime_records:
+        raise ResourceLimit('prime proof record limit exceeded')
+    proven: set[int] = set()
+    last = 1
+    for rec in records:
+        keys(rec, {'p', 'witness', 'factors'}, 'prime proof')
+        p = integer(rec['p'], 'proved number', 2, limits=limits)
+        if p <= last:
+            raise Invalid('prime proofs must be strictly increasing')
+        a = integer(rec['witness'], 'prime witness', 1, p-1, limits)
+        if p == 2:
+            if a != 1 or rec['factors'] != []:
+                raise Invalid('base proof for 2 must have witness 1 and no factors')
         else:
-            fields(proof, ('n', 'base', 'factors'), 'prime proof')
-            qs = factorization(proof['factors'], n - 1, proven, limits)
-            base = integer(proof['base'], 'primality witness', limits, 2)
-            if base >= n or pow(base, n - 1, n) != 1:
-                raise InvalidCertificate('Invalid Fermat/primality witness.')
+            qs = factorization(p-1, rec['factors'], proven, limits)
+            if pow(a, p-1, p) != 1:
+                raise Invalid('failed prime power identity')
             for q in qs:
-                if gcd(pow(base, (n - 1) // q, n) - 1, n) != 1:
-                    raise InvalidCertificate('Insufficient multiplicative order for primality.')
-        proven.add(n)
-        last = n
+                if gcd(pow(a, (p-1)//q, p)-1, p) != 1:
+                    raise Invalid('failed prime-order exclusion')
+            stats['modular_power_checks'] += 1+len(qs)
+        proven.add(p)
+        last = p
+    stats['prime_records'] = len(proven)
     return proven
 
 
-def verify(instance, certificate, limits=Limits()) -> VerifiedSummary:
-    p, a, c, x, y = parse_instance(instance, limits)
-    fields(certificate, ('schema', 'instance_sha256', 'prime_proofs', 'claim'), 'certificate')
-    if certificate['schema'] != 'alc-certificate-1':
-        raise InvalidCertificate('Unsupported certificate schema.')
-    digest = instance_hash(instance)
-    if certificate['instance_sha256'] != digest:
-        raise InvalidCertificate('Certificate is bound to a different instance.')
-    primes = check_primes(certificate['prime_proofs'], limits)
-    if p not in primes:
-        raise InvalidCertificate('No valid proof that the modulus is prime.')
-    if rank(a, p) != len(a):
-        raise InvalidCertificate('Only invertible recurrences are supported.')
-    n = len(a)
-    lift = tuple(row + (shift,) for row, shift in zip(a, c)) + ((0,) * n + (1,),)
-    start, target = x + (1,), y + (1,)
-    claim = certificate['claim']
-    if type(claim) is not dict or 'kind' not in claim:
-        raise InvalidCertificate('Malformed claim.')
-    kind = claim['kind']
-    if kind == 'hit':
-        fields(claim, ('kind', 'offset', 'period', 'factors'), 'hit claim')
-        t = integer(claim['offset'], 'offset', limits)
-        r = integer(claim['period'], 'period', limits, 1)
-        if t >= r:
-            raise InvalidCertificate('Offset must be canonical: 0 <= t < period.')
-        factors = factorization(claim['factors'], r, primes, limits)
-        if power_apply(lift, t, start, p) != target:
-            raise InvalidCertificate('Claimed target hit is false.')
-        if power_apply(lift, r, start, p) != start:
-            raise InvalidCertificate('Claimed period does not return to the initial state.')
-        if any(power_apply(lift, r // q, start, p) == start for q in factors):
-            raise InvalidCertificate('Claimed period is not minimal.')
-        return VerifiedSummary(digest, kind, t, r)
-    if kind == 'outside-span':
-        fields(claim, ('kind', 'separator'), 'outside-span claim')
-        w = vector(claim['separator'], n + 1, p, 'separator', limits)
-        v = start
-        for _ in range(n + 1):
-            if dot(w, v, p):
-                raise InvalidCertificate('Separator does not annihilate the Krylov span.')
-            v = mv(lift, v, p)
-        if not dot(w, target, p):
-            raise InvalidCertificate('Separator does not distinguish the target.')
-        return VerifiedSummary(digest, kind)
-    if kind == 'cycle-exclusion':
-        fields(claim, ('kind', 'states'), 'cycle-exclusion claim')
-        states = claim['states']
-        if type(states) is not list or not states:
-            raise InvalidCertificate('Nonempty closed trajectory required.')
-        if len(states) > limits.max_cycle_states:
-            raise VerificationLimit('Explicit cycle length exceeds verifier policy.')
-        current = x
-        for raw in states:
-            s = vector(raw, n, p, 'cycle state', limits)
-            if s != current or s == y:
-                raise InvalidCertificate('Invalid trajectory or target appears in exclusion witness.')
-            current = tuple((dot(row, s, p) + ci) % p for row, ci in zip(a, c))
-        if current != x:
-            raise InvalidCertificate('Exclusion trajectory is not closed.')
-        return VerifiedSummary(digest, kind)
-    raise InvalidCertificate('Unknown claim kind; no untrusted status is accepted.')
+@dataclass(frozen=True)
+class VerifiedHits:
+    """Use checker.verify to create this result; arithmetic consumers do not prove it."""
+    problem_sha256: str
+    first: int
+    period: int
+    stats: dict
+
+    def as_dict(self) -> dict:
+        return {'status': 'valid', 'claim': 'complete_positive_hit_set',
+                'problem_sha256': self.problem_sha256,
+                'first': self.first, 'period': self.period,
+                'hit_set': 'first + j * period for every integer j >= 0',
+                'checks': dict(self.stats)}
+
+
+def verify(problem_document: dict, certificate: dict,
+           limits: Limits = DEFAULT_LIMITS) -> VerifiedHits:
+    problem = Problem.parse(problem_document, limits)
+    keys(certificate, {'schema', 'kind', 'problem_sha256', 'first', 'period',
+                      'period_factors', 'inverse_matrix', 'prime_proofs'}, 'certificate')
+    if certificate['schema'] != 'alc.certificate.v1' or certificate['kind'] != 'periodic_hits':
+        raise Invalid('unknown certificate type; v1 verifies positive hit sets only')
+    if certificate['problem_sha256'] != problem.fingerprint:
+        raise Invalid('certificate does not match the independently supplied problem')
+    stats = {'prime_records': 0, 'modular_power_checks': 0, 'power_checks': 0,
+             'matrix_vector_products': 0, 'matrix_squares': 0, 'inverse_products': 0}
+    proven = prime_proofs(certificate['prime_proofs'], limits, stats)
+    if problem.p not in proven:
+        raise Invalid('field modulus lacks a valid primality proof')
+    n = len(problem.A)
+    inverse = matrix(certificate['inverse_matrix'], n, problem.p, 'inverse_matrix', limits)
+    unit = identity(n)
+    if product(problem.A, inverse, problem.p) != unit or product(inverse, problem.A, problem.p) != unit:
+        raise Invalid('invalid inverse witness or noninvertible recurrence')
+    stats['inverse_products'] = 2
+    r = integer(certificate['period'], 'period', 1, limits=limits)
+    if r > problem.p**n:
+        raise Invalid('claimed point period exceeds the finite state count')
+    t0 = integer(certificate['first'], 'first', 0, r-1, limits)
+    qs = factorization(r, certificate['period_factors'], proven, limits)
+    if advance(problem, r, stats) != problem.initial:
+        raise Invalid('claimed period does not return to the initial state')
+    for q in qs:
+        if advance(problem, r//q, stats) == problem.initial:
+            raise Invalid('claimed period is not the least period')
+    if advance(problem, t0, stats) != problem.target:
+        raise Invalid('claimed first time does not hit the target')
+    return VerifiedHits(problem.fingerprint, t0, r, stats)

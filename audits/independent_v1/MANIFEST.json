@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "audits/independent_v1/README.md": "ae3dd93852f2dba6519e10d877dc01abc2be11091ee6b4f9e548c621b70e4b42",
+    "audits/independent_v1/crosscheck.py": "f54236af5bd08f379d944d74c7478be4a312cc3fec405ba0b932040b11caa5cb",
+    "audits/independent_v1/expected.json": "1fcfa3d6d94b6f6feab192890f6ecd63d98dece7d03dd57c247dfdf4f1001191",
+    "audits/independent_v1/reference/MANIFEST.json": "11df608472ec29a537b7a51fd9dc53dc3914bf504170ac8eaf2f83faff42bc94",
+    "audits/independent_v1/verify.py": "e15f4e9eeb6c31ca471145ef6e775603be5430d2baee70f49360342cff3b15e1",
+    "tests/test_independent_audit.py": "f875eac2f5dfe5208e7e4d049ab4e929986e50440fc5b96c82b33b13e82d83e2"
+  }
+}

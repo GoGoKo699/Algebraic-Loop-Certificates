@@ -1,13 +1,21 @@
-# Current research task
+# Current work: a classical certificate contribution, not a quantum speedup claim
 
-Read README.md, docs/SPECIFICATION.md, docs/PRIOR_WORK.md, provenance/README.md, and reports/expected.json. Run `python verify.py` before editing. Do not change historical files or the original LICENSE. Manuscript remains on hold. No journal is selected for this spinoff.
+Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, and provenance/ORIGIN.md first. The manuscript is on hold. No journal is selected for this spinoff. The original quantum project must not be modified as part of this work.
 
-The objective is useful, proof-producing algebraic loop analysis, independent of the parent project's quantum-advantage requirement. The current implementation is a prime-field reference, not a new fast orbit algorithm. Its producer may enumerate a cycle; its checker must never import that producer or infer truth from a timeout.
+## Established executable baseline
 
-Next establish one contribution rather than widening scope. Inspect current exact-algebra methods for non-enumerative point-orbit summary production; retain structure-aware classical algorithms and shared preprocessing. Add an interchangeable producer only with independent certificate replay and matched end-to-end comparison. An optional quantum producer is neither needed nor implemented.
+The package supplies a bounded prime-field affine-orbit producer, an independent positive certificate checker, and an arithmetic consumer. The checker validates primality and complete period factorization, an inverse witness, least point period, canonical hit offset, and problem binding. It does not import or run the producer. The producer is an enumerator, not a fast orbit/discrete-log algorithm. The mathematics is established; no novelty or practical speedup is claimed.
 
-The compact general inside-span negative certificate problem remains unresolved. The existing explicit-cycle proof is honest but potentially large. Do not describe a failure to find a hit as proof that none exists.
+Run `python verify.py` before and after changes. Do not change stored expected evidence just to make modified code pass. Keep tests for composite-factor spoofing, malformed inputs, fixed points, affine shifts, resource limits, and time-window semantics. Limit exhaustion, rejection, and mathematical unreachability are different statuses.
 
-The authentic original conversation ZIP is unavailable in this runtime. Do not reconstruct it and label the reconstruction historical. When authentic bytes become available, import them immutably and register hashes before running their own verifier. The pinned published orbit note is already preserved byte-for-byte.
+## Next research task
 
-Do not retarget or edit the Quantum-Assisted-Algorithm-Discovery repository. No release, paid computation, external contact, or manuscript submission follows from this work order. Owner has authorized repository modification and merging after validation.
+Perform a targeted prior-work comparison and identify one genuinely useful certificate or consumer improvement. Before implementing a broad extension, state the exact new claim, strongest existing method, and downstream task. A scoped negative-certificate mechanism or composition of independently certified summaries may be worth auditing, but neither is established as original here. Do not inflate a toy's horizon to claim useful speedup, or compare only against the elementary producer.
+
+The current executable semantics are prime fields, invertible affine maps, one initial state and a full-state target. Extension fields, machine-word rings, singular maps/tails, arbitrary guards and negative certificates require explicit new specifications and proofs. Do not silently broaden them.
+
+## Preservation and delivery
+
+The original license is immutable. The predecessor portable ZIP is unavailable, not imported; recover and preserve it verbatim when accessible. Do not re-create it from the new code. The upstream orbit note is pinned by commit and blob in provenance/ORIGIN.md.
+
+No public release tag, manuscript, journal submission, paid computation, or external contact is authorized by the bootstrap. Ordinary repository development and testing are the requested work. Keep scientific claims distinct from packaging progress and expose any uncompleted verification or comparison.
