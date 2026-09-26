@@ -1,0 +1,213 @@
+{
+  "cases": [
+    {
+      "checker_ns": [
+        4081096,
+        3580239,
+        3589131,
+        3433993,
+        3495494,
+        3475905,
+        3426401
+      ],
+      "median_checker_ns": 3495494,
+      "median_native_ns": 76713,
+      "median_producer_ns": 2822761,
+      "modulus": 65536,
+      "native_ns": [
+        87369,
+        57926,
+        78786,
+        54891,
+        91545,
+        55612,
+        76713
+      ],
+      "producer_ns": [
+        3431749,
+        2841810,
+        2545242,
+        2702093,
+        2699209,
+        2822761,
+        2831334
+      ],
+      "repeats": 7
+    },
+    {
+      "checker_ns": [
+        8837018,
+        8362669,
+        9351677,
+        8577856,
+        8923065,
+        8694839,
+        8361978
+      ],
+      "median_checker_ns": 8694839,
+      "median_native_ns": 192194,
+      "median_producer_ns": 5935661,
+      "modulus": 4294967296,
+      "native_ns": [
+        197992,
+        178634,
+        259993,
+        188348,
+        242909,
+        165944,
+        192194
+      ],
+      "producer_ns": [
+        5935661,
+        5850244,
+        5750868,
+        6041077,
+        6430541,
+        6101355,
+        5672523
+      ],
+      "repeats": 7
+    },
+    {
+      "checker_ns": [
+        24869034,
+        24222511,
+        24831949,
+        23443622,
+        24162343,
+        22868535,
+        23594214
+      ],
+      "median_checker_ns": 24162343,
+      "median_native_ns": 673152,
+      "median_producer_ns": 15492050,
+      "modulus": 18446744073709551616,
+      "native_ns": [
+        673152,
+        709406,
+        656237,
+        642597,
+        660604,
+        764748,
+        763406
+      ],
+      "producer_ns": [
+        15013264,
+        15430188,
+        17185256,
+        14683949,
+        15492050,
+        16348011,
+        16065475
+      ],
+      "repeats": 7
+    },
+    {
+      "checker_ns": [
+        283467,
+        264751,
+        276458,
+        258451,
+        316427,
+        282096,
+        524103
+      ],
+      "median_checker_ns": 282096,
+      "median_native_ns": 15022,
+      "median_producer_ns": 235908,
+      "modulus": 25,
+      "native_ns": [
+        18517,
+        11567,
+        15022,
+        10215,
+        16745,
+        11156,
+        19719
+      ],
+      "producer_ns": [
+        246584,
+        237871,
+        231582,
+        230660,
+        235908,
+        234686,
+        335745
+      ],
+      "repeats": 7
+    },
+    {
+      "checker_ns": [
+        402874,
+        480378,
+        619353,
+        386409,
+        380091,
+        379079,
+        465155
+      ],
+      "median_checker_ns": 402874,
+      "median_native_ns": 23294,
+      "median_producer_ns": 343496,
+      "modulus": 12,
+      "native_ns": [
+        24716,
+        14772,
+        26579,
+        16414,
+        23294,
+        15143,
+        25428
+      ],
+      "producer_ns": [
+        331859,
+        333181,
+        343496,
+        351007,
+        346231,
+        354352,
+        326361
+      ],
+      "repeats": 7
+    },
+    {
+      "checker_ns": [
+        171503,
+        153667,
+        147918,
+        141278,
+        163411,
+        196840,
+        142490
+      ],
+      "median_checker_ns": 153667,
+      "median_native_ns": 3154,
+      "median_producer_ns": 107739,
+      "modulus": 8,
+      "native_ns": [
+        83804,
+        3235,
+        3154,
+        1662,
+        2904,
+        1743,
+        3435
+      ],
+      "producer_ns": [
+        109541,
+        140828,
+        107739,
+        105396,
+        104734,
+        107178,
+        109021
+      ],
+      "repeats": 7
+    }
+  ],
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "protocol": "Warm process; no factor/order hints; alternating order; producer and independent checking recorded separately. Not cold startup or best-possible implementation.",
+  "python": "3.13.5",
+  "schema": 1,
+  "sympy_version": "1.14.0"
+}

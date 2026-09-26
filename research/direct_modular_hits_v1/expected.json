@@ -1,0 +1,10 @@
+{
+  "false_hits_rejected": 53776,
+  "malformed_proofs_rejected": 7,
+  "nonminimal_periods_rejected": 18800,
+  "outcomes_sha256": "5a5fd9512134d532d410ab80f8e48814dcd1539456d644de4aca87a05e9e8f27",
+  "period_one_cases": 726,
+  "positive_certificates": 29200,
+  "schema": 1,
+  "scope": "Independent finite ring positive-certificate audit. No new order theorem, compact general negative proof, or runtime advantage claimed."
+}

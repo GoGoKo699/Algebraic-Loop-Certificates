@@ -1,0 +1,28 @@
+{
+  "base_commit": "2d74067b2c678ba72ff995bfed5d9c6f583f83ae",
+  "schema": 1,
+  "scope": "Experimental research source, fixed results and explicit dependencies; no primary API changes.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "research/complete_orbits_v1/__init__.py": "542231bb32509e927e65595d1b381b7ac3ca5f752bb2d64b936ace6fc8035eb3",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/check.py": "7aae84f5c25d373fb846e2eac4c79ddf192d11b153a2d83d522a56910606a5f6",
+    "research/complete_orbits_v1/checker.py": "5914229738a20632e7572602d6c3ad52b48f68657cb313d022d38fde64d8556b",
+    "research/complete_orbits_v1/consumer.py": "5a53c7de0e44afcb77deb9dc71786eff9eb68e0a8e9fab82d41b05aaf17be1eb",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/complete_orbits_v1/sympy_check.py": "d78ccead72c9c4b79f27ff2d0b193e851936bf096611a63926424ca03f2468eb",
+    "research/complete_orbits_v1/verify.py": "f0c2ca6a024a3b11a2856df977e12a21a34f378266af3e61b78c41ee449ca7c4",
+    "research/modular_lifting_v1/README.md": "451cc5fe00634e2572375896535ec1c1c13d65735410b322e2d44b3b239fa141",
+    "research/modular_lifting_v1/RESULTS_SUMMARY.json": "a2c5b577cdd5c0383def3b15bff7365d4894a68836df51d0de78f02f904e6458",
+    "research/modular_lifting_v1/THEORY.md": "bf338d2963bac28241f264e9e7f3fa64caa6cae82e35bca8b6db2a9450c1f674",
+    "research/modular_lifting_v1/__init__.py": "a6698236289e35a7a7b84da0e9199acbd76a1ec8a90163b93bf2a3a209ccb8f1",
+    "research/modular_lifting_v1/check.py": "663065463f15c23ab7be104ef443bd5e6a32572801df9282fe46c0e3544074a9",
+    "research/modular_lifting_v1/consumer.py": "b2ee1cf7a2b3dba506f2712a9869c99405849242e9f4533bf553d69c45291f58",
+    "research/modular_lifting_v1/expected.json.gz": "c94423f30932e3ded40cc6c656410d3f0988b46b5c74ca4d6c3931ff8d4a0d6f",
+    "research/modular_lifting_v1/lifting.py": "b1786c725d3d21f81593657f215e58d2ec6f555049ad3daead012093761b4b8a",
+    "research/modular_lifting_v1/producer.py": "cca7b794c238dbcb8972aa1188b85eba4abb3deb427c56beb822d1c055567199",
+    "research/modular_lifting_v1/verify.py": "9489dbc5fb9ba4bbeee4839c090f09ddffd4891ef964d025feebd1aadb69b7c6",
+    "tests/test_modular_lifting_research.py": "bde46d45650deb63f4fd315915aff0e9ef14de563fae050fa3305cc629c94c3b"
+  }
+}

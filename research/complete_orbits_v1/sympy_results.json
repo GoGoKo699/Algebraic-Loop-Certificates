@@ -1,0 +1,8 @@
+{
+  "polynomial_factorizations": 81,
+  "reachable": 175,
+  "scalar_cases": 300,
+  "scope": "Native exact primitive/scalar correctness comparison only. No general matrix-orbit runtime advantage is tested.",
+  "sympy_version": "1.14.0",
+  "unreachable": 125
+}
