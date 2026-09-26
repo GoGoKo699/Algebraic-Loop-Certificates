@@ -1,0 +1,34 @@
+{
+  "counts": {
+    "ambient_reduction_counterexample": 1,
+    "compiled_sources": 1414,
+    "independent_module_spans": 256,
+    "independent_p_group_queries": 23201,
+    "large_closed_form_queries": 138,
+    "malformed_compilations_rejected": 13,
+    "malformed_queries_rejected": 5,
+    "matrix_mod4_sources": 576,
+    "mixed_order_modules": 380,
+    "query_only_dependency_control": 1,
+    "reachable_queries": 6535,
+    "scalar_sources": 796,
+    "seeded_matrix_sources": 36,
+    "target_queries": 25189,
+    "unknown_control": 1,
+    "unreachable_queries": 18654
+  },
+  "full_report": {
+    "path": "expected.json.gz",
+    "uncompressed_bytes": 14006,
+    "uncompressed_sha256": "d640c6bfee69ba925d82ca98dead369562be2d6b5f227f71412d78d10e07ae78"
+  },
+  "outcomes_sha256": "99c7970a603088ecb3f39fec47730a20b53adab8cd94ac1bf46c6d52e051df6c",
+  "query_modes": {
+    "early_rejection": 13526,
+    "identity": 1202,
+    "precision_digit": 8164,
+    "residue_nilpotent": 2297
+  },
+  "schema": 1,
+  "scope": "Exact prime-power source compilation. Standard algebraic components; not novelty clearance, formal implementation proof, or runtime advantage. No first-hit claim or arbitrary composite-modulus compilation."
+}

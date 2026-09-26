@@ -1,0 +1,24 @@
+{
+  "archive_sha256": "9dd7bade38d26542873960c95e653cc175e948a798758eb090e3e5bb0a8787fc",
+  "member_sha256": {
+    "research/QUERY_BOUNDARIES_05.md": "523a0ca42d5f845eb4d7b9dea9a3b46970513c359912b9cd72e8edbcab5e86e2",
+    "research/query_boundary_audit_v1/MANIFEST.json": "eb1d461cb0b758327525a07de50dc38d9da2a85f8fca77284dca72424ef4ac9b",
+    "research/query_boundary_audit_v1/README.md": "bcf7a9c1f2905a0b06a517ec0edb73960d459779d2d49ec7008daab41ecb4def",
+    "research/query_boundary_audit_v1/SOURCES.md": "6d1a05016aea80765a4fe7ea82113b7504e69cf11585fb877a956e59331521b6",
+    "research/query_boundary_audit_v1/THEORY.md": "0727076005360beabee8beafbbe35c72ba33e5a040ed1f2bbeef9a5da6c74b9d",
+    "research/query_boundary_audit_v1/boundaries.py": "12ea318a0100a24d19b9b8e9d52088dc3931f7ce0e20eccd4d8730b8a3fcac92",
+    "research/query_boundary_audit_v1/check.py": "cb66b6298e66280ee67186ae6e5e83ce8150b0409b1d033899e6e52755aaf4fc",
+    "research/query_boundary_audit_v1/expected.json": "c224359d4ba2712db8c4b2a01f682568376bb108472397eca95a40f3b13841fd",
+    "research/query_boundary_audit_v1/native_results.json": "f4838b3b79d8b999c33368e09e89d59e279aabf281a887fdae032206be9c3e28",
+    "research/query_boundary_audit_v1/verify.py": "559a8084b92a6f0792c7f46381306b82895058caf6d78b7c4ef506a025bc157f",
+    "tests/test_query_boundary_research.py": "63dfa6854561fa792a4320f51f71515efd861b6e0a72d15c0680fbd460942def"
+  },
+  "origin": "Authentic supplied query-boundary checkpoint; eleven additive member files only.",
+  "original_checkpoint_sha256": "ac4035163e238f80891e6b74e70c3fe63eb9cd9d3f73b6273e6262aa27dc04be",
+  "original_patch_sha256": "a4c7847591cd60fe4bf8021211ccbd37e830d12e0aac6d7b6b3b0d7e5ff50146",
+  "schema": 1,
+  "wrapper_sha256": {
+    "README.md": "538a3f301bce347e79c60fd933537cd1776868e28417dd893b926b048c6af4fb",
+    "verify.py": "f22067898145582e18548f9a9e772c67a3208b47e174f5296e1cb4c98e907688"
+  }
+}

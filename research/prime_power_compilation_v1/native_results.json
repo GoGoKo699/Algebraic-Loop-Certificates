@@ -1,0 +1,8 @@
+{
+  "normal_form_cases": 120,
+  "scalar_queries": 2868,
+  "scalar_sources": 76,
+  "schema": 1,
+  "scope": "Native Smith invariants and scalar subgroup predicates only. No orbit enumeration or target logarithm on the baseline query path. Not a performance or novelty comparison.",
+  "sympy_version": "1.14.0"
+}
