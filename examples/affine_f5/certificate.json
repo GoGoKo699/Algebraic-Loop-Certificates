@@ -1,0 +1,35 @@
+{
+  "first": 3,
+  "inverse_matrix": [
+    [
+      1
+    ]
+  ],
+  "kind": "periodic_hits",
+  "period": 5,
+  "period_factors": [
+    [
+      5,
+      1
+    ]
+  ],
+  "prime_proofs": [
+    {
+      "factors": [],
+      "p": 2,
+      "witness": 1
+    },
+    {
+      "factors": [
+        [
+          2,
+          2
+        ]
+      ],
+      "p": 5,
+      "witness": 2
+    }
+  ],
+  "problem_sha256": "a2f7022e5a5efceeb695cdbb11282b71107bebc4224f436b373c7e327a43eb6b",
+  "schema": "alc.certificate.v1"
+}
