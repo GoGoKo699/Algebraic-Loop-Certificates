@@ -1,0 +1,23 @@
+{
+  "base_commit": "0cd354086b9ffd585f28bc4756db8396eb62bd07",
+  "schema": 1,
+  "scope": "Experimental invariant source, exact result and dependencies only; no previous file replaced.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "research/INVARIANT_RESEARCH_UPDATE_03.md": "50d0810f75e5ad0da2fb67e2fbd2b1da36acf61866179535521b330abe328f24",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/checker.py": "5914229738a20632e7572602d6c3ad52b48f68657cb313d022d38fde64d8556b",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/separating_invariants_v1/README.md": "515ca6970a47739369cd68a625864e62f817f590beaaf7cc41d009aa94338024",
+    "research/separating_invariants_v1/SOURCES.md": "589a63db833c3ed27a6d6d86d2b8e4d1d6541b4cd3c53ee337f06cf893ffe1f6",
+    "research/separating_invariants_v1/THEORY.md": "f39013a8699ec254fbb7e314323279d11ebbc6983d4994af048ea55355675262",
+    "research/separating_invariants_v1/__init__.py": "b7ad1de95d1738955cf90b883b02d4b18f4037ec28e99e16f2910d516f4a6c9f",
+    "research/separating_invariants_v1/check.py": "d4cfe260e57b6cef6493eca9f655c8ced5c9016e58cb96a0263785d6803ef5e0",
+    "research/separating_invariants_v1/checker.py": "b7aae0a1540224de4e6c6357689a7abe0bc438cee0bd926e01cb24b51eb04420",
+    "research/separating_invariants_v1/expected.json": "c9df72ff1d43df4913b36993e3c2d1742307e455aa903cce4d0b77f4376cfa0e",
+    "research/separating_invariants_v1/producer.py": "1377b8351a79ddd8b554b9d40ef30d01c90cf7759c4ae7d47c35dfa408bdf553",
+    "research/separating_invariants_v1/verify.py": "5c2c3cb20cbdda7dafee3aae686062097c7a1f2b353373dce6f19c5f6246cf9a",
+    "tests/test_separating_invariants_research.py": "58007cbcb832b8d8a4f56eddee293b40c7a1bb39f957d5b002aa30dea9f4db87"
+  }
+}
