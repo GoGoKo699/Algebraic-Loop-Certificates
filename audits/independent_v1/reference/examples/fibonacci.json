@@ -1,0 +1,26 @@
+{
+  "initial": [
+    1,
+    0
+  ],
+  "matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "modulus": 7,
+  "schema": "alc-instance-1",
+  "target": [
+    4,
+    5
+  ],
+  "translation": [
+    0,
+    0
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "comparison_counts": {
+    "corrupted_inverse_witnesses_rejected_by_primary": 2282,
+    "negative_targets_with_false_hit_rejected_by_both": 2552,
+    "noncanonical_offsets_rejected_by_both": 2282,
+    "positive_agreements": 2282,
+    "recurrences": 100,
+    "state_target_cases": 4834,
+    "valid_reference_negative_certificates": 2552
+  },
+  "outcomes_sha256": "5348d6c878c87405c4cd4aa0ab55eec30d296e0182b63fb99993ae32f3e55e7b",
+  "primary_source_sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671"
+  },
+  "schema": 1,
+  "scope": "Two implementations agree on the enumerated domain and reject the tested false positive claims. Primary API remains positive-only; reference negative schemas are NOT production support. No formal verification, native algebra performance comparison, or novelty claim."
+}
