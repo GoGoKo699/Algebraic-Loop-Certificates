@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "arbitrary_state_linearity_inverse_controls": 200,
+    "boolean_assignments_checked": 5760,
+    "clock_steps_checked": 16293,
+    "closed_observation_pairs": 102,
+    "closed_observation_queries": 5280,
+    "common_exponent_sources": 34,
+    "common_exponent_target_queries": 13498,
+    "distinct_quotient_compilations": 22,
+    "dummy_mutations_rejected": 138,
+    "exhaustive_clause_subset_families": 3,
+    "existing_compiler_clock_queries": 80,
+    "formula_instances": 755,
+    "formula_time_guard_checks": 297747,
+    "inconsistent_one_hot_states_rejected": 135,
+    "malformed_clause_controls": 4,
+    "malformed_observation_controls": 3,
+    "membership_not_index_controls": 11,
+    "nonclosed_observation_counterexamples": 300,
+    "observation_matrix_pairs": 402,
+    "satisfiable_formula_instances": 519,
+    "unsatisfiable_formula_instances": 236
+  },
+  "full_report": {
+    "path": "expected.json.gz",
+    "uncompressed_bytes": 28238,
+    "uncompressed_sha256": "bf9c0fb5421bcb347c6b8177abd62bc6dacaa30d17d968202fae6fabaa2de41f"
+  },
+  "outcomes_sha256": "51139c1fcd6c73dd6fad4a1a246644a8f2e7209874206f7be83ac5a68b9c60e1",
+  "schema": 1,
+  "scope": "Exact reductions and query-boundary controls. Small inputs do not test asymptotic hardness or novelty. No new production schema, general guard solver, native solver speedup, or formal code proof."
+}
