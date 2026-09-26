@@ -1,0 +1,25 @@
+{
+  "base_commit": "5270aa58e92458fbcb111b7bdeb794777e030b41",
+  "schema": 1,
+  "scope": "Additive query-scope reductions, standard quotient controls and exact pinned evidence. No prior source modified.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "research/QUERY_SCOPE_AUDIT_05.md": "d49610c09e63c7f1ab4bf3579ede12f72ac5d706f002fea2822598adb280467c",
+    "research/compiled_orbits_v1/checker.py": "1336e982c8a43159cf6fca9f0e815839d5b51c8cff4ca6767eb74210f1159f23",
+    "research/compiled_orbits_v1/producer.py": "8f0ddba5efee03a4a86199fac3645a9a7252aff990591ab390e13f1f24e3c6cd",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/query_scope_v1/README.md": "1f25b3963465845a96caffa88b6ff9824dfd84987d17a0ffa1f7b6c1be7e2e30",
+    "research/query_scope_v1/RESULTS_SUMMARY.json": "b7b8290edd88c8631046b7562b3a4af82f8f362de46def2486f2336e9ecdd82d",
+    "research/query_scope_v1/SOURCES.md": "d7f91ce0270f3bafce17a49406d803234ebd9ac1e90b14f4ab1a3e4ca01e445a",
+    "research/query_scope_v1/THEORY.md": "f4cd7154204034318ed1bf3e0a16855a279152aad91dce5948cae03d9fb72c60",
+    "research/query_scope_v1/check.py": "2c4d2c3ae34fc8a8a7a29df6f56db65bffdf699e95dcfcce85068c0401f331c0",
+    "research/query_scope_v1/controls.py": "6d77393c0b975fb464f158df9d9e47e82aca1dd35a638642d494e9ec5621a3a5",
+    "research/query_scope_v1/expected.json.gz": "a8783303ac72be59c3c7a8952f815ada708b953a212362f43e160d25644296af",
+    "research/query_scope_v1/verify.py": "66033dab45bbf3bb2ec5d4b3f36acc8df518552ebc369dd5c3f206e649c7c68c",
+    "research/separating_invariants_v1/checker.py": "b7aae0a1540224de4e6c6357689a7abe0bc438cee0bd926e01cb24b51eb04420",
+    "research/separating_invariants_v1/producer.py": "1377b8351a79ddd8b554b9d40ef30d01c90cf7759c4ae7d47c35dfa408bdf553",
+    "tests/test_query_scope_research.py": "ec362cadd2d8bcc276a8b2558fd98953171a41603e1b8555991a5bb3eeb28ae5"
+  }
+}
