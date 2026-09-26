@@ -1,0 +1,30 @@
+{
+  "claim": {
+    "kind": "cycle-exclusion",
+    "states": [
+      [
+        1
+      ],
+      [
+        4
+      ]
+    ]
+  },
+  "instance_sha256": "5a0e94523047fed9b01c80bc660d3cc19b3bbe74924daddfac38a429c59afe9e",
+  "prime_proofs": [
+    {
+      "n": 2
+    },
+    {
+      "base": 2,
+      "factors": [
+        [
+          2,
+          2
+        ]
+      ],
+      "n": 5
+    }
+  ],
+  "schema": "alc-certificate-1"
+}

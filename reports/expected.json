@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "cli_controls": 5,
+    "consumer_queries": 38672,
+    "malformed_or_false_certificates_rejected": 14,
+    "noncanonical_offsets_rejected": 2282,
+    "nonminimal_periods_rejected": 2282,
+    "primality_cases": 298,
+    "recurrences": 100,
+    "resource_limits_checked": 3,
+    "schedule_intersections": 6084,
+    "state_target_cases": 4834
+  },
+  "evidence_kinds": {
+    "cycle-exclusion": 706,
+    "hit": 2282,
+    "outside-span": 1846
+  },
+  "outcomes_sha256": "a99bd8d14ff7787ebfb71070316f7d3f9dd0a7f4c892f1d36f0ca450652604dc",
+  "schema": 1,
+  "scope": "Fresh bootstrap controls; not reruns of the unavailable original scout ZIP. No production algebra solver, quantum backend, formal proof assistant, or performance advantage tested."
+}
