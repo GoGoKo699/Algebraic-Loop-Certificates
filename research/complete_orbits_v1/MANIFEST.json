@@ -1,0 +1,31 @@
+{
+  "base_commit": "2d74067b2c678ba72ff995bfed5d9c6f583f83ae",
+  "schema": 1,
+  "scope": "Experimental research source, fixed results and explicit dependencies; no primary API changes.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "research/PRIOR_WORK_COMPARISON_02.md": "2fd1bfbd38a4ec565e0d9b77e3645a6834e7a0fec6a6eb691f732029f6c6ed38",
+    "research/README.md": "6f28316f969dd1dc30036c1dc1ba4e459ebb2f2154c85b2c52e040cf30e160a4",
+    "research/RESEARCH_COMPLETION.md": "392368ef4b8eebc4c4b7a049f9ff55c526bdcd790748fad04e720358c2d54513",
+    "research/SCIENTIFIC_WORK_ORDER.md": "811562e2af0baf5f5096722a3eed6225139641af87e978c897bcfacbf1460448",
+    "research/complete_orbits_v1/CLAIMS.json": "d157936732aa7f821590cb7cdbf8b46ed5d966d607a1b67bf5a63f60b1d45882",
+    "research/complete_orbits_v1/FORMAT.md": "32445666f84236f366c6896151ab0d2cb2d85ba9d8fa2c812dc1eb2a564ceb22",
+    "research/complete_orbits_v1/LITERATURE.md": "917e7bba8eb7042373044e8603bc59131f399c81cb073efeeff16eb67441ede4",
+    "research/complete_orbits_v1/README.md": "8fe987660e12dae3b5feec234881e41492a3660230ccf6abb253b4e492cd7ba2",
+    "research/complete_orbits_v1/RESEARCH_STATUS.md": "e501edb6618c529e6a3c756803eb576766dbfb00b3f207bfe66bb45fa094c03c",
+    "research/complete_orbits_v1/RESULTS_SUMMARY.json": "de6d5bfb78da80b671dcc36104fb71076513334de1fac05947ea346359f5cfa3",
+    "research/complete_orbits_v1/THEORY.md": "96ab4ecc2dfaa2bafea1fbc297a5dea3c9f6c4c4c9e6fc73fef1995a580351e8",
+    "research/complete_orbits_v1/__init__.py": "542231bb32509e927e65595d1b381b7ac3ca5f752bb2d64b936ace6fc8035eb3",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/check.py": "7aae84f5c25d373fb846e2eac4c79ddf192d11b153a2d83d522a56910606a5f6",
+    "research/complete_orbits_v1/checker.py": "5914229738a20632e7572602d6c3ad52b48f68657cb313d022d38fde64d8556b",
+    "research/complete_orbits_v1/consumer.py": "5a53c7de0e44afcb77deb9dc71786eff9eb68e0a8e9fab82d41b05aaf17be1eb",
+    "research/complete_orbits_v1/expected.json.gz": "c03e09a4071e8f1e078eddd874048d546c331f0579b6ccb19a1609ac2584fb08",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/complete_orbits_v1/sympy_check.py": "d78ccead72c9c4b79f27ff2d0b193e851936bf096611a63926424ca03f2468eb",
+    "research/complete_orbits_v1/sympy_results.json": "7acfa7212bcc653c84beec3c022b613ee09afd6a88fb549a65125676c1ffb9de",
+    "research/complete_orbits_v1/verify.py": "f0c2ca6a024a3b11a2856df977e12a21a34f378266af3e61b78c41ee449ca7c4",
+    "tests/test_complete_orbit_research.py": "0b2f71a0c0bf36d11a89e8d6b1dda356f448211ec2936eec66e2cd44c35992cc"
+  }
+}

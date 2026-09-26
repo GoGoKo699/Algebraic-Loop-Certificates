@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "base_recurrences": 100,
+    "factor_generation_limit_control": 1,
+    "independent_irreducibility_cases": 246,
+    "large_horizon_consumer_control": 1,
+    "mixed_factor_cases": 1093,
+    "opposite_claims_rejected": 6205,
+    "primary_positive_replays": 2374,
+    "proof_mutations_rejected": 16,
+    "repeated_factor_cases": 273,
+    "reverified_consumer_queries": 15,
+    "state_target_cases": 6205,
+    "unipotent_ring_cases": 403,
+    "unknown_control": 1,
+    "window_queries": 18615,
+    "wrong_problem_rejected": 1
+  },
+  "golden_report": {
+    "path": "expected.json.gz",
+    "source": "exact report in the previous scientific checkpoint; compression only",
+    "uncompressed_bytes": 13692,
+    "uncompressed_sha256": "b0358c2cb084445e4573b21d9e5f7d79ca2a4e6de8f8c977c9ba6c7abf056b44"
+  },
+  "outcome_reasons": {
+    "complete_hit_set": 2374,
+    "field_subgroup_obstruction": 812,
+    "incompatible_field_congruences": 1,
+    "outside_cyclic_span": 2795,
+    "unipotent_digit_mismatch": 223
+  },
+  "outcomes_sha256": "69de4771e902b863a8d30a6e88e2ee217683aa406e57c611b4f14f77029a6c69",
+  "schema": 1,
+  "scope": "Experimental complete decision certificates; independent finite controls, not proof of publication novelty, practical speedup, or formal checker verification."
+}

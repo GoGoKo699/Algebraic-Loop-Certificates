@@ -1,0 +1,30 @@
+{
+  "counts": {
+    "bad_lower_schedule_rejected": 1,
+    "cases": 67180,
+    "complete_modular_hit_set": 19547,
+    "exhaustive_matrix_mod4": 49152,
+    "exhaustive_scalar": 17902,
+    "field_certificates_checked": 117170,
+    "incompatible_prime_power_times": 813,
+    "large_horizon_consumer": 1,
+    "large_word_cases": 1,
+    "local_prime_power_obstruction": 46820,
+    "opposite_claims_rejected": 67180,
+    "proof_mutations_rejected": 9,
+    "reverified_consumers": 24,
+    "seeded_matrix_cases": 120,
+    "separate_schema_control": 1,
+    "unknown_control": 1,
+    "wrong_problem_rejected": 1
+  },
+  "golden_report": {
+    "path": "expected.json.gz",
+    "source": "exact report in the previous scientific checkpoint; compression only",
+    "uncompressed_bytes": 92000,
+    "uncompressed_sha256": "2ea6b126c5cbf93116aca7185b5291b6324e07edd7b180dbf7140e11f4cbfe5f"
+  },
+  "outcomes_sha256": "37e4b534966356d4f84e6abeb199e66ca40ff5d6368013296749c9b0ffb426b7",
+  "schema": 1,
+  "scope": "Exact new modular-wrapper controls. All small trajectories are independently enumerated; producer and checker use powering and finite-field subcertificates. The 64-bit source is a classical easy family, not a native analyzer or speedup experiment."
+}

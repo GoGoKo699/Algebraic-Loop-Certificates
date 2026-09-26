@@ -1,0 +1,222 @@
+{
+  "displayed_cases": [
+    {
+      "certificate_bytes": 5668,
+      "certificate_sha256": "94944b4bfd682124877baf7615565a75c9c2e866f2e3f60c071fea74be95e95e",
+      "checked_field_layers": 16,
+      "input": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 65536,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          31495
+        ]
+      },
+      "native_answer": [
+        32891,
+        65536
+      ],
+      "reduced_native_problem": {
+        "base": 5,
+        "kind": "logarithm",
+        "modulus": 262144,
+        "target": 125981
+      },
+      "verified_answer": [
+        32891,
+        65536
+      ]
+    },
+    {
+      "certificate_bytes": 11027,
+      "certificate_sha256": "34a6dc580a412df2871c48e097827296fc28c373c0fcb3e4eb4fd89e178c20e5",
+      "checked_field_layers": 32,
+      "input": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 4294967296,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          614071047
+        ]
+      },
+      "native_answer": [
+        2147483771,
+        4294967296
+      ],
+      "reduced_native_problem": {
+        "base": 5,
+        "kind": "logarithm",
+        "modulus": 17179869184,
+        "target": 2456284189
+      },
+      "verified_answer": [
+        2147483771,
+        4294967296
+      ]
+    },
+    {
+      "certificate_bytes": 21744,
+      "certificate_sha256": "561155a753b9eaa58c9ea9e52ce4de7b1a9ad62d2bbeaa04e752cc2c4ba29f5a",
+      "checked_field_layers": 64,
+      "input": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 18446744073709551616,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          7938025238596025095
+        ]
+      },
+      "native_answer": [
+        9223372036854775931,
+        18446744073709551616
+      ],
+      "reduced_native_problem": {
+        "base": 5,
+        "kind": "logarithm",
+        "modulus": 73786976294838206464,
+        "target": 31752100954384100381
+      },
+      "verified_answer": [
+        9223372036854775931,
+        18446744073709551616
+      ]
+    },
+    {
+      "certificate_bytes": 1170,
+      "certificate_sha256": "17feed91de0b5a966d9052f7b65ea845b94c7c0b216e1a9b03ae9068ee658c4a",
+      "checked_field_layers": 2,
+      "input": {
+        "initial": [
+          5
+        ],
+        "matrix": [
+          [
+            2
+          ]
+        ],
+        "modulus": 25,
+        "offset": [
+          0
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          5
+        ]
+      },
+      "native_answer": [
+        0,
+        4
+      ],
+      "reduced_native_problem": {
+        "base": 2,
+        "kind": "logarithm",
+        "modulus": 5,
+        "target": 1
+      },
+      "verified_answer": [
+        0,
+        4
+      ]
+    },
+    {
+      "certificate_bytes": 1476,
+      "certificate_sha256": "89d0ee9187beabad6328c9e1ceb8f619db3a24021de9988463e56d8b961a8bc4",
+      "checked_field_layers": 3,
+      "input": {
+        "initial": [
+          1
+        ],
+        "matrix": [
+          [
+            11
+          ]
+        ],
+        "modulus": 12,
+        "offset": [
+          0
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          5
+        ]
+      },
+      "native_answer": null,
+      "reduced_native_problem": {
+        "base": 11,
+        "kind": "logarithm",
+        "modulus": 12,
+        "target": 5
+      },
+      "verified_answer": null
+    },
+    {
+      "certificate_bytes": 871,
+      "certificate_sha256": "1360f9bee5a2b3e08c9b922a86204e802a4b5c3fc3451be11c9d47f8f11052ff",
+      "checked_field_layers": 2,
+      "input": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            1
+          ]
+        ],
+        "modulus": 8,
+        "offset": [
+          4
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          2
+        ]
+      },
+      "native_answer": null,
+      "reduced_native_problem": {
+        "kind": "empty"
+      },
+      "verified_answer": null
+    }
+  ],
+  "exhaustive_scalar_cases": 13602,
+  "outcomes_sha256": "b9cc84314e084f4f502e09d33f810d6528a789be2e73c70159a3de09f9c6fe53",
+  "paired_certificate_cases": 1122,
+  "reduction_branches": {
+    "direct": 2197,
+    "empty": 4694,
+    "logarithm": 6711
+  },
+  "schema": 1,
+  "scope": "Native scalar algebra comparison. Not a native matrix-orbit analyzer, formally verified baseline, or a proof of novelty/speedup. Timings compare same answers but certificate pipeline additionally returns independent evidence.",
+  "sympy_version": "1.14.0"
+}

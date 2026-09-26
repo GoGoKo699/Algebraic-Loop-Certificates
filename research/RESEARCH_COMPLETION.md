@@ -1,0 +1,105 @@
+# Scientific completion record
+
+26 September 2026. Manuscript writing is on hold. These are results, proofs,
+source assessments and test artifacts, not drafted paper sections.
+
+**Overall scientific readiness: incomplete.** The core coverage gap has a proved,
+implemented candidate solution, and the modular composition gives it an explicit
+computational-logic consumer. The precise originality and a matched practical
+comparison still need to be established. Neither the test count nor packaging
+can substitute for those two scientific obligations.
+
+## Technical results now supported
+
+| Result | Proof | Executed evidence |
+|---|---|---|
+| Complete static positive/negative certificates for invertible affine prime-field point orbits | complete_orbits_v1/THEORY.md | 6,205 decision cases; 403 unipotent-ring cases; 246 independent irreducibility cases |
+| No full-cycle listing is mathematically needed for an in-span negative answer | Field decomposition, checked congruences, and unipotent membership proof | Mixed irreducible/repeated-factor tests and opposite-claim rejection |
+| Polynomial witness length and deterministic verification in explicit input size | Field theorem T9; modular theory Section6 | Implementation follows the proof; no formal code verification is implied |
+| A prime-power query reduces to a chain of at most e genuine F_p queries | modular_lifting_v1/THEORY.md Sections2-4 | Exhaustive small Z/4Z matrices and scalar prime-power cases |
+| General composite moduli compose by checked ring factors and CRT on time schedules | Modular theory Section5 | Cases with local attainability but incompatible times; 67,180 small cases overall |
+| Exact termination/nontermination for the stipulated full-state point-guard loop | Modular theory Section8 | Reverified consumer checks, not a source-language frontend |
+| 64-bit modular arithmetic is supported without misusing F_(2^64) | Precision-fiber identity and final modular replay | 64 derived F2 certificates on x -> 5*x+1 modulo2^64 |
+| Existing arithmetic is a real classical comparator | LITERATURE S11 | SymPy1.14.0: 81 factorization and 300 scalar decision checks |
+
+These claims are scoped. Root production code remains the positive-only v1 API.
+The new decision schemas live under `research/`. Default parser/resource limits
+can reject mathematically valid large instances; the parameterized theorem is
+not a claim that every such input is accepted with those fixed defaults.
+
+## What has not been established
+
+1. **Priority beyond a certifying reformulation.** The direct finite-field
+   matrix-logarithm predecessor is only partly accessible here. Scalar lifting,
+   finite-ring cycle algorithms, and algebraic certification all predate this
+   work. The whole combination must be compared at theorem and cost level.
+2. **A consequential matched advantage.** No native full matrix-orbit analyzer,
+   finite-ring solver or bitvector verification workflow has been compared at
+   matched semantics and output. A known easy 64-bit recurrence is not a hard
+   benchmark, and a large horizon is not an improvement over symbolic methods.
+3. **Operational integration and full-checkout validation.** The additions are
+   staged separately from the unchanged primary API. Publication and remote CI
+   status are recorded by Git history and the delivery receipt. Do not infer a
+   successful merge from a source-subset test or from this scientific ledger.
+   Root code, original manifests, history and licenses remain unchanged.
+4. **Machine-checked source soundness.** Ordinary proofs and exact tests are not
+   a proof-assistant formalization or a verified source-language frontend. Such
+   formalization is optional only if no claim depends on having performed it.
+
+The paper's eventual central claim must identify which new capability, bound or
+consumer-level improvement survives the prior-work comparison. Until then,
+"a new fast classical algorithm" and "a novel complete verification method"
+are prohibited as established conclusions.
+
+## Background evidence for eventual opening and closing claims
+
+The field source dossier is `complete_orbits_v1/LITERATURE.md`; modular sources
+and inspected scope are in `modular_lifting_v1/THEORY.md` Section9 and references.
+Use these as evidence maps, not paragraphs to paste into a manuscript.
+
+- **Motivation:** loop acceleration and proof-carrying/certifying computation
+  explain why independently checked summaries have a purpose. SMT-LIB defines
+  the actual modular bitvector semantics supported by the new reduction.
+- **Prior methods:** cyclic-space and matrix-logarithm algorithms explain the
+  algebra we are reusing. Finite-ring dynamics and scalar lifting are direct
+  comparators, not merely broad background citations.
+- **Contribution scope:** current proofs establish the stated certificate
+  contract. They do not establish that no prior paper implies the same result.
+- **Consequences:** time windows and the stipulated point-guard program follow
+  from a complete hit set. No general program safety claim is warranted.
+- **Limitations:** factorization and logarithm discovery can remain expensive;
+  native comparisons cover only primitives/scalars; semantic extraction,
+  arbitrary guards, singular maps and untrusted proof hardening remain outside.
+
+Read depth is explicit: some sources were inspected in full at the relevant
+sections, others only at abstract/metadata level. The scan-only 1997 matrix-log
+paper could not be fully read after repeated screenshot failures. No missing
+result is treated as evidence of originality. The 2016 finite-ring article's
+arXiv deposit in2017 is not its publication year.
+
+## Concrete next scientific decision
+
+Compare the precision-fiber composition and static negative certificate against
+Menezes-Wu1997, Wei-Xu-Zou2016, Viglietta-Kachi2025, and Kantic-et-al2026 at the
+same fixed-target/minimal-period output contract. Determine whether the value is
+a new logical composition rule, a more economical certificate, or simply a useful
+implementation of established algebra. Select the strongest defensible result;
+do not broaden to arbitrary programs merely to avoid a negative novelty verdict.
+
+Then measure construction, witness size, independent verification and useful
+consumption against an appropriate source-aware classical method. Both sides
+receive the same factorization/order hints and model representation. Do not
+charge a competitor for full orbit enumeration when it has an algebraic route.
+
+No paper section, journal submission, release tag, external contact or paid
+computation is part of this checkpoint.
+
+
+## Continuation: source-aware audit and native scalar comparison
+
+See [the closer-prior audit](PRIOR_WORK_COMPARISON_02.md) and [the executed scalar comparator](scalar_comparison_v1/README.md). They supersede any suggestion that scalar huge-horizon examples establish difficult classical computation. The native comparison now covers 13,602 scalar decisions and 1,122 paired certificate cases; it does not close the native matrix-orbit or original-contribution obligations. Finite-ring lifting and separate extension-field processing have close prior art. The core proofs and finite evidence remain useful, but scientific completion and novelty remain unestablished. No manuscript text or venue claim is authorized by this update.
+
+
+## Positive-certificate simplification
+
+[Direct modular hit certificates](direct_modular_hits_v1/README.md) remove the unnecessary full precision chain for positive answers. The standard point-order witness works over any explicit residue ring with a checked inverse and needs no factorization of the modulus. A matched positive-proof comparison reduces the recorded 64-bit witness from 21,744 to 292 bytes. Native solving, proof assembly, and checking are separately costed. This repairs our implementation using established mathematics; it is not claimed to close the originality requirement. Complete negative evidence remains the role of the richer algebraic construction.

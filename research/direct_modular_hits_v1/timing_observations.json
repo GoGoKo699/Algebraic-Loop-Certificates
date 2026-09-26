@@ -1,0 +1,312 @@
+{
+  "cases": [
+    {
+      "assembly_ns": [
+        31327,
+        25197,
+        67179,
+        27250,
+        28271,
+        23354,
+        26559
+      ],
+      "checking_ns": [
+        166215,
+        183800,
+        175638,
+        165174,
+        169169,
+        165855,
+        166175
+      ],
+      "direct_bytes": 248,
+      "direct_certificate": {
+        "first": 32891,
+        "inverse_matrix": [
+          [
+            52429
+          ]
+        ],
+        "period": 65536,
+        "period_factors": [
+          [
+            2,
+            16
+          ]
+        ],
+        "prime_proofs": [
+          {
+            "factors": [],
+            "p": 2,
+            "witness": 1
+          }
+        ],
+        "problem_sha256": "bb0ba46dcf36c1bbd4e6f49799ea04d6fca1688cca05a3ae9343b0900bcaf8fb",
+        "schema": "alc.modular-hits.v1"
+      },
+      "first": 32891,
+      "layered_bytes": 5668,
+      "layered_checking_ns": [
+        5618042,
+        3624894,
+        3798550,
+        3663330,
+        3572557,
+        3680906,
+        3498688
+      ],
+      "layered_production_ns": [
+        2637858,
+        2660202,
+        2704397,
+        4660430,
+        2715153,
+        2930129,
+        2855960
+      ],
+      "layered_sha256": "94944b4bfd682124877baf7615565a75c9c2e866f2e3f60c071fea74be95e95e",
+      "median_assembly_ns": 27250,
+      "median_checking_ns": 166215,
+      "median_layered_checking_ns": 3663330,
+      "median_layered_production_ns": 2715153,
+      "median_native_ns": 80218,
+      "native_ns": [
+        87589,
+        79928,
+        79908,
+        80218,
+        80819,
+        72267,
+        139806
+      ],
+      "period": 65536,
+      "problem": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 65536,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          31495
+        ]
+      },
+      "repeats": 7,
+      "width": 16
+    },
+    {
+      "assembly_ns": [
+        39658,
+        30995,
+        33850,
+        45467,
+        35052,
+        28322,
+        34771
+      ],
+      "checking_ns": [
+        370345,
+        348273,
+        292851,
+        294343,
+        306803,
+        293293,
+        294344
+      ],
+      "direct_bytes": 263,
+      "direct_certificate": {
+        "first": 2147483771,
+        "inverse_matrix": [
+          [
+            3435973837
+          ]
+        ],
+        "period": 4294967296,
+        "period_factors": [
+          [
+            2,
+            32
+          ]
+        ],
+        "prime_proofs": [
+          {
+            "factors": [],
+            "p": 2,
+            "witness": 1
+          }
+        ],
+        "problem_sha256": "0fb52d90b82ba55ccd67fcae18492e462b160f4e68d0d4dfefe6b1b067d58c83",
+        "schema": "alc.modular-hits.v1"
+      },
+      "first": 2147483771,
+      "layered_bytes": 11027,
+      "layered_checking_ns": [
+        9666961,
+        8303010,
+        9046737,
+        8543234,
+        9688463,
+        10248468,
+        9280030
+      ],
+      "layered_production_ns": [
+        6002369,
+        6748599,
+        6017802,
+        5984863,
+        6065191,
+        5945815,
+        6096437
+      ],
+      "layered_sha256": "34a6dc580a412df2871c48e097827296fc28c373c0fcb3e4eb4fd89e178c20e5",
+      "median_assembly_ns": 34771,
+      "median_checking_ns": 294344,
+      "median_layered_checking_ns": 9280030,
+      "median_layered_production_ns": 6017802,
+      "median_native_ns": 198763,
+      "native_ns": [
+        193886,
+        201647,
+        195678,
+        193485,
+        212394,
+        198763,
+        287344
+      ],
+      "period": 4294967296,
+      "problem": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 4294967296,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          614071047
+        ]
+      },
+      "repeats": 7,
+      "width": 32
+    },
+    {
+      "assembly_ns": [
+        48021,
+        48011,
+        45528,
+        36414,
+        62823,
+        34751,
+        65878
+      ],
+      "checking_ns": [
+        551543,
+        638071,
+        585122,
+        777206,
+        562719,
+        540928,
+        564953
+      ],
+      "direct_bytes": 292,
+      "direct_certificate": {
+        "first": 9223372036854775931,
+        "inverse_matrix": [
+          [
+            14757395258967641293
+          ]
+        ],
+        "period": 18446744073709551616,
+        "period_factors": [
+          [
+            2,
+            64
+          ]
+        ],
+        "prime_proofs": [
+          {
+            "factors": [],
+            "p": 2,
+            "witness": 1
+          }
+        ],
+        "problem_sha256": "19de18237f51f67da69d03252eb0534c69fbaa65d143f39cf438faa6b219dbdb",
+        "schema": "alc.modular-hits.v1"
+      },
+      "first": 9223372036854775931,
+      "layered_bytes": 21744,
+      "layered_checking_ns": [
+        27780243,
+        26571571,
+        26377094,
+        25658976,
+        23507374,
+        24014251,
+        25177456
+      ],
+      "layered_production_ns": [
+        15185716,
+        15476045,
+        16086745,
+        15273736,
+        15655039,
+        16123810,
+        15968030
+      ],
+      "layered_sha256": "561155a753b9eaa58c9ea9e52ce4de7b1a9ad62d2bbeaa04e752cc2c4ba29f5a",
+      "median_assembly_ns": 48011,
+      "median_checking_ns": 564953,
+      "median_layered_checking_ns": 25658976,
+      "median_layered_production_ns": 15655039,
+      "median_native_ns": 739009,
+      "native_ns": [
+        683457,
+        842893,
+        745549,
+        682847,
+        739009,
+        672511,
+        749525
+      ],
+      "period": 18446744073709551616,
+      "problem": {
+        "initial": [
+          0
+        ],
+        "matrix": [
+          [
+            5
+          ]
+        ],
+        "modulus": 18446744073709551616,
+        "offset": [
+          1
+        ],
+        "schema": "alc.modular-problem.v1",
+        "target": [
+          7938025238596025095
+        ]
+      },
+      "repeats": 7,
+      "width": 64
+    }
+  ],
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "schema": 1,
+  "scope": "Same positive answer and independent-proof obligation; two different encodings and producers. Warm-process seven-repeat controls, not broad performance or novelty evidence. Native solve must be added to direct assembly and checking cost.",
+  "sympy": "1.14.0"
+}

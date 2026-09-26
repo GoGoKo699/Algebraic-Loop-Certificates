@@ -1,0 +1,89 @@
+{
+  "claims": [
+    {
+      "claim": "Every valid invertible affine prime-field point-orbit instance has polynomial-size yes/no evidence with a deterministic polynomial-time checker.",
+      "evidence": [
+        "THEORY.md#t1-main-statement",
+        "THEORY.md#t8-soundness-and-completeness-of-the-certificate-system",
+        "THEORY.md#t9-bit-size-and-checker-complexity"
+      ],
+      "id": "C1",
+      "qualification": "Not claimed novel; parameterized theoretical bound, not production default-limit universality.",
+      "status": "derived_mathematical_statement"
+    },
+    {
+      "claim": "The experimental exact checker handles repeated and mixed polynomial factors and distinguishes verified nonmembership from exhausted production.",
+      "evidence": [
+        "checker.py",
+        "algebra.py",
+        "expected.json.gz",
+        "check.py"
+      ],
+      "id": "C2",
+      "qualification": "No formal proof-assistant certification of the implementation.",
+      "status": "implemented_and_finitely_tested"
+    },
+    {
+      "claim": "The reference producer enumerates no matrix/vector trajectory.",
+      "evidence": [
+        "producer.py"
+      ],
+      "id": "C3",
+      "qualification": "It does perform potentially expensive trial factorization and field discrete-logarithm searches; no general polynomial-time producer claim.",
+      "status": "implemented"
+    },
+    {
+      "claim": "Positive outputs agree with the unchanged primary verifier.",
+      "evidence": [
+        "check.py",
+        "expected.json.gz"
+      ],
+      "id": "C4",
+      "qualification": "Finite compatibility evidence; production schema not modified.",
+      "status": "tested_for_2374_cases"
+    },
+    {
+      "claim": "Mathematical primitives agree with native exact-algebra routines on the recorded comparison.",
+      "evidence": [
+        "sympy_check.py",
+        "sympy_results.json"
+      ],
+      "id": "C5",
+      "qualification": "81 polynomial factorizations and 300 scalar cases only, not an end-to-end performance benchmark.",
+      "status": "native_sympy_comparison_executed"
+    },
+    {
+      "claim": "A publication-level contribution beyond known matrix-logarithm reductions is established.",
+      "evidence": [
+        "LITERATURE.md",
+        "RESEARCH_STATUS.md"
+      ],
+      "id": "C6",
+      "qualification": "Strong direct predecessor remains to be audited fully at equation level.",
+      "status": "not_established"
+    },
+    {
+      "claim": "A useful end-to-end advantage over strong classical analysis tools is established.",
+      "evidence": [
+        "RESEARCH_STATUS.md"
+      ],
+      "id": "C7",
+      "qualification": "No native full matrix-orbit or analyzer comparison; large horizons are not performance evidence.",
+      "status": "not_established"
+    },
+    {
+      "claim": "The research additions are integrated without changing the primary API.",
+      "evidence": [
+        "README.md",
+        "../RESEARCH_COMPLETION.md"
+      ],
+      "id": "C8",
+      "qualification": "Do not infer merge or CI success from this static scientific ledger.",
+      "status": "operational_status_recorded_in_git_and_delivery_receipt"
+    }
+  ],
+  "continuation": "Native scalar comparison and closer finite-ring prior work narrow the remaining contribution claim. See ../PRIOR_WORK_COMPARISON_02.md.",
+  "manuscript_status": "on_hold",
+  "schema": 1,
+  "scientific_completion": "not_complete"
+}
