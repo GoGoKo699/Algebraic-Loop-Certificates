@@ -1,0 +1,35 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    xoroshiro128++:scalar
+Output size, bits: 64
+Total physical RAM: 9967 MiB
+Free physical RAM:  7478 MiB
+LFSR period checker
+  malloc: nbytes = 16; ptr = 0x94734911010976
+  The PRNG is probably a LFSR
+  The maximal period to be verified: 2**128 - 1
+Beginning the period verification
+  LFSR transition matrix layout:
+    |????|
+    |????|
+    |????|
+    |.???|
+  A^period = I: passed
+  Verifying the A^(period/prime) = A^e <> I exponents
+  Exponent ( 127 bits): 5555555555555555.5555555555555555 OK
+  Exponent ( 126 bits): 3333333333333333.3333333333333333 OK
+  Exponent ( 124 bits): 0F0F0F0F0F0F0F0F.0F0F0F0F0F0F0F0F OK
+  Exponent ( 120 bits): 00FF00FF00FF00FF.00FF00FF00FF00FF OK
+  Exponent ( 119 bits): 00663D80FF99C27F.00663D80FF99C27F OK
+  Exponent ( 112 bits): 0000FFFF0000FFFF.0000FFFF0000FFFF OK
+  Exponent ( 110 bits): 00003D30F19CD100.FFFFC2CF0E632EFF OK
+  Exponent ( 106 bits): 00000280FFFFFD7F.00000280FFFFFD7F OK
+  Exponent (  83 bits): 0000000000042F00.FFFFFFFFFFFBD0FF OK
+The LFSR has a maximal period
+Characteristic polynomial:
+x^128 + x^117 + x^116 + x^112 + x^111 + x^109 + x^108 + x^107 + x^106 + x^103 + x^102 + x^101 + x^100 + x^97 + x^95 + x^94 + x^93 + x^92 + x^91 + x^86 + x^84 + x^82 + x^80 + x^79 + x^78 + x^76 + x^74 + x^73 + x^71 + x^70 + x^69 + x^66 + x^64 + x^63 + x^59 + x^58 + x^56 + x^55 + x^53 + x^51 + x^50 + x^49 + x^46 + x^45 + x^44 + x^38 + x^37 + x^36 + x^34 + x^33 + x^32 + x^31 + x^28 + x^26 + x^25 + x^24 + x^22 + x^21 + x^15 + x^13 + x^12 + x^7 + 1 | nterms = 63
+  0031BCF2F855D6E5.8DAE70779760B081
+  uint64_t char_poly[] = {0x8DAE70779760B081, 0x0031BCF2F855D6E5};
+Jump polynomial for the 2^64 jump:
+  0992CCAF6A6FCA05.2BD7A6A6E99C2DDC
+  uint64_t jump_poly[] = {0x2BD7A6A6E99C2DDC, 0x0992CCAF6A6FCA05};
+Time elapsed: 00:00:00

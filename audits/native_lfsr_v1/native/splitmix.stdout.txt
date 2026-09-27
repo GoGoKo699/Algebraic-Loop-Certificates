@@ -1,0 +1,10 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    SplitMix
+Output size, bits: 64
+Total physical RAM: 9967 MiB
+Free physical RAM:  7471 MiB
+LFSR period checker
+  malloc: nbytes = 8; ptr = 0x94427249866880
+  The PRNG is not a LFSR
+The verification cannot be applied to this PNG
+Time elapsed: 00:00:00

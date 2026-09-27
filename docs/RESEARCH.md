@@ -1,6 +1,16 @@
-# Research assessment and first contribution audit
+# Research assessment
 
-26 September 2026. The project has an executable certificate workflow. It does **not** yet have an established new research contribution, a fast general classical discrete-log solver, or an application benchmark showing an advantage over existing tools. Manuscript work is on hold.
+Updated 27 September 2026. The project has an executable certificate workflow. It does **not** yet have an established new research contribution, a fast general classical discrete-log solver, or an application benchmark showing an advantage over existing tools. Manuscript work is on hold.
+
+## Current decision
+
+The [constructive contribution assessment](../research/CONTRIBUTION_ASSESSMENT_08.md) supersedes the initial open comparison: a conventional character/Taylor route supplies the same complete source-recognition contract at comparable coarse polynomial bounds. The direct matrix-logarithm paper is now accessible and its relevant mathematics has been read. The engine is treated as a certifying implementation of established structure; the representation/guarantee comparison is not a native performance benchmark or an exhaustive historical priority finding.
+
+The [supplied-invariant gate](../research/VERIFICATION_GATE_09.md) then tested a concrete verification task. Native cvc5 solved all ten valid invariants directly, so that corpus supplies no capability gap requiring the orbit engine. Finite-field proof production also has direct predecessors. No matched timing or proof-assistant replay was performed. The next task must earn a useful cost or assurance improvement for an independently specified consumer, before more engine development.
+
+The following baseline records the original production implementation. Experimental complete certificates, source recognizers, query boundaries and independent recognition audits are indexed in [research/README.md](../research/README.md); they do not change that production API.
+
+The [next existing-workload pass](../research/NATIVE_WORKLOAD_GATE_10.md) executes a native LFSR analyzer and checks a smaller odd-order argument against 23 published AIGER safety circuits. This gives a concrete source-to-safety integration candidate; source-aware squarefree-polynomial reasoning reaches the same algebraic decision, so originality remains unresolved.
 
 ## Current separation
 
@@ -27,8 +37,8 @@ The producer remains deliberately elementary. A better producer must be compared
 
 ## Next substantive research question
 
-Select one certificate or analysis capability that existing approaches do not already supply as cheaply or as generally. Candidate directions include a carefully scoped negative certificate or a compositional consumer, but neither is an established result or preapproved performance claim. Compare the actual prior algorithms and identify a consumer before broadening the supported semantics.
+Identify an existing verification workload or documented requirement, specify its natural input/output contract, and execute the strongest relevant baseline. State in advance what measurable cost or assurance improvement would count as success and what result would end the attempt. Complete negative certificates and compositional consumers already exist in the research modules; adding them again or changing the algebraic format does not resolve the contribution gap.
 
 Before claiming practical benefit, measure the entire chain: extraction of the recurrence, production of the summary, proof size, verification, and downstream analysis. Both sides may exploit invariants, decompositions, smooth orders, cached algebra, and alternative formulations. Do not change the intended task to make those methods fail.
 
-The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result, and its venue will be chosen only after the contribution is identified.
+The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result.

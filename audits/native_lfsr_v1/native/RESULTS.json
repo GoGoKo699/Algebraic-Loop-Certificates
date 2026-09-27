@@ -1,0 +1,171 @@
+{
+  "schema": "alc-native-lfsr-gate-v1",
+  "created_utc": "2026-09-27T05:12:42.594455+00:00",
+  "source_url": "https://github.com/alvoskov/SmokeRand",
+  "source_commit": "20f3adab3121b4205a12f06746055551e6504648",
+  "source_tree": "f65422e6b85922f2b8a297a5e12414d3ce640554",
+  "tracked_source_clean": true,
+  "source_path": "/workspace/scratch/9781207fd51b/SmokeRand",
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "make_version": "GNU Make 4.3",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "build_command": [
+    "make",
+    "-f",
+    "Makefile.gnu",
+    "-j2",
+    "bin/smokerand",
+    "bin/generators/sfc64.so",
+    "bin/generators/shr3.so",
+    "bin/generators/splitmix.so",
+    "bin/generators/xoroshiro128pp.so",
+    "bin/generators/xorrot32.so",
+    "bin/generators/xoshiro256pp.so"
+  ],
+  "build_time_measured": false,
+  "build_note": "The first upstream build completed before this runner; its stdout/stderr were preserved separately. No compile-time speed claim.",
+  "artifact_sha256": {
+    "bin/smokerand": "c196bcab09bb85fba9cd79dea45cebd16047eb7f2d3f3afc63003eab5d8f5d51",
+    "bin/generators/sfc64.so": "a2421595ef940ff37e0c4a13af7b808ba52de8a324851ba01c5c4dd5aea0aaea",
+    "bin/generators/shr3.so": "9cbf664972025dcb2e595a6c27c8d61bc83c5f6e36136567792b042dab5015ff",
+    "bin/generators/splitmix.so": "25063c2f4cdf1f881176b0a60a2fd44c90e67ccdeb370631c358dd6c15f7bd62",
+    "bin/generators/xoroshiro128pp.so": "9d91a6e6658be0af17fe1f19b21f3eafac1e10b44233368b181f5abd390b0472",
+    "bin/generators/xorrot32.so": "ca21c69ef3aab5249282a528140796b470ba00424bad500190adbad9d54e3506",
+    "bin/generators/xoshiro256pp.so": "66c87e40bfc96172a72f9997b08eb68e270c0537948d20afc6c8acc92b52d172"
+  },
+  "timeout_seconds_per_case": 60,
+  "timing_scope": "Single process wall time including upstream initialization, probing, algebra, and output; not a matched ALC timing comparison.",
+  "cases": [
+    {
+      "name": "shr3",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/shr3.so"
+      ],
+      "expected_upstream_class": "maximal",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.08500111200009997,
+      "stdout_file": "shr3.stdout.txt",
+      "stdout_sha256": "8f3b23ddaae3ecaabec4a15d78a0c8bb34a7398fc62e46aee3b11c8924edc550",
+      "stderr_file": "shr3.stderr.txt",
+      "stderr_sha256": "2340355b2bc3732256b5fc6bbda2d5b7b03de3ad88f5189b1e50b89a83f968cb"
+    },
+    {
+      "name": "xoroshiro128pp",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/xoroshiro128pp.so"
+      ],
+      "expected_upstream_class": "maximal",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.2157757759996457,
+      "stdout_file": "xoroshiro128pp.stdout.txt",
+      "stdout_sha256": "9d32fc3c752c3a05093e6951df837697885bee181fa63ddebe177629841d48b3",
+      "stderr_file": "xoroshiro128pp.stderr.txt",
+      "stderr_sha256": "feed6a33a5254bd18661a6cd899444dba3078faa6d5ab1b1eb7de6d4a6ca2b06"
+    },
+    {
+      "name": "xoshiro256pp",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/xoshiro256pp.so"
+      ],
+      "expected_upstream_class": "maximal",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.20216573899961077,
+      "stdout_file": "xoshiro256pp.stdout.txt",
+      "stdout_sha256": "8ce31f9186136c60c0a48166ffed5acdc2d06c2b576049784b98d4e41297765e",
+      "stderr_file": "xoshiro256pp.stderr.txt",
+      "stderr_sha256": "ebe95fa8927fc900fb483c5fea1d78101500e143427802a388a42f2492fb6edb"
+    },
+    {
+      "name": "xorrot32_default",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/xorrot32.so"
+      ],
+      "expected_upstream_class": "maximal",
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.08377488900077878,
+      "stdout_file": "xorrot32_default.stdout.txt",
+      "stdout_sha256": "54b5bcb036d07af70053feaea0fbb8416943cd51a89e62c0a4921fff141a468f",
+      "stderr_file": "xorrot32_default.stderr.txt",
+      "stderr_sha256": "5a7261a26a630459e3e0be27ae6a075a122e55f5b8a757c62ecca3f2445fcb4a"
+    },
+    {
+      "name": "xorrot32_bad1",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/xorrot32.so",
+        "--param=bad1"
+      ],
+      "expected_upstream_class": "not_maximal",
+      "returncode": 1,
+      "timed_out": false,
+      "elapsed_seconds": 0.08676831999946444,
+      "stdout_file": "xorrot32_bad1.stdout.txt",
+      "stdout_sha256": "3f769147265c85a4de7c198407a82196b12e4f467e457ca2ebfa1617ab7d2bec",
+      "stderr_file": "xorrot32_bad1.stderr.txt",
+      "stderr_sha256": "d534d78b5872b99923dacc52fa9beb88b7485ff89303e54754ea0b065351ccd9"
+    },
+    {
+      "name": "xorrot32_bad2",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/xorrot32.so",
+        "--param=bad2"
+      ],
+      "expected_upstream_class": "not_maximal",
+      "returncode": 1,
+      "timed_out": false,
+      "elapsed_seconds": 0.0850276830005896,
+      "stdout_file": "xorrot32_bad2.stdout.txt",
+      "stdout_sha256": "39bd16f8f26ed75281ff57d3c4d16cb6eb7f127b343c4941f31f43af378850f1",
+      "stderr_file": "xorrot32_bad2.stderr.txt",
+      "stderr_sha256": "b1860cbb22d9f492b69a713ffc8a569e214b86489c8f4754325546652861df37"
+    },
+    {
+      "name": "splitmix",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/splitmix.so"
+      ],
+      "expected_upstream_class": "unsupported",
+      "returncode": 2,
+      "timed_out": false,
+      "elapsed_seconds": 0.11737504200027615,
+      "stdout_file": "splitmix.stdout.txt",
+      "stdout_sha256": "6246ba6ca994bd54a726cd3fe700e1a00d205be3331a8de644d87f9d6e422f5a",
+      "stderr_file": "splitmix.stderr.txt",
+      "stderr_sha256": "a2ce19c65071121d12a06732f7439e3207b8e116d2d6a9b5c88e7529ba002ef0"
+    },
+    {
+      "name": "sfc64",
+      "command": [
+        "./smokerand",
+        "lfsr",
+        "generators/sfc64.so"
+      ],
+      "expected_upstream_class": "unsupported",
+      "returncode": 2,
+      "timed_out": false,
+      "elapsed_seconds": 0.11365616300099646,
+      "stdout_file": "sfc64.stdout.txt",
+      "stdout_sha256": "3c7d423baeb5e1a577cf4f967794de883b184e7e213fd78beeb40d6c4f2ca35b",
+      "stderr_file": "sfc64.stderr.txt",
+      "stderr_sha256": "e4078cf1823eecf5fa2cb32f1e40fbcd231c7d5d4f316174bc9646aac3bf9ce4"
+    }
+  ],
+  "completed_utc": "2026-09-27T05:12:43.593486+00:00"
+}

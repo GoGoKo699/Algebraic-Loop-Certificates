@@ -1,0 +1,12 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    SFC64
+Output size, bits: 64
+Total physical RAM: 9967 MiB
+Free physical RAM:  7471 MiB
+LFSR period checker
+  malloc: nbytes = 32; ptr = 0x94670237741504
+  The PRNG has constants and/or counters inside its state. Automated
+  period deduction is impossible and may cause memory corruption
+  and/or segmentation fault.
+The verification cannot be applied to this PNG
+Time elapsed: 00:00:00

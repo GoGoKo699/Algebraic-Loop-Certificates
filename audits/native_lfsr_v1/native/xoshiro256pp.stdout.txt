@@ -1,0 +1,41 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    xoshiro256++
+Output size, bits: 64
+Total physical RAM: 9967 MiB
+Free physical RAM:  7471 MiB
+LFSR period checker
+  malloc: nbytes = 32; ptr = 0x94860404089312
+  The PRNG is probably a LFSR
+  The maximal period to be verified: 2**256 - 1
+Beginning the period verification
+  LFSR transition matrix layout:
+    |I.I.I...|
+    |.I.I.I..|
+    |I.I.????|
+    |.I.I.???|
+    |..I.I...|
+    |...I.I..|
+    |I.....??|
+    |.I....??|
+  A^period = I: passed
+  Verifying the A^(period/prime) = A^e <> I exponents
+  Exponent ( 255 bits): 5555555555555555.5555555555555555.5555555555555555.5555555555555555 OK
+  Exponent ( 254 bits): 3333333333333333.3333333333333333.3333333333333333.3333333333333333 OK
+  Exponent ( 252 bits): 0F0F0F0F0F0F0F0F.0F0F0F0F0F0F0F0F.0F0F0F0F0F0F0F0F.0F0F0F0F0F0F0F0F OK
+  Exponent ( 248 bits): 00FF00FF00FF00FF.00FF00FF00FF00FF.00FF00FF00FF00FF.00FF00FF00FF00FF OK
+  Exponent ( 247 bits): 00663D80FF99C27F.00663D80FF99C27F.00663D80FF99C27F.00663D80FF99C27F OK
+  Exponent ( 240 bits): 0000FFFF0000FFFF.0000FFFF0000FFFF.0000FFFF0000FFFF.0000FFFF0000FFFF OK
+  Exponent ( 238 bits): 00003D30F19CD100.FFFFC2CF0E632EFF.00003D30F19CD100.FFFFC2CF0E632EFF OK
+  Exponent ( 234 bits): 00000280FFFFFD7F.00000280FFFFFD7F.00000280FFFFFD7F.00000280FFFFFD7F OK
+  Exponent ( 211 bits): 0000000000042F00.FFFFFFFFFFFBD0FF.0000000000042F00.FFFFFFFFFFFBD0FF OK
+  Exponent ( 201 bits): 0000000000000135.40775B48CC32BA00.FFFFFFFFFFFFFECA.BF88A4B733CD45FF OK
+  Exponent ( 184 bits): 00D3EAFC3AF14600.FFFFFFFFFFFFFFFF.FF2C1503C50EB9FF OK
+The LFSR has a maximal period
+Characteristic polynomial:
+x^256 + x^241 + x^240 + x^239 + x^238 + x^229 + x^228 + x^227 + x^226 + x^221 + x^220 + x^219 + x^218 + x^217 + x^216 + x^213 + x^212 + x^211 + x^210 + x^209 + x^207 + x^206 + x^203 + x^201 + x^200 + x^196 + x^195 + x^192 + x^186 + x^183 + x^181 + x^180 + x^178 + x^175 + x^174 + x^173 + x^171 + x^170 + x^168 + x^167 + x^166 + x^163 + x^162 + x^161 + x^160 + x^157 + x^154 + x^153 + x^149 + x^146 + x^144 + x^143 + x^140 + x^139 + x^138 + x^137 + x^136 + x^135 + x^130 + x^128 + x^121 + x^119 + x^101 + x^99 + x^97 + x^96 + x^95 + x^94 + x^91 + x^90 + x^89 + x^87 + x^86 + x^85 + x^84 + x^83 + x^82 + x^80 + x^76 + x^75 + x^73 + x^70 + x^68 + x^67 + x^66 + x^65 + x^63 + x^60 + x^59 + x^58 + x^56 + x^52 + x^48 + x^46 + x^45 + x^43 + x^42 + x^41 + x^40 + x^37 + x^35 + x^33 + x^32 + x^31 + x^29 + x^28 + x^23 + x^22 + x^21 + x^20 + x^15 + x^14 + x^13 + x^12 + 1 | nterms = 115
+  0003C03C3F3ECB19.04B4EDCF26259F85.0280002BCEFD1A5E.9D116F2BB0F0F001
+  uint64_t char_poly[] = {0x9D116F2BB0F0F001, 0x0280002BCEFD1A5E, 0x04B4EDCF26259F85, 0x0003C03C3F3ECB19};
+Jump polynomial for the 2^128 jump:
+  39ABDC4529B1661C.A9582618E03FC9AA.D5A61266F0C9392C.180EC6D33CFD0ABA
+  uint64_t jump_poly[] = {0x180EC6D33CFD0ABA, 0xD5A61266F0C9392C, 0xA9582618E03FC9AA, 0x39ABDC4529B1661C};
+Time elapsed: 00:00:01

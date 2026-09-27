@@ -1,0 +1,5 @@
+======== ABC command line "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-02-0x3.aig; pdr -S 91648253; print_status"
+Invariant F[5] : 10 clauses with 5 flops (out of 5) (cex = 0, ave = 4.62)
+Verification of invariant with 10 clauses was successful.  Time =     0.00 sec
+Property proved.  Time =     0.02 sec
+Status = 1  Frames = 6   Cex is not defined.

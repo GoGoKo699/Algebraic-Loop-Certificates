@@ -1,0 +1,1 @@
+No ABC process ran in the first harness attempt. Launching /usr/bin/time failed with FileNotFoundError before exec; /usr/bin/time is not installed. Conversion output produced before this failure is retained in preflight-conversion/. The runner then adopted an external Python watchdog and wait4 resource measurement before the first actual solver run.

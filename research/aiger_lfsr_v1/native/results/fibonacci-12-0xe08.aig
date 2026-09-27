@@ -1,0 +1,87 @@
+aig 193 12 25 1 156
+121
+127
+133
+139
+145
+151
+157
+163
+169
+175
+181
+187
+191
+195
+199
+203
+207
+211
+215
+219
+223
+227
+231
+235
+356
+387
+75MKKI_45<<@@]F["D%Y(B+W.@1U4>7S:<=Q@:COF8IML6OKR4UIX2\.Z`,Fd*Dh(Bl&@p$>t"<x :|8Ä6Ñ4à2ß•Ωªªπ¿¡ƒ≈ ÀŒœ´CÆAÚÛ¯˘¸˝ÑÖàâéèíì>]ÅóñÜøΩ¸Y””—}i0 input_0
+i1 input_1
+i2 input_2
+i3 input_3
+i4 input_4
+i5 input_5
+i6 input_6
+i7 input_7
+i8 input_8
+i9 input_9
+i10 input_10
+i11 input_11
+l0 register_bit_0
+l1 register_bit_1
+l2 register_bit_2
+l3 register_bit_3
+l4 register_bit_4
+l5 register_bit_5
+l6 register_bit_6
+l7 register_bit_7
+l8 register_bit_8
+l9 register_bit_9
+l10 register_bit_10
+l11 register_bit_11
+l12 copy_bit_0
+l13 copy_bit_1
+l14 copy_bit_2
+l15 copy_bit_3
+l16 copy_bit_4
+l17 copy_bit_5
+l18 copy_bit_6
+l19 copy_bit_7
+l20 copy_bit_8
+l21 copy_bit_9
+l22 copy_bit_10
+l23 copy_bit_11
+l24 counter_bit_0
+o0 bad_state_detector
+c
+--------------------------------------------------------------------------------
+This circuit computes the period (modulo 2) of a Fibonacci linear feedback shift
+register with 12 bits and taps 0xE08, corresponding to the feedback polynomial
+x^12 + x^11 + x^10 + x^4 + 1 with period 4,095.
+---
+The circuit has 12 input bits. If any of them are set, the computation is
+(re)started: the value of the input bits is copied into the 12-bit LFSR and into
+a second 12-bit register that acts as an immutable copy of the initial value.
+Otherwise, the register performs its regular operation and increments the period
+(modulo 2) in each step. Once the register value reaches the initial value,
+which is stored in the second register, the period is reset to zero. Setting any
+input to one starts a new computation.
+---
+The output bit is set if one of the following conditions is true, neither of
+which is possible:
+* the register value becomes zero during its regular operation, or
+* the register value reaches the initial value again, but the period is even.
+--------------------------------------------------------------------------------
+This file is part of https://github.com/tniessen/aiger-safety-properties.
+---
+The output variable is UNSATISFIABLE.

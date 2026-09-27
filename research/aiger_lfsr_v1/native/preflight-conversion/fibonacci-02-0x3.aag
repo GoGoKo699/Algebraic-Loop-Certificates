@@ -1,0 +1,69 @@
+aag 37 2 5 1 30
+2
+4
+6 29
+8 35
+10 39
+12 43
+14 64
+75
+16 5 3
+18 17 2
+20 8 7
+22 9 6
+24 23 21
+26 25 16
+28 27 19
+30 17 4
+32 16 6
+34 33 31
+36 16 10
+38 37 19
+40 16 12
+42 41 31
+44 13 11
+46 25 10
+48 24 11
+50 49 47
+52 12 6
+54 13 7
+56 55 53
+58 57 51
+60 58 45
+62 61 16
+64 62 15
+66 60 14
+68 66 16
+70 24 7
+72 70 45
+74 73 69
+i0 input_0
+i1 input_1
+l0 register_bit_0
+l1 register_bit_1
+l2 copy_bit_0
+l3 copy_bit_1
+l4 counter_bit_0
+o0 bad_state_detector
+c
+--------------------------------------------------------------------------------
+This circuit computes the period (modulo 2) of a Fibonacci linear feedback shift
+register with 2 bits and taps 0x3, corresponding to the feedback polynomial
+x^2 + x + 1 with period 3.
+---
+The circuit has 2 input bits. If any of them are set, the computation is
+(re)started: the value of the input bits is copied into the 2-bit LFSR and into
+a second 2-bit register that acts as an immutable copy of the initial value.
+Otherwise, the register performs its regular operation and increments the period
+(modulo 2) in each step. Once the register value reaches the initial value,
+which is stored in the second register, the period is reset to zero. Setting any
+input to one starts a new computation.
+---
+The output bit is set if one of the following conditions is true, neither of
+which is possible:
+* the register value becomes zero during its regular operation, or
+* the register value reaches the initial value again, but the period is even.
+--------------------------------------------------------------------------------
+This file is part of https://github.com/tniessen/aiger-safety-properties.
+---
+The output variable is UNSATISFIABLE.

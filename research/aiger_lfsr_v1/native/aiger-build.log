@@ -1,0 +1,3 @@
+gcc -O3 -DNDEBUG -c aiger.c
+gcc -O3 -DNDEBUG -c aigtoaig.c
+gcc -O3 -DNDEBUG -o aigtoaig aigtoaig.o aiger.o

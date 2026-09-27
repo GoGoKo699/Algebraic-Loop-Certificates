@@ -1,0 +1,193 @@
+{
+  "upstream_files_verified": 25,
+  "circuits": [
+    {
+      "file": "fibonacci-02-0x3.aag",
+      "accepted": true,
+      "bits": 2,
+      "odd_exponent": 3,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-03-0x6.aag",
+      "accepted": true,
+      "bits": 3,
+      "odd_exponent": 7,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-04-0xc.aag",
+      "accepted": true,
+      "bits": 4,
+      "odd_exponent": 15,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-05-0x14.aag",
+      "accepted": true,
+      "bits": 5,
+      "odd_exponent": 31,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-06-0x30.aag",
+      "accepted": true,
+      "bits": 6,
+      "odd_exponent": 63,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-07-0x60.aag",
+      "accepted": true,
+      "bits": 7,
+      "odd_exponent": 127,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-08-0xb8.aag",
+      "accepted": true,
+      "bits": 8,
+      "odd_exponent": 255,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-09-0x110.aag",
+      "accepted": true,
+      "bits": 9,
+      "odd_exponent": 511,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-10-0x240.aag",
+      "accepted": true,
+      "bits": 10,
+      "odd_exponent": 1023,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-11-0x500.aag",
+      "accepted": true,
+      "bits": 11,
+      "odd_exponent": 2047,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-12-0xe08.aag",
+      "accepted": true,
+      "bits": 12,
+      "odd_exponent": 4095,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-13-0x1c80.aag",
+      "accepted": true,
+      "bits": 13,
+      "odd_exponent": 8191,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-14-0x3802.aag",
+      "accepted": true,
+      "bits": 14,
+      "odd_exponent": 16383,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-15-0x6000.aag",
+      "accepted": true,
+      "bits": 15,
+      "odd_exponent": 32767,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-16-0xd008.aag",
+      "accepted": true,
+      "bits": 16,
+      "odd_exponent": 65535,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-17-0x12000.aag",
+      "accepted": true,
+      "bits": 17,
+      "odd_exponent": 131071,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-18-0x20400.aag",
+      "accepted": true,
+      "bits": 18,
+      "odd_exponent": 262143,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-19-0x72000.aag",
+      "accepted": true,
+      "bits": 19,
+      "odd_exponent": 524287,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-20-0x90000.aag",
+      "accepted": true,
+      "bits": 20,
+      "odd_exponent": 1048575,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-21-0x140000.aag",
+      "accepted": true,
+      "bits": 21,
+      "odd_exponent": 2097151,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-22-0x300000.aag",
+      "accepted": true,
+      "bits": 22,
+      "odd_exponent": 4194303,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-23-0x420000.aag",
+      "accepted": true,
+      "bits": 23,
+      "odd_exponent": 8388607,
+      "squarefree_comparator": true
+    },
+    {
+      "file": "fibonacci-24-0xe10000.aag",
+      "accepted": true,
+      "bits": 24,
+      "odd_exponent": 16777215,
+      "squarefree_comparator": true
+    }
+  ],
+  "raw_transition_checks": 9344,
+  "all_small_binary_matrices": 530,
+  "small_companion_comparisons": 60,
+  "counterfeit_rejections": 87,
+  "unsafe_mutations": [
+    {
+      "name": "always_bad",
+      "rejected": true,
+      "raw_counterexample_found": true
+    },
+    {
+      "name": "counter_forced_one",
+      "rejected": true,
+      "raw_counterexample_found": true
+    },
+    {
+      "name": "nonzero_initial_state",
+      "rejected": true,
+      "raw_counterexample_found": false
+    },
+    {
+      "name": "zero_first_latch",
+      "rejected": true,
+      "raw_counterexample_found": true
+    }
+  ],
+  "identity_and_swap_controls": true
+}

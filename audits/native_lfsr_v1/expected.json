@@ -1,0 +1,318 @@
+{
+  "cases": [
+    {
+      "accepted_maximal_period": true,
+      "candidate_bytes": 2603,
+      "candidate_sha256": "57d2b14bb344dcdf90a4b5e809fbd7b65e58a0e51b3250defd086fe6031cf190",
+      "case": "shr3",
+      "checker_counts": {
+        "inverse_products": 2,
+        "matrix_squares": 155,
+        "matrix_vector_products": 112,
+        "modular_power_checks": 10,
+        "power_checks": 7,
+        "prime_records": 6
+      },
+      "columns": [
+        270369,
+        540738,
+        1081476,
+        2162952,
+        4325937,
+        8651874,
+        17303748,
+        34607496,
+        69214992,
+        138429984,
+        276859968,
+        553719936,
+        1107439872,
+        2214879744,
+        134792192,
+        269584384,
+        539168768,
+        1078337569,
+        2156675138,
+        17301636,
+        34603272,
+        69206544,
+        138413088,
+        276826176,
+        553652352,
+        1107304704,
+        2214609408,
+        134251520,
+        268503040,
+        537006080,
+        1074012160,
+        2148024320
+      ],
+      "mutations": {
+        "first": "rejected",
+        "problem_sha256": "rejected"
+      },
+      "negative_witness": null,
+      "problem_sha256": "024fed2af6067af8eedeb8f7991688aa6080540813d54dbe5395acffa984678e",
+      "rejection": null,
+      "return_controls": [
+        {
+          "exponent": 4294967295,
+          "state": 1
+        },
+        {
+          "exponent": 1431655765,
+          "state": 3335786257
+        },
+        {
+          "exponent": 858993459,
+          "state": 299503798
+        },
+        {
+          "exponent": 252645135,
+          "state": 914354430
+        },
+        {
+          "exponent": 16711935,
+          "state": 4155664621
+        },
+        {
+          "exponent": 65535,
+          "state": 1691782510
+        }
+      ]
+    },
+    {
+      "accepted_maximal_period": true,
+      "candidate_bytes": 2603,
+      "candidate_sha256": "c6a59766816787ff949951d8d8c1bcc1ea2ab533d047f64e3ac7fe3f0994c502",
+      "case": "xorrot32",
+      "checker_counts": {
+        "inverse_products": 2,
+        "matrix_squares": 155,
+        "matrix_vector_products": 112,
+        "modular_power_checks": 10,
+        "power_checks": 7,
+        "prime_records": 6
+      },
+      "columns": [
+        402654723,
+        805309446,
+        1610618892,
+        3221237784,
+        2147508273,
+        49251,
+        98502,
+        197004,
+        394008,
+        788016,
+        1576032,
+        3152064,
+        6304128,
+        12608256,
+        25216512,
+        50433024,
+        100866048,
+        201732096,
+        403464192,
+        806928384,
+        1613856768,
+        3227713536,
+        2160459777,
+        25952259,
+        51904518,
+        103809036,
+        207618072,
+        415236144,
+        830472288,
+        1660944576,
+        3321889152,
+        2214592768
+      ],
+      "mutations": {
+        "first": "rejected",
+        "problem_sha256": "rejected"
+      },
+      "negative_witness": null,
+      "problem_sha256": "e6af7135bbcab5b3630de21178aa327d93274ce87b39505075bf4c6cb411f90d",
+      "rejection": null,
+      "return_controls": [
+        {
+          "exponent": 4294967295,
+          "state": 1
+        },
+        {
+          "exponent": 1431655765,
+          "state": 3241559796
+        },
+        {
+          "exponent": 858993459,
+          "state": 1280851401
+        },
+        {
+          "exponent": 252645135,
+          "state": 3289109155
+        },
+        {
+          "exponent": 16711935,
+          "state": 837307483
+        },
+        {
+          "exponent": 65535,
+          "state": 855218316
+        }
+      ]
+    },
+    {
+      "accepted_maximal_period": false,
+      "candidate_bytes": 2603,
+      "candidate_sha256": "83a3b04f2e0892c198ecaeb783cf79beef78fd0c520c9b84fbb8627aef534388",
+      "case": "xorrot32_bad1",
+      "checker_counts": null,
+      "columns": [
+        671091205,
+        1342182410,
+        2684364820,
+        1073762345,
+        2147524690,
+        82085,
+        164170,
+        328340,
+        656680,
+        1313360,
+        2626720,
+        5253440,
+        10506880,
+        21013760,
+        42027520,
+        84055040,
+        168110080,
+        336220160,
+        672440320,
+        1344880640,
+        2689761280,
+        1084555265,
+        2169110530,
+        43253765,
+        86507530,
+        173015060,
+        346030120,
+        692060240,
+        1384120480,
+        2768240960,
+        1107296384,
+        2214592768
+      ],
+      "mutations": {},
+      "negative_witness": {
+        "exponent": 4294967295,
+        "kind": "failed_full_return",
+        "state": 1166829039
+      },
+      "problem_sha256": "0e64eb26767101e889ab9ac2de028363a36ee817dd3cd5b0182620723c6deab4",
+      "rejection": "claimed period does not return to the initial state",
+      "return_controls": [
+        {
+          "exponent": 4294967295,
+          "state": 1166829039
+        },
+        {
+          "exponent": 1431655765,
+          "state": 1166829039
+        },
+        {
+          "exponent": 858993459,
+          "state": 1456109315
+        },
+        {
+          "exponent": 252645135,
+          "state": 2422244768
+        },
+        {
+          "exponent": 16711935,
+          "state": 680890924
+        },
+        {
+          "exponent": 65535,
+          "state": 1166829039
+        }
+      ]
+    },
+    {
+      "accepted_maximal_period": false,
+      "candidate_bytes": 2603,
+      "candidate_sha256": "3c5501b1fc1748156ea2a67a4d58441753d21359e14b97713de526f3c7b493ca",
+      "case": "xorrot32_bad2",
+      "checker_counts": null,
+      "columns": [
+        25166019,
+        50332038,
+        100664076,
+        201328152,
+        402656304,
+        805312608,
+        1610625216,
+        3221250432,
+        2147533569,
+        99843,
+        199686,
+        399372,
+        798744,
+        1597488,
+        3194976,
+        6389952,
+        12779904,
+        25559808,
+        51119616,
+        102239232,
+        204478464,
+        408956928,
+        817913856,
+        1635827712,
+        3271655424,
+        2248343553,
+        201719811,
+        403439622,
+        806879244,
+        1613758488,
+        3227516976,
+        2151677984
+      ],
+      "mutations": {},
+      "negative_witness": {
+        "exponent": 858993459,
+        "kind": "earlier_return",
+        "state": 1
+      },
+      "problem_sha256": "7d60a778e0f43548bc9dcdf1b8ded0001782ddbd4bd3dd934198e67ae03c80be",
+      "rejection": "claimed period is not the least period",
+      "return_controls": [
+        {
+          "exponent": 4294967295,
+          "state": 1
+        },
+        {
+          "exponent": 1431655765,
+          "state": 770050837
+        },
+        {
+          "exponent": 858993459,
+          "state": 1
+        },
+        {
+          "exponent": 252645135,
+          "state": 3111382731
+        },
+        {
+          "exponent": 16711935,
+          "state": 1509866508
+        },
+        {
+          "exponent": 65535,
+          "state": 4253976386
+        }
+      ]
+    }
+  ],
+  "period_candidate": 4294967295,
+  "schema": 1
+}

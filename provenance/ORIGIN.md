@@ -24,4 +24,14 @@ The current Python package is a newly written implementation of the mathematical
 
 ## External material
 
-No third-party solver code or dataset is copied. The implementation uses the Python standard library. Primary mathematical sources and their limits are listed in [the research assessment](../docs/RESEARCH.md). Merely citing the Archive of Formal Proofs does not transfer its verification to our Python code.
+The bootstrap copied no third-party solver code or dataset. The later
+[AIGER workload](../research/aiger_lfsr_v1/README.md) preserves 23 original
+MIT-licensed benchmark circuits, the upstream README and its separate license,
+with pinned commit and per-file Git blob hashes. That dataset's license and
+attribution are retained under its own directory; the root license is unchanged.
+Native SmokeRand, ABC and AIGER solver/converter sources and executables are not
+vendored. Their commands, hashes and observed outputs are recorded separately.
+The local checker implementations use the Python standard library. Primary
+mathematical sources and their limits are listed in
+[the research assessment](../docs/RESEARCH.md). Merely citing the Archive of
+Formal Proofs does not transfer its verification to our Python code.

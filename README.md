@@ -10,7 +10,7 @@ $$
 
 This project separates **finding that description**, **checking its proof**, and **using it**. A producer may be slow or untrusted. The checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
-**Status:** working research prototype, not a new fast classical orbit algorithm, a quantum-advantage result, or a production program verifier. The certificate ingredients are established mathematics. Research novelty and a consequential advantage over existing analysis tools remain open. Manuscript preparation is on hold; no journal is selected for this spinoff.
+**Status:** working research prototype, not a new fast classical orbit algorithm, a quantum-advantage result, or a production program verifier. The [current contribution assessment](research/CONTRIBUTION_ASSESSMENT_08.md) treats the algebraic engine as a certifying implementation of established structure. A [native-verifier gate](research/VERIFICATION_GATE_09.md) found no capability gap for the tested supplied-invariant task. A [new circuit-integration result](research/NATIVE_WORKLOAD_GATE_10.md) checks an odd-order safety argument against 23 published AIGER circuits, including their reseeding logic. Research originality and a consequential advantage over source-aware alternatives remain unestablished. Manuscript preparation is on hold.
 
 ## Try a complete example
 
@@ -40,15 +40,18 @@ The producer uses bounded classical enumeration and trial division. It refuses t
 | [Mathematical specification and proof](docs/SPECIFICATION.md) | Exact domain, complete positive-hit theorem, and the role of primality proofs |
 | [Certificate and command-line interface](docs/FORMAT.md) | Trusted input, untrusted certificate, validation rules, exit codes, and limits |
 | [Research assessment](docs/RESEARCH.md) | Prior work, current contribution boundary, and the next substantive research question |
+| [Research modules and latest decisions](research/README.md) | Experimental complete certificates, reusable recognizers, comparison audits, and the failed application-benefit gate |
 | [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
 | [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
 | [Current work order](work_orders/CURRENT.md) | Scope for the next research session |
 
 ## Supported now
 
-The executable implementation covers invertible linear and affine maps `x -> A x + c` over **prime fields** `F_p`, with a supplied initial state and a **full-state target**. It checks the modulus by a Lucas-Pratt proof, matrix invertibility by an inverse witness, and the least point period using a complete proved-prime factorization. The certificate is bound to a separately supplied canonical problem document.
+The production `alc/` implementation covers invertible linear and affine maps `x -> A x + c` over **prime fields** `F_p`, with a supplied initial state and a **full-state target**. It checks the modulus by a Lucas-Pratt proof, matrix invertibility by an inverse witness, and the least point period using a complete proved-prime factorization. The certificate is bound to a separately supplied canonical problem document.
 
 Extension fields, composite-modulus arithmetic, machine-word overflow, singular maps with transient tails, arbitrary guards, and general negative certificates are **not implemented**. The mathematics can be discussed more broadly than this implementation; unsupported encodings are rejected, not silently reinterpreted.
+
+That boundary applies to the production `alc/` API. Separate [research modules](research/README.md) implement complete point-orbit certificates and reusable source recognizers, including scoped modular extensions. Their contracts and evidence do not silently broaden the production API.
 
 A positive certificate says nothing about whether the recurrence was faithfully extracted from a larger program. That extraction and the trusted problem specification are outside the current checker.
 
