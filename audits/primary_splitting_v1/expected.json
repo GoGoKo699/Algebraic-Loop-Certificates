@@ -1,0 +1,178 @@
+{
+  "counterexamples": {
+    "concrete_source_order": {
+      "bad_projector_accepts": true,
+      "checked_methods_accept": false,
+      "orbit": [
+        1,
+        24
+      ],
+      "passes_residue": true,
+      "source": {
+        "exponent": 2,
+        "initial": [
+          1
+        ],
+        "matrix": [
+          [
+            24
+          ]
+        ],
+        "modulus": 25,
+        "offset": [
+          0
+        ],
+        "prime": 5,
+        "schema": "alc.prime-power-source.v1"
+      },
+      "target": [
+        6
+      ],
+      "target_endomorphism": [
+        [
+          6,
+          0
+        ],
+        [
+          10,
+          1
+        ]
+      ]
+    },
+    "non_p_kernel": {
+      "actual_member": false,
+      "g": [
+        1,
+        0
+      ],
+      "group": "C4 x C2",
+      "h": [
+        0,
+        1
+      ],
+      "m": 4,
+      "p": 3,
+      "passes_naive_conditions": true,
+      "quotient": "C4"
+    },
+    "noncommuting": {
+      "actual_member": false,
+      "g": [
+        1,
+        0,
+        2
+      ],
+      "group": "S3",
+      "h": [
+        0,
+        2,
+        1
+      ],
+      "m": 2,
+      "p": 3,
+      "passes_naive_conditions": true
+    },
+    "source_order_bound": {
+      "bad_p_bound": 1,
+      "bad_primary_exponent": 0,
+      "correct_p_bound": 5,
+      "correct_primary_exponent": 6,
+      "g": [
+        1,
+        0
+      ],
+      "group": "C2 x C5",
+      "h": [
+        1,
+        1
+      ]
+    }
+  },
+  "counts": {
+    "abelian_generators": 540,
+    "abelian_source_target_pairs": 40060,
+    "bad_projector_inputs_rejected": 4,
+    "concrete_source_order_counterexample": 1,
+    "mixed_order_sources": 370,
+    "noncommuting_counterexamples": 1,
+    "queries": 25068,
+    "query_dependency_control": 1,
+    "reachable": 6698,
+    "saved_fixture_queries": 294,
+    "source_order_bound_counterexample": 1,
+    "sources": 1408,
+    "unreachable": 18370,
+    "wrong_characteristic_kernel_counterexamples": 1
+  },
+  "examples": [
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 1,
+      "field_certificates": 1,
+      "modulus": 25,
+      "name": "nonunit_point",
+      "p_bound": 5,
+      "period": 4,
+      "primary_projection_exponent": 16,
+      "prime_to_p_order": 4
+    },
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 1,
+      "field_certificates": 1,
+      "modulus": 32,
+      "name": "mixed_word_subgroup",
+      "p_bound": 32,
+      "period": 8,
+      "primary_projection_exponent": 1,
+      "prime_to_p_order": 1
+    },
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 2,
+      "field_certificates": 1,
+      "modulus": 8,
+      "name": "two_coordinate_nilpotent",
+      "p_bound": 8,
+      "period": 8,
+      "primary_projection_exponent": 1,
+      "prime_to_p_order": 1
+    },
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 1,
+      "field_certificates": 1,
+      "modulus": 18446744073709551616,
+      "name": "word64_affine",
+      "p_bound": 18446744073709551616,
+      "period": 18446744073709551616,
+      "primary_projection_exponent": 1,
+      "prime_to_p_order": 1
+    },
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 1,
+      "field_certificates": 1,
+      "modulus": 18446744073709551616,
+      "name": "word64_subgroup",
+      "p_bound": 18446744073709551616,
+      "period": 4611686018427387904,
+      "primary_projection_exponent": 1,
+      "prime_to_p_order": 1
+    },
+    {
+      "additional_certificate_bytes": 0,
+      "dimension": 1,
+      "field_certificates": 1,
+      "modulus": 66049,
+      "name": "large_characteristic",
+      "p_bound": 66049,
+      "period": 66049,
+      "primary_projection_exponent": 1,
+      "prime_to_p_order": 1
+    }
+  ],
+  "outcomes_sha256": "14f75bb9426846f3d8924802f700d07b3b9f2a9a5c502087bf69db1074f4640e",
+  "schema": 1,
+  "scope": "Matched reduction-layer comparison only. Same checked module, residue certificate and p-group kernel; not an independent full compiler or a published native baseline. Independent finite trajectories/group tables test the replacement logic. No timing, practical superiority, or novelty claim."
+}
