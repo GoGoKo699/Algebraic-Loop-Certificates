@@ -1,0 +1,7 @@
+{
+  "abc_export_time_measured": true,
+  "abc_export_results": "abc_export/EXPORT_RESULTS.json",
+  "original_pla_to_witness_time_measured": false,
+  "post_replay_adapter_timing_performed": false,
+  "scope": "Native ABC process wall times include PDR search and PLA export. Initial PLA-to-AIGER adaptation time was not measured. They exclude the later native Certifaiger/SAT/LRAT pipeline and tool building. No complete original end-to-end cost is claimed."
+}

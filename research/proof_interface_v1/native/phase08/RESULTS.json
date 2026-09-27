@@ -1,0 +1,469 @@
+{
+  "schema": 1,
+  "interface": "existing Certifaiger AIGER witness circuits",
+  "input_paths": {
+    "model": "/workspace/scratch/9781207fd51b/phase-witnesses/n08-model.aag",
+    "witness": "/workspace/scratch/9781207fd51b/phase-witnesses/n08-witness.aag"
+  },
+  "input_sha256": {
+    "model": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+    "witness": "bfb2ebf7b88c836f8695294f2242f7a164399f33eb0c4f59e2543bae04c66fa8"
+  },
+  "binary_sha256": {
+    "certifaiger": "2b1ed7d4b35a0218e32cfecaf04d55b6c6223be9265fc7169b7bb39b509b8b2e",
+    "aigsplit": "af6611a86c0441294b56a7e5160af5a6c7b27e2a23b075159459dfc68dbf930d",
+    "aigtocnf": "00b42876bb8f4478f146642d80831452da039d2c44cdb14732df8fbd85744b71",
+    "cadical": "3ce98a1edd3cfc4c70aa3b548976a80090dba54049637257e9333a6a1ceea342",
+    "lrat-trim": "b8cc27ad0baaf11dac1d88f8453a2bedc9aeef1be79f20780d12673d4698abf8"
+  },
+  "limits": {
+    "seconds_per_process": 10,
+    "address_space_bytes": 1073741824,
+    "artifact_bytes_per_case": 67108864
+  },
+  "stages": [
+    {
+      "name": "generate",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/certifaiger",
+        "model.aag",
+        "witness.aag",
+        "check.aig"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.004004690999863669
+    },
+    {
+      "name": "split",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigsplit",
+        "-n",
+        "check.aig",
+        "obligation_"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.002861969000150566
+    },
+    {
+      "name": "Reset_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Reset.aig",
+        "Reset.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018931809991045156
+    },
+    {
+      "name": "Reset_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.005311631999575184
+    },
+    {
+      "name": "Reset_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.001496217999374494
+    },
+    {
+      "name": "Transition_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Transition.aig",
+        "Transition.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018755130004137754
+    },
+    {
+      "name": "Transition_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0037112160007382045
+    },
+    {
+      "name": "Transition_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0019069609988946468
+    },
+    {
+      "name": "Safety_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Safety.aig",
+        "Safety.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018604599990794668
+    },
+    {
+      "name": "Safety_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Safety.cnf",
+        "Safety.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.00375837799947476
+    },
+    {
+      "name": "Safety_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Safety.cnf",
+        "Safety.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0016393950008932734
+    },
+    {
+      "name": "Liveness_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Liveness.aig",
+        "Liveness.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.001977107000129763
+    },
+    {
+      "name": "Liveness_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Liveness.cnf",
+        "Liveness.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0034865649995481363
+    },
+    {
+      "name": "Liveness_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Liveness.cnf",
+        "Liveness.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.00192692600103328
+    },
+    {
+      "name": "Base_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Base.aig",
+        "Base.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0017564619993208908
+    },
+    {
+      "name": "Base_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Base.cnf",
+        "Base.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.003231668999433168
+    },
+    {
+      "name": "Base_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Base.cnf",
+        "Base.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0022456189999502385
+    },
+    {
+      "name": "Inductive_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Inductive.aig",
+        "Inductive.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.002296451999427518
+    },
+    {
+      "name": "Inductive_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Inductive.cnf",
+        "Inductive.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 3.0268065839991323
+    },
+    {
+      "name": "Inductive_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Inductive.cnf",
+        "Inductive.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.2174945070000831
+    },
+    {
+      "name": "Decrease_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Decrease.aig",
+        "Decrease.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.005163417001313064
+    },
+    {
+      "name": "Decrease_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Decrease.cnf",
+        "Decrease.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.003273671998613281
+    },
+    {
+      "name": "Decrease_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Decrease.cnf",
+        "Decrease.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018581870008347323
+    },
+    {
+      "name": "Closure_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Closure.aig",
+        "Closure.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018712369983404642
+    },
+    {
+      "name": "Closure_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Closure.cnf",
+        "Closure.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0031540309992124094
+    },
+    {
+      "name": "Closure_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Closure.cnf",
+        "Closure.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0016530559987586457
+    },
+    {
+      "name": "Consistent_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Consistent.aig",
+        "Consistent.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018697040013648802
+    },
+    {
+      "name": "Consistent_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Consistent.cnf",
+        "Consistent.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0032044380004663253
+    },
+    {
+      "name": "Consistent_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Consistent.cnf",
+        "Consistent.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0017297429985774215
+    }
+  ],
+  "obligations": [
+    {
+      "name": "Reset",
+      "status": "unsat_replayed",
+      "cnf_sha256": "8a6043de527da4c01ed0b28f6d5a226d6e06f4eae884e907adcee2d752c75390",
+      "proof_sha256": "8b2aab8bea3d825ba076a5d4941406ff6d9c1357c0a9c8147475a21857edf2ac",
+      "cnf_bytes": 1345,
+      "proof_bytes": 2952
+    },
+    {
+      "name": "Transition",
+      "status": "unsat_replayed",
+      "cnf_sha256": "1c65382f884657f7091e6c588007faeee9033744de357a38767b28e24d68710b",
+      "proof_sha256": "f8e930bf647e3ab4c0ce3716d15655b8a8b52d704b806793eb319110b53d5802",
+      "cnf_bytes": 6170,
+      "proof_bytes": 22372
+    },
+    {
+      "name": "Safety",
+      "status": "unsat_replayed",
+      "cnf_sha256": "8d754fbd7e8fd5b927d41237a5683ad37edd292f1f8523cbaa8e13aaa855b6de",
+      "proof_sha256": "88e89fa22a193baa7f35d578b1b852cab8461bc9e1d3dfefc4e732e865e7e6c1",
+      "cnf_bytes": 14632,
+      "proof_bytes": 7243
+    },
+    {
+      "name": "Liveness",
+      "status": "unsat_replayed",
+      "cnf_sha256": "c770e97f6cbfc30a0521b279948170ec248be5e0c5898afb45c0072af6734b17",
+      "proof_sha256": "aa6d8e89928a3f8ba80616d67ec5480035414c12edce45b9831678280c5d57ff",
+      "cnf_bytes": 32247,
+      "proof_bytes": 108
+    },
+    {
+      "name": "Base",
+      "status": "unsat_replayed",
+      "cnf_sha256": "d7dba13b1f50ccfb8d14af0aee3160b351934763759739056c129672f50e0f32",
+      "proof_sha256": "7b909fba44be214ef7ff40ba4fa68b573cc558efd077ed6c4d82c85fe13deccb",
+      "cnf_bytes": 14713,
+      "proof_bytes": 9535
+    },
+    {
+      "name": "Inductive",
+      "status": "unsat_replayed",
+      "cnf_sha256": "b727e139e0d529586278ca32da1dbbfdf7d9e28435222b643e06ce369f66fb9d",
+      "proof_sha256": "1d4bb14ab3f84ac232f66479bb4c5de5d084c2b7e30494e27342f320785fa64a",
+      "cnf_bytes": 32121,
+      "proof_bytes": 25770520
+    },
+    {
+      "name": "Decrease",
+      "status": "unsat_replayed",
+      "cnf_sha256": "610cc36886afebc75e3c9b34aa836cc8866eb40f11cea488e28428c27201b400",
+      "proof_sha256": "c2b25df38d8003a667fabfee8ba31f007c67d783980221a140c65775e7b18044",
+      "cnf_bytes": 32207,
+      "proof_bytes": 98
+    },
+    {
+      "name": "Closure",
+      "status": "unsat_replayed",
+      "cnf_sha256": "115995ba6e8b0f0eb7449dd378fef0fb702eb578708297a41e129888aea673cd",
+      "proof_sha256": "67fe7be47d9a5c43e67b8345562dc87c10c12a823f7d37c07fdaa16f576827ae",
+      "cnf_bytes": 46722,
+      "proof_bytes": 114
+    },
+    {
+      "name": "Consistent",
+      "status": "unsat_replayed",
+      "cnf_sha256": "a90fa0c16e08ca459d0348859e390cb5b9f4101b85a3963e8d87fe5548a7e0b4",
+      "proof_sha256": "01374fbc8081d29a151d14262f61537067fdb312ff8f1ee8ebb25d365fb58e9b",
+      "cnf_bytes": 52242,
+      "proof_bytes": 124
+    }
+  ],
+  "status": "accepted",
+  "elapsed_seconds": 3.4174395440004446,
+  "artifact_bytes": 26140858
+}

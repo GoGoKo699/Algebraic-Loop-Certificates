@@ -1,0 +1,119 @@
+{
+  "binary_sha256": {
+    "aigsplit": "af6611a86c0441294b56a7e5160af5a6c7b27e2a23b075159459dfc68dbf930d",
+    "aigtocnf": "00b42876bb8f4478f146642d80831452da039d2c44cdb14732df8fbd85744b71",
+    "cadical": "3ce98a1edd3cfc4c70aa3b548976a80090dba54049637257e9333a6a1ceea342",
+    "certifaiger": "2b1ed7d4b35a0218e32cfecaf04d55b6c6223be9265fc7169b7bb39b509b8b2e",
+    "lrat-trim": "b8cc27ad0baaf11dac1d88f8453a2bedc9aeef1be79f20780d12673d4698abf8"
+  },
+  "build_invocations": [
+    {
+      "argv": [
+        "gcc",
+        "-O2",
+        "-c",
+        "aiger-native-src/aiger.c",
+        "-o",
+        "certifaiger-native-bin/aiger.o"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b"
+    },
+    {
+      "argv": [
+        "g++",
+        "-std=c++23",
+        "-O2",
+        "-DGITID=\"27d526e3e979074c3e92582768f577dc6eddb0da\"",
+        "-DVERSION=\"10.3.0\"",
+        "-I",
+        "aiger-native-src",
+        "certifaiger/src/certifaiger.cpp",
+        "certifaiger-native-bin/aiger.o",
+        "-o",
+        "certifaiger-native-bin/certifaiger"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b"
+    },
+    {
+      "argv": [
+        "gcc",
+        "-O2",
+        "aiger-native-src/aigtocnf.c",
+        "certifaiger-native-bin/aiger.o",
+        "-o",
+        "certifaiger-native-bin/aigtocnf"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b"
+    },
+    {
+      "argv": [
+        "gcc",
+        "-O2",
+        "aiger-native-src/aigsplit.c",
+        "certifaiger-native-bin/aiger.o",
+        "-o",
+        "certifaiger-native-bin/aigsplit"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b"
+    },
+    {
+      "argv": [
+        "./configure"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b/certifaiger-cadical"
+    },
+    {
+      "argv": [
+        "make",
+        "-j2"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b/certifaiger-cadical"
+    },
+    {
+      "argv": [
+        "gcc",
+        "-O2",
+        "certifaiger-lrat-trim/lrat-trim.c",
+        "-o",
+        "certifaiger-native-bin/lrat-trim"
+      ],
+      "cwd": "/workspace/scratch/9781207fd51b"
+    }
+  ],
+  "build_note": "CMake unavailable; same upstream C/C++ sources compiled directly; no source modifications. Certifaiger and AIGER compiled with assertions enabled; CaDiCaL upstream configure defaults include NDEBUG. First run runner was changed only to hash consumed copies rather than original source paths; all captured input hashes agree with consumed copies.",
+  "build_time_measured": false,
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "cxx_compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "protocol_sha256": "3ad6e5975150364a01f3744bca14426daaccd841e1ea275442130312416310f5",
+  "sources": {
+    "aiger": {
+      "commit": "039ec1a2cc37d3093ac35c4b6df65336b346f409",
+      "original_path": "/workspace/scratch/9781207fd51b/aiger-native-src",
+      "tracked_status": "",
+      "tree": "7640321908e493fd2e1128372aa105df3695aac4",
+      "url": "https://github.com/arminbiere/aiger.git"
+    },
+    "cadical": {
+      "commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+      "original_path": "/workspace/scratch/9781207fd51b/certifaiger-cadical",
+      "tracked_status": "",
+      "tree": "9630ba7aaccee77f6fec916e5babd6d1ccedd404",
+      "url": "https://github.com/arminbiere/cadical.git"
+    },
+    "certifaiger": {
+      "commit": "27d526e3e979074c3e92582768f577dc6eddb0da",
+      "original_path": "/workspace/scratch/9781207fd51b/certifaiger",
+      "tracked_status": "",
+      "tree": "84180618c4934162c0e6331d0257cbf0c72754af",
+      "url": "https://github.com/Froleyks/certifaiger.git"
+    },
+    "lrat-trim": {
+      "commit": "adba6e61368e91957c79bf952b29800f05dbee51",
+      "original_path": "/workspace/scratch/9781207fd51b/certifaiger-lrat-trim",
+      "tracked_status": "",
+      "tree": "08f18b531a636eeb632a949bb8abbab009ccdee8",
+      "url": "https://github.com/arminbiere/lrat-trim.git"
+    }
+  }
+}

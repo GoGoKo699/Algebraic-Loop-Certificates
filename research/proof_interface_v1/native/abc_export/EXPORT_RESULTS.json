@@ -1,0 +1,35 @@
+{
+  "plan_sha256": "8198c240cb62ce33322bbe9b67f6c7e005fd3d8246886f1da78615a28b86f85f",
+  "results": [
+    {
+      "n": 2,
+      "command": [
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-02-0x3.aig; pdr -S 91648253 -d -e -I /workspace/scratch/9781207fd51b/aiger-native-proof-export/n02.pla; print_status"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.04135328799929994,
+      "aig_sha256": "4e1664626fb9f9734fe59948f85ccb2f2920b97b6c801dbc24a3b3ddfae1219e",
+      "abc_sha256": "529038bd1acc76ec906a42ad6a3fc7dea3e11dcd9d517aa2d299ff14f62d3fcb",
+      "pla_sha256": "5156df717260501e6209025e91bdba3a635079cc7d611586b38127b73616aaa1",
+      "stdout": "======== ABC command line \"read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-02-0x3.aig; pdr -S 91648253 -d -e -I /workspace/scratch/9781207fd51b/aiger-native-proof-export/n02.pla; print_status\"\nInvariant F[5] : 10 clauses with 5 flops (out of 5) (cex = 0, ave = 4.62)\nVerification of invariant with 10 clauses was successful.  Time =     0.00 sec\nInductive invariant was written into file \"/workspace/scratch/9781207fd51b/aiger-native-proof-export/n02.pla\".\nDumped inductive invariant in file \"/workspace/scratch/9781207fd51b/aiger-native-proof-export/n02.pla\".\nProperty proved.  Time =     0.02 sec\nStatus = 1  Frames = 6   Cex is not defined.\n"
+    },
+    {
+      "n": 4,
+      "command": [
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-04-0xc.aig; pdr -S 91648253 -d -e -I /workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla; print_status"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.378222249000828,
+      "aig_sha256": "c1e5281ec69fb6906ebd6a3fdd50ebf60d17c29d0267a9deaa13ebf914d68d60",
+      "abc_sha256": "529038bd1acc76ec906a42ad6a3fc7dea3e11dcd9d517aa2d299ff14f62d3fcb",
+      "pla_sha256": "9372d15a97d3b3d69107591800c4caa7808d2a49903bc66c2d44dd1ac2ebc399",
+      "stdout": "======== ABC command line \"read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-04-0xc.aig; pdr -S 91648253 -d -e -I /workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla; print_status\"\nInvariant F[30] : 136 clauses with 9 flops (out of 9) (cex = 0, ave = 8.91)\nVerification of invariant with 136 clauses was successful.  Time =     0.00 sec\nInductive invariant was written into file \"/workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla\".\nDumped inductive invariant in file \"/workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla\".\nProperty proved.  Time =     0.35 sec\nStatus = 1  Frames = 30   Cex is not defined.\n"
+    }
+  ]
+}

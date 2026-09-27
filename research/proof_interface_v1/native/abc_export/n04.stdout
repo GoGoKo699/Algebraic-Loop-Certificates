@@ -1,0 +1,7 @@
+======== ABC command line "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-04-0xc.aig; pdr -S 91648253 -d -e -I /workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla; print_status"
+Invariant F[30] : 136 clauses with 9 flops (out of 9) (cex = 0, ave = 8.91)
+Verification of invariant with 136 clauses was successful.  Time =     0.00 sec
+Inductive invariant was written into file "/workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla".
+Dumped inductive invariant in file "/workspace/scratch/9781207fd51b/aiger-native-proof-export/n04.pla".
+Property proved.  Time =     0.35 sec
+Status = 1  Frames = 30   Cex is not defined.

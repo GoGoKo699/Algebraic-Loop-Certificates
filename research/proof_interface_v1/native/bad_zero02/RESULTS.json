@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "interface": "existing Certifaiger AIGER witness circuits",
+  "input_paths": {
+    "model": "/workspace/scratch/9781207fd51b/phase-witnesses/n02-model.aag",
+    "witness": "/workspace/scratch/9781207fd51b/phase-witnesses/n02-bad-zero.aag"
+  },
+  "input_sha256": {
+    "model": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+    "witness": "c5a2c8028ac5d58d748b241514b6f8c4416dfd7eaa85dd968c5ca19528b0ab65"
+  },
+  "binary_sha256": {
+    "certifaiger": "2b1ed7d4b35a0218e32cfecaf04d55b6c6223be9265fc7169b7bb39b509b8b2e",
+    "aigsplit": "af6611a86c0441294b56a7e5160af5a6c7b27e2a23b075159459dfc68dbf930d",
+    "aigtocnf": "00b42876bb8f4478f146642d80831452da039d2c44cdb14732df8fbd85744b71",
+    "cadical": "3ce98a1edd3cfc4c70aa3b548976a80090dba54049637257e9333a6a1ceea342",
+    "lrat-trim": "b8cc27ad0baaf11dac1d88f8453a2bedc9aeef1be79f20780d12673d4698abf8"
+  },
+  "limits": {
+    "seconds_per_process": 10,
+    "address_space_bytes": 1073741824,
+    "artifact_bytes_per_case": 67108864
+  },
+  "stages": [
+    {
+      "name": "generate",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/certifaiger",
+        "model.aag",
+        "witness.aag",
+        "check.aig"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.00398569199933263
+    },
+    {
+      "name": "split",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigsplit",
+        "-n",
+        "check.aig",
+        "obligation_"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0018818330008798512
+    },
+    {
+      "name": "Reset_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Reset.aig",
+        "Reset.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0015220980003505247
+    },
+    {
+      "name": "Reset_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0023135259998525726
+    },
+    {
+      "name": "Reset_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.0015526129991485504
+    },
+    {
+      "name": "Transition_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Transition.aig",
+        "Transition.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0016510229997948045
+    },
+    {
+      "name": "Transition_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.002526069998566527
+    },
+    {
+      "name": "Transition_replay",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/lrat-trim",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "exit_code": 20,
+      "timed_out": false,
+      "elapsed_seconds": 0.001698034000582993
+    },
+    {
+      "name": "Safety_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Safety.aig",
+        "Safety.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0014530830012517981
+    },
+    {
+      "name": "Safety_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Safety.cnf",
+        "Safety.lrat"
+      ],
+      "exit_code": 10,
+      "timed_out": false,
+      "elapsed_seconds": 0.0022320129992294824
+    }
+  ],
+  "obligations": [
+    {
+      "name": "Reset",
+      "status": "unsat_replayed",
+      "cnf_sha256": "ba5b06d5cb609348a8a982144ad52d2c938fb2a4b61073f8c3a52bac5d39abaa",
+      "proof_sha256": "cf07f001503ec6bb80601b588c09897aca5f93ecdf1baa0a40cf683769ecd6bd",
+      "cnf_bytes": 423,
+      "proof_bytes": 832
+    },
+    {
+      "name": "Transition",
+      "status": "unsat_replayed",
+      "cnf_sha256": "916fac8d7b98f4b494fb3f23b89cca0a028bac99e48f44dd7ef740110826868d",
+      "proof_sha256": "3929dccc8933ef00431e88fa36d32e8e86b4987049237e7c8e0f6cbdfc1d3e86",
+      "cnf_bytes": 1487,
+      "proof_bytes": 3326
+    },
+    {
+      "name": "Safety",
+      "status": "sat"
+    }
+  ],
+  "status": "rejected",
+  "elapsed_seconds": 0.026291103000403382,
+  "artifact_bytes": 18285,
+  "reason": "SAT counterexample to Safety"
+}

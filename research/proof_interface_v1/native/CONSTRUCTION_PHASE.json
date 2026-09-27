@@ -1,0 +1,176 @@
+{
+  "cache_scope": "Fresh processes only; operating-system caches were not flushed or controlled. These are single observations, not a statistically established performance comparison.",
+  "cases": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "research.proof_interface_v1.produce",
+        "--model",
+        "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/proof_interface_v1/native/phase02/model.aag",
+        "--taps",
+        "0x3",
+        "--output",
+        "/workspace/scratch/9781207fd51b/phase-construction-7fi_rrq1/n02-witness.aag"
+      ],
+      "byte_identical_to_preserved_native_witness": true,
+      "case": "phase02",
+      "full_cold_process_elapsed_seconds": 0.0665490339997632,
+      "model_path": "research/proof_interface_v1/native/phase02/model.aag",
+      "model_sha256": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+      "output_bytes": 1146,
+      "output_sha256": "08eb0e3d0cd2db0468a26e1f42fc4f026eb22d6b521d81fbb695773d7cadc8dc",
+      "preserved_native_witness_path": "research/proof_interface_v1/native/phase02/witness.aag",
+      "preserved_native_witness_sha256": "08eb0e3d0cd2db0468a26e1f42fc4f026eb22d6b521d81fbb695773d7cadc8dc",
+      "producer_metadata": {
+        "bits": 2,
+        "ghost_latches": 2,
+        "maximality": {
+          "full_return": 1,
+          "initial": 1,
+          "period": 3,
+          "prime_divisor_controls": [
+            {
+              "exponent": 1,
+              "prime": 3,
+              "state": 3
+            }
+          ]
+        },
+        "model_sha256": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+        "mutation": null,
+        "original_ands": 30,
+        "original_latches": 5,
+        "witness_ands": 83,
+        "witness_bytes": 1146,
+        "witness_sha256": "08eb0e3d0cd2db0468a26e1f42fc4f026eb22d6b521d81fbb695773d7cadc8dc"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "93e1bb39c2efad453600774cf25e8bc41ab79938968c4ce99b0bb3d3bc570cd6"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "research.proof_interface_v1.produce",
+        "--model",
+        "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/proof_interface_v1/native/phase04/model.aag",
+        "--taps",
+        "0xc",
+        "--output",
+        "/workspace/scratch/9781207fd51b/phase-construction-7fi_rrq1/n04-witness.aag"
+      ],
+      "byte_identical_to_preserved_native_witness": true,
+      "case": "phase04",
+      "full_cold_process_elapsed_seconds": 0.03674486599993543,
+      "model_path": "research/proof_interface_v1/native/phase04/model.aag",
+      "model_sha256": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+      "output_bytes": 2802,
+      "output_sha256": "555c1420c35181f34e708e37a5cb0fe5d31cc11bd701bcd41ef3cca38529cfe0",
+      "preserved_native_witness_path": "research/proof_interface_v1/native/phase04/witness.aag",
+      "preserved_native_witness_sha256": "555c1420c35181f34e708e37a5cb0fe5d31cc11bd701bcd41ef3cca38529cfe0",
+      "producer_metadata": {
+        "bits": 4,
+        "ghost_latches": 4,
+        "maximality": {
+          "full_return": 1,
+          "initial": 1,
+          "period": 15,
+          "prime_divisor_controls": [
+            {
+              "exponent": 5,
+              "prime": 3,
+              "state": 6
+            },
+            {
+              "exponent": 3,
+              "prime": 5,
+              "state": 9
+            }
+          ]
+        },
+        "model_sha256": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+        "mutation": null,
+        "original_ands": 54,
+        "original_latches": 9,
+        "witness_ands": 213,
+        "witness_bytes": 2802,
+        "witness_sha256": "555c1420c35181f34e708e37a5cb0fe5d31cc11bd701bcd41ef3cca38529cfe0"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "6e8fbf55de911ed28b38250764b5c262fbe69023dc3f3ab526f992a1a0139c47"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "research.proof_interface_v1.produce",
+        "--model",
+        "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/proof_interface_v1/native/phase08/model.aag",
+        "--taps",
+        "0xb8",
+        "--output",
+        "/workspace/scratch/9781207fd51b/phase-construction-7fi_rrq1/n08-witness.aag"
+      ],
+      "byte_identical_to_preserved_native_witness": true,
+      "case": "phase08",
+      "full_cold_process_elapsed_seconds": 0.17200741799933894,
+      "model_path": "research/proof_interface_v1/native/phase08/model.aag",
+      "model_sha256": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+      "output_bytes": 11211,
+      "output_sha256": "bfb2ebf7b88c836f8695294f2242f7a164399f33eb0c4f59e2543bae04c66fa8",
+      "preserved_native_witness_path": "research/proof_interface_v1/native/phase08/witness.aag",
+      "preserved_native_witness_sha256": "bfb2ebf7b88c836f8695294f2242f7a164399f33eb0c4f59e2543bae04c66fa8",
+      "producer_metadata": {
+        "bits": 8,
+        "ghost_latches": 8,
+        "maximality": {
+          "full_return": 1,
+          "initial": 1,
+          "period": 255,
+          "prime_divisor_controls": [
+            {
+              "exponent": 85,
+              "prime": 3,
+              "state": 222
+            },
+            {
+              "exponent": 51,
+              "prime": 5,
+              "state": 10
+            },
+            {
+              "exponent": 15,
+              "prime": 17,
+              "state": 37
+            }
+          ]
+        },
+        "model_sha256": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+        "mutation": null,
+        "original_ands": 108,
+        "original_latches": 17,
+        "witness_ands": 827,
+        "witness_bytes": 11211,
+        "witness_sha256": "bfb2ebf7b88c836f8695294f2242f7a164399f33eb0c4f59e2543bae04c66fa8"
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "d4dcf868f2f7bad2b1b3f1a490889367ee6e752e37be976ba5f509c51b107825"
+    }
+  ],
+  "created_utc": "2026-09-27T05:49:46.191911+00:00",
+  "measurement_order": "These reconstruction measurements were made after the preserved native proof runs. They are not measurements of the original producer invocation.",
+  "original_construction_time_measured": false,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "producer_path": "research/proof_interface_v1/produce.py",
+  "producer_sha256": "8b1cef472064e05935341af6f15a76c5709a77930dd325a551a75ea3883cd5d1",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "schema": "alc-phase-post-replay-construction-v1",
+  "scope": "One fresh Python subprocess per case. Wall time includes process startup, imports, source read and wrapper validation, maximal-point-order diagnostics, witness generation, output write, and metadata printing. Tool builds and native proof generation/replay are excluded.",
+  "source_checker_sha256": "d93d963e9a3f6cd38841c4ef36a62ae2177f2cb01afbf04eb8ce00ee7cbb9e6d",
+  "working_directory": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates"
+}
