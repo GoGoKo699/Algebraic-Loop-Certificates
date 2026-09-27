@@ -12,7 +12,6 @@ import json
 import os
 from pathlib import Path
 import platform
-import resource
 import shutil
 import signal
 import subprocess
@@ -48,6 +47,15 @@ def sha(path):
         for block in iter(lambda: stream.read(1 << 20), b""):
             h.update(block)
     return h.hexdigest()
+
+
+def copy_executable(source, destination):
+    """Preserve executable mode as well as bytes when staging a built tool."""
+    source, destination = Path(source), Path(destination)
+    require(source.is_file() and os.access(source, os.X_OK), "Build output is not executable")
+    shutil.copy2(source, destination)
+    require(os.access(destination, os.X_OK) and sha(source) == sha(destination),
+            "Staged executable differs or cannot be executed")
 
 
 def inspect_case(directory, rejected_at=None):
@@ -125,6 +133,7 @@ def main():
         save()
 
         def limits():
+            import resource
             resource.setrlimit(resource.RLIMIT_AS, (1 << 30, 1 << 30))
             resource.setrlimit(resource.RLIMIT_FSIZE, (64 << 20, 64 << 20))
             os.sched_setaffinity(0, {min(os.sched_getaffinity(0))})
@@ -180,7 +189,7 @@ def main():
         run("ric3-build", ["cargo", "build", "--locked", "--release", "--jobs", "2"], ric3, seconds=1200)
         require(sha(ric3 / "Cargo.lock") == record["cargo_lock_sha256"], "Dependency lock changed")
         run("ric3-metadata", ["cargo", "metadata", "--locked", "--format-version", "1"], ric3)
-        shutil.copyfile(ric3 / "target/release/ric3", tools / "ric3")
+        copy_executable(ric3 / "target/release/ric3", tools / "ric3")
         aiger = work / "aiger"
         run("aiger-object", ["gcc", "-O2", "-c", aiger / "aiger.c", "-o", tools / "aiger.o"])
         run("certifaiger-build", ["g++", "-std=c++23", "-O2", '-DGITID="' + PINS["certifaiger"][1] + '"',
@@ -190,13 +199,13 @@ def main():
             run(name + "-build", ["gcc", "-O2", aiger / (name + ".c"), tools / "aiger.o", "-o", tools / name])
         run("cadical-configure", ["./configure"], work / "cadical")
         run("cadical-build", ["make", "-j2"], work / "cadical")
-        shutil.copyfile(work / "cadical/build/cadical", tools / "cadical")
+        copy_executable(work / "cadical/build/cadical", tools / "cadical")
         run("lrat-trim-build", ["gcc", "-O2", work / "lrat-trim/lrat-trim.c", "-o", tools / "lrat-trim"])
         for name in PINS:
             status = run(name + "-tracked-status", ["git", "status", "--porcelain", "--untracked-files=no", "--ignore-submodules=untracked"], work / name)
             record["sources"][name]["tracked_status_after_build"] = status
             require(not status, "Build changed tracked source: " + name)
-        run("ric3-recursive-clean", ["git", "submodule", "foreach", "--recursive", "git diff --exit-code; git diff --cached --exit-code"], ric3)
+        run("ric3-recursive-clean", ["git", "submodule", "foreach", "--recursive", "git diff --exit-code && git diff --cached --exit-code"], ric3)
         record["binary_sha256"] = {name: sha(tools / name) for name in
                                    ("ric3", "certifaiger", "aigsplit", "aigtocnf", "cadical", "lrat-trim")}
         run("ric3-help", [tools / "ric3", "--help"])

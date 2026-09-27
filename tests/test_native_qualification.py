@@ -1,5 +1,6 @@
 """Record-validation unit tests; these are NOT substitutes for native replay."""
-import hashlib
+import os
+import subprocess
 import json
 from pathlib import Path
 import tempfile
@@ -16,6 +17,24 @@ class QualificationRecordTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         for name in ("model", "witness"):
             (self.root / (name + ".aag")).write_text(name)
+
+    @unittest.skipUnless(os.name == "posix", "Native executable mode is a POSIX contract")
+    def test_staged_executable_keeps_permission_and_runs(self):
+        source, destination = self.root / "built-tool", self.root / "staged-tool"
+        source.write_text("#!/bin/sh\nexit 0\n")
+        source.chmod(0o755)
+        q.copy_executable(source, destination)
+        self.assertEqual(source.read_bytes(), destination.read_bytes())
+        self.assertTrue(os.access(destination, os.X_OK))
+        subprocess.run([str(destination)], check=True, timeout=5)
+
+    @unittest.skipUnless(os.name == "posix", "Native executable mode is a POSIX contract")
+    def test_nonexecutable_build_output_is_rejected(self):
+        source = self.root / "not-executable"
+        source.write_text("not a tool")
+        source.chmod(0o644)
+        with self.assertRaises(ValueError):
+            q.copy_executable(source, self.root / "destination")
 
     def record(self, rejection=None):
         names = q.OBLIGATIONS if rejection is None else q.OBLIGATIONS[:q.OBLIGATIONS.index(rejection) + 1]
