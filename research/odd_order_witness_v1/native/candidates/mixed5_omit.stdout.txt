@@ -1,0 +1,89 @@
+{
+  "bits": 5,
+  "distinct_kernel_predicates": 3,
+  "factorization": [
+    [
+      3,
+      2
+    ],
+    [
+      7,
+      1
+    ]
+  ],
+  "factorization_algorithm": "complete deterministic trial division, M < 2^24",
+  "factorization_trial_divisors": 2,
+  "ghost_literals": [
+    34,
+    36,
+    38,
+    40,
+    42,
+    44
+  ],
+  "invariant_literal": 801,
+  "kernel_factors": [
+    {
+      "fixes_seed_literal": 1,
+      "kernel_rank": 0,
+      "kernel_rows": [],
+      "level": 1,
+      "matrix_exponent": 21,
+      "prime": 3,
+      "skipped": false
+    },
+    {
+      "fixes_seed_literal": 218,
+      "kernel_rank": 2,
+      "kernel_rows": [
+        13,
+        23
+      ],
+      "level": 2,
+      "matrix_exponent": 7,
+      "prime": 3,
+      "skipped": true
+    },
+    {
+      "fixes_seed_literal": 234,
+      "kernel_rank": 3,
+      "kernel_rows": [
+        7,
+        9,
+        18
+      ],
+      "level": 1,
+      "matrix_exponent": 9,
+      "prime": 7,
+      "skipped": false
+    }
+  ],
+  "matrix_order_identity_checked": true,
+  "model_sha256": "93a2b857db8bc4d9842ac025434422f813f6669a54990e72d000611341dca00b",
+  "mutation": "skip_repeated3",
+  "odd_multiple": 63,
+  "original_ands": 71,
+  "original_bad_literal": 187,
+  "original_latches": 11,
+  "period_literals": [
+    1,
+    235,
+    235,
+    0,
+    0,
+    0
+  ],
+  "phase_bits": 6,
+  "phase_next_literals": [
+    250,
+    258,
+    268,
+    278,
+    288,
+    298
+  ],
+  "variant": "canonical_rref_shared_kernels_fixed_prime_shift_add",
+  "witness_ands": 379,
+  "witness_bytes": 4820,
+  "witness_sha256": "427000f5ac12a385c5cbf9b07c0c30417efad6d765bcf8db63e77320491c024b"
+}

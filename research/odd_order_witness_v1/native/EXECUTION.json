@@ -1,0 +1,6 @@
+{
+  "local_pre_execution_commit": "7c4bf5c36ea3f8a2e87a2b030cd7d846656a3685",
+  "frozen_before_native_execution": true,
+  "command": "python -m research.odd_order_witness_v1.run_native execute --tools /workspace/scratch/9781207fd51b/certifaiger-native-bin",
+  "scope": "One run per frozen case, no post-result tuning."
+}

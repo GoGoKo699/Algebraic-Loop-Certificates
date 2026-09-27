@@ -1,0 +1,22 @@
+{
+  "semantic_source": "research/proof_interface_v1/THEORY.md section1",
+  "upstream_family": "https://github.com/tniessen/aiger-safety-properties/tree/c8efd0251c0548dd46168db8410e6777c5f82b73/lfsr-period",
+  "models": [
+    {
+      "file": "rotation3.aag",
+      "width": 3,
+      "taps": "0x4",
+      "sha256": "52cbf63d24a8eb77ece89bf25042be555dc214fbd23cef4680ff93463dd50788",
+      "bytes": 765,
+      "origin": "new synthetic control, not upstream file"
+    },
+    {
+      "file": "mixed5.aag",
+      "width": 5,
+      "taps": "0x11",
+      "sha256": "93a2b857db8bc4d9842ac025434422f813f6669a54990e72d000611341dca00b",
+      "bytes": 1224,
+      "origin": "new synthetic control, not upstream file"
+    }
+  ]
+}

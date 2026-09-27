@@ -14,6 +14,8 @@ The [next existing-workload pass](../research/NATIVE_WORKLOAD_GATE_10.md) execut
 
 The [proof-interface gate](../research/PROOF_INTERFACE_GATE_11.md) now delivers history witnesses through Certifaiger's existing AIGER interface. Three history witnesses and two exported ABC invariants passed all native obligations with SAT-proof replay. The phase-parity reduction clarifies why adding history matters, without claiming a size lower bound. This establishes a measured integration, while its stronger maximal-period premise and the equally available conventional algebraic route still limit the contribution claim.
 
+The subsequent [odd-order gate](../research/ODD_ORDER_WITNESS_GATE_12.md) removes that maximal-period premise. Exact seed periods are compiled from a factored odd annihilating exponent, so mixed seed periods and nonminimal exponents work through the same native interface. All three positive witnesses passed; both wrong selectors failed induction; 37 completed proofs independently replayed. Factorization remains construction work and native source-to-CNF translation remains trusted. The conventional route can emit the same witness. The next question is the precise original-state evaluation/history distinction and its predecessors, rather than another algebraic format.
+
 ## Current separation
 
 The producer performs bounded discovery; the checker verifies supplied witnesses; the consumer uses the verified arithmetic progression. The first implementation hardens this separation by including primality proofs and binding the claim to a separately supplied problem. A counterfeit composite-factor example is retained as a regression test. This is sound engineering around established mathematics, not a priority claim.

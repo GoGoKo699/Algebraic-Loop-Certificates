@@ -36,6 +36,12 @@ also preserves generated witness circuits, CNF obligations and LRAT traces,
 with source pins for Certifaiger, CaDiCaL and lrat-trim. Those external tools'
 source code and executables are not vendored. Original-model copies retain the
 benchmark attribution and license recorded by the AIGER workload.
+The [odd-order continuation](../research/odd_order_witness_v1/README.md)
+preserves two newly generated synthetic wrapper controls, clearly labeled as
+such, plus generated witnesses and native CNF/LRAT evidence. Its third positive
+case reuses the unchanged published 8-bit circuit. Independent emission checks,
+pre-execution source hashes and raw/stored artifact hashes record their origin;
+no additional external solver source or executable is vendored.
 The local checker implementations use the Python standard library. Primary
 mathematical sources and their limits are listed in
 [the research assessment](../docs/RESEARCH.md). Merely citing the Archive of
