@@ -1,7 +1,8 @@
 # Bounded comparison design: conventional algebra to a checked witness
 
-Status: requirement and study design fixed; executable protocol and native
-results pending. This file is not a claim that a preregistered blind experiment
+Status: requirement, study design and baseline qualification complete;
+the executable protocol is frozen and comparative results remain pending.
+This file is not a claim that a preregistered blind experiment
 has been completed. The cases have earlier exploratory observations.
 
 ## Consumer, source and accepted result
@@ -74,8 +75,8 @@ The Certifaiger/AIGER/CaDiCaL/lrat-trim pins remain those in Gate 12. A rebuilt
 binary gets new provenance rather than edits to historical hashes. Freeze all
 commands, source and binary hashes, case order and the resource harness before
 timed runs. A source candidate is pinned in
-[BASELINE_QUALIFICATION.md](BASELINE_QUALIFICATION.md); qualifying its executable
-and completing this freeze are still open. The protocol must specify descendant
+[BASELINE_QUALIFICATION.md](BASELINE_QUALIFICATION.md); its executable has now
+passed the external checker on separate smoke controls. The protocol specifies descendant
 termination, monitoring of temporary as well as retained artifacts, and bounded
 stdout/stderr capture so that subprocesses cannot escape the declared budget.
 
@@ -89,6 +90,13 @@ workflow deadline, and 64 MiB total raw circuit/CNF/proof artifacts per trial.
 The new orchestration must enforce the remaining total deadline across stages;
 the old ten-seconds-per-process runner alone does not do this. Do not claim
 one-GiB aggregate memory unless it is actually enforced across descendants.
+
+The prospective [executable protocol](EXECUTABLE_PROTOCOL.md) refines the disk
+limit before benchmark measurements: 64 MiB is a monitored raw-artifact
+acceptance budget, with a per-file hard limit and sampled aggregate checks,
+not an instantaneous aggregate filesystem quota. It records observed peaks and
+sampling gaps and applies a conservative all-file guard. Metadata/log-only
+exhaustion is not eligible evidence for an artifact-limit coverage win.
 
 Start total timing before reading/converting the original source and stop after
 the final native proof check. Charge source recognition, algebra, factorization,

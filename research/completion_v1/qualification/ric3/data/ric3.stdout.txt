@@ -1,0 +1,54 @@
+[08:45:35 INFO] the model to be checked: /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/model.aag
+[08:45:35 WARN] property not found, moved 1 outputs to bad properties
+[08:45:35 INFO] origin ts has 26 vars, 3 inputs, 7 latches, 0 constraints, 66 clauses and 182 lits in cnf
+[08:45:35 INFO] trivial simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:45:35 INFO] scorr: eliminates 0 latchs out of 7 in 0.00s
+[08:45:35 INFO] scorr: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:45:35 INFO] frts: eliminates 0 out of 21 vars in 0.00s
+[08:45:35 INFO] frts: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:45:35 INFO] preprocessed ts has 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:45:35 INFO] IC3 found no counterexample up to depth 0
+[08:45:35 INFO] IC3 found no counterexample up to depth 1
+[08:45:35 INFO] IC3 found no counterexample up to depth 2
+[08:45:35 INFO] IC3 found no counterexample up to depth 3
+[08:45:35 INFO] IC3 found no counterexample up to depth 4
+[08:45:35 INFO] IC3 found no counterexample up to depth 5
+[08:45:35 INFO] IC3 found no counterexample up to depth 6
+[08:45:35 INFO] IC3 found no counterexample up to depth 7
+[08:45:35 INFO] IC3 found no counterexample up to depth 8
+[08:45:35 INFO] IC3 proved the property
+[08:45:35 INFO] obligations: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18]
+[08:45:35 INFO] frames [11]: 7 8 11 4 5 9 2 2 0 20 5 
+[08:45:35 INFO] SolverStatistic {
+    num_solve: 957,
+    avg_solve_time: 1.556µs,
+    avg_decide_var: 0.882443,
+    num_simplify_subsume: 0,
+    num_simplify_self_subsume: 0,
+}
+[08:45:35 INFO] Statistic {
+    time: 0.00s,
+    num_mic: 71,
+    avg_mic_cube_len: 4.549296,
+    avg_po_cube_len: 6.571429,
+    mic_drop: success: 37, fail: 283, success rate: 11.56%,
+    num_down: 320,
+    num_down_sat: 372,
+    ctp: success: 0, fail: 75, success rate: 0.00%,
+    block: Block {
+        overall_time: 1.741468ms,
+        get_bad_time: 19 times in 77.867000µs,
+        blocked_time: 67 times in 121.301000µs,
+        get_pred_time: 392.537µs,
+        mic_time: 1.521616ms,
+        push_time: 42.974µs,
+    },
+    propagate: Propagate {
+        overall_time: 442.319µs,
+        push_inf_time: 200.202µs,
+    },
+    xor_gen: success: 0, fail: 0, success rate: NaN%,
+    num_auxiliary_var: 0,
+    test: success: 0, fail: 0, success rate: NaN%,
+}
+UNSAT

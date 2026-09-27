@@ -6,16 +6,28 @@ proofs, source assessments and test artifacts, not drafted paper sections.
 ## Current status
 
 **Overall scientific readiness: incomplete.** The
-[scientific closure gate](SCIENTIFIC_CLOSURE_GATE_14.md) completes the requirement
-audit for a scoped conventional LFSR witness exporter. The matched native
-comparison remains pending. Its [study design](completion_v1/STUDY_DESIGN.md)
-requires rIC3 as the certifying baseline; ABC remains diagnostic, while the
-direct squarefree checker is a reference with a different result and trust
-contract. This candidate does not use the complete orbit engine or establish
-its consumer-level benefit.
+[requirement audit](SCIENTIFIC_CLOSURE_GATE_14.md) fixes the scoped conventional
+LFSR witness-exporter study. The [qualification gate](BASELINE_QUALIFICATION_GATE_15.md)
+now qualifies pinned rIC3 and freezes the [executable protocol](completion_v1/EXECUTABLE_PROTOCOL.md).
+Both positive qualification witnesses pass all nine native obligations;
+two corrupted witnesses fail induction and reset checks respectively.
+All 23 completed proofs replay independently, and both SAT assignments are
+checked. Ten process controls exercise the common resource harness, including
+the bounded exit-transition retry for descriptor-access races. Its retry time
+counts toward the workflow deadline and observed polling gap; persistent live
+access denial still fails closed. Earlier qualifications and protocol freezes
+are preserved in [the portability history](completion_v1/qualification_history/README.md).
+These are compatibility and rejection checks, not benchmark measurements.
 
-The finite remaining sequence is tool qualification and protocol freeze, the
-bounded study, contribution and assurance review, and evidence freeze. The
+The matched native comparison remains pending. Its
+[study design](completion_v1/STUDY_DESIGN.md) requires rIC3 as the certifying
+baseline; ABC remains diagnostic, while the direct squarefree checker has a
+different result and trust contract. This candidate does not use the complete
+orbit engine or establish its consumer-level benefit.
+
+The finite remaining sequence is the bounded study under the
+[protocol freeze](completion_v1/PROTOCOL_FREEZE.json), contribution and assurance
+review, and evidence freeze. The
 [cost audit](completion_v1/README.md) separates the retained native stages and
 their accounting limits; it does not supply the missing matched experiment.
 A failed or blocked outcome must be recorded without reopening closed novelty

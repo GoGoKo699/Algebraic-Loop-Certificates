@@ -1,0 +1,1240 @@
+{
+  "finished_utc": "2026-09-27T08:45:36.164118+00:00",
+  "model_bytes": 765,
+  "model_sha256": "52cbf63d24a8eb77ece89bf25042be555dc214fbd23cef4680ff93463dd50788",
+  "model_source": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/odd_order_witness_v1/models/rotation3.aag",
+  "obligations": [
+    {
+      "name": "Reset",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Transition",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Safety",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Liveness",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Base",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Inductive",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Decrease",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Closure",
+      "status": "unsat_replayed"
+    },
+    {
+      "name": "Consistent",
+      "status": "unsat_replayed"
+    }
+  ],
+  "output_contract": "source-bound Certifaiger witness with nine LRAT checks",
+  "phases": [
+    {
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0003359999999999995,
+      "name": "preflight",
+      "start_offset_seconds": 0.00019235100262449123,
+      "started_utc": "2026-09-27T08:45:35.894306+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0003424679998715874
+    },
+    {
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.00028699999999999906,
+      "name": "read_original",
+      "start_offset_seconds": 0.0008506480007781647,
+      "started_utc": "2026-09-27T08:45:35.894960+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0002965179992315825
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/ric3",
+        "check",
+        "model.aag",
+        "--cert",
+        "witness.aag",
+        "--ui",
+        "false",
+        "ic3",
+        "--rseed",
+        "0"
+      ],
+      "cpu_system_seconds": 0.008264,
+      "cpu_user_seconds": 0.011204999999999996,
+      "name": "ric3",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/ric3",
+          "check",
+          "model.aag",
+          "--cert",
+          "witness.aag",
+          "--ui",
+          "false",
+          "ic3",
+          "--rseed",
+          "0"
+        ],
+        "cpu_system_seconds": 0.004005,
+        "cpu_user_seconds": 0.0030919999999999997,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.908385+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/ric3.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 2540,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/ric3.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.017947828000615118
+      },
+      "start_offset_seconds": 0.0013158320034563076,
+      "started_utc": "2026-09-27T08:45:35.895425+00:00",
+      "status": "completed",
+      "wall_seconds": 0.03097030099888798
+    },
+    {
+      "cpu_system_seconds": 0.00021099999999999938,
+      "cpu_user_seconds": 0.0,
+      "name": "witness_metadata",
+      "start_offset_seconds": 0.032596362001640955,
+      "started_utc": "2026-09-27T08:45:35.926706+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0002971200010506436
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/certifaiger",
+        "model.aag",
+        "witness.aag",
+        "check.aig"
+      ],
+      "cpu_system_seconds": 0.000706,
+      "cpu_user_seconds": 0.0016420000000000046,
+      "name": "generate",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/certifaiger",
+          "model.aag",
+          "witness.aag",
+          "check.aig"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0016419999999999998,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.927446+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/generate.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 246,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/generate.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.012974368997674901
+      },
+      "start_offset_seconds": 0.0330902400019113,
+      "started_utc": "2026-09-27T08:45:35.927200+00:00",
+      "status": "completed",
+      "wall_seconds": 0.013251248001324711
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigsplit",
+        "-n",
+        "check.aig",
+        "obligation_"
+      ],
+      "cpu_system_seconds": 0.0006529999999999991,
+      "cpu_user_seconds": 0.0009799999999999948,
+      "name": "split",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigsplit",
+          "-n",
+          "check.aig",
+          "obligation_"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.00098,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.941213+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/split.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/split.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.002175773999624653
+      },
+      "start_offset_seconds": 0.04662804200052051,
+      "started_utc": "2026-09-27T08:45:35.940739+00:00",
+      "status": "completed",
+      "wall_seconds": 0.002665924999746494
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Reset.aig",
+        "Reset.cnf"
+      ],
+      "cpu_system_seconds": 0.0008830000000000001,
+      "cpu_user_seconds": 0.0006140000000000034,
+      "name": "Reset_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Reset.aig",
+          "Reset.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.000614,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.944046+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011157920002005994
+      },
+      "start_offset_seconds": 0.04961005600125645,
+      "started_utc": "2026-09-27T08:45:35.943720+00:00",
+      "status": "completed",
+      "wall_seconds": 0.011629012999037514
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "cpu_system_seconds": 0.0004049999999999991,
+      "cpu_user_seconds": 0.0019510000000000013,
+      "name": "Reset_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Reset.cnf",
+          "Reset.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.001548,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.956189+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0019962320002377965
+      },
+      "start_offset_seconds": 0.06170554500204162,
+      "started_utc": "2026-09-27T08:45:35.955816+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0023962880004546605
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0015630000000000019,
+      "name": "Reset_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Reset.cnf",
+          "Reset.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006360000000000011,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.958977+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 973,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Reset_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011270349998085294
+      },
+      "start_offset_seconds": 0.06439451600090251,
+      "started_utc": "2026-09-27T08:45:35.958504+00:00",
+      "status": "completed",
+      "wall_seconds": 0.011776015002396889
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Transition.aig",
+        "Transition.cnf"
+      ],
+      "cpu_system_seconds": 0.0007559999999999997,
+      "cpu_user_seconds": 0.0006469999999999948,
+      "name": "Transition_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Transition.aig",
+          "Transition.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006469999999999983,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.971297+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011094233999756398
+      },
+      "start_offset_seconds": 0.07683802200335776,
+      "started_utc": "2026-09-27T08:45:35.970948+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0114786149970314
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "cpu_system_seconds": 4.100000000000284e-05,
+      "cpu_user_seconds": 0.0025600000000000067,
+      "name": "Transition_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Transition.cnf",
+          "Transition.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0018280000000000015,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.983196+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.002203446001658449
+      },
+      "start_offset_seconds": 0.08869498000058229,
+      "started_utc": "2026-09-27T08:45:35.982805+00:00",
+      "status": "completed",
+      "wall_seconds": 0.002617461999761872
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Transition.cnf",
+        "Transition.lrat"
+      ],
+      "cpu_system_seconds": 0.0012059999999999987,
+      "cpu_user_seconds": 0.0007570000000000007,
+      "name": "Transition_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Transition.cnf",
+          "Transition.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.000756999999999999,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:35.986638+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 990,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Transition_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.012491388999478659
+      },
+      "start_offset_seconds": 0.09189814900310012,
+      "started_utc": "2026-09-27T08:45:35.986008+00:00",
+      "status": "completed",
+      "wall_seconds": 0.013145898999937344
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Safety.aig",
+        "Safety.cnf"
+      ],
+      "cpu_system_seconds": 0.0009119999999999961,
+      "cpu_user_seconds": 0.0010710000000000025,
+      "name": "Safety_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Safety.aig",
+          "Safety.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0010710000000000008,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.000730+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011599208002735395
+      },
+      "start_offset_seconds": 0.10619167600088986,
+      "started_utc": "2026-09-27T08:45:36.000301+00:00",
+      "status": "completed",
+      "wall_seconds": 0.012062298999808263
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Safety.cnf",
+        "Safety.lrat"
+      ],
+      "cpu_system_seconds": 0.0003080000000000027,
+      "cpu_user_seconds": 0.002263000000000001,
+      "name": "Safety_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Safety.cnf",
+          "Safety.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0017149999999999995,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.013252+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0020931879989802837
+      },
+      "start_offset_seconds": 0.11866467600339092,
+      "started_utc": "2026-09-27T08:45:36.012774+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0025927349997800775
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Safety.cnf",
+        "Safety.lrat"
+      ],
+      "cpu_system_seconds": 0.0003079999999999958,
+      "cpu_user_seconds": 0.001245000000000003,
+      "name": "Safety_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Safety.cnf",
+          "Safety.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006969999999999997,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.016279+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 982,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Safety_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0010755379989859648
+      },
+      "start_offset_seconds": 0.12169599500339245,
+      "started_utc": "2026-09-27T08:45:36.015805+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0015691849985159934
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Liveness.aig",
+        "Liveness.cnf"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.001577000000000002,
+      "name": "Liveness_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Liveness.aig",
+          "Liveness.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006329999999999999,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.018842+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.001024852001137333
+      },
+      "start_offset_seconds": 0.12420774700149195,
+      "started_utc": "2026-09-27T08:45:36.018318+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0015938520009513013
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Liveness.cnf",
+        "Liveness.lrat"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.002708999999999996,
+      "name": "Liveness_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Liveness.cnf",
+          "Liveness.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.001618999999999999,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.021135+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0035908460013160948
+      },
+      "start_offset_seconds": 0.126294786001381,
+      "started_utc": "2026-09-27T08:45:36.020405+00:00",
+      "status": "completed",
+      "wall_seconds": 0.004103851999389008
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Liveness.cnf",
+        "Liveness.lrat"
+      ],
+      "cpu_system_seconds": 0.0007609999999999978,
+      "cpu_user_seconds": 0.0008459999999999995,
+      "name": "Liveness_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Liveness.cnf",
+          "Liveness.lrat"
+        ],
+        "cpu_system_seconds": 0.0006529999999999999,
+        "cpu_user_seconds": 0.0,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.025750+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 972,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Liveness_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0010765090009954292
+      },
+      "start_offset_seconds": 0.13111405100062257,
+      "started_utc": "2026-09-27T08:45:36.025224+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0016249700020125601
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Base.aig",
+        "Base.cnf"
+      ],
+      "cpu_system_seconds": 0.00033500000000000196,
+      "cpu_user_seconds": 0.0012990000000000085,
+      "name": "Base_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Base.aig",
+          "Base.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006340000000000026,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.028531+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011077007999119814
+      },
+      "start_offset_seconds": 0.1338209680034197,
+      "started_utc": "2026-09-27T08:45:36.027931+00:00",
+      "status": "completed",
+      "wall_seconds": 0.01170975599961821
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Base.cnf",
+        "Base.lrat"
+      ],
+      "cpu_system_seconds": 0.0003880000000000029,
+      "cpu_user_seconds": 0.0022830000000000003,
+      "name": "Base_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Base.cnf",
+          "Base.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.001513999999999998,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.040846+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.012174939998658374
+      },
+      "start_offset_seconds": 0.14616272100101924,
+      "started_utc": "2026-09-27T08:45:36.040273+00:00",
+      "status": "completed",
+      "wall_seconds": 0.01277324500188115
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Base.cnf",
+        "Base.lrat"
+      ],
+      "cpu_system_seconds": 0.0012040000000000002,
+      "cpu_user_seconds": 0.0009110000000000021,
+      "name": "Base_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Base.cnf",
+          "Base.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0009110000000000021,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.054190+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 977,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Base_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011557284000446089
+      },
+      "start_offset_seconds": 0.15948836200186634,
+      "started_utc": "2026-09-27T08:45:36.053598+00:00",
+      "status": "completed",
+      "wall_seconds": 0.012192616999527672
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Inductive.aig",
+        "Inductive.cnf"
+      ],
+      "cpu_system_seconds": 0.0004080000000000021,
+      "cpu_user_seconds": 0.0014319999999999958,
+      "name": "Inductive_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Inductive.aig",
+          "Inductive.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006919999999999982,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.067643+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011262177999014966
+      },
+      "start_offset_seconds": 0.17294031500205165,
+      "started_utc": "2026-09-27T08:45:36.067050+00:00",
+      "status": "completed",
+      "wall_seconds": 0.011916547999135219
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Inductive.cnf",
+        "Inductive.lrat"
+      ],
+      "cpu_system_seconds": 0.00041600000000000317,
+      "cpu_user_seconds": 0.0034600000000000047,
+      "name": "Inductive_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Inductive.cnf",
+          "Inductive.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.002707000000000001,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.080202+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.014951953999116085
+      },
+      "start_offset_seconds": 0.1854536970022309,
+      "started_utc": "2026-09-27T08:45:36.079563+00:00",
+      "status": "completed",
+      "wall_seconds": 0.01562527200076147
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Inductive.cnf",
+        "Inductive.lrat"
+      ],
+      "cpu_system_seconds": 0.00042200000000000223,
+      "cpu_user_seconds": 0.001566999999999999,
+      "name": "Inductive_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Inductive.cnf",
+          "Inductive.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0007999999999999986,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.097140+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 995,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Inductive_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.001212564999150345
+      },
+      "start_offset_seconds": 0.20177934900129912,
+      "started_utc": "2026-09-27T08:45:36.095890+00:00",
+      "status": "completed",
+      "wall_seconds": 0.002483128999301698
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Decrease.aig",
+        "Decrease.cnf"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0019350000000000062,
+      "name": "Decrease_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Decrease.aig",
+          "Decrease.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.00068,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.100455+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011223920002521481
+      },
+      "start_offset_seconds": 0.20558429900120245,
+      "started_utc": "2026-09-27T08:45:36.099694+00:00",
+      "status": "completed",
+      "wall_seconds": 0.012018943001748994
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Decrease.cnf",
+        "Decrease.lrat"
+      ],
+      "cpu_system_seconds": 0.0017420000000000005,
+      "cpu_user_seconds": 0.0010280000000000011,
+      "name": "Decrease_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Decrease.cnf",
+          "Decrease.lrat"
+        ],
+        "cpu_system_seconds": 0.0016620000000000003,
+        "cpu_user_seconds": 0.0,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.113166+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0020744400026160292
+      },
+      "start_offset_seconds": 0.21834678800223628,
+      "started_utc": "2026-09-27T08:45:36.112458+00:00",
+      "status": "completed",
+      "wall_seconds": 0.002807889999530744
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Decrease.cnf",
+        "Decrease.lrat"
+      ],
+      "cpu_system_seconds": 0.0003999999999999976,
+      "cpu_user_seconds": 0.0013880000000000003,
+      "name": "Decrease_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Decrease.cnf",
+          "Decrease.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0005950000000000018,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.116920+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 972,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Decrease_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0010644009998941328
+      },
+      "start_offset_seconds": 0.22204315300041344,
+      "started_utc": "2026-09-27T08:45:36.116153+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0018074760009767488
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Closure.aig",
+        "Closure.cnf"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0020899999999999946,
+      "name": "Closure_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Closure.aig",
+          "Closure.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0007339999999999985,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.122097+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0011076869996031746
+      },
+      "start_offset_seconds": 0.22700451300261193,
+      "started_utc": "2026-09-27T08:45:36.121115+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0021092030001454987
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Closure.cnf",
+        "Closure.lrat"
+      ],
+      "cpu_system_seconds": 0.000341000000000001,
+      "cpu_user_seconds": 0.002457000000000001,
+      "name": "Closure_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Closure.cnf",
+          "Closure.lrat"
+        ],
+        "cpu_system_seconds": 0.0001429999999999999,
+        "cpu_user_seconds": 0.0014190000000000001,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.124710+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0019960110003012232
+      },
+      "start_offset_seconds": 0.22980588400241686,
+      "started_utc": "2026-09-27T08:45:36.123916+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0028156820008007344
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Closure.cnf",
+        "Closure.lrat"
+      ],
+      "cpu_system_seconds": 0.0003650000000000042,
+      "cpu_user_seconds": 0.0014160000000000006,
+      "name": "Closure_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Closure.cnf",
+          "Closure.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0006320000000000006,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.128254+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 970,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Closure_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0010090180003317073
+      },
+      "start_offset_seconds": 0.23337731000356143,
+      "started_utc": "2026-09-27T08:45:36.127487+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0017972399982681964
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+        "Consistent.aig",
+        "Consistent.cnf"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.001997999999999986,
+      "name": "Consistent_cnf",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/aigtocnf",
+          "Consistent.aig",
+          "Consistent.cnf"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0007369999999999981,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 0,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.133617+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_cnf.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 0,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_cnf.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.011202628000319237
+      },
+      "start_offset_seconds": 0.23675330000332906,
+      "started_utc": "2026-09-27T08:45:36.130863+00:00",
+      "status": "completed",
+      "wall_seconds": 0.013985210000100778
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Consistent.cnf",
+        "Consistent.lrat"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0033219999999999916,
+      "name": "Consistent_solve",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/cadical",
+          "--quiet",
+          "--unsat",
+          "--lrat",
+          "--no-binary",
+          "--no-factor",
+          "Consistent.cnf",
+          "Consistent.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.001918000000000003,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.146734+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_solve.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 16,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_solve.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.012443216000974644
+      },
+      "start_offset_seconds": 0.2515832590033824,
+      "started_utc": "2026-09-27T08:45:36.145694+00:00",
+      "status": "completed",
+      "wall_seconds": 0.013514476999262115
+    },
+    {
+      "argv": [
+        "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+        "Consistent.cnf",
+        "Consistent.lrat"
+      ],
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.002242000000000008,
+      "name": "Consistent_replay",
+      "process": {
+        "command": [
+          "/workspace/scratch/9781207fd51b/completion-native-bin/lrat-trim",
+          "Consistent.cnf",
+          "Consistent.lrat"
+        ],
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0007640000000000008,
+        "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data",
+        "exit_code": 20,
+        "resource_signal": null,
+        "started_utc": "2026-09-27T08:45:36.161174+00:00",
+        "status": "completed",
+        "stderr_bytes": 0,
+        "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_replay.stderr.txt",
+        "stderr_truncated": false,
+        "stdout_bytes": 976,
+        "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/Consistent_replay.stdout.txt",
+        "stdout_truncated": false,
+        "wall_seconds": 0.0011804770001617726
+      },
+      "start_offset_seconds": 0.26600257600148325,
+      "started_utc": "2026-09-27T08:45:36.160113+00:00",
+      "status": "completed",
+      "wall_seconds": 0.0022595100017497316
+    }
+  ],
+  "route": "ric3",
+  "schema": 1,
+  "started_utc": "2026-09-27T08:45:35.894110+00:00",
+  "status": "accepted",
+  "timing_scope": "Worker phase clock excludes startup; use supervisor total wall time.",
+  "witness_bytes": 1829,
+  "witness_sha256": "2119be731f4ee83ff353b5ecfe1d212e83754875f59ffcd80e7055881bb37808",
+  "worker_wall_seconds": 0.2700174640012847
+}

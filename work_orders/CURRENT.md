@@ -1,6 +1,6 @@
 # Current work: a classical certificate contribution, not a quantum speedup claim
 
-Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/SCIENTIFIC_CLOSURE_GATE_14.md, research/completion_v1/STUDY_DESIGN.md, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
+Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/BASELINE_QUALIFICATION_GATE_15.md, research/completion_v1/EXECUTABLE_PROTOCOL.md, research/completion_v1/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
 
 ## Established executable baseline
 
@@ -12,16 +12,17 @@ Run `python verify.py` before and after changes. Do not change stored expected e
 
 The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) is complete. A documented hardware-verification consumer requires an accepted witness against the original circuit, not just an algebraic safety verdict. The primary candidate is the conventional LFSR witness exporter already demonstrated at the existing interface. It is a scoped integration study; it does not use the complete orbit engine or establish a benefit for that engine. The matched native comparison remains pending.
 
-A pinned, qualified rIC3 witness-producing configuration is the mandatory baseline. ABC remains a diagnostic reference. The direct squarefree structural checker remains a cost and trust reference with a different output contract; it does not by itself deliver the requested witness. The conventional source-aware route can emit the same history witness, so do not invent a separate orbit-engine advantage over it.
+The [baseline qualification gate](../research/BASELINE_QUALIFICATION_GATE_15.md) qualifies pinned rIC3 through the same native checker as the exporter, including positive and corrupted-witness controls. Commands, sources, binaries, case order and the resource policy are fixed in the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md) and [freeze record](../research/completion_v1/PROTOCOL_FREEZE.json). Qualification observations are not benchmark measurements.
+
+rIC3 remains the mandatory certifying baseline. ABC remains a diagnostic reference. The direct squarefree structural checker remains a cost and trust reference with a different output contract; it does not by itself deliver the requested witness. The conventional source-aware route can emit the same history witness, so do not invent a separate orbit-engine advantage over it.
 
 The algebraic contribution boundary in [assessment 08](../research/CONTRIBUTION_ASSESSMENT_08.md), negative supplied-invariant result in [Gate 09](../research/VERIFICATION_GATE_09.md), and closed invariant/history novelty route in [Gate 13](../research/INVARIANT_HISTORY_GATE_13.md) remain binding. Preserve the successful integrations in Gates 10–12 and all unsuccessful controls. The [cost audit](../research/completion_v1/README.md) separates the available native stages; historical partial timings must not become invented full-workflow totals.
 
 ## Finite remaining sequence
 
-1. **Qualify tools and freeze the protocol.** Pin rIC3 and establish a documented witness-output path accepted by the existing external checker. Record compatibility smoke checks separately, then freeze commands, sources, binaries, case order and the enforcing resource harness before timed runs. A qualification failure blocks the comparison; it is not an exporter win or permission to fall back to an ABC-only claim.
-2. **Execute the bounded study.** Follow the [fixed study design](../research/completion_v1/STUDY_DESIGN.md). Charge source recognition, hint validation, factorization, construction, conversions, native obligations, SAT search and LRAT replay. Retain every accepted, rejected, unknown and failed outcome. Do not change the corpus or limits after results.
-3. **Review contribution and assurance.** Compare any surviving scoped result with the closest certifying-exporter literature and map each claim to evidence and trusted components. CNF proof replay is not end-to-end formal verification. A failed primary benefit criterion cannot be replaced by a post-hoc speedup claim.
-4. **Freeze the evidence.** Run the integrated verifier, resolve contradictions, and document the final limitations and stopping decision. A completed negative study is a legitimate endpoint; it does not establish research readiness. Manuscript drafting remains on hold.
+1. **Execute the bounded study.** Verify the frozen source and binary hashes before following the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md). Charge source recognition, hint validation, factorization, construction, conversions, native obligations, SAT search and LRAT replay. Retain every accepted, rejected, unknown and failed outcome. Keep qualification smokes separate. Do not change the corpus or limits after results. An execution failure suspends the comparison; it is not an exporter win or permission to fall back to an ABC-only claim.
+2. **Review contribution and assurance.** Compare any surviving scoped result with the closest certifying-exporter literature and map each claim to evidence and trusted components. CNF proof replay is not end-to-end formal verification. A failed primary benefit criterion cannot be replaced by a post-hoc speedup claim.
+3. **Freeze the evidence.** Run the integrated verifier, resolve contradictions, and document the final limitations and stopping decision. A completed negative study is a legitimate endpoint; it does not establish research readiness. Manuscript drafting remains on hold.
 
 This sequence supersedes the earlier open-ended next-task recommendations. Another equivalent format, broader arithmetic domain or larger synthetic exponent is not an automatic follow-up to a negative result.
 

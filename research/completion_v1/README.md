@@ -1,15 +1,17 @@
-# Scientific completion: requirement and cost audit
+# Scientific completion: qualified baseline and bounded study
 
-This checkpoint closes the requirement audit for a bounded conventional LFSR
-certificate-export study. It also reconciles eight existing positive native
-observations: 72 obligations and 232 subprocess stages. It runs no new solver
-experiment and does not add another safety certificate format.
+The requirement audit and baseline qualification are complete. The conventional
+LFSR exporter and pinned rIC3 both produce witnesses accepted by the same external
+checker on a synthetic smoke control. Two corruptions are rejected; 23 completed
+CNF proofs and both negative SAT assignments are independently checked. The
+six-case comparative study has not run.
 
-Read [the decision](../SCIENTIFIC_CLOSURE_GATE_14.md),
-[the comparison design](STUDY_DESIGN.md), and
-[baseline qualification status](BASELINE_QUALIFICATION.md).
-The executable protocol and matched results remain pending. Manuscript
-preparation remains on hold.
+Read [the current decision](../BASELINE_QUALIFICATION_GATE_15.md),
+[the comparison design](STUDY_DESIGN.md),
+[baseline qualification](BASELINE_QUALIFICATION.md), and
+[the executable protocol](EXECUTABLE_PROTOCOL.md). Manuscript preparation
+remains on hold. The earlier [requirement audit](../SCIENTIFIC_CLOSURE_GATE_14.md)
+and retrospective accounting below remain unchanged scientific evidence.
 
 ## What the existing costs actually measure
 
@@ -65,8 +67,7 @@ analytical inputs; they are not an additional soundness theorem.
 
 ## Remaining work
 
-Qualify the pinned rIC3 baseline, freeze exact commands and resource enforcement,
-and then execute the six-case matched study. Its primary outcome and failure
+Execute the frozen six-case matched study. Its primary outcome and failure
 classification are fixed in the study design. A failed comparison closes that
 benefit hypothesis; it does not authorize an expanding search for favorable
 cases. The complete orbit compiler's consumer usefulness remains a separate
