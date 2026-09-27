@@ -1,0 +1,69 @@
+{
+  "assurance": "Native solver verdicts only; no exported proof was independently replayed. Existing Python certificate checking is not formal verification.",
+  "columns": [
+    "case",
+    "expected",
+    "raw_status",
+    "raw_elapsed_ns",
+    "raw_input_sha256",
+    "decomposed_status",
+    "decomposed_elapsed_ns",
+    "decomposed_input_sha256",
+    "decomposed_obligations"
+  ],
+  "common_output_fields": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "status followed by newline"
+  },
+  "environment": {
+    "address_space_limit_mb": 1536,
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "process": "one cold process per case and route",
+    "python": "3.12.14",
+    "timeout_ms": 2000
+  },
+  "provenance": {
+    "artifact_id": 10923289731,
+    "artifact_retention_days": 30,
+    "artifact_sha256": "fd0b32f9292d30ace9c6331512ef728a96801b7545ddc80b4c5459c16a3d749a",
+    "freeze_commit": "8da6f2569e8c2cf18d96e539be7fc1d6d8468abd",
+    "inputs": "All 40 input hashes matched locally regenerated frozen formulas.",
+    "job_id": 108552934824,
+    "job_url": "https://github.com/GoGoKo699/Algebraic-Loop-Certificates/actions/runs/36295303134/job/108552934824",
+    "kind": "Selected exact fields transcribed from the native CI job JSON output; not a byte-for-byte download of its artifact.",
+    "repository": "GoGoKo699/Algebraic-Loop-Certificates",
+    "run_id": 36295303134
+  },
+  "schema": 1,
+  "solver": {
+    "binary_sha256": "b265759b80da81b51df0eac26f6289630860617ed7cdce86f93352e4ce84e59f",
+    "cocoa": true,
+    "git_short": "2b2e844",
+    "release_archive_sha256": "d0b54324ec2129697975da8753767fd255309947b87832917d32a78da7d16666",
+    "version": "cvc5 1.4.1"
+  },
+  "timing_scope": "One observation per route and case. Elapsed time includes process startup and solving, excludes formula generation and the local certificate path. Not a statistical timing benchmark.",
+  "rows": [
+    ["p13_e3_diagonal_valid","unsat","unsat",15845937,"143449833acf2244ad108c64c66708ee95a7109b954e0780bd3042f1f26d1548","unsat",9217395,"1e8861a16fdef8429d06593d61bface54dcbfc6a4a979e2e5b7791031bc65c32",6],
+    ["p13_e3_diagonal_broken","sat","sat",6219001,"fde9988a52bb3fcf4bb6301bda69ee2ca3f8dec1b5048a87bcfe5111edb2dcb5","sat",12019408,"8bd4ca21ecdeb282e7ff5460e3e94b4635367e07be4f81df32c204bb62f5785b",6],
+    ["p13_e3_mixed_valid","unsat","unsat",6025633,"a693add1f990c7d68300016e875a8fb78969dc1238f60bd1a55b35bc8e08afb0","unsat",10424483,"c2f3daf36dc44714492058863b08e4a4ca8c286e2034f442ea269c6e12e2d5dc",6],
+    ["p13_e3_mixed_broken","sat","sat",6173423,"76db01d6fe78e2fff38c4ee9ab60d6cd9f45070ead33d5285dde54bdc546b10f","sat",13778587,"d250655ddc1321c629c00283733dcc6286ba3457f240f2a5f533b8164550b7fd",6],
+    ["p257_e17_diagonal_valid","unsat","unsat",6251238,"593accf4ae46adf4f59b33c23aac474f90fec395a77d5ddb697d18a39a2e1647","unsat",347253742,"001c6e9503eae99b934c2bb0bbed6f385bdb122cd3f0c0412d7984a3a52343b3",14],
+    ["p257_e17_diagonal_broken","sat","sat",7589902,"660c7d2cbc3e96bcbb5f149806f38a2dc37bed2378a5c7f6c411fd0aa6677f1b","sat",313728028,"ab14e3a2e49bdd3be4477b505f846ceb1cde9f91593bd6c868b9e6f4e1cb68e9",14],
+    ["p257_e17_mixed_valid","unsat","unsat",7299019,"6c9891b058bb830c582e5612068ce8e0fcb0ff78681f1ec81bbfe230dd2b6545","unsat",361084928,"133e79496cf9b451e13902580399fee8d67df63109bf767f093ff762dd9635d3",14],
+    ["p257_e17_mixed_broken","sat","sat",9403083,"784eb0933b45b1326903b7d17194f1584d243f07208ce4b2d3d2dee4e80c4c3b","sat",331853138,"2cf985ebc3ae0571228890c844333b36522ea029f91a948da40d9196ad16779d",14],
+    ["p65537_e65_diagonal_valid","unsat","unsat",7284848,"6322ce8961083610427b78d4560e097df530080923842c25e3efe630b502e53c","unknown",2015907475,"6b70e388e5cf6aabeb4ec920529c926fef42bcaca72e4c8047a1c6146af569d9",20],
+    ["p65537_e65_diagonal_broken","sat","sat",9081804,"cc7afecabd7f8a58ef647a9a45557ac9f14bd6ff7d9e9c8b74557cc39c91ed10","sat",288110951,"a2d6b56595164f862a06201acafc65808c0689db71baea8a299209d09eb67615",20],
+    ["p65537_e65_mixed_valid","unsat","unsat",8336334,"6348a8e7a5ad1b3d073bf4321f086eafc0ab7d17e115d507b22e487c6e159bbf","unknown",2008866511,"ced57a7d6ae3404f89f16ebb80f1a9be6bcad3d35e39d24f7923f7a53fb32bf6",20],
+    ["p65537_e65_mixed_broken","sat","sat",40850691,"8702e0260ce39b9bff1b2ce5166e1e2f773a32aba71897a0b127dd1e9a613d2f","sat",275481935,"90bfa5713abefe448854bd93d71f2adcc86cdab65c7980f1b8109ea738a1a46a",20],
+    ["p65537_e257_diagonal_valid","unsat","unsat",8963057,"46be18b800d773cabfb01bd8584413922902146c2a958a3c41988aec59b9af08","unknown",2016224662,"8786f359b3a756d7e03f7bcfcb018e0a16a671c996b09d08622c1f6f27d79759",26],
+    ["p65537_e257_diagonal_broken","sat","sat",27553869,"b27829c87cb7f632eaf0b87f136746f90f54f9245206d38ca3f8894c5d73d30b","sat",1058190992,"c413a9b07ac5ce8cbf9b9cd9123eea4ab0d69c5b25ac23434dc962bce5e0c545",26],
+    ["p65537_e257_mixed_valid","unsat","unsat",13914114,"3ec7b0e6b02b3a15fb57ab03175621bf0367d0e73d8160c08c349eafd1fb5869","unknown",2005377730,"aefdd2af968faf0222547ab6a469cb7f508ded585094cd3bc2cd4c93aa3240eb",26],
+    ["p65537_e257_mixed_broken","sat","sat",599392023,"e1fe5f0cc8e1ee451f0ebd3143505edec9882194a09d7f5212c4b18d0739a58a","sat",1110846819,"23305031b610ab807ef1d0404e17570ea6cdc147771858f466013bf588eab7f9",26],
+    ["p65537_e1025_diagonal_valid","unsat","unsat",14075785,"a7afcb2f135ef8c244768ed2b7c8eeec52982d8060c1eb7d19f38c4e4544b8e7","unknown",2015878391,"3290cc027812b300634a86e64b4a412f8aa32c6d4fb956f1a11e7bb6ec8172e3",32],
+    ["p65537_e1025_diagonal_broken","sat","sat",436858150,"21b4082147f5ce85a5bd8938d3c27322d93dcb8550b5676e3c280eceb6f92722","sat",854481774,"925b776e7964b2f37c8ca4c6f234282da2b553c083b4a154fe11ed3125cc38c5",32],
+    ["p65537_e1025_mixed_valid","unsat","unsat",64334724,"3abf4d67cd04eb98d21dae3cfcd476390ad17a9f7ed199b62ca302c58479bbd2","unknown",2016665773,"cb140f19cc8dbb7f764b91428ea0168edf873b5de16997bb5cf338aed81a2cf7",32],
+    ["p65537_e1025_mixed_broken","sat","unknown",2028234210,"b8b5293cf745ebb73aa2e4e62cda9885a11ab215886718f2f3cb862cbd247594","sat",554667509,"b76a371e83a7df1b9d1aba9380f5e05b0341767e0678103ce035b017c2f7a0f5",32]
+  ]
+}
