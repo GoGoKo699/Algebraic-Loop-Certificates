@@ -1,17 +1,57 @@
-# Scientific completion: qualified baseline and bounded study
+# Scientific completion: suspended bounded comparison
 
-The requirement audit and baseline qualification are complete. The conventional
-LFSR exporter and pinned rIC3 both produce witnesses accepted by the same external
-checker on a synthetic smoke control. Two corruptions are rejected; 23 completed
-CNF proofs and both negative SAT assignments are independently checked. The
-six-case comparative study has not run.
+The [current gate](../BOUNDED_COMPARISON_GATE_16.md) records a suspended study.
+The exact first 32 trials of the frozen 54-trial sequence ran; the remaining 22
+were not attempted. The primary three-of-three criterion is unevaluated, so this
+is neither a completed positive nor a completed negative comparison. Manuscript
+preparation remains on hold.
 
-Read [the current decision](../BASELINE_QUALIFICATION_GATE_15.md),
-[the comparison design](STUDY_DESIGN.md),
-[baseline qualification](BASELINE_QUALIFICATION.md), and
-[the executable protocol](EXECUTABLE_PROTOCOL.md). Manuscript preparation
-remains on hold. The earlier [requirement audit](../SCIENTIFIC_CLOSURE_GATE_14.md)
-and retrospective accounting below remain unchanged scientific evidence.
+| Recorded outcome | Exporter | rIC3 | Structural | Total |
+|---|---:|---:|---:|---:|
+| Completed workflow | 6 | 4 | 10 | 20 |
+| Deadline unknown | 0 | 7 | 0 | 7 |
+| Raw-artifact-limit unknown | 4 | 0 | 0 | 4 |
+| Execution issue: all-file storage guard | 1 | 0 | 0 | 1 |
+| Attempted | 11 | 11 | 10 | 32 |
+
+The final trial was the width-16 exporter in repetition 2. The shared cap was
+67,108,864 bytes. Raw artifacts occupied 67,098,722 bytes, 10,142 below that cap;
+all files occupied 67,170,336 bytes, 61,472 above it. The difference was 71,614
+bytes of metadata and logs. The all-file guard therefore suspended the run as an
+execution issue, as the frozen policy requires. This is not an invalid-witness
+finding: the Inductive solve was interrupted after the first five obligations
+had completed proofs.
+
+No third repetition ran. At width 8, the exporter completed twice and rIC3
+reached the 30-second deadline twice. These partial observations cannot establish
+the required three-repetition win. No comparative claim is recovered by dropping
+the failed trial, calling it raw-budget exhaustion or resuming selected trials.
+
+The [study report](STUDY_REPORT.json), [run context](STUDY_RUN_CONTEXT.json),
+[retention note](STUDY_RETENTION_NOTE.json) and
+[lossless archive](study_20260927.tar.xz.parts/manifest.json) retain the executed prefix. Independent
+replay validates all 115 completed CNF proofs, including those before interrupted
+solves. Native source-to-CNF translations remain trusted, and the structural
+reference does not supply the requested hardware witness. Check the retained
+study without invoking native tools:
+
+```sh
+python -m research.completion_v1.verify_study
+```
+
+The [comparison design](STUDY_DESIGN.md), [executable protocol](EXECUTABLE_PROTOCOL.md)
+and [freeze](PROTOCOL_FREEZE.json) are preserved unchanged. The next step is a
+separate prospective review of the shared storage policy and a decision on
+whether a fresh whole 54-trial sequence is warranted, with the original raw
+budget, sources and corpus fixed. Original outcomes must not be reclassified.
+
+The earlier [qualification gate](../BASELINE_QUALIFICATION_GATE_15.md) remains
+valid: the conventional LFSR exporter and pinned rIC3 pass the same external
+checker on a synthetic smoke control; both corruptions are rejected; 23 completed
+qualification proofs and both negative SAT assignments are independently checked.
+That compatibility evidence is separate from the comparative study. The earlier
+[requirement audit](../SCIENTIFIC_CLOSURE_GATE_14.md) and retrospective accounting
+below remain unchanged scientific evidence.
 
 ## What the existing costs actually measure
 
@@ -67,8 +107,9 @@ analytical inputs; they are not an additional soundness theorem.
 
 ## Remaining work
 
-Execute the frozen six-case matched study. Its primary outcome and failure
-classification are fixed in the study design. A failed comparison closes that
-benefit hypothesis; it does not authorize an expanding search for favorable
+Resolve the prospective storage-policy question before deciding on a fresh
+whole study. The suspended sequence supplies no completed primary result, and
+its evidence remains fixed. A completed negative comparison would close the
+benefit hypothesis; it would not authorize an expanding search for favorable
 cases. The complete orbit compiler's consumer usefulness remains a separate
 unresolved question and is not claimed by this narrower integration.

@@ -4,7 +4,9 @@ Updated 27 September 2026. The project has an executable certificate workflow. I
 
 ## Current decision
 
-The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) fixes a bounded study of a conventional LFSR witness exporter. The documented consumer requires an accepted hardware-safety certificate for the original circuit. The candidate is this scoped integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes. The [baseline qualification gate](../research/BASELINE_QUALIFICATION_GATE_15.md) now establishes a compatible pinned rIC3 witness-output path and freezes the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md). The matched native comparison remains pending.
+The [bounded comparison gate](../research/BOUNDED_COMPARISON_GATE_16.md) records a suspended study. The frozen 54-trial sequence stopped at its 32nd trial, the width-16 exporter in repetition 2, when metadata and logs pushed all-file storage above the shared guard although raw artifacts remained below their budget. This is an execution issue, not an invalid-witness result. The primary three-repetition criterion remains unevaluated; the 22 remaining trials were not attempted. Neither a positive nor a negative completed comparison is established.
+
+The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) fixes the documented consumer: an accepted hardware-safety certificate for the original circuit. The [qualification gate](../research/BASELINE_QUALIFICATION_GATE_15.md) establishes the compatible pinned rIC3 path, and the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md) remains preserved exactly as executed. The candidate is this scoped conventional exporter integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes.
 
 rIC3 is the mandatory certifying baseline, through the same accepted-artifact interface. Earlier ABC observations remain diagnostic; an ABC-only result cannot complete the comparison. The direct squarefree structural checker is a necessary source-aware cost and trust reference with a different output contract: it decides safety without itself supplying the requested standard witness. Conventional reasoning can emit the same witness as the candidate, so the study cannot count that reasoning as a weaker competitor.
 
@@ -51,10 +53,10 @@ The producer remains deliberately elementary. A better producer must be compared
 
 ## Finite remaining sequence
 
-1. Execute the bounded matched study under the [frozen protocol](../research/completion_v1/PROTOCOL_FREEZE.json), charging construction, conversions, native obligation generation, SAT search and proof replay; retain every outcome.
-2. Review any surviving scoped contribution against the closest exporter work and state its complete assurance boundary.
+1. Review a prospective shared storage-policy amendment separately from the suspended evidence and decide whether a fresh whole 54-trial sequence is warranted. Preserve the original raw budget, sources and corpus; do not selectively restart trials or reclassify recorded outcomes.
+2. If a new complete study is justified and prospectively frozen, evaluate its original primary criterion before reviewing any surviving scoped contribution against the closest exporter work and its complete assurance boundary.
 3. Freeze the scientific evidence after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
 
-The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. A later execution or compatibility failure suspends the comparison; it is not a performance win. A completed negative result closes this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
+The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. The observed execution issue suspends the comparison; it is not a performance win. At width 8, two exporter acceptances and two rIC3 deadline outcomes are partial observations, not satisfaction of the required three-repetition criterion. A completed negative result would close this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
 
 The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result.

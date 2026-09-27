@@ -1,0 +1,34 @@
+{
+  "duplicates": [
+    {
+      "action": "Moved unlisted duplicate outside the study directory; exact content remains losslessly retained in the original indexed gzip file.",
+      "canonical_stored_path": "n08-t1-exporter/data/Inductive.lrat.gz",
+      "canonical_stored_sha256": "37e94dbe47b5ff0ab100764eee7757ac435c880047d20f6e090b84173045115d",
+      "observed_stat": {
+        "ctime_ns": 1790499703882435726,
+        "mtime_ns": 1790499698938286183
+      },
+      "raw_bytes": 24856409,
+      "raw_sha256": "bae9fc50c7e30a942fd6a727049eec273d9f6fc4a5888d2b23610d08d3ba9842",
+      "trial": "n08-t1-exporter",
+      "unlisted_path": "data/Inductive.lrat"
+    },
+    {
+      "action": "Moved unlisted duplicate outside the study directory; exact content remains losslessly retained in the original indexed gzip file.",
+      "canonical_stored_path": "n08-t2-exporter/data/Inductive.lrat.gz",
+      "canonical_stored_sha256": "37e94dbe47b5ff0ab100764eee7757ac435c880047d20f6e090b84173045115d",
+      "observed_stat": {
+        "ctime_ns": 1790499913480769254,
+        "mtime_ns": 1790499908372614404
+      },
+      "raw_bytes": 24856409,
+      "raw_sha256": "bae9fc50c7e30a942fd6a727049eec273d9f6fc4a5888d2b23610d08d3ba9842",
+      "trial": "n08-t2-exporter",
+      "unlisted_path": "data/Inductive.lrat"
+    }
+  ],
+  "observation": "Two unlisted raw files were present after archive completion. Their bytes exactly equal the original indexed gzip payloads. The creation mechanism is not established; no native trial was rerun or observation edited.",
+  "recorded_after_run_utc": "2026-09-27T09:09:14.527815+00:00",
+  "recovery_directory": "/workspace/scratch/9781207fd51b/gate16-duplicate-raw-observations",
+  "schema": 1
+}

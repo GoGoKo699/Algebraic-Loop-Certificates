@@ -1,0 +1,40 @@
+{
+  "baseline_commit": "d965a41c8c67d8247f6205da3c3d9c0f95e751c7",
+  "baseline_tree": "a6ab6a64b29b4124295de37fd35074ce6415bb72",
+  "baseline_verification": "61 tests and exact 4,772-case audit passed before measurement; 111.190 seconds for regression suite.",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-u",
+    "-m",
+    "research.completion_v1.study",
+    "execute",
+    "--tools",
+    "/workspace/scratch/9781207fd51b/completion-native-bin",
+    "--freeze",
+    "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/PROTOCOL_FREEZE.json",
+    "--output",
+    "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/study_20260927"
+  ],
+  "environment": {
+    "allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "cpu_model_names": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "proc_memtotal": "MemTotal:       10206540 kB",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "execution_policy": "Sequential native trials; no concurrent project tests, builds, solvers, or proof replay. Host infrastructure load is not controlled. Fresh processes without cache flushing.",
+  "recorded_before_run_utc": "2026-09-27T09:01:33.091691+00:00",
+  "schema": 1
+}

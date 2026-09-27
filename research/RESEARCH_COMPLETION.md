@@ -6,33 +6,43 @@ proofs, source assessments and test artifacts, not drafted paper sections.
 ## Current status
 
 **Overall scientific readiness: incomplete.** The
-[requirement audit](SCIENTIFIC_CLOSURE_GATE_14.md) fixes the scoped conventional
-LFSR witness-exporter study. The [qualification gate](BASELINE_QUALIFICATION_GATE_15.md)
-now qualifies pinned rIC3 and freezes the [executable protocol](completion_v1/EXECUTABLE_PROTOCOL.md).
-Both positive qualification witnesses pass all nine native obligations;
-two corrupted witnesses fail induction and reset checks respectively.
-All 23 completed proofs replay independently, and both SAT assignments are
-checked. Ten process controls exercise the common resource harness, including
-the bounded exit-transition retry for descriptor-access races. Its retry time
-counts toward the workflow deadline and observed polling gap; persistent live
-access denial still fails closed. Earlier qualifications and protocol freezes
-are preserved in [the portability history](completion_v1/qualification_history/README.md).
-These are compatibility and rejection checks, not benchmark measurements.
+[bounded comparison gate](BOUNDED_COMPARISON_GATE_16.md) records the exact
+32-trial prefix of the frozen 54-trial sequence. It contains 20 completed
+workflows (six exporter, four rIC3 and ten structural), seven rIC3 deadline
+outcomes, four exporter raw-artifact-limit outcomes and one exporter execution
+issue. The width-16 exporter in repetition 2 reached the all-file storage guard
+because metadata and logs raised the total above the cap while raw artifacts
+remained below their budget. Its Inductive solve was interrupted; the first five
+obligations had completed proofs. This is not a finding of an invalid witness.
 
-The matched native comparison remains pending. Its
-[study design](completion_v1/STUDY_DESIGN.md) requires rIC3 as the certifying
-baseline; ABC remains diagnostic, while the direct squarefree checker has a
-different result and trust contract. This candidate does not use the complete
-orbit engine or establish its consumer-level benefit.
+The remaining 22 trials were not attempted, including all of repetition 3.
+The primary three-of-three criterion is unevaluated. In particular, two exporter
+acceptances and two rIC3 deadlines at width 8 cannot establish the required win.
+This is neither a completed positive nor a completed negative study. The
+[study report](completion_v1/STUDY_REPORT.json) and
+[lossless run archive](completion_v1/study_20260927.tar.xz.parts/manifest.json) retain the outcomes.
+All 115 completed CNF proofs replay independently, including the completed
+obligations before interrupted solves. Native translations remain trusted.
 
-The finite remaining sequence is the bounded study under the
-[protocol freeze](completion_v1/PROTOCOL_FREEZE.json), contribution and assurance
-review, and evidence freeze. The
-[cost audit](completion_v1/README.md) separates the retained native stages and
-their accounting limits; it does not supply the missing matched experiment.
-A failed or blocked outcome must be recorded without reopening closed novelty
-routes or expanding the corpus to obtain a favorable result. Manuscript work
-remains on hold.
+The [requirement audit](SCIENTIFIC_CLOSURE_GATE_14.md) and
+[qualification gate](BASELINE_QUALIFICATION_GATE_15.md) remain binding. Both
+positive qualification witnesses pass all nine native obligations, both
+corruptions are rejected, and all 23 completed qualification proofs replay
+independently. Ten process controls exercise the resource harness. Earlier
+qualifications and freezes remain in [the portability history](completion_v1/qualification_history/README.md).
+Qualification is distinct from comparative evidence. The direct squarefree
+checker has a different result and trust contract, and this conventional
+exporter integration does not use the complete orbit engine or establish its
+consumer-level benefit.
+
+Next, separately review a prospective shared storage-policy amendment and decide
+whether a fresh whole 54-trial sequence is warranted. Preserve the original raw
+budget, source models and corpus; do not selectively resume, rerun or reclassify
+the suspended study. Its [design](completion_v1/STUDY_DESIGN.md),
+[executable protocol](completion_v1/EXECUTABLE_PROTOCOL.md) and
+[freeze](completion_v1/PROTOCOL_FREEZE.json) remain unchanged. Contribution and
+assurance review, then evidence freeze, still follow a completed comparison.
+Manuscript work remains on hold.
 
 ## Earlier scientific decisions
 
