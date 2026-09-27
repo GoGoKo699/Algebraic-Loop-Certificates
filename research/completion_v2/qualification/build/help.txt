@@ -1,0 +1,18 @@
+hardware model checker
+
+Usage: ric3 <COMMAND>
+
+Commands:
+  run    Run verification using 'ric3.toml' (requires the file in the current directory)
+  check  Verify properties for AIGER/BTOR files
+  clean  Clean up verification cache (ric3proj)
+  build  Build ric3proj with ric3.toml
+  cill   CTI Guided Interactive Lemma Generation
+  trace  Inspect Traces (CounterExamples or CTIs)
+  help   Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Copyright (C) 2023 - Present, Yuheng Su <gipsyh.icu@gmail.com>. All rights reserved.

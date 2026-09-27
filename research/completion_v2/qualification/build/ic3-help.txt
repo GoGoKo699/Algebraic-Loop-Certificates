@@ -1,0 +1,33 @@
+ic3
+
+Usage: ric3 check <MODEL> ic3 [OPTIONS]
+
+Options:
+      --prop <PROP>                  Property ID. If not specified, all properties are checked
+      --start <START>                Start bound [default: 0]
+      --end <END>                    Max bound to check [default: 18446744073709551615]
+      --step <STEP>                  Step length [default: 1]
+      --rseed <RSEED>                Random seed [default: 0]
+      --time-limit <TIME_LIMIT>      Time limit in seconds
+      --preproc <PREPROC>            disable preprocess [default: true] [possible values: true, false]
+      --bve <BVE>                    bounded variable elimination [default: true] [possible values: true, false]
+      --frts <FRTS>                  function reduced transys [default: true] [possible values: true, false]
+      --frts-tl <FRTS_TL>            frts time limit in seconds [default: 1000]
+      --scorr <SCORR>                scorr [default: true] [possible values: true, false]
+      --scorr-tl <SCORR_TL>          scorr time limit in seconds [default: 200]
+      --dynamic                      dynamic generalization
+      --mab                          contextual-MAB (LinUCB) adaptive generalization (A-IC3)
+      --mab-alpha <MAB_ALPHA>        LinUCB exploration parameter alpha [default: 1]
+      --mab-lambda <MAB_LAMBDA>      LinUCB regularization parameter lambda [default: 0.1]
+      --ctg <CTG>                    counterexample to generalization [default: true] [possible values: true, false]
+      --ctg-max <CTG_MAX>            max number of ctg [default: 3]
+      --ctg-limit <CTG_LIMIT>        ctg limit [default: 1]
+      --ctp                          counterexample to propagation
+      --inn                          internal signals (FMCAD'21 https://doi.org/10.34727/2021/isbn.978-3-85448-046-4_14)
+      --abs-cst                      abstract constrains
+      --abs-trans                    abstract trans
+      --drop-po <DROP_PO>            dropping proof-obligation [default: true] [possible values: true, false]
+      --abs-array                    abstract array
+      --parent-lemma <PARENT_LEMMA>  finding parent lemma in mic (CAV'23 https://doi.org/10.1007/978-3-031-37703-7_14) [default: true] [possible values: true, false]
+      --pred-prop                    predicate property
+  -h, --help                         Print help

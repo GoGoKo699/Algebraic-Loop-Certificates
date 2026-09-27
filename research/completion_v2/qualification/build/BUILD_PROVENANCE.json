@@ -1,0 +1,304 @@
+{
+  "schema": "ric3-pinned-build-v1",
+  "status": "build-completed-cli-verified-not-checker-qualified",
+  "source": {
+    "url": "https://github.com/gipsyh/rIC3.git",
+    "commit": "8dcec6995e0e5c0adf7d4397047aafc06e9559dc",
+    "tree": "940c4dc7c26a6fb9e544ea9a3ed67d4af9585aff",
+    "dirty": false,
+    "cargo_lock_sha256": "87b1fd38d87bc8161894e0511fed1835a66c94f1e0105673e23ef7e6999029e4",
+    "cargo_lock_git_blob": "58fe1c356f49e30686fe08ca9f80e298ddcd3b5d",
+    "submodules": [
+      {
+        "initialized": true,
+        "commit": "0a287285d5e52def2d885f3b16790539dccba372",
+        "path": "deps/aig-rs"
+      },
+      {
+        "initialized": true,
+        "commit": "322d70b799ffc5e4570093183198abb27cae042a",
+        "path": "deps/aig-rs/aiger"
+      },
+      {
+        "initialized": true,
+        "commit": "3743b786048a2f1fb06306b54e890f4f3bdb3b88",
+        "path": "deps/bitwuzla-rs"
+      },
+      {
+        "initialized": true,
+        "commit": "95e71f3b9322f4892bb54510e72765d32b10b9b1",
+        "path": "deps/bitwuzla-rs/bitwuzla"
+      },
+      {
+        "initialized": true,
+        "commit": "4eaa050a4a207f73a7dabf9fce214dced553154d",
+        "path": "deps/btor-rs"
+      },
+      {
+        "initialized": true,
+        "commit": "8cd2c73166a8d25f30f6dbeaa1da8629c08caba7",
+        "path": "deps/cadical-rs"
+      },
+      {
+        "initialized": true,
+        "commit": "f13d74439a5b5c963ac5b02d05ce93a8098018b8",
+        "path": "deps/cadical-rs/cadical"
+      },
+      {
+        "initialized": true,
+        "commit": "b787d2b64bfa5a2ba9eadd3276d04336297210a2",
+        "path": "deps/giputils"
+      },
+      {
+        "initialized": true,
+        "commit": "0ce9de57fb8ff1028a1d84d559d0bf2f59b58d86",
+        "path": "deps/kissat-rs"
+      },
+      {
+        "initialized": true,
+        "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+        "path": "deps/kissat-rs/kissat"
+      },
+      {
+        "initialized": true,
+        "commit": "22a7d0fd16cec8ee816f107fef594457dc1e1802",
+        "path": "deps/logicrs"
+      },
+      {
+        "initialized": false,
+        "commit": "4918e4a1f4f43092739d00abe331cd3b14122797",
+        "path": "examples/fvbench"
+      }
+    ],
+    "dirty_after_build": false
+  },
+  "build": {
+    "command": [
+      "cargo",
+      "build",
+      "--release",
+      "--locked",
+      "--offline",
+      "-j",
+      "2"
+    ],
+    "script": "build.sh",
+    "log": "build-release.log",
+    "rust_components": {
+      "rustc": {
+        "available": true,
+        "url": "https://static.rust-lang.org/dist/2026-09-03/rustc-1.98.1-x86_64-unknown-linux-gnu.tar.gz",
+        "hash": "a6e35741daaac7978e7f485b564a783d13b6740a1ecf3e80c2e71696ca5cabb2",
+        "xz_url": "https://static.rust-lang.org/dist/2026-09-03/rustc-1.98.1-x86_64-unknown-linux-gnu.tar.xz",
+        "xz_hash": "e974f036b28565f37c0f3bd92ddefa809bee16c04f9dcf07b9ed96e05aaaf7c4",
+        "version": "1.98.1 (48a229cea 2026-09-01)"
+      },
+      "cargo": {
+        "available": true,
+        "url": "https://static.rust-lang.org/dist/2026-09-03/cargo-1.98.1-x86_64-unknown-linux-gnu.tar.gz",
+        "hash": "3f1215b2a3b88c7aaa008b561bd4f39d6c6672fa7821e562ab6ba1a6d6f37f61",
+        "xz_url": "https://static.rust-lang.org/dist/2026-09-03/cargo-1.98.1-x86_64-unknown-linux-gnu.tar.xz",
+        "xz_hash": "ea1de9f9e23107d97ee2b41a72c552f34064a593da503789218387aee59f3ba4",
+        "version": "0.99.0 (797e8a9bc 2026-08-05)"
+      },
+      "rust-std": {
+        "available": true,
+        "url": "https://static.rust-lang.org/dist/2026-09-03/rust-std-1.98.1-x86_64-unknown-linux-gnu.tar.gz",
+        "hash": "eddab0358cbd12aeb897716aab00d1db7b59696e85b9ac4982e72259a9a976b1",
+        "xz_url": "https://static.rust-lang.org/dist/2026-09-03/rust-std-1.98.1-x86_64-unknown-linux-gnu.tar.xz",
+        "xz_hash": "fa3ff450172a16c026944030230c5069947af93c728d9179971d44e5e0cfb561",
+        "version": "1.98.1 (48a229cea 2026-09-01)"
+      }
+    },
+    "additional_build_tools": {
+      "cmake": {
+        "Package": "cmake",
+        "Version": "3.28.3-1build7",
+        "Filename": "pool/main/c/cmake/cmake_3.28.3-1build7_amd64.deb",
+        "Size": "11190006",
+        "SHA256": "4b0a7f8c0daf27b26b46997d994ae5d1ee7a3d11dfcda9f7627bb1462c162295",
+        "Depends": "libarchive13t64 (>= 3.3.3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp25 (>= 1.9.5), librhash0 (>= 1.2.6), libstdc++6 (>= 13.1), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4), cmake-data (= 3.28.3-1build7), procps"
+      },
+      "cmake-data": {
+        "Package": "cmake-data",
+        "Version": "3.28.3-1build7",
+        "Filename": "pool/main/c/cmake/cmake-data_3.28.3-1build7_all.deb",
+        "Size": "2154936",
+        "SHA256": "20a3b644211ce82f35c24f1f5052199adeb0ac159978a8740fd6c0959611557f"
+      },
+      "libarchive13t64": {
+        "Package": "libarchive13t64",
+        "Version": "3.7.2-2",
+        "Filename": "pool/main/liba/libarchive/libarchive13t64_3.7.2-2_amd64.deb",
+        "Size": "381452",
+        "SHA256": "90f7f4692ac6b2ce1755c0f2e67f9655e288d764ef9d70dba7c3f7ae8b8a5b4b",
+        "Depends": "libacl1 (>= 2.2.23), libbz2-1.0, libc6 (>= 2.38), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnettle8t64, libxml2 (>= 2.7.4), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)"
+      },
+      "libclang-cpp18": {
+        "Package": "libclang-cpp18",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/main/l/llvm-toolchain-18/libclang-cpp18_18.1.3-1_amd64.deb",
+        "Size": "13494854",
+        "SHA256": "899e354d4719c31eb7829517a3ed8d6b64173590fb5c7fe7371ede469fbbe05d",
+        "Depends": "libc6 (>= 2.38), libllvm18 (= 1:18.1.3-1), libstdc++6 (>= 12)"
+      },
+      "libclang1-18": {
+        "Package": "libclang1-18",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/main/l/llvm-toolchain-18/libclang1-18_18.1.3-1_amd64.deb",
+        "Size": "7815262",
+        "SHA256": "c7972cec7003be32e57fcfc3ec6ca3ee65ac5d648fb9c420db52022919562855",
+        "Depends": "libc6 (>= 2.38), libllvm18, libstdc++6 (>= 11)"
+      },
+      "libjsoncpp25": {
+        "Package": "libjsoncpp25",
+        "Version": "1.9.5-6build1",
+        "Filename": "pool/main/libj/libjsoncpp/libjsoncpp25_1.9.5-6build1_amd64.deb",
+        "Size": "82754",
+        "SHA256": "8efea5b75952f3ad1c40e6b5b31de687c297ea29f87f8b63efebb55e13467211",
+        "Depends": "libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)"
+      },
+      "libllvm18": {
+        "Package": "libllvm18",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/main/l/llvm-toolchain-18/libllvm18_18.1.3-1_amd64.deb",
+        "Size": "27545628",
+        "SHA256": "826621c8e678dd27b4f5c3a9b26d10aae50d5de2d95575695a17c91014f5eaa5",
+        "Depends": "libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libffi8 (>= 3.4), libgcc-s1 (>= 3.3), libstdc++6 (>= 12), libtinfo6 (>= 6), libxml2 (>= 2.7.4), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)"
+      },
+      "libpkgconf3": {
+        "Package": "libpkgconf3",
+        "Version": "1.8.1-2build1",
+        "Filename": "pool/main/p/pkgconf/libpkgconf3_1.8.1-2build1_amd64.deb",
+        "Size": "30652",
+        "SHA256": "fc3a57e8f931ec06cb7c51acc56878f1fec247ff02a7adcab26905c2faeb2792",
+        "Depends": "libc6 (>= 2.38)"
+      },
+      "librhash0": {
+        "Package": "librhash0",
+        "Version": "1.4.3-3build1",
+        "Filename": "pool/main/r/rhash/librhash0_1.4.3-3build1_amd64.deb",
+        "Size": "128748",
+        "SHA256": "e9ee69963ff1a56378b9c5ffdd21ea0feaec9647c522349b7612b25103490528",
+        "Depends": "libc6 (>= 2.34)"
+      },
+      "pkgconf": {
+        "Package": "pkgconf",
+        "Version": "1.8.1-2build1",
+        "Filename": "pool/main/p/pkgconf/pkgconf_1.8.1-2build1_amd64.deb",
+        "Size": "16790",
+        "SHA256": "834a58031069d97d7cfb8b2f5bfd5effc69cecf7f30cc362071875f1f8dc1828",
+        "Depends": "pkgconf-bin"
+      },
+      "pkgconf-bin": {
+        "Package": "pkgconf-bin",
+        "Version": "1.8.1-2build1",
+        "Filename": "pool/main/p/pkgconf/pkgconf-bin_1.8.1-2build1_amd64.deb",
+        "Size": "20730",
+        "SHA256": "7a812f05ee1610154b433e2ad54f6e4163fcbb306b9fb31afe959afb2e5e1545",
+        "Depends": "libc6 (>= 2.34), libpkgconf3 (>= 1.8.0)"
+      },
+      "clang-18": {
+        "Package": "clang-18",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/universe/l/llvm-toolchain-18/clang-18_18.1.3-1_amd64.deb",
+        "Size": "80564",
+        "SHA256": "3d028a3b4c0b3dc942e043db94e153baedf5c384283181d274a5e915da1b5135",
+        "Depends": "libc6 (>= 2.34), libclang-cpp18 (>= 1:18.1.3), libllvm18 (= 1:18.1.3-1), libstdc++6 (>= 11), libstdc++-13-dev, libgcc-13-dev, libobjc-13-dev, libclang-common-18-dev (= 1:18.1.3-1), llvm-18-linker-tools (= 1:18.1.3-1), libclang1-18 (= 1:18.1.3-1), libc6-dev, binutils"
+      },
+      "libclang-common-18-dev": {
+        "Package": "libclang-common-18-dev",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/universe/l/llvm-toolchain-18/libclang-common-18-dev_18.1.3-1_amd64.deb",
+        "Size": "736304",
+        "SHA256": "91df14d6e3829652b837e2b368e35b076124277f2962a3f3daaea296bf86e4b0"
+      },
+      "llvm-18-linker-tools": {
+        "Package": "llvm-18-linker-tools",
+        "Version": "1:18.1.3-1",
+        "Filename": "pool/universe/l/llvm-toolchain-18/llvm-18-linker-tools_18.1.3-1_amd64.deb",
+        "Size": "1294898",
+        "SHA256": "5724e42bd73a481386087b57dc9962c4d4d218c91175160668b6ceb297725093",
+        "Depends": "libc6 (>= 2.38), libllvm18, libstdc++6 (>= 11)"
+      },
+      "libuv1t64": {
+        "Package": "libuv1t64",
+        "Version": "1.48.0-1.1build1",
+        "Filename": "pool/main/libu/libuv1/libuv1t64_1.48.0-1.1build1_amd64.deb",
+        "Size": "97288",
+        "SHA256": "72a1856b30af1e533494ab90742a2446f4491b15ddebcade6661a6e8d61b4359",
+        "Depends": "libc6 (>= 2.38)"
+      }
+    },
+    "compiler_versions_file": "compiler-versions.txt",
+    "default_release_profile": {
+      "lto": true,
+      "panic": "abort",
+      "strip": true
+    },
+    "bitwuzla": "upstream default nonvendor stub when library missing; word-level SMT unsupported",
+    "not_run": [
+      "six-case benchmark",
+      "comparison trials",
+      "proof checker qualification"
+    ],
+    "system_executables": {
+      "cc": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+      },
+      "c++": {
+        "path": "/usr/bin/x86_64-linux-gnu-g++-13",
+        "sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73"
+      },
+      "ld": {
+        "path": "/usr/bin/x86_64-linux-gnu-ld.bfd",
+        "sha256": "5b674ea1d7017c2929f3c52c43487478bb240ecdd7197a25cce3813a70329a5c"
+      },
+      "make": {
+        "path": "/usr/bin/make",
+        "sha256": "d78b8f1d099fbcfb6f2f49ab87223b9b68fb3956642f92d6ec6de812e8afa965"
+      },
+      "git": {
+        "path": "/usr/local/bin/git",
+        "sha256": "2dae8066ef4d6a926561b4b0eaca7b458d4f5b56bb83760656e6baa7fc3e974f"
+      },
+      "python3": {
+        "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+      }
+    },
+    "host": {
+      "platform": "Linux c324a5931a68 6.18.44 #1 SMP Tue Sep 22 17:26:16 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux",
+      "glibc": "ldd (Ubuntu GLIBC 2.39-0ubuntu8.6) 2.39"
+    },
+    "log_sha256": "82835cd0091ade30532ae8fd7bcc06de5cedcec25bbd2d6fc84f93ee7d8f118b"
+  },
+  "method_limit": "Pins and a rebuild recipe are recorded; bit-for-bit rebuild determinism has not been tested.",
+  "binary": {
+    "path": "/workspace/scratch/9781207fd51b/ric3-cargo-target/release/ric3",
+    "bytes": 8639792,
+    "sha256": "e8ea8072fc76bbfeb002337677292b23557b045464b016fe38fcfddbe7a7ba76",
+    "version": "rIC3 1.5.2",
+    "ldd": "\tlinux-vdso.so.1 (0x00007fa667062000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007fa666593000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fa666565000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fa66647c000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fa66626a000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fa667064000)\n"
+  },
+  "cli": {
+    "command": [
+      "ric3",
+      "check",
+      "model.aag",
+      "--cert",
+      "witness.aag",
+      "--ui",
+      "false",
+      "ic3"
+    ],
+    "help_files": [
+      "version.txt",
+      "help.txt",
+      "check-help.txt",
+      "ic3-help.txt"
+    ],
+    "note": "Help accepted and source-inspected. Execution smoke and external checker qualification delegated to lead."
+  }
+}
