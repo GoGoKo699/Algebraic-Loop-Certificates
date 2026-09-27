@@ -1,0 +1,17 @@
+{
+  "base_commit": "eccf449fa226fc08fd518387c6901d1344031e33",
+  "schema": 1,
+  "sha256": {
+    ".github/workflows/invariant-gate.yml": "b3393a117bb60a1ccc94d772a8b9561de752940e817134bfad890f115da2de45",
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "audits/invariant_validation_v1/PROTOCOL.md": "25f888a2bdb28287d2c40f676396fe85820497741238a95e9631a704597a39bb",
+    "audits/invariant_validation_v1/expected.json": "5ed98952dedc912080f213f05e2ab1440e310a410227b5c6abfbc2fe1e8ebab7",
+    "audits/invariant_validation_v1/gate.py": "89624bb77bbb0cce2a50ff848da862677d51c873ab7da28955fe57ce97c8465e",
+    "audits/invariant_validation_v1/verify.py": "8328e22933efb6047809645558887e34f4b997fa067ff13950d4e9bc14b29368",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/separating_invariants_v1/checker.py": "b7aae0a1540224de4e6c6357689a7abe0bc438cee0bd926e01cb24b51eb04420",
+    "tests/test_invariant_validation_gate.py": "0e6f4a8cb150dd6f21b7ead67297fb7219ed074791f8ac26132927f727fdff3f"
+  }
+}

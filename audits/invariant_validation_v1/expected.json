@@ -1,0 +1,8 @@
+{
+  "cases": 20,
+  "complete_report_sha256": "df8e6dd434375826eb14adc9955ae3f59411b18f609b9a732fc00d9914f36896",
+  "multiplication_dag_nodes": 332,
+  "predicate_and_step_checks": 1700,
+  "schema": 1,
+  "scope": "Local exact generator, certificate, predicate and induction controls. No native SMT run implied."
+}
