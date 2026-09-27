@@ -10,7 +10,7 @@ $$
 
 This project separates **finding that description**, **checking its proof**, and **using it**. A producer may be slow or untrusted. The checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
-**Status:** working research prototype with independently checked orbit certificates and an experimental [hardware-safety integration](research/odd_order_witness_v1/README.md). The [latest contribution audit](research/INVARIANT_HISTORY_GATE_13.md) identifies the invariant/history argument as a concrete instance of an established inverse-bit separator construction. We are closing that standalone novelty route while preserving the verified examples and native proof evidence. A new research contribution or consequential advantage over source-aware methods remains unestablished. Manuscript preparation is on hold.
+**Status:** working research prototype. The [current gate](research/SCIENTIFIC_CLOSURE_GATE_14.md) completes the requirement audit for exporting conventional LFSR reasoning through an existing hardware-safety certificate interface; the matched rIC3 comparison is pending. This scoped integration has not established a new research contribution or an advantage for the complete orbit engine. Manuscript preparation is on hold.
 
 ## Try a complete example
 
@@ -40,7 +40,7 @@ The producer uses bounded classical enumeration and trial division. It refuses t
 | [Mathematical specification and proof](docs/SPECIFICATION.md) | Exact domain, complete positive-hit theorem, and the role of primality proofs |
 | [Certificate and command-line interface](docs/FORMAT.md) | Trusted input, untrusted certificate, validation rules, exit codes, and limits |
 | [Research assessment](docs/RESEARCH.md) | Prior work, current contribution boundary, and the next substantive research question |
-| [Research modules and latest decisions](research/README.md) | Experimental complete certificates, reusable recognizers, comparison audits, and the failed application-benefit gate |
+| [Research modules and latest decisions](research/README.md) | Experimental certificates, witness integration, prior-work decisions, and the bounded completion study |
 | [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
 | [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
 | [Current work order](work_orders/CURRENT.md) | Scope for the next research session |

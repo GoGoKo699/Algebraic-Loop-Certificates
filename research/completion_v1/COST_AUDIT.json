@@ -1,0 +1,907 @@
+{
+  "cases": [
+    {
+      "case": "abc02",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "complete_original_construction_measured": false,
+        "kind": "partial_original_abc_search_and_pla_export",
+        "missing": [
+          "original AAG-to-binary preparation",
+          "PLA-to-AIGER adaptation"
+        ],
+        "seconds": "0.04135328799929994",
+        "source": "research/proof_interface_v1/native/abc_export/EXPORT_RESULTS.json"
+      },
+      "gate": 11,
+      "method": "abc_export",
+      "native_seconds": "0.10196893399916007",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0170704359970841322",
+        "native_lrat_replay": "0.0159086619987647283",
+        "obligation_generation": "0.004303630999856978",
+        "obligation_split": "0.001954204000867321",
+        "sat_search_and_lrat_emission": "0.0269533949976903389"
+      },
+      "native_unallocated_overhead_seconds": "0.0357786060048965716",
+      "obligations": [
+        {
+          "cnf_seconds": "0.0023554969993710984",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.002054897999187233",
+          "raw_cnf_bytes": 423,
+          "raw_lrat_bytes": 832,
+          "search_and_emission_seconds": "0.003061794999666745"
+        },
+        {
+          "cnf_seconds": "0.0026393299995106645",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0015494959989155177",
+          "raw_cnf_bytes": 1487,
+          "raw_lrat_bytes": 3326,
+          "search_and_emission_seconds": "0.003487113999653957"
+        },
+        {
+          "cnf_seconds": "0.0019730429994524457",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0015024650001578266",
+          "raw_cnf_bytes": 796,
+          "raw_lrat_bytes": 971,
+          "search_and_emission_seconds": "0.003258254999309429"
+        },
+        {
+          "cnf_seconds": "0.0015102260003914125",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.002232579001429258",
+          "raw_cnf_bytes": 1907,
+          "raw_lrat_bytes": 89,
+          "search_and_emission_seconds": "0.0024858260003384203"
+        },
+        {
+          "cnf_seconds": "0.0019992930010630516",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.001894001999971806",
+          "raw_cnf_bytes": 824,
+          "raw_lrat_bytes": 1125,
+          "search_and_emission_seconds": "0.003126873998553492"
+        },
+        {
+          "cnf_seconds": "0.0017555309987073997",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.0018110250002791872",
+          "raw_cnf_bytes": 1927,
+          "raw_lrat_bytes": 3077,
+          "search_and_emission_seconds": "0.003179745001034462"
+        },
+        {
+          "cnf_seconds": "0.0014648269989265827",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.0014593679989047814",
+          "raw_cnf_bytes": 1867,
+          "raw_lrat_bytes": 81,
+          "search_and_emission_seconds": "0.002569813999798498"
+        },
+        {
+          "cnf_seconds": "0.001959641998837469",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.0014638650009146659",
+          "raw_cnf_bytes": 2540,
+          "raw_lrat_bytes": 93,
+          "search_and_emission_seconds": "0.002558035999754793"
+        },
+        {
+          "cnf_seconds": "0.0014130470008240081",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0019409639990044525",
+          "raw_cnf_bytes": 3465,
+          "raw_lrat_bytes": 101,
+          "search_and_emission_seconds": "0.0032259359995805426"
+        }
+      ],
+      "raw_case_artifact_bytes": 38102,
+      "raw_cnf_bytes": 15236,
+      "raw_lrat_bytes": 9695,
+      "results_path": "research/proof_interface_v1/native/abc02/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 2,
+      "witness_bytes": 833
+    },
+    {
+      "case": "abc04",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "complete_original_construction_measured": false,
+        "kind": "partial_original_abc_search_and_pla_export",
+        "missing": [
+          "original AAG-to-binary preparation",
+          "PLA-to-AIGER adaptation"
+        ],
+        "seconds": "0.378222249000828",
+        "source": "research/proof_interface_v1/native/abc_export/EXPORT_RESULTS.json"
+      },
+      "gate": 11,
+      "method": "abc_export",
+      "native_seconds": "0.12185365599907527",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0181713989968557143",
+        "native_lrat_replay": "0.0183838889952312457",
+        "obligation_generation": "0.003448747998845647",
+        "obligation_split": "0.0028820489987992914",
+        "sat_search_and_lrat_emission": "0.0540619769999466372"
+      },
+      "native_unallocated_overhead_seconds": "0.0249055940093967344",
+      "obligations": [
+        {
+          "cnf_seconds": "0.00159798299864633",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.00154641500012076",
+          "raw_cnf_bytes": 728,
+          "raw_lrat_bytes": 1506,
+          "search_and_emission_seconds": "0.002517336000892101"
+        },
+        {
+          "cnf_seconds": "0.0016698119998181937",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0014386309994733892",
+          "raw_cnf_bytes": 2845,
+          "raw_lrat_bytes": 7424,
+          "search_and_emission_seconds": "0.0027456219995656284"
+        },
+        {
+          "cnf_seconds": "0.0027296580010442995",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0015378209991467884",
+          "raw_cnf_bytes": 14811,
+          "raw_lrat_bytes": 11241,
+          "search_and_emission_seconds": "0.0029783549998683156"
+        },
+        {
+          "cnf_seconds": "0.0018335900003876304",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.0015816779996384867",
+          "raw_cnf_bytes": 32906,
+          "raw_lrat_bytes": 109,
+          "search_and_emission_seconds": "0.0027930140004173154"
+        },
+        {
+          "cnf_seconds": "0.001888061999125057",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0017809799992392072",
+          "raw_cnf_bytes": 19032,
+          "raw_lrat_bytes": 21673,
+          "search_and_emission_seconds": "0.003736814998774207"
+        },
+        {
+          "cnf_seconds": "0.0017838639996625716",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.0041435509992879815",
+          "raw_cnf_bytes": 38298,
+          "raw_lrat_bytes": 325181,
+          "search_and_emission_seconds": "0.028634128999328823"
+        },
+        {
+          "cnf_seconds": "0.0021075249987916322",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.00227039199853607",
+          "raw_cnf_bytes": 32860,
+          "raw_lrat_bytes": 99,
+          "search_and_emission_seconds": "0.0037196890007180627"
+        },
+        {
+          "cnf_seconds": "0.0021827300006407313",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.001878406999821891",
+          "raw_cnf_bytes": 49854,
+          "raw_lrat_bytes": 114,
+          "search_and_emission_seconds": "0.0034753990003082436"
+        },
+        {
+          "cnf_seconds": "0.0023781749987392686",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0022060139999666717",
+          "raw_cnf_bytes": 51792,
+          "raw_lrat_bytes": 124,
+          "search_and_emission_seconds": "0.0034616180000739405"
+        }
+      ],
+      "raw_case_artifact_bytes": 719699,
+      "raw_cnf_bytes": 243126,
+      "raw_lrat_bytes": 367471,
+      "results_path": "research/proof_interface_v1/native/abc04/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 4,
+      "witness_bytes": 12393
+    },
+    {
+      "case": "phase02",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "add_to_native_total": false,
+        "complete_original_construction_measured": false,
+        "kind": "post_native_byte_identical_reconstruction",
+        "seconds": "0.0665490339997632",
+        "source": "research/proof_interface_v1/native/CONSTRUCTION_PHASE.json"
+      },
+      "gate": 11,
+      "method": "maximal_phase",
+      "native_seconds": "0.07804557399867917",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0138788389995170292",
+        "native_lrat_replay": "0.0136596449992794081",
+        "obligation_generation": "0.0028932050008734223",
+        "obligation_split": "0.001949236000655219",
+        "sat_search_and_lrat_emission": "0.0217403280021244425"
+      },
+      "native_unallocated_overhead_seconds": "0.0239243209962296489",
+      "obligations": [
+        {
+          "cnf_seconds": "0.0014469839989033062",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.0014312490002339473",
+          "raw_cnf_bytes": 423,
+          "raw_lrat_bytes": 832,
+          "search_and_emission_seconds": "0.0023101219994714484"
+        },
+        {
+          "cnf_seconds": "0.001453683000363526",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.001410769000358414",
+          "raw_cnf_bytes": 1487,
+          "raw_lrat_bytes": 3326,
+          "search_and_emission_seconds": "0.002681855999981053"
+        },
+        {
+          "cnf_seconds": "0.0017857269995147362",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0014313599986053305",
+          "raw_cnf_bytes": 1089,
+          "raw_lrat_bytes": 992,
+          "search_and_emission_seconds": "0.0021893690009164857"
+        },
+        {
+          "cnf_seconds": "0.0014407440012291772",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.0013723210013267817",
+          "raw_cnf_bytes": 2811,
+          "raw_lrat_bytes": 91,
+          "search_and_emission_seconds": "0.002212232999227126"
+        },
+        {
+          "cnf_seconds": "0.0018186470006185118",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.001464589999159216",
+          "raw_cnf_bytes": 1088,
+          "raw_lrat_bytes": 1229,
+          "search_and_emission_seconds": "0.0022635909990640357"
+        },
+        {
+          "cnf_seconds": "0.0016042320003180066",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.0016169959999388084",
+          "raw_cnf_bytes": 2707,
+          "raw_lrat_bytes": 7036,
+          "search_and_emission_seconds": "0.0030573550011467887"
+        },
+        {
+          "cnf_seconds": "0.001484149999669171",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.001939208999829134",
+          "raw_cnf_bytes": 2771,
+          "raw_lrat_bytes": 83,
+          "search_and_emission_seconds": "0.002305846001036116"
+        },
+        {
+          "cnf_seconds": "0.0014500079996651039",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.001464855000449461",
+          "raw_cnf_bytes": 3818,
+          "raw_lrat_bytes": 95,
+          "search_and_emission_seconds": "0.002395561999946949"
+        },
+        {
+          "cnf_seconds": "0.0013946639992354903",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0015282959993783152",
+          "raw_cnf_bytes": 4997,
+          "raw_lrat_bytes": 103,
+          "search_and_emission_seconds": "0.00232439400133444"
+        }
+      ],
+      "raw_case_artifact_bytes": 50572,
+      "raw_cnf_bytes": 21191,
+      "raw_lrat_bytes": 13787,
+      "results_path": "research/proof_interface_v1/native/phase02/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 2,
+      "witness_bytes": 1146
+    },
+    {
+      "case": "phase04",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "add_to_native_total": false,
+        "complete_original_construction_measured": false,
+        "kind": "post_native_byte_identical_reconstruction",
+        "seconds": "0.03674486599993543",
+        "source": "research/proof_interface_v1/native/CONSTRUCTION_PHASE.json"
+      },
+      "gate": 11,
+      "method": "maximal_phase",
+      "native_seconds": "0.10283904999960214",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0152745020022848624",
+        "native_lrat_replay": "0.0193273000004410282",
+        "obligation_generation": "0.0029884100003982894",
+        "obligation_split": "0.002119073000358185",
+        "sat_search_and_lrat_emission": "0.0359134520040242932"
+      },
+      "native_unallocated_overhead_seconds": "0.0272163129920954818",
+      "obligations": [
+        {
+          "cnf_seconds": "0.001664732999415719",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.00382088200058206",
+          "raw_cnf_bytes": 728,
+          "raw_lrat_bytes": 1506,
+          "search_and_emission_seconds": "0.0029819100000167964"
+        },
+        {
+          "cnf_seconds": "0.0015387219991680468",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0015611569997417973",
+          "raw_cnf_bytes": 2845,
+          "raw_lrat_bytes": 7424,
+          "search_and_emission_seconds": "0.0027495080012158724"
+        },
+        {
+          "cnf_seconds": "0.0017503930012026103",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0014499379994958872",
+          "raw_cnf_bytes": 3002,
+          "raw_lrat_bytes": 2541,
+          "search_and_emission_seconds": "0.0032854800010682084"
+        },
+        {
+          "cnf_seconds": "0.001893570999527583",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.001520314999652328",
+          "raw_cnf_bytes": 7766,
+          "raw_lrat_bytes": 91,
+          "search_and_emission_seconds": "0.0024810510003590025"
+        },
+        {
+          "cnf_seconds": "0.001621949000764289",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0014283350010373397",
+          "raw_cnf_bytes": 3052,
+          "raw_lrat_bytes": 2727,
+          "search_and_emission_seconds": "0.0024518870013707783"
+        },
+        {
+          "cnf_seconds": "0.001511100001152954",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.004197723999823211",
+          "raw_cnf_bytes": 7656,
+          "raw_lrat_bytes": 215588,
+          "search_and_emission_seconds": "0.013652527000886039"
+        },
+        {
+          "cnf_seconds": "0.001743832999636652",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.002221617998657166",
+          "raw_cnf_bytes": 7726,
+          "raw_lrat_bytes": 83,
+          "search_and_emission_seconds": "0.00315030499950808"
+        },
+        {
+          "cnf_seconds": "0.0020060910010215594",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.0014971800010243896",
+          "raw_cnf_bytes": 10819,
+          "raw_lrat_bytes": 95,
+          "search_and_emission_seconds": "0.00273491599909903"
+        },
+        {
+          "cnf_seconds": "0.0015441100003954489",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0016301510004268494",
+          "raw_cnf_bytes": 13250,
+          "raw_lrat_bytes": 114,
+          "search_and_emission_seconds": "0.0024258680005004862"
+        }
+      ],
+      "raw_case_artifact_bytes": 318052,
+      "raw_cnf_bytes": 56844,
+      "raw_lrat_bytes": 230169,
+      "results_path": "research/proof_interface_v1/native/phase04/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 4,
+      "witness_bytes": 2802
+    },
+    {
+      "case": "phase08",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "add_to_native_total": false,
+        "complete_original_construction_measured": false,
+        "kind": "post_native_byte_identical_reconstruction",
+        "seconds": "0.17200741799933894",
+        "source": "research/proof_interface_v1/native/CONSTRUCTION_PHASE.json"
+      },
+      "gate": 11,
+      "method": "maximal_phase",
+      "native_seconds": "3.4174395440004446",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0205635329984943380",
+        "native_lrat_replay": "0.2319506119983998322",
+        "obligation_generation": "0.004004690999863669",
+        "obligation_split": "0.002861969000150566",
+        "sat_search_and_lrat_emission": "3.0559381849961937685"
+      },
+      "native_unallocated_overhead_seconds": "0.1021205540073424263",
+      "obligations": [
+        {
+          "cnf_seconds": "0.0018931809991045156",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.001496217999374494",
+          "raw_cnf_bytes": 1345,
+          "raw_lrat_bytes": 2952,
+          "search_and_emission_seconds": "0.005311631999575184"
+        },
+        {
+          "cnf_seconds": "0.0018755130004137754",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0019069609988946468",
+          "raw_cnf_bytes": 6170,
+          "raw_lrat_bytes": 22372,
+          "search_and_emission_seconds": "0.0037112160007382045"
+        },
+        {
+          "cnf_seconds": "0.0018604599990794668",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0016393950008932734",
+          "raw_cnf_bytes": 14632,
+          "raw_lrat_bytes": 7243,
+          "search_and_emission_seconds": "0.00375837799947476"
+        },
+        {
+          "cnf_seconds": "0.001977107000129763",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.00192692600103328",
+          "raw_cnf_bytes": 32247,
+          "raw_lrat_bytes": 108,
+          "search_and_emission_seconds": "0.0034865649995481363"
+        },
+        {
+          "cnf_seconds": "0.0017564619993208908",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0022456189999502385",
+          "raw_cnf_bytes": 14713,
+          "raw_lrat_bytes": 9535,
+          "search_and_emission_seconds": "0.003231668999433168"
+        },
+        {
+          "cnf_seconds": "0.002296451999427518",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.2174945070000831",
+          "raw_cnf_bytes": 32121,
+          "raw_lrat_bytes": 25770520,
+          "search_and_emission_seconds": "3.0268065839991323"
+        },
+        {
+          "cnf_seconds": "0.005163417001313064",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.0018581870008347323",
+          "raw_cnf_bytes": 32207,
+          "raw_lrat_bytes": 98,
+          "search_and_emission_seconds": "0.003273671998613281"
+        },
+        {
+          "cnf_seconds": "0.0018712369983404642",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.0016530559987586457",
+          "raw_cnf_bytes": 46722,
+          "raw_lrat_bytes": 114,
+          "search_and_emission_seconds": "0.0031540309992124094"
+        },
+        {
+          "cnf_seconds": "0.0018697040013648802",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0017297429985774215",
+          "raw_cnf_bytes": 52242,
+          "raw_lrat_bytes": 124,
+          "search_and_emission_seconds": "0.0032044380004663253"
+        }
+      ],
+      "raw_case_artifact_bytes": 26140858,
+      "raw_cnf_bytes": 232399,
+      "raw_lrat_bytes": 25813066,
+      "results_path": "research/proof_interface_v1/native/phase08/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 8,
+      "witness_bytes": 11211
+    },
+    {
+      "case": "rotation3",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "complete_original_construction_measured": true,
+        "kind": "pre_native_fresh_process_source_to_witness",
+        "scope": "One fresh Python process per candidate before native replay; includes imports, factorization, algebra, AAG construction and file output. Excludes model emission and native verification.",
+        "seconds": "0.04101605500000005",
+        "source": "research/odd_order_witness_v1/native/CONSTRUCTION.json"
+      },
+      "gate": 12,
+      "method": "exact_seed_period",
+      "native_seconds": "0.07930602000124054",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0131425190011213998",
+        "native_lrat_replay": "0.0134536999976262453",
+        "obligation_generation": "0.002947135999420425",
+        "obligation_split": "0.0017719959996611578",
+        "sat_search_and_lrat_emission": "0.0231999510033347183"
+      },
+      "native_unallocated_overhead_seconds": "0.0247907180000765938",
+      "obligations": [
+        {
+          "cnf_seconds": "0.0013592800005426398",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.001415345999703277",
+          "raw_cnf_bytes": 575,
+          "raw_lrat_bytes": 1148,
+          "search_and_emission_seconds": "0.0023724560014670715"
+        },
+        {
+          "cnf_seconds": "0.0015204339997580973",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0015888379984971834",
+          "raw_cnf_bytes": 2023,
+          "raw_lrat_bytes": 5028,
+          "search_and_emission_seconds": "0.002333436001208611"
+        },
+        {
+          "cnf_seconds": "0.0014208840002538636",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0016160989998752484",
+          "raw_cnf_bytes": 1835,
+          "raw_lrat_bytes": 1405,
+          "search_and_emission_seconds": "0.0022334250006679213"
+        },
+        {
+          "cnf_seconds": "0.0015220569985103793",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.001496447999670636",
+          "raw_cnf_bytes": 5005,
+          "raw_lrat_bytes": 91,
+          "search_and_emission_seconds": "0.0023851149999245536"
+        },
+        {
+          "cnf_seconds": "0.001389887000186718",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0014809639997110935",
+          "raw_cnf_bytes": 1921,
+          "raw_lrat_bytes": 2061,
+          "search_and_emission_seconds": "0.002309169000000111"
+        },
+        {
+          "cnf_seconds": "0.001406250999934855",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.001572914001371828",
+          "raw_cnf_bytes": 4863,
+          "raw_lrat_bytes": 17762,
+          "search_and_emission_seconds": "0.0028866850007034373"
+        },
+        {
+          "cnf_seconds": "0.0015594230007991428",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.0014250000003812602",
+          "raw_cnf_bytes": 4965,
+          "raw_lrat_bytes": 83,
+          "search_and_emission_seconds": "0.002188266000302974"
+        },
+        {
+          "cnf_seconds": "0.001508106000983389",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.0014247689996409463",
+          "raw_cnf_bytes": 6810,
+          "raw_lrat_bytes": 95,
+          "search_and_emission_seconds": "0.0040116199998010416"
+        },
+        {
+          "cnf_seconds": "0.001456197000152315",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0014333219987747725",
+          "raw_cnf_bytes": 8619,
+          "raw_lrat_bytes": 103,
+          "search_and_emission_seconds": "0.002479778999258997"
+        }
+      ],
+      "raw_case_artifact_bytes": 86783,
+      "raw_cnf_bytes": 36616,
+      "raw_lrat_bytes": 27776,
+      "results_path": "research/odd_order_witness_v1/native/rotation3/RESULTS.json",
+      "source_kind": "synthetic_premise_control",
+      "source_width": 3,
+      "witness_bytes": 1920
+    },
+    {
+      "case": "mixed5",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "complete_original_construction_measured": true,
+        "kind": "pre_native_fresh_process_source_to_witness",
+        "scope": "One fresh Python process per candidate before native replay; includes imports, factorization, algebra, AAG construction and file output. Excludes model emission and native verification.",
+        "seconds": "0.03788610999981756",
+        "source": "research/odd_order_witness_v1/native/CONSTRUCTION.json"
+      },
+      "gate": 12,
+      "method": "exact_seed_period",
+      "native_seconds": "0.11171386000023631",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0147180550011398738",
+        "native_lrat_replay": "0.0185846659987873863",
+        "obligation_generation": "0.0029839429989806376",
+        "obligation_split": "0.002422220999505953",
+        "sat_search_and_lrat_emission": "0.0467642190014885258"
+      },
+      "native_unallocated_overhead_seconds": "0.0262407560003339335",
+      "obligations": [
+        {
+          "cnf_seconds": "0.0015662830010114703",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.0014588209996873047",
+          "raw_cnf_bytes": 882,
+          "raw_lrat_bytes": 1874,
+          "search_and_emission_seconds": "0.0026994460004061693"
+        },
+        {
+          "cnf_seconds": "0.001448135000828188",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0015999549996195128",
+          "raw_cnf_bytes": 3586,
+          "raw_lrat_bytes": 10318,
+          "search_and_emission_seconds": "0.0028479659995355178"
+        },
+        {
+          "cnf_seconds": "0.0014751050002814736",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0015504899984080112",
+          "raw_cnf_bytes": 6432,
+          "raw_lrat_bytes": 17617,
+          "search_and_emission_seconds": "0.003310217000034754"
+        },
+        {
+          "cnf_seconds": "0.001517839998996351",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.001425581000148668",
+          "raw_cnf_bytes": 14764,
+          "raw_lrat_bytes": 106,
+          "search_and_emission_seconds": "0.0024136080010066507"
+        },
+        {
+          "cnf_seconds": "0.0016351680005755043",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0017226050003955606",
+          "raw_cnf_bytes": 6322,
+          "raw_lrat_bytes": 4508,
+          "search_and_emission_seconds": "0.002296640999702504"
+        },
+        {
+          "cnf_seconds": "0.0016302910007652827",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.005396513999585295",
+          "raw_cnf_bytes": 14588,
+          "raw_lrat_bytes": 552698,
+          "search_and_emission_seconds": "0.0237100129997998"
+        },
+        {
+          "cnf_seconds": "0.0018446859994583065",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.0017852250002761139",
+          "raw_cnf_bytes": 14724,
+          "raw_lrat_bytes": 96,
+          "search_and_emission_seconds": "0.0026650190011423547"
+        },
+        {
+          "cnf_seconds": "0.0016372819991374854",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.0019036550002056174",
+          "raw_cnf_bytes": 20966,
+          "raw_lrat_bytes": 111,
+          "search_and_emission_seconds": "0.0027840000002470333"
+        },
+        {
+          "cnf_seconds": "0.001963265000085812",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.0017418200004613027",
+          "raw_cnf_bytes": 23807,
+          "raw_lrat_bytes": 121,
+          "search_and_emission_seconds": "0.004037308999613742"
+        }
+      ],
+      "raw_case_artifact_bytes": 741349,
+      "raw_cnf_bytes": 106071,
+      "raw_lrat_bytes": 587449,
+      "results_path": "research/odd_order_witness_v1/native/mixed5/RESULTS.json",
+      "source_kind": "synthetic_premise_control",
+      "source_width": 5,
+      "witness_bytes": 4937
+    },
+    {
+      "case": "published8",
+      "complete_original_end_to_end_seconds": null,
+      "construction_observation": {
+        "complete_original_construction_measured": true,
+        "kind": "pre_native_fresh_process_source_to_witness",
+        "scope": "One fresh Python process per candidate before native replay; includes imports, factorization, algebra, AAG construction and file output. Excludes model emission and native verification.",
+        "seconds": "0.04356460499911918",
+        "source": "research/odd_order_witness_v1/native/CONSTRUCTION.json"
+      },
+      "gate": 12,
+      "method": "exact_seed_period",
+      "native_seconds": "3.3325801829996635",
+      "native_stage_count": 29,
+      "native_stage_seconds": {
+        "cnf_conversion": "0.0173774369977763853",
+        "native_lrat_replay": "0.1813515220019326052",
+        "obligation_generation": "0.0038212210001802305",
+        "obligation_split": "0.0028034490005666157",
+        "sat_search_and_lrat_emission": "3.0727333630020438692"
+      },
+      "native_unallocated_overhead_seconds": "0.0544931909971637941",
+      "obligations": [
+        {
+          "cnf_seconds": "0.001608828000826179",
+          "name": "Reset",
+          "native_lrat_replay_seconds": "0.0015554580004391028",
+          "raw_cnf_bytes": 1345,
+          "raw_lrat_bytes": 2952,
+          "search_and_emission_seconds": "0.0024616810005682055"
+        },
+        {
+          "cnf_seconds": "0.001725835998513503",
+          "name": "Transition",
+          "native_lrat_replay_seconds": "0.0015036089989735046",
+          "raw_cnf_bytes": 6170,
+          "raw_lrat_bytes": 22372,
+          "search_and_emission_seconds": "0.003113118000328541"
+        },
+        {
+          "cnf_seconds": "0.0017331869985355297",
+          "name": "Safety",
+          "native_lrat_replay_seconds": "0.0015275450004992308",
+          "raw_cnf_bytes": 15289,
+          "raw_lrat_bytes": 6443,
+          "search_and_emission_seconds": "0.0026678630001697456"
+        },
+        {
+          "cnf_seconds": "0.0018437649996485561",
+          "name": "Liveness",
+          "native_lrat_replay_seconds": "0.0017797370001062518",
+          "raw_cnf_bytes": 33650,
+          "raw_lrat_bytes": 108,
+          "search_and_emission_seconds": "0.002795045000311802"
+        },
+        {
+          "cnf_seconds": "0.0018248460000904743",
+          "name": "Base",
+          "native_lrat_replay_seconds": "0.0015933450013108086",
+          "raw_cnf_bytes": 15201,
+          "raw_lrat_bytes": 9768,
+          "search_and_emission_seconds": "0.0025720180001371773"
+        },
+        {
+          "cnf_seconds": "0.0017882800002553267",
+          "name": "Inductive",
+          "native_lrat_replay_seconds": "0.16771307199996954",
+          "raw_cnf_bytes": 33376,
+          "raw_lrat_bytes": 24856409,
+          "search_and_emission_seconds": "3.0487325500016595"
+        },
+        {
+          "cnf_seconds": "0.0023641930001758737",
+          "name": "Decrease",
+          "native_lrat_replay_seconds": "0.0019582870008889586",
+          "raw_cnf_bytes": 33610,
+          "raw_lrat_bytes": 98,
+          "search_and_emission_seconds": "0.003891747999659856"
+        },
+        {
+          "cnf_seconds": "0.0022575410002900753",
+          "name": "Closure",
+          "native_lrat_replay_seconds": "0.001753877999362885",
+          "raw_cnf_bytes": 49500,
+          "raw_lrat_bytes": 114,
+          "search_and_emission_seconds": "0.0032585079989075894"
+        },
+        {
+          "cnf_seconds": "0.0022309609994408675",
+          "name": "Consistent",
+          "native_lrat_replay_seconds": "0.001966591000382323",
+          "raw_cnf_bytes": 55161,
+          "raw_lrat_bytes": 124,
+          "search_and_emission_seconds": "0.0032408320003014524"
+        }
+      ],
+      "raw_case_artifact_bytes": 25241374,
+      "raw_cnf_bytes": 243302,
+      "raw_lrat_bytes": 24898388,
+      "results_path": "research/odd_order_witness_v1/native/published8/RESULTS.json",
+      "source_kind": "published_original",
+      "source_width": 8,
+      "witness_bytes": 11872
+    }
+  ],
+  "counts": {
+    "accepted_positive_observations": 8,
+    "native_stages": 232,
+    "obligations": 72
+  },
+  "limitations": [
+    "One preserved native observation per case; caches were not controlled and no statistical speedup is established.",
+    "The eight cases are different methods/gates and include repeated source models, not eight independent benchmark instances.",
+    "Gate 11 phase construction was measured after native replay; original ABC adaptation cost is missing.",
+    "No complete original end-to-end total is reported, including for separately timed Gate 12 construction and replay.",
+    "SAT search stages include LRAT emission; replay stages measure only native lrat-trim processes.",
+    "Artifact sizes come from retained manifests cross-checked with obligation records; this audit does not replay LRAT or establish safety."
+  ],
+  "native_timing_scope": "Recorded driver interval after copying/hashing inputs: obligation generation, splitting, CNF conversion, SAT search/proof emission, native LRAT replay, and intervening orchestration. Excludes producer work, tool builds, later Python replay and report generation.",
+  "purpose": "Arithmetic decomposition of preserved Gate 11/12 observations; no new experiment",
+  "report_version": 1,
+  "source_files_sha256": {
+    "research/odd_order_witness_v1/native/ARTIFACTS.json": "06584144c8e81be1940c4fe62018a945341b75b517a78865efc965085af8a9c1",
+    "research/odd_order_witness_v1/native/BUILD_PROVENANCE.json": "488c456a8cfe5d2db8d4ebb9ab62fd04084a461de0a3c29ac5ba041bfc48eb67",
+    "research/odd_order_witness_v1/native/CONSTRUCTION.json": "c13321e868282b04024adf5ee60c3ce388860841443143d340cbe4eec026b2c4",
+    "research/odd_order_witness_v1/native/mixed5/RESULTS.json": "25a1e6691a79b327d4a5a19c855c579daec1237bc0bed509d893aa8fd9328464",
+    "research/odd_order_witness_v1/native/mixed5/model.aag": "93a2b857db8bc4d9842ac025434422f813f6669a54990e72d000611341dca00b",
+    "research/odd_order_witness_v1/native/mixed5/witness.aag": "3288bb07d88126d12cccd0c430f855a61f5374a3681b6d1a35c4d7961a2e6a36",
+    "research/odd_order_witness_v1/native/published8/RESULTS.json": "65d4531ab939b8acc233181e816cd78ccb29f75a5c7f08b4070d06964ed9354e",
+    "research/odd_order_witness_v1/native/published8/model.aag": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+    "research/odd_order_witness_v1/native/published8/witness.aag": "76e18de136b487a562284b7452578b464ff45c1e821b001c48fbf3584c87e5aa",
+    "research/odd_order_witness_v1/native/rotation3/RESULTS.json": "e5d0b45cc81c97b5a2d4cfcd29d0ade36fa2020f5200d1b0a8d8b495131e7dba",
+    "research/odd_order_witness_v1/native/rotation3/model.aag": "52cbf63d24a8eb77ece89bf25042be555dc214fbd23cef4680ff93463dd50788",
+    "research/odd_order_witness_v1/native/rotation3/witness.aag": "140a5b648535ea2cb0fb14fef6ae3b51381a49ca2f8241f62ddf3fc2931737a4",
+    "research/proof_interface_v1/native/ARTIFACTS.json": "4b4eb86ef8a9dde8b0daec76df82db3cb04aa72fe8c9116eb829d2035345c8df",
+    "research/proof_interface_v1/native/BUILD_PROVENANCE.json": "662247b8430f59df7aa9a8c97a68eea3d641a132ab39d578a4dcbdfdd5b36c28",
+    "research/proof_interface_v1/native/CONSTRUCTION_ABC.json": "75f84f5d2f00fa2408eccb57f09df628d8a064c3577a0ad80747ed6e5653fc6e",
+    "research/proof_interface_v1/native/CONSTRUCTION_PHASE.json": "59ae8f6a226117ef126bb91ed9878035655452691a61348a530ba2e748d8f005",
+    "research/proof_interface_v1/native/abc02/RESULTS.json": "f0656bc263f1935f831537b77d33d047a812924febe9162d0dbec79b439ab0fe",
+    "research/proof_interface_v1/native/abc02/model.aag": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+    "research/proof_interface_v1/native/abc02/witness.aag": "741c6f25067b7795357324b1a670287bf1afa132e648867ba83d245f4158b9be",
+    "research/proof_interface_v1/native/abc04/RESULTS.json": "7c11a9f8e5bbe79726ae7837dbf69b5378c7b6917f50514df89d1a4cf4191162",
+    "research/proof_interface_v1/native/abc04/model.aag": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+    "research/proof_interface_v1/native/abc04/witness.aag": "cf7c64bf68af60721106bbdf35d6f0da06236d5f4e587800ec0a8c15bfed4fe8",
+    "research/proof_interface_v1/native/abc_export/EXPORT_RESULTS.json": "4f54a42b254cdde3b4e048a594ddce0a900b27b49a414a97b527a152ba86df2b",
+    "research/proof_interface_v1/native/phase02/RESULTS.json": "075e9584806ab4aacbb402d7fb8ac917e72acb632806778378e1b3e18859e3dc",
+    "research/proof_interface_v1/native/phase02/model.aag": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+    "research/proof_interface_v1/native/phase02/witness.aag": "08eb0e3d0cd2db0468a26e1f42fc4f026eb22d6b521d81fbb695773d7cadc8dc",
+    "research/proof_interface_v1/native/phase04/RESULTS.json": "213583ddce2533fdeb245323db281684eacbfa5e77461ce9025e6282e8e47a04",
+    "research/proof_interface_v1/native/phase04/model.aag": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+    "research/proof_interface_v1/native/phase04/witness.aag": "555c1420c35181f34e708e37a5cb0fe5d31cc11bd701bcd41ef3cca38529cfe0",
+    "research/proof_interface_v1/native/phase08/RESULTS.json": "de218f0d07adbe0000d5d6d7eb80037ced88f4e733796576c06468ed2a3db614",
+    "research/proof_interface_v1/native/phase08/model.aag": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+    "research/proof_interface_v1/native/phase08/witness.aag": "bfb2ebf7b88c836f8695294f2242f7a164399f33eb0c4f59e2543bae04c66fa8"
+  },
+  "sums_of_recorded_observations": {
+    "native_seconds": "7.34574682099810160",
+    "native_stage_seconds": {
+      "cnf_conversion": "0.1301967199942737350",
+      "native_lrat_replay": "0.5126199959904624793",
+      "obligation_generation": "0.0273909849984192988",
+      "obligation_split": "0.0187641970005643089",
+      "sat_search_and_lrat_emission": "6.3373048700068465936"
+    },
+    "native_unallocated_overhead_seconds": "0.3194700530075351844",
+    "raw_cnf_bytes": 954785,
+    "raw_lrat_bytes": 51947801,
+    "witness_bytes": 47114
+  },
+  "timing_encoding": "Exact decimal strings from recorded JSON tokens; digits do not imply clock precision"
+}
