@@ -10,7 +10,7 @@ $$
 
 This project separates **finding that description**, **checking its proof**, and **using it**. A producer may be slow or untrusted. The checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
-**Status:** working research prototype. The [current gate](research/BOUNDED_COMPARISON_GATE_16.md) records a bounded comparison suspended after 32 of 54 scheduled trials: an exporter run crossed the shared all-file storage guard while its raw artifacts remained below the declared budget. The primary comparison is unevaluated; partial observations establish neither a completed positive nor a completed negative study. A new research contribution and an advantage for the complete orbit engine remain unestablished. Manuscript preparation is on hold.
+**Status:** working research prototype. The [current gate](research/BOUNDED_COMPARISON_GATE_17.md) completes a fresh 54-trial comparison under a prospectively frozen storage amendment. At width 8, the exporter delivered accepted witnesses in all three repetitions (4.397–4.713 seconds), while pinned rIC3 reached the 30-second limit each time. The fixed added-coverage criterion is met on this scoped corpus; 180 completed CNF proofs replay independently. The [earlier suspended experiment](research/BOUNDED_COMPARISON_GATE_16.md) remains separate and unchanged. Originality and a benefit for the complete orbit engine remain unestablished. Manuscript preparation is on hold.
 
 ## Try a complete example
 

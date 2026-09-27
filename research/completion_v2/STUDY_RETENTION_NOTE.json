@@ -1,0 +1,180 @@
+{
+  "action": "Moved intact to a separate exclusive recovery directory; canonical indexed evidence remains unchanged.",
+  "creation_mechanism": "Unknown; no attribution to the measured worker or environmental file handling is established.",
+  "duplicates": [
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 7307033,
+      "canonical_stored_path": "data/Inductive.lrat.gz",
+      "canonical_stored_sha256": "37e94dbe47b5ff0ab100764eee7757ac435c880047d20f6e090b84173045115d",
+      "raw_bytes": 24856409,
+      "raw_sha256": "bae9fc50c7e30a942fd6a727049eec273d9f6fc4a5888d2b23610d08d3ba9842",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525715693057,
+        "ctime_ns": 1790501958322580747,
+        "device": 27,
+        "inode": 1707926,
+        "mtime_ns": 1790501953390434461
+      },
+      "trial": "n08-t1-exporter",
+      "unindexed_path": "data/Inductive.lrat"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 7307033,
+      "canonical_stored_path": "data/Inductive.lrat.gz",
+      "canonical_stored_sha256": "37e94dbe47b5ff0ab100764eee7757ac435c880047d20f6e090b84173045115d",
+      "raw_bytes": 24856409,
+      "raw_sha256": "bae9fc50c7e30a942fd6a727049eec273d9f6fc4a5888d2b23610d08d3ba9842",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525747694042,
+        "ctime_ns": 1790502170240865458,
+        "device": 27,
+        "inode": 1708773,
+        "mtime_ns": 1790502165336717592
+      },
+      "trial": "n08-t2-exporter",
+      "unindexed_path": "data/Inductive.lrat"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 7307033,
+      "canonical_stored_path": "data/Inductive.lrat.gz",
+      "canonical_stored_sha256": "37e94dbe47b5ff0ab100764eee7757ac435c880047d20f6e090b84173045115d",
+      "raw_bytes": 24856409,
+      "raw_sha256": "bae9fc50c7e30a942fd6a727049eec273d9f6fc4a5888d2b23610d08d3ba9842",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525779695027,
+        "ctime_ns": 1790502321797449967,
+        "device": 27,
+        "inode": 1709580,
+        "mtime_ns": 1790502317009304270
+      },
+      "trial": "n08-t3-exporter",
+      "unindexed_path": "data/Inductive.lrat"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 64444,
+      "canonical_stored_path": "data/Base.aig.gz",
+      "canonical_stored_sha256": "1242be2e926f1b5dc227877defbb0aa1a9235a56fcc7897bf62818dbd7abdb5e",
+      "raw_bytes": 144345,
+      "raw_sha256": "809539ccabf5a6bf91ec91475191b125ea8fe650b46c2bd617ef51b8b874c3ce",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709036,
+        "mtime_ns": 1790502296604757329
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Base.aig"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 90913,
+      "canonical_stored_path": "data/Base.cnf.gz",
+      "canonical_stored_sha256": "482c127d893417f3db8893d6b4d66f2670f25210c6ee4e2258105d23c09553c4",
+      "raw_bytes": 384394,
+      "raw_sha256": "c2dfc3d60f3ca3859f6b8e417188ba8fdbe514ef3b1334afbf2c7523fe3577a8",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709038,
+        "mtime_ns": 1790502296801653005
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Base.cnf"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 62931,
+      "canonical_stored_path": "data/Base.lrat.gz",
+      "canonical_stored_sha256": "e8dd9f0e408c390217130e00c2f76889398244c7aa1089788fa4c5ac696dea96",
+      "raw_bytes": 183831,
+      "raw_sha256": "430b28d1d7b2d3d0f3f4a615a854ff0305c7160e4e53e3d359b6305373b93fd3",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709039,
+        "mtime_ns": 1790502296816693535
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Base.lrat"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 64449,
+      "canonical_stored_path": "data/Closure.aig.gz",
+      "canonical_stored_sha256": "93b58761f19c4d8f56000b1db436db2b667fc4f3cdcd2c019fae13785e9ebeb2",
+      "raw_bytes": 144349,
+      "raw_sha256": "4d66a3bd22fcae0ee4f59b01c036dcdb87e3dc5a48afb6e38b333cc63470e184",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709040,
+        "mtime_ns": 1790502296612687375
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Closure.aig"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 64454,
+      "canonical_stored_path": "data/Consistent.aig.gz",
+      "canonical_stored_sha256": "39d830fc3bd4596d2b5febc4511a9910ddff78a06cc9148104609fba5d2631b6",
+      "raw_bytes": 144352,
+      "raw_sha256": "70cff3ecc51533daf8005c1bdf2c8a68c9af57f09a6423a87f86592fa84dd497",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709041,
+        "mtime_ns": 1790502296617159347
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Consistent.aig"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 64451,
+      "canonical_stored_path": "data/Decrease.aig.gz",
+      "canonical_stored_sha256": "f8b81d2ad3e32d35e353eca0c7182316e20bce28f9e2585b66d3210e818bb8b0",
+      "raw_bytes": 144349,
+      "raw_sha256": "128d00362266678682745841ddd2e0affa2ae77c05dbf739c633ecc30163c93e",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709042,
+        "mtime_ns": 1790502296612445135
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Decrease.aig"
+    },
+    {
+      "byte_for_byte_equal_to_decoded_indexed_artifact": true,
+      "canonical_stored_bytes": 64452,
+      "canonical_stored_path": "data/Inductive.aig.gz",
+      "canonical_stored_sha256": "7101f022f0711b038453c80446a7d78eda93bbeffe29dd76e89ae18dbbfb7b6d",
+      "raw_bytes": 144350,
+      "raw_sha256": "ebf52a3e1a46d405747e46e23cea76aa40cbc579d5fbe37359524008260a5ed6",
+      "stat_observed_after_measurement": {
+        "atime_ns": 1790502525819696258,
+        "ctime_ns": 1790502303620899219,
+        "device": 27,
+        "inode": 1709043,
+        "mtime_ns": 1790502296607063683
+      },
+      "trial": "n24-t2-exporter",
+      "unindexed_path": "data/Inductive.aig"
+    }
+  ],
+  "interpretation": "Unindexed files observed after measurement are not timing evidence. Every byte is duplicated in an indexed canonical artifact whose raw size/hash remains bound to the measured supervisor record.",
+  "observed_utc": "2026-09-27T09:49:27.936869+00:00",
+  "recovery_directory": "/workspace/scratch/9781207fd51b/gate17-duplicate-raw-observations",
+  "schema": "alc-post-run-duplicate-observations-v1"
+}
