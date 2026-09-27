@@ -3,14 +3,15 @@
 Manuscript preparation is on hold. The production `alc/` API remains unchanged.
 These are explicit experimental namespaces, not a silent expansion of its scope.
 
-**Latest:** [amended bounded comparison completed](BOUNDED_COMPARISON_GATE_17.md). All 54 planned trials ran: nine exporter and six rIC3 accepted witnesses, 18 structural decisions, nine exporter raw-artifact limits and twelve rIC3 deadlines. The original three-of-three added-coverage criterion is met at width 8. All 180 completed CNF proofs replay independently. The direct structural reference has a different output contract; native translations remain trusted.
+**Latest:** [contribution and assurance assessment completed](CONTRIBUTION_ASSESSMENT_18.md). The retained result is a reproducible integration case study; a distinct standalone contribution remains uncleared after the bounded primary-source audit. The [54-trial comparison](BOUNDED_COMPARISON_GATE_17.md) remains fixed: nine exporter and six rIC3 accepted witnesses, 18 structural decisions, nine exporter raw-artifact limits and twelve rIC3 deadlines. Its added-coverage criterion is met at width 8. All 180 completed CNF proofs replay independently; native translations remain trusted.
 
 The outcome-informed [storage amendment](completion_v2/STORAGE_AMENDMENT.md) preserves the 64 MiB raw budget and adds a separate 64 MiB allowance for exact known metadata paths. The source corpus, commands, binaries and trial order are unchanged. Its [prospective freeze](completion_v2/PROTOCOL_FREEZE.json) preceded the fresh sequence. The [suspended Gate 16 experiment](BOUNDED_COMPARISON_GATE_16.md) is preserved without pooling, resuming or reclassifying its trials.
 
-The next step is to assess this scoped exporter result against the closest certifying-exporter literature and its assurance requirements. The [constructive comparison](CONTRIBUTION_ASSESSMENT_08.md), [supplied-invariant gate](VERIFICATION_GATE_09.md) and [invariant/history audit](INVARIANT_HISTORY_GATE_13.md) remain binding. No new algebraic contribution, general solver advantage or complete-orbit-engine benefit is established. Manuscript preparation remains on hold. [CURRENT.md](../work_orders/CURRENT.md) records the active work order.
+The finite assessment is closed with an explicit stopping decision. No further experiment or manuscript task is scheduled. The [constructive comparison](CONTRIBUTION_ASSESSMENT_08.md), [supplied-invariant gate](VERIFICATION_GATE_09.md) and [invariant/history audit](INVARIANT_HISTORY_GATE_13.md) remain binding. No new algebraic contribution, general solver advantage or complete-orbit-engine benefit is established. [CURRENT.md](../work_orders/CURRENT.md) records the conditions for reopening scientific work.
 
 | Module | Scientific object | Main boundary |
 |---|---|---|
+| [Contribution and assurance assessment](CONTRIBUTION_ASSESSMENT_18.md) | Core argument, claim ledger, primary-source comparison and stopping decision | Completed integration study; exact priority unresolved and standalone contribution uncleared |
 | [Amended completion study](completion_v2/README.md) | Full 54-trial source-bound witness comparison; width-8 added coverage | Outcome-informed storage repair; fixed hinted family and trusted native translations; no novelty or orbit-engine claim |
 | [Completion study and cost audit](completion_v1/README.md) | Qualified native interface, suspended bounded comparison, and accounting of retained observations | Primary criterion unevaluated after a storage-guard execution issue; no completed comparison claim |
 | [Invariant/history audit](invariant_history_v1/README.md) | Exact forced inverse-bit characterization and conservative-history projection | Established separator pattern; no standalone novelty or general size lower bound |
@@ -32,7 +33,7 @@ The next step is to assess this scoped exporter result against the closest certi
 The [completion ledger](RESEARCH_COMPLETION.md) preserves the development record.
 The earlier [scientific work order](SCIENTIFIC_WORK_ORDER.md) and
 [closer-prior comparison](PRIOR_WORK_COMPARISON_02.md) are historical checkpoints;
-Gates 14–17 supersede their next-step recommendations.
+Gates 14–18 supersede their next-step recommendations.
 A proved construction is not automatically a new publishable contribution.
 
 Run the standard-library research checks from the repository root:
