@@ -4,9 +4,17 @@ Updated 27 September 2026. The project has an executable certificate workflow. I
 
 ## Current decision
 
+The [scientific closure gate](../research/SCIENTIFIC_CLOSURE_GATE_14.md) completes the requirement audit and fixes a bounded study of a conventional LFSR witness exporter. The documented consumer requires an accepted hardware-safety certificate for the original circuit. The candidate is this scoped integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes. The [study design](../research/completion_v1/STUDY_DESIGN.md) states the inputs, accepted result and stopping rule. The matched native comparison remains pending.
+
+rIC3 is the mandatory certifying baseline, through the same accepted-artifact interface. Earlier ABC observations remain diagnostic; an ABC-only result cannot complete the comparison. The direct squarefree structural checker is a necessary source-aware cost and trust reference with a different output contract: it decides safety without itself supplying the requested standard witness. Conventional reasoning can emit the same witness as the candidate, so the study cannot count that reasoning as a weaker competitor.
+
+The [cost audit](../research/completion_v1/README.md) separates retained native observations into their recorded stages and distinguishes SAT search from LRAT replay. Those observations do not include every construction cost and cannot be relabeled as complete workflow timings. Tool qualification and an executable protocol freeze are still required before the bounded comparison.
+
+## Earlier decisions and preserved evidence
+
 The [constructive contribution assessment](../research/CONTRIBUTION_ASSESSMENT_08.md) supersedes the initial open comparison: a conventional character/Taylor route supplies the same complete source-recognition contract at comparable coarse polynomial bounds. The direct matrix-logarithm paper is now accessible and its relevant mathematics has been read. The engine is treated as a certifying implementation of established structure; the representation/guarantee comparison is not a native performance benchmark or an exhaustive historical priority finding.
 
-The [supplied-invariant gate](../research/VERIFICATION_GATE_09.md) then tested a concrete verification task. Native cvc5 solved all ten valid invariants directly, so that corpus supplies no capability gap requiring the orbit engine. Finite-field proof production also has direct predecessors. No matched timing or proof-assistant replay was performed. The next task must earn a useful cost or assurance improvement for an independently specified consumer, before more engine development.
+The [supplied-invariant gate](../research/VERIFICATION_GATE_09.md) then tested a concrete verification task. Native cvc5 solved all ten valid invariants directly, so that corpus supplies no capability gap requiring the orbit engine. Finite-field proof production also has direct predecessors. No matched timing or proof-assistant replay was performed. These observations established the need for a useful cost or assurance improvement tied to a specified consumer.
 
 The following baseline records the original production implementation. Experimental complete certificates, source recognizers, query boundaries and independent recognition audits are indexed in [research/README.md](../research/README.md); they do not change that production API.
 
@@ -16,7 +24,7 @@ The [proof-interface gate](../research/PROOF_INTERFACE_GATE_11.md) now delivers 
 
 The subsequent [odd-order gate](../research/ODD_ORDER_WITNESS_GATE_12.md) removes that maximal-period premise. Exact seed periods are compiled from a factored odd annihilating exponent, so mixed seed periods and nonminimal exponents work through the same native interface. All three positive witnesses passed; both wrong selectors failed induction; 37 completed proofs independently replayed. Factorization remains construction work and native source-to-CNF translation remains trusted. The conventional route can emit the same witness. That left the precise original-state evaluation/history distinction for comparison with its predecessors.
 
-The [invariant/history audit](../research/INVARIANT_HISTORY_GATE_13.md) now closes that route as a standalone novelty candidate. The forced predicate is an exact instance of an established inverse-bit separator construction; history retains its inverse witness. The scoped theorem remains valid, but it supplies neither a new general circuit lower bound nor a matched advantage. Further implementation needs an independently motivated consumer and a falsifiable cost or assurance benefit. The preserved integration remains useful without treating this comparison as an exhaustive priority search.
+The [invariant/history audit](../research/INVARIANT_HISTORY_GATE_13.md) closes that route as a standalone novelty candidate. The forced predicate is an exact instance of an established inverse-bit separator construction; history retains its inverse witness. The scoped theorem remains valid, but it supplies neither a new general circuit lower bound nor a matched advantage. Gate 14 supplies the subsequent requirement audit and bounded study design for the preserved conventional exporter. This does not turn the earlier comparison into an exhaustive priority search.
 
 ## Current separation
 
@@ -41,10 +49,13 @@ A caller can now supply a trusted recurrence and an untrusted candidate certific
 
 The producer remains deliberately elementary. A better producer must be compared with relevant finite-field/matrix-order routines and source-level simplification, not only with this enumerator. A dramatic execution horizon is not enough if a classical analyzer already derives the same summary cheaply.
 
-## Next substantive research question
+## Finite remaining sequence
 
-Identify an existing verification workload or documented requirement, specify its natural input/output contract, and execute the strongest relevant baseline. State in advance what measurable cost or assurance improvement would count as success and what result would end the attempt. Complete negative certificates and compositional consumers already exist in the research modules; adding them again or changing the algebraic format does not resolve the contribution gap.
+1. Qualify a pinned rIC3 witness-output path and freeze the exact executable protocol before timed runs.
+2. Execute the bounded matched study, charging construction, conversions, native obligation generation, SAT search and proof replay; retain every outcome.
+3. Review any surviving scoped contribution against the closest exporter work and state its complete assurance boundary.
+4. Freeze the scientific evidence after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
 
-Before claiming practical benefit, measure the entire chain: extraction of the recurrence, production of the summary, proof size, verification, and downstream analysis. Both sides may exploit invariants, decompositions, smooth orders, cached algebra, and alternative formulations. Do not change the intended task to make those methods fail.
+The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. A baseline qualification failure leaves the comparison blocked. A completed negative result closes this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
 
 The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result.

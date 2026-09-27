@@ -6,6 +6,25 @@ proofs, source assessments and test artifacts, not drafted paper sections.
 ## Current status
 
 **Overall scientific readiness: incomplete.** The
+[scientific closure gate](SCIENTIFIC_CLOSURE_GATE_14.md) completes the requirement
+audit for a scoped conventional LFSR witness exporter. The matched native
+comparison remains pending. Its [study design](completion_v1/STUDY_DESIGN.md)
+requires rIC3 as the certifying baseline; ABC remains diagnostic, while the
+direct squarefree checker is a reference with a different result and trust
+contract. This candidate does not use the complete orbit engine or establish
+its consumer-level benefit.
+
+The finite remaining sequence is tool qualification and protocol freeze, the
+bounded study, contribution and assurance review, and evidence freeze. The
+[cost audit](completion_v1/README.md) separates the retained native stages and
+their accounting limits; it does not supply the missing matched experiment.
+A failed or blocked outcome must be recorded without reopening closed novelty
+routes or expanding the corpus to obtain a favorable result. Manuscript work
+remains on hold.
+
+## Earlier scientific decisions
+
+The
 [constructive contribution assessment](CONTRIBUTION_ASSESSMENT_08.md) closes the
 specified algebraic comparison at the representation/guarantee level. The direct
 matrix-logarithm paper has now been read, and a conventional character/Taylor
@@ -15,11 +34,10 @@ established structure, not a cleared original theorem.
 
 The [native-verifier gate](VERIFICATION_GATE_09.md) also fails to establish the
 proposed supplied-invariant benefit: cvc5 discharged all ten valid obligations
-directly. No matched checker timing or proof-assistant replay was run. The next
-scientific task is an independently specified verification workload, an executed
-native baseline and a falsifiable cost or assurance improvement; see the
-[current work order](../work_orders/CURRENT.md). Broader domains or another
-equivalent format are not substitutes.
+directly. No matched checker timing or proof-assistant replay was run for that
+gate. Its negative selection evidence remains valid; the subsequent Gate 14
+study and [current work order](../work_orders/CURRENT.md) supersede the earlier
+open-ended next-task recommendation.
 
 The later [existing-workload gate](NATIVE_WORKLOAD_GATE_10.md) binds an odd-order
 argument to 23 original reseeding circuits. The [proof-interface gate](PROOF_INTERFACE_GATE_11.md)
