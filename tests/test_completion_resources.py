@@ -5,6 +5,7 @@ processes and kernel limits, including detached descendants and deleted files.
 """
 
 import json
+import itertools
 import os
 from pathlib import Path
 import sys
@@ -152,13 +153,15 @@ except MemoryError:
     def test_proc_permission_race_requires_fresh_exit_and_process_identity(self):
         """Root-run tests must also cover unprivileged zombie fd permissions."""
         descendants = {123: (1, 777, "R")}
-        cases = [("Z", 777, True), ("X", 777, True),
-                 ("R", 777, False), ("Z", 888, False),
-                 ("gone", 777, True), ("denied", 777, False)]
+        cases = [("Z", 777, 1, True), ("X", 777, 1, True),
+                 ("R", 777, 1, False), ("Z", 888, 1, False),
+                 ("gone", 777, 1, True), ("denied", 777, 1, False),
+                 ("Z", 777, 2, False)]
         for boundary in ("directory", "readlink", "stat"):
-            for state, starttime, should_skip in cases:
-                with self.subTest(boundary=boundary, state=state, starttime=starttime), tempfile.TemporaryDirectory() as directory:
+            for state, starttime, threads, should_skip in cases:
+                with self.subTest(boundary=boundary, state=state, starttime=starttime, threads=threads), tempfile.TemporaryDirectory() as directory:
                     fields = [state, "1"] + ["0"] * 17 + [str(starttime)]
+                    fields[17] = str(threads)
                     fresh_stat = "123 (worker) " + " ".join(fields)
                     read_error = (FileNotFoundError() if state == "gone" else
                                   PermissionError() if state == "denied" else None)
@@ -169,12 +172,34 @@ except MemoryError:
                          mock.patch.object(Path, "read_text", return_value=fresh_stat, side_effect=read_error), \
                          mock.patch("os.readlink", return_value=directory + "/deleted.proof (deleted)",
                                     side_effect=PermissionError() if boundary == "readlink" else None), \
-                         mock.patch.object(Path, "stat", side_effect=PermissionError()):
+                         mock.patch.object(Path, "stat", side_effect=PermissionError()), \
+                         mock.patch("research.completion_v1.resources.time.monotonic",
+                                    side_effect=itertools.count(step=0.03).__next__), \
+                         mock.patch("research.completion_v1.resources.time.sleep"):
                         if should_skip:
                             self.assertEqual(_artifact_size(directory, descendants), (0, 0, 0))
                         else:
                             with self.assertRaises(PermissionError):
                                 _artifact_size(directory, descendants)
+
+    def test_fd_access_revocation_can_precede_visible_zombie_state(self):
+        """A short live-to-dead transition is retried, not silently ignored."""
+        fields = ["R", "1"] + ["0"] * 17 + ["777"]
+        fields[17] = "1"
+        running = "123 (worker) " + " ".join(fields)
+        zombie = running.replace(") R ", ") Z ")
+        fields[0] = "Z"
+        fields[17] = "2"
+        live_threads = "123 (worker) " + " ".join(fields)
+        for initial, terminal in ((running, zombie), (running, FileNotFoundError()), (live_threads, zombie)):
+            with self.subTest(initial=initial, terminal=type(terminal).__name__), tempfile.TemporaryDirectory() as directory:
+                with mock.patch.object(Path, "iterdir", side_effect=PermissionError()), \
+                     mock.patch.object(Path, "read_text", side_effect=[initial, terminal]) as fresh_reads, \
+                     mock.patch("research.completion_v1.resources.time.monotonic", side_effect=[0.0, 0.01]), \
+                     mock.patch("research.completion_v1.resources.time.sleep") as sleep:
+                    self.assertEqual(_artifact_size(directory, {123: (1, 777, "R")}), (0, 0, 0))
+                    self.assertEqual(fresh_reads.call_count, 2)
+                    sleep.assert_called_once_with(0.001)
 
 
 if __name__ == "__main__":

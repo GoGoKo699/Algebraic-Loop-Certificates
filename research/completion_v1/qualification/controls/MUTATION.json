@@ -1,6 +1,6 @@
 {
-  "kind": "mapped_reset_flip",
-  "latch_index": 0,
+  "after": "1",
   "before": "0",
-  "after": "1"
+  "kind": "mapped_reset_flip",
+  "latch_index": 0
 }

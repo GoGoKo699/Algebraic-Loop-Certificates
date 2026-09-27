@@ -14,9 +14,9 @@ c trimmed 66 added clauses in original proof to 40 clauses 61%
 c trimming proof took 0.00 seconds
 c backward checking proof took 0.00 seconds
 s VERIFIED
-c checked 40 clauses 62112 per second
+c checked 40 clauses 75047 per second
 c resolved 158 clauses 3.95 per checked clause
 c assigned 120 literals 3.00 per checked clause
 c maximum-resident-set-size of 13 MB
-c process-time of 0.00 seconds (218.36 %)
+c process-time of 0.00 seconds (397.79 %)
 c wall-clock-time of 0.00 seconds

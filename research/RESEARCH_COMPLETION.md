@@ -12,7 +12,11 @@ now qualifies pinned rIC3 and freezes the [executable protocol](completion_v1/EX
 Both positive qualification witnesses pass all nine native obligations;
 two corrupted witnesses fail induction and reset checks respectively.
 All 23 completed proofs replay independently, and both SAT assignments are
-checked. Nine process controls exercise the common resource harness.
+checked. Ten process controls exercise the common resource harness, including
+the bounded exit-transition retry for descriptor-access races. Its retry time
+counts toward the workflow deadline and observed polling gap; persistent live
+access denial still fails closed. Earlier qualifications and protocol freezes
+are preserved in [the portability history](completion_v1/qualification_history/README.md).
 These are compatibility and rejection checks, not benchmark measurements.
 
 The matched native comparison remains pending. Its

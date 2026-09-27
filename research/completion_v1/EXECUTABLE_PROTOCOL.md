@@ -90,6 +90,14 @@ does not restore acceptance. Record the observed peak, final size, and largest
 actual sampling gap. Short peaks between samples can be missed, and the number
 of transient excess bytes has no guaranteed bound.
 
+On a descriptor-access permission denial during process exit, the monitor
+retries fresh process-status reads for at most 50 ms, yielding for up to 1 ms
+between reads. It skips the inaccessible descriptors only if the process
+vanishes, or the same start time identifies a terminal process with at most
+one remaining thread. Reused process identifiers and persistent live denials
+fail closed. This retry contributes to the total workflow time and observed
+polling gap; it does not extend the deadline.
+
 As a conservative execution guard, the same 64 MiB cap also covers the trial's
 metadata and bounded logs. Raw circuit/CNF/proof/temporary bytes and all trial
 bytes are recorded separately. A storage-limit coverage result is eligible only

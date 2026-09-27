@@ -16,7 +16,11 @@ The supervisor is a Linux child subreaper. It finds descendants through /proc,
 so a native tool's ``setsid`` does not escape cleanup. It kills and reaps them
 on timeout, detected violation, worker exit, and ordinary supervisor exceptions.
 An fd-access permission denial is ignored only after a fresh /proc stat check
-confirms the same process has exited or vanished; live denials fail closed.
+confirms the same process has exited with no remaining sibling threads, or has
+vanished; live denials fail closed.
+The kernel can revoke fd access before publishing zombie state, so that check
+retries for at most 50 ms with 1 ms sleeps. This wait is charged to the workflow
+deadline and visible in the observed monitoring gap; it adds no trial budget.
 This is a non-hostile research harness, not a security sandbox: programs must
 not deliberately change affinity, alter limits, or write outside the trial.
 
@@ -312,14 +316,27 @@ def _descriptors_closed(pid, expected_starttime):
 
     Linux can deny an unprivileged owner access to /proc/PID/fd after the task
     exits but before it is reaped. A fresh stat read must identify the same
-    process in zombie/dead state; a reused PID or inaccessible live task must
-    still fail closed. A vanished process also has no remaining descriptors.
+    process in zombie/dead state without remaining sibling threads; an exited
+    main thread alone is insufficient. A reused PID or inaccessible live task
+    must still fail closed. A vanished process also has no remaining descriptors.
+    Exit can revoke fd access just before the task becomes a zombie. Retry this
+    transition for 50 ms, yielding for 1 ms between fresh reads. The enclosing
+    workflow clock continues running throughout; persistent live denial fails.
     """
-    try:
-        fields = Path(f"/proc/{pid}/stat").read_text().rsplit(")", 1)[1].split()
-    except (FileNotFoundError, ProcessLookupError):
-        return True
-    return int(fields[19]) == expected_starttime and fields[0] in {"Z", "X", "x"}
+    deadline = time.monotonic() + 0.05
+    while True:
+        try:
+            fields = Path(f"/proc/{pid}/stat").read_text().rsplit(")", 1)[1].split()
+        except (FileNotFoundError, ProcessLookupError):
+            return True
+        if int(fields[19]) != expected_starttime:
+            return False
+        if fields[0] in {"Z", "X", "x"} and 0 <= int(fields[17]) <= 1:
+            return True
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            return False
+        time.sleep(min(0.001, remaining))
 
 
 def _artifact_size(root, descendants):
@@ -477,6 +494,8 @@ def _supervise(config):
         report.update(status="infrastructure_error", reason=type(exc).__name__, error=str(exc))
     finally:
         work_end = time.monotonic()
+        if previous_poll is not None:
+            report["max_poll_gap_seconds"] = max(report["max_poll_gap_seconds"], work_end - previous_poll)
         if report["status"] == "completed" and work_end > deadline:
             limited("deadline")
         report["cleanup"] = _cleanup(proc)
