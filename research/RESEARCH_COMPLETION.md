@@ -5,7 +5,15 @@ proofs, source assessments and test artifacts, not drafted paper sections.
 
 ## Current status
 
-**Overall scientific readiness: incomplete.** The
+**Bounded assessment complete; standalone scientific contribution uncleared.**
+The [Gate 18 assessment](CONTRIBUTION_ASSESSMENT_18.md) records the surviving
+core argument, primary-source comparison, assurance boundary and stopping
+decision. The result is retained as a reproducible integration case study.
+The exact exporter's priority remains unresolved; the evidence does not
+establish a sufficiently distinct standalone contribution. Manuscript work
+remains on hold, and no further experiment is scheduled.
+
+The
 [amended comparison gate](BOUNDED_COMPARISON_GATE_17.md) completes all 54 trials
 under a separately qualified and prospectively frozen storage policy. It records
 nine exporter and six rIC3 accepted witnesses, 18 structural decisions, nine
@@ -35,10 +43,12 @@ proofs. Its remaining trials were not resumed, and no observations were pooled
 into the new study. Both archives and the documented post-run duplicate-file
 observations are retained without changing measured records.
 
-Next, compare the surviving scoped exporter contribution with the closest
-certifying-exporter literature and make its complete assurance boundary explicit.
-Then freeze the scientific assessment and stopping decision. Originality and
-scientific readiness remain unresolved; manuscript work remains on hold.
+The focused literature and assurance assessment is now complete. Its
+[source dossier](contribution_v1/SOURCES.md) identifies close methodological
+predecessors without claiming an exact duplicate or exhaustive historical
+coverage. Reopening work requires a concrete distinct question and consumer,
+or a material correctness/assurance defect; a new format, larger synthetic
+width or favorable budget search is not an automatic continuation.
 
 ## Earlier scientific decisions
 

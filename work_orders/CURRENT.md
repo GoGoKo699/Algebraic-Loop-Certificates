@@ -1,6 +1,6 @@
 # Current work: a classical certificate contribution, not a quantum speedup claim
 
-Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/BOUNDED_COMPARISON_GATE_17.md, research/completion_v2/README.md, research/completion_v2/EXECUTABLE_PROTOCOL.md, research/completion_v2/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
+Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/CONTRIBUTION_ASSESSMENT_18.md, research/contribution_v1/SOURCES.md, research/BOUNDED_COMPARISON_GATE_17.md, research/completion_v2/README.md, research/completion_v2/EXECUTABLE_PROTOCOL.md, research/completion_v2/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
 
 ## Established executable baseline
 
@@ -9,6 +9,8 @@ The package supplies a bounded prime-field affine-orbit producer, an independent
 Run `python verify.py` before and after changes. Do not change stored expected evidence just to make modified code pass. Keep tests for composite-factor spoofing, malformed inputs, fixed points, affine shifts, resource limits, and time-window semantics. Limit exhaustion, rejection, and mathematical unreachability are different statuses.
 
 ## Current scientific decision
+
+The [final bounded assessment](../research/CONTRIBUTION_ASSESSMENT_18.md) completes the prescribed contribution, assurance and stopping review. Retain the result as a reproducible integration case study. Primary sources already establish the generic witness/history interface and specialized certifying workflows that add coverage beyond rIC3. No exact prior seed-period exporter was identified, but its priority and sufficient significance for a distinct standalone contribution remain uncleared. No further experiment or manuscript task is scheduled.
 
 The [amended comparison gate](../research/BOUNDED_COMPARISON_GATE_17.md) completes all 54 trials and meets the original added-coverage criterion at width 8: three accepted exporter witnesses versus three rIC3 deadlines. All 180 completed CNF proofs replay independently. Widths 2 and 4 pass through both witness routes; widths 12, 16 and 24 exhaust both routes' frozen resource budgets. The structural reference passes all cases but has a different output contract.
 
@@ -22,11 +24,11 @@ rIC3 remains the mandatory certifying baseline. ABC remains a diagnostic referen
 
 The algebraic contribution boundary in [assessment 08](../research/CONTRIBUTION_ASSESSMENT_08.md), negative supplied-invariant result in [Gate 09](../research/VERIFICATION_GATE_09.md), and closed invariant/history novelty route in [Gate 13](../research/INVARIANT_HISTORY_GATE_13.md) remain binding. Preserve the successful integrations in Gates 10–12 and all unsuccessful controls. The [cost audit](../research/completion_v1/README.md) separates the available native stages; historical partial timings must not become invented full-workflow totals.
 
-## Finite remaining sequence
+## Stopping decision and conditions for reopening
 
-1. **Assess the surviving scoped contribution.** Compare the completed width-8 certified-witness coverage result with the closest certifying-exporter literature, keeping source recognition, supplied exponent/tap hints, conventional algebra and the required accepted witness explicit. A fixed-corpus coverage result is not a general solver or orbit-engine advantage. Do not reopen the closed algebraic or inverse-bit novelty routes.
-2. **Finish the assurance and evidence assessment.** Distinguish independent CNF proof replay from trusted native witness/obligation/CNF transformations and measured resource enforcement. Preserve every completed, unknown and failed observation from both protocols, including the retention notes. Resolve contradictions before making a final scientific claim.
-3. **Freeze the scientific conclusion and stopping decision.** Run integrated verification and document the final scope and limitations. Another format, broader arithmetic domain, larger synthetic exponent or selective rerun is not an automatic follow-up. Manuscript drafting remains on hold.
+The finite sequence is complete: focused contribution comparison, assurance/evidence assessment, and a frozen scientific judgment. Independent CNF replay establishes the supplied formulas' unsatisfiability; original-model parsing, witness obligations and CNF translation remain trusted. Hashes bind retained bytes rather than attest execution. Preserve every completed, unknown and failed observation, both protocols and the retention notes.
+
+Do not automatically add experiments, change resource budgets, expand the synthetic corpus, reopen the closed algebraic/inverse-bit routes, or draft a manuscript. Reopening scientific development requires a concrete new question with a plausible distinct result and a specified consumer, or a material correctness/assurance defect. Another format, broader arithmetic domain or larger exponent alone does not meet that condition. Maintenance and reproducibility fixes may proceed without turning them into novelty claims.
 
 The production `alc/` semantics remain prime fields, invertible affine maps, one initial state and a full-state target. Research-only extensions have their own specifications and proofs. Do not silently broaden production semantics or treat research support as production integration.
 

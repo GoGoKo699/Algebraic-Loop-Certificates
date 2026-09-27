@@ -10,7 +10,7 @@ $$
 
 This project separates **finding that description**, **checking its proof**, and **using it**. A producer may be slow or untrusted. The checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
-**Status:** working research prototype. The [current gate](research/BOUNDED_COMPARISON_GATE_17.md) completes a fresh 54-trial comparison under a prospectively frozen storage amendment. At width 8, the exporter delivered accepted witnesses in all three repetitions (4.397–4.713 seconds), while pinned rIC3 reached the 30-second limit each time. The fixed added-coverage criterion is met on this scoped corpus; 180 completed CNF proofs replay independently. The [earlier suspended experiment](research/BOUNDED_COMPARISON_GATE_16.md) remains separate and unchanged. Originality and a benefit for the complete orbit engine remain unestablished. Manuscript preparation is on hold.
+**Status:** working research prototype with a completed [integration-study assessment](research/CONTRIBUTION_ASSESSMENT_18.md). The [54-trial comparison](research/BOUNDED_COMPARISON_GATE_17.md) meets its added-coverage criterion at width 8: three accepted exporter witnesses (4.397–4.713 seconds) versus three pinned-rIC3 deadlines. All 180 completed CNF proofs replay independently; native translations remain trusted. The bounded literature and assurance audit retains this scoped result but does not clear a distinct standalone contribution or a benefit for the complete orbit engine. The study is frozen, with no further experiment scheduled. Manuscript preparation is on hold.
 
 ## Try a complete example
 
@@ -39,11 +39,11 @@ The producer uses bounded classical enumeration and trial division. It refuses t
 |---|---|
 | [Mathematical specification and proof](docs/SPECIFICATION.md) | Exact domain, complete positive-hit theorem, and the role of primality proofs |
 | [Certificate and command-line interface](docs/FORMAT.md) | Trusted input, untrusted certificate, validation rules, exit codes, and limits |
-| [Research assessment](docs/RESEARCH.md) | Prior work, current contribution boundary, and the next substantive research question |
+| [Research assessment](docs/RESEARCH.md) | Prior work, supported claims, and the bounded stopping decision |
 | [Research modules and latest decisions](research/README.md) | Experimental certificates, witness integration, prior-work decisions, and the bounded completion study |
 | [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
 | [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
-| [Current work order](work_orders/CURRENT.md) | Scope for the next research session |
+| [Current work order](work_orders/CURRENT.md) | Completed assessment and conditions for reopening scientific work |
 
 ## Supported now
 

@@ -1,8 +1,10 @@
 # Research assessment
 
-Updated 27 September 2026. The project has an executable certificate workflow. It does **not** yet have an established new research contribution, a fast general classical discrete-log solver, or an application benchmark showing an advantage over existing tools. Manuscript work is on hold.
+Updated 27 September 2026. The project has an executable certificate workflow and a completed scoped witness-export comparison. It does **not** yet have an established new research contribution, a fast general classical discrete-log solver, or a general advantage over existing tools. Manuscript work is on hold.
 
 ## Current decision
+
+The [final bounded assessment](../research/CONTRIBUTION_ASSESSMENT_18.md) closes the literature, assurance and claim review. The retained result is a reproducible integration case study. Existing witness/history constructions and specialized certified workflows narrow the contribution claim; the exact exporter's priority remains unresolved. The evidence does not clear a distinct standalone contribution. The [source dossier](../research/contribution_v1/SOURCES.md) records the inspected primary texts and access limits. No further experiment or manuscript task is scheduled.
 
 The [amended comparison gate](../research/BOUNDED_COMPARISON_GATE_17.md) completes a fresh 54-trial sequence and meets the original three-of-three added-coverage criterion at width 8. The exporter delivers accepted witnesses in 4.397–4.713 seconds; pinned rIC3 reaches the 30-second limit in all three repetitions. All 180 completed CNF proofs replay independently. This is scoped to the fixed hinted source family and native configuration; it is not a general speedup or a benefit for the complete orbit engine.
 
@@ -53,11 +55,11 @@ A caller can now supply a trusted recurrence and an untrusted candidate certific
 
 The producer remains deliberately elementary. A better producer must be compared with relevant finite-field/matrix-order routines and source-level simplification, not only with this enumerator. A dramatic execution horizon is not enough if a classical analyzer already derives the same summary cheaply.
 
-## Finite remaining sequence
+## Completed finite assessment
 
-1. Assess the scoped added certified-witness coverage against the closest certifying-exporter literature, preserving the exact consumer, hints and conventional source-aware alternatives.
-2. Complete the assurance assessment: independent CNF proofs do not certify the trusted native transformations or establish a general solver advantage.
-3. Freeze the scientific conclusion after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
+Gate 18 completes the three prescribed tasks: focused contribution comparison, explicit assurance boundaries, and a frozen scientific/stopping judgment. The construction and measured coverage result remain supported; originality and sufficient significance for a standalone contribution remain uncleared. Independent CNF replay does not verify native source/obligation/CNF transformations.
+
+Reopening scientific work requires a concrete new question with a plausible distinct result and a specified consumer, or a material correctness/assurance defect. Another format, synthetic width, budget search or selective rerun is not an automatic follow-up. Preserve both studies and keep manuscript drafting on hold.
 
 The original [study design](../research/completion_v1/STUDY_DESIGN.md) and the separate [amended protocol](../research/completion_v2/EXECUTABLE_PROTOCOL.md) govern the completed comparison. Width 8 satisfies its fixed primary criterion; no criterion, corpus or old outcome was revised to obtain that result. Both routes may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
 
