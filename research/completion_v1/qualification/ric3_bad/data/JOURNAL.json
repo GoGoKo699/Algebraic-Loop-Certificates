@@ -1,6 +1,6 @@
 {
   "control_witness_source": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/controls/ric3_reset_flip.aag",
-  "finished_utc": "2026-09-27T08:12:45.112960+00:00",
+  "finished_utc": "2026-09-27T08:31:43.341730+00:00",
   "model_bytes": 765,
   "model_sha256": "52cbf63d24a8eb77ece89bf25042be555dc214fbd23cef4680ff93463dd50788",
   "model_source": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/odd_order_witness_v1/models/rotation3.aag",
@@ -14,39 +14,39 @@
   "phases": [
     {
       "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0003049999999999997,
+      "cpu_user_seconds": 0.00028900000000000106,
       "name": "preflight",
-      "start_offset_seconds": 0.0011090999978478067,
-      "started_utc": "2026-09-27T08:12:45.056548+00:00",
+      "start_offset_seconds": 0.0002781510011118371,
+      "started_utc": "2026-09-27T08:31:43.286939+00:00",
       "status": "completed",
-      "wall_seconds": 0.00031133200172916986
+      "wall_seconds": 0.0002952979994006455
     },
     {
       "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0002999999999999982,
+      "cpu_user_seconds": 0.0002620000000000018,
       "name": "read_original",
-      "start_offset_seconds": 0.0016736859979573637,
-      "started_utc": "2026-09-27T08:12:45.057107+00:00",
+      "start_offset_seconds": 0.0008265120013675187,
+      "started_utc": "2026-09-27T08:31:43.287483+00:00",
       "status": "completed",
-      "wall_seconds": 0.00032136699883267283
+      "wall_seconds": 0.00037281500044628046
     },
     {
-      "cpu_system_seconds": 5.9000000000000025e-05,
-      "cpu_user_seconds": 0.0001470000000000013,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.00020900000000000085,
       "name": "copy_control",
-      "start_offset_seconds": 0.002135504997568205,
-      "started_utc": "2026-09-27T08:12:45.057569+00:00",
+      "start_offset_seconds": 0.001380792000418296,
+      "started_utc": "2026-09-27T08:31:43.288037+00:00",
       "status": "completed",
-      "wall_seconds": 0.0002195429988205433
+      "wall_seconds": 0.00023487600265070796
     },
     {
-      "cpu_system_seconds": 5.299999999999923e-05,
-      "cpu_user_seconds": 0.00012900000000000064,
+      "cpu_system_seconds": 1.4999999999999389e-05,
+      "cpu_user_seconds": 0.00013799999999999923,
       "name": "witness_metadata",
-      "start_offset_seconds": 0.0025487419989076443,
-      "started_utc": "2026-09-27T08:12:45.057982+00:00",
+      "start_offset_seconds": 0.0017813690028560814,
+      "started_utc": "2026-09-27T08:31:43.288437+00:00",
       "status": "completed",
-      "wall_seconds": 0.00019580599837354384
+      "wall_seconds": 0.0001976589992409572
     },
     {
       "argv": [
@@ -55,8 +55,8 @@
         "witness.aag",
         "check.aig"
       ],
-      "cpu_system_seconds": 0.004226999999999999,
-      "cpu_user_seconds": 0.010335999999999998,
+      "cpu_system_seconds": 0.0027539999999999986,
+      "cpu_user_seconds": 0.010781999999999996,
       "name": "generate",
       "process": {
         "command": [
@@ -65,12 +65,12 @@
           "witness.aag",
           "check.aig"
         ],
-        "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.002022,
+        "cpu_system_seconds": 0.0019279999999999998,
+        "cpu_user_seconds": 0.0,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:45.071052+00:00",
+        "started_utc": "2026-09-27T08:31:43.300597+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/generate.stderr.txt",
@@ -78,12 +78,12 @@
         "stdout_bytes": 246,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/generate.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.01291237499754061
+        "wall_seconds": 0.012583275001816219
       },
-      "start_offset_seconds": 0.0029161179991206154,
-      "started_utc": "2026-09-27T08:12:45.058349+00:00",
+      "start_offset_seconds": 0.00215010800093296,
+      "started_utc": "2026-09-27T08:31:43.288805+00:00",
       "status": "completed",
-      "wall_seconds": 0.02567561400064733
+      "wall_seconds": 0.02442545899975812
     },
     {
       "argv": [
@@ -92,8 +92,8 @@
         "check.aig",
         "obligation_"
       ],
-      "cpu_system_seconds": 0.00021200000000000038,
-      "cpu_user_seconds": 0.0015539999999999998,
+      "cpu_system_seconds": 0.0013700000000000014,
+      "cpu_user_seconds": 0.0006019999999999984,
       "name": "split",
       "process": {
         "command": [
@@ -102,12 +102,12 @@
           "check.aig",
           "obligation_"
         ],
-        "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.001068,
+        "cpu_system_seconds": 0.001197,
+        "cpu_user_seconds": 0.0,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:45.084608+00:00",
+        "started_utc": "2026-09-27T08:31:43.313820+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/split.stderr.txt",
@@ -115,12 +115,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/split.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011578850000660168
+        "wall_seconds": 0.011785026999859838
       },
-      "start_offset_seconds": 0.028829882998252288,
-      "started_utc": "2026-09-27T08:12:45.084264+00:00",
+      "start_offset_seconds": 0.026826617002370767,
+      "started_utc": "2026-09-27T08:31:43.313483+00:00",
       "status": "completed",
-      "wall_seconds": 0.011953828001423972
+      "wall_seconds": 0.012156538999988697
     },
     {
       "argv": [
@@ -128,8 +128,8 @@
         "Reset.aig",
         "Reset.cnf"
       ],
-      "cpu_system_seconds": 0.00022199999999999998,
-      "cpu_user_seconds": 0.0011570000000000018,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.001524000000000001,
       "name": "Reset_cnf",
       "process": {
         "command": [
@@ -138,11 +138,11 @@
           "Reset.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0006489999999999998,
+        "cpu_user_seconds": 0.00074,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:45.096842+00:00",
+        "started_utc": "2026-09-27T08:31:43.326364+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/Reset_cnf.stderr.txt",
@@ -150,12 +150,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/Reset_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011137796002003597
+        "wall_seconds": 0.002135876002284931
       },
-      "start_offset_seconds": 0.04111498299971572,
-      "started_utc": "2026-09-27T08:12:45.096549+00:00",
+      "start_offset_seconds": 0.03936026800147374,
+      "started_utc": "2026-09-27T08:31:43.326016+00:00",
       "status": "completed",
-      "wall_seconds": 0.011461606998636853
+      "wall_seconds": 0.0024976339991553687
     },
     {
       "argv": [
@@ -168,8 +168,8 @@
         "Reset.cnf",
         "Reset.lrat"
       ],
-      "cpu_system_seconds": 0.0026560000000000004,
-      "cpu_user_seconds": 0.0004870000000000013,
+      "cpu_system_seconds": 0.0017880000000000014,
+      "cpu_user_seconds": 0.0007990000000000011,
       "name": "Reset_solve",
       "process": {
         "command": [
@@ -182,12 +182,12 @@
           "Reset.cnf",
           "Reset.lrat"
         ],
-        "cpu_system_seconds": 0.002443,
+        "cpu_system_seconds": 0.001788,
         "cpu_user_seconds": 0.0,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data",
         "exit_code": 10,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:45.108613+00:00",
+        "started_utc": "2026-09-27T08:31:43.329076+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/Reset_solve.stderr.txt",
@@ -195,21 +195,21 @@
         "stdout_bytes": 144,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/data/Reset_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.003924967000784818
+        "wall_seconds": 0.012326967000262812
       },
-      "start_offset_seconds": 0.05285401999935857,
-      "started_utc": "2026-09-27T08:12:45.108288+00:00",
+      "start_offset_seconds": 0.0421010700010811,
+      "started_utc": "2026-09-27T08:31:43.328757+00:00",
       "status": "completed",
-      "wall_seconds": 0.004269438999472186
+      "wall_seconds": 0.012677728998824023
     }
   ],
   "reason": "SAT counterexample to Reset",
   "route": "witness-control",
   "schema": 1,
-  "started_utc": "2026-09-27T08:12:45.055434+00:00",
+  "started_utc": "2026-09-27T08:31:43.286658+00:00",
   "status": "rejected",
   "timing_scope": "Worker phase clock excludes startup; use supervisor total wall time.",
   "witness_bytes": 1831,
   "witness_sha256": "7bb021e7b7443105b805f3fc0905b970aeb191da541058d00303afdf7bb7a30c",
-  "worker_wall_seconds": 0.05753606399957789
+  "worker_wall_seconds": 0.05508316000123159
 }

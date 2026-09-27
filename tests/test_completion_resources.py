@@ -10,8 +10,9 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
-from research.completion_v1.resources import Limits, run_workflow
+from research.completion_v1.resources import Limits, _artifact_size, run_workflow
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -147,6 +148,33 @@ except MemoryError:
             result = self.trial("import os; os.symlink('/etc/passwd','escape.proof')", directory)
             self.assertEqual(result["status"], "infrastructure_error", result)
             self.assertTrue(result["cleanup"]["complete"])
+
+    def test_proc_permission_race_requires_fresh_exit_and_process_identity(self):
+        """Root-run tests must also cover unprivileged zombie fd permissions."""
+        descendants = {123: (1, 777, "R")}
+        cases = [("Z", 777, True), ("X", 777, True),
+                 ("R", 777, False), ("Z", 888, False),
+                 ("gone", 777, True), ("denied", 777, False)]
+        for boundary in ("directory", "readlink", "stat"):
+            for state, starttime, should_skip in cases:
+                with self.subTest(boundary=boundary, state=state, starttime=starttime), tempfile.TemporaryDirectory() as directory:
+                    fields = [state, "1"] + ["0"] * 17 + [str(starttime)]
+                    fresh_stat = "123 (worker) " + " ".join(fields)
+                    read_error = (FileNotFoundError() if state == "gone" else
+                                  PermissionError() if state == "denied" else None)
+                    fd = Path("/proc/123/fd/7")
+                    with mock.patch.object(Path, "iterdir",
+                                           side_effect=PermissionError() if boundary == "directory" else None,
+                                           return_value=iter([fd])), \
+                         mock.patch.object(Path, "read_text", return_value=fresh_stat, side_effect=read_error), \
+                         mock.patch("os.readlink", return_value=directory + "/deleted.proof (deleted)",
+                                    side_effect=PermissionError() if boundary == "readlink" else None), \
+                         mock.patch.object(Path, "stat", side_effect=PermissionError()):
+                        if should_skip:
+                            self.assertEqual(_artifact_size(directory, descendants), (0, 0, 0))
+                        else:
+                            with self.assertRaises(PermissionError):
+                                _artifact_size(directory, descendants)
 
 
 if __name__ == "__main__":

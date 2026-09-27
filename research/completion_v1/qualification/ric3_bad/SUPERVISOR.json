@@ -1,16 +1,16 @@
 {
-  "all_trial_files_bytes": 48690,
-  "artifact_final_bytes": 48690,
-  "artifact_peak_observed_bytes": 48690,
+  "all_trial_files_bytes": 48612,
+  "artifact_final_bytes": 48612,
+  "artifact_peak_observed_bytes": 48612,
   "artifact_policy": "sampled acceptance cap; all regular trial files",
   "artifact_root": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad",
-  "child_cpu_system_seconds": 0.015255,
-  "child_cpu_user_seconds": 0.041389999999999996,
+  "child_cpu_system_seconds": 0.016485,
+  "child_cpu_user_seconds": 0.038887,
   "cleanup": {
     "complete": true,
     "terminated_pids": []
   },
-  "cleanup_seconds": 0.0011191659978067037,
+  "cleanup_seconds": 0.0011459859997557942,
   "command": [
     "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
     "-m",
@@ -27,8 +27,8 @@
     "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/controls/ric3_reset_flip.aag"
   ],
   "cpu": 0,
-  "cpu_system_seconds": 0.029353999999999998,
-  "cpu_user_seconds": 0.08401399999999999,
+  "cpu_system_seconds": 0.024307,
+  "cpu_user_seconds": 0.080426,
   "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates",
   "exit_code": 0,
   "instantaneous_aggregate_quota": false,
@@ -40,14 +40,14 @@
     "poll_seconds": 0.01,
     "wall_seconds": 30.0
   },
-  "max_poll_gap_seconds": 0.015435167999385158,
+  "max_poll_gap_seconds": 0.01338934699742822,
   "observed_violations": [],
   "open_deleted_peak_observed_bytes": 0,
   "raw_artifact_bytes": 25898,
   "raw_artifact_peak_observed_bytes": 25898,
   "reason": null,
   "schema": "alc-bounded-workflow-v1",
-  "started_utc": "2026-09-27T08:12:44.984673+00:00",
+  "started_utc": "2026-09-27T08:31:43.220952+00:00",
   "status": "completed",
   "stderr": "",
   "stderr_bytes": 0,
@@ -57,5 +57,5 @@
   "stdout_bytes": 64,
   "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3_bad/workflow.stdout",
   "stdout_truncated": false,
-  "wall_seconds": 0.15050369700111332
+  "wall_seconds": 0.14287126500130398
 }

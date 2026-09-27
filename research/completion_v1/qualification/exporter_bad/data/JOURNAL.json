@@ -66,7 +66,7 @@
     "witness_sha256": "2722c34e85a9948a16221bf13b328768c842241634d5fe0969b791664d8b7415"
   },
   "control_mutation": "global_bound",
-  "finished_utc": "2026-09-27T08:12:10.218124+00:00",
+  "finished_utc": "2026-09-27T08:31:43.184540+00:00",
   "hints": {
     "odd_multiple": 9,
     "taps": 4,
@@ -104,40 +104,40 @@
   "output_contract": "source-bound Certifaiger witness with nine LRAT checks",
   "phases": [
     {
-      "cpu_system_seconds": 4.6000000000000034e-05,
-      "cpu_user_seconds": 0.00023099999999999857,
+      "cpu_system_seconds": 0.00012099999999999958,
+      "cpu_user_seconds": 0.0002489999999999992,
       "name": "preflight",
-      "start_offset_seconds": 0.0002126219987985678,
-      "started_utc": "2026-09-27T08:12:10.073334+00:00",
+      "start_offset_seconds": 0.00024220699924626388,
+      "started_utc": "2026-09-27T08:31:43.016973+00:00",
       "status": "completed",
-      "wall_seconds": 0.0002834190017892979
+      "wall_seconds": 0.0003759889987122733
     },
     {
-      "cpu_system_seconds": 5.4999999999999494e-05,
-      "cpu_user_seconds": 0.00027699999999999947,
+      "cpu_system_seconds": 0.00011099999999999999,
+      "cpu_user_seconds": 0.0002270000000000015,
       "name": "read_original",
-      "start_offset_seconds": 0.0007421939990308601,
-      "started_utc": "2026-09-27T08:12:10.073858+00:00",
+      "start_offset_seconds": 0.0008803239979897626,
+      "started_utc": "2026-09-27T08:31:43.017606+00:00",
       "status": "completed",
-      "wall_seconds": 0.0003467960013949778
+      "wall_seconds": 0.0003460240004642401
     },
     {
-      "cpu_system_seconds": 0.00010999999999999985,
-      "cpu_user_seconds": 0.008969999999999999,
+      "cpu_system_seconds": 0.0044909999999999985,
+      "cpu_user_seconds": 0.005236000000000001,
       "name": "construct",
-      "start_offset_seconds": 0.0012320659989200067,
-      "started_utc": "2026-09-27T08:12:10.074348+00:00",
+      "start_offset_seconds": 0.0013940019998699427,
+      "started_utc": "2026-09-27T08:31:43.018120+00:00",
       "status": "completed",
-      "wall_seconds": 0.009838047000812367
+      "wall_seconds": 0.010565928998403251
     },
     {
-      "cpu_system_seconds": 2.8999999999999512e-05,
-      "cpu_user_seconds": 0.0002009999999999998,
+      "cpu_system_seconds": 0.00011999999999999858,
+      "cpu_user_seconds": 0.00020900000000000085,
       "name": "witness_metadata",
-      "start_offset_seconds": 0.011280021000857232,
-      "started_utc": "2026-09-27T08:12:10.084396+00:00",
+      "start_offset_seconds": 0.012196028998005204,
+      "started_utc": "2026-09-27T08:31:43.028922+00:00",
       "status": "completed",
-      "wall_seconds": 0.00025834099869825877
+      "wall_seconds": 0.00034171800143667497
     },
     {
       "argv": [
@@ -146,8 +146,8 @@
         "witness.aag",
         "check.aig"
       ],
-      "cpu_system_seconds": 0.0019560000000000003,
-      "cpu_user_seconds": 0.0050529999999999985,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.007313,
       "name": "generate",
       "process": {
         "command": [
@@ -156,12 +156,12 @@
           "witness.aag",
           "check.aig"
         ],
-        "cpu_system_seconds": 0.0018839999999999998,
-        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.00187,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.089492+00:00",
+        "started_utc": "2026-09-27T08:31:43.034270+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/generate.stderr.txt",
@@ -169,12 +169,12 @@
         "stdout_bytes": 246,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/generate.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.002394819002802251
+        "wall_seconds": 0.012545769001008011
       },
-      "start_offset_seconds": 0.011773207999794977,
-      "started_utc": "2026-09-27T08:12:10.084889+00:00",
+      "start_offset_seconds": 0.012755706997268135,
+      "started_utc": "2026-09-27T08:31:43.029481+00:00",
       "status": "completed",
-      "wall_seconds": 0.007053227000142215
+      "wall_seconds": 0.01738300800207071
     },
     {
       "argv": [
@@ -183,8 +183,8 @@
         "check.aig",
         "obligation_"
       ],
-      "cpu_system_seconds": 0.000876,
-      "cpu_user_seconds": 0.0009499999999999995,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0019850000000000007,
       "name": "split",
       "process": {
         "command": [
@@ -193,12 +193,12 @@
           "check.aig",
           "obligation_"
         ],
-        "cpu_system_seconds": 0.0007920000000000002,
-        "cpu_user_seconds": 0.000287,
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.001132,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.092508+00:00",
+        "started_utc": "2026-09-27T08:31:43.047547+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/split.stderr.txt",
@@ -206,12 +206,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/split.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.012397375001455657
+        "wall_seconds": 0.012673192999500316
       },
-      "start_offset_seconds": 0.019092569000349613,
-      "started_utc": "2026-09-27T08:12:10.092209+00:00",
+      "start_offset_seconds": 0.030466531999991275,
+      "started_utc": "2026-09-27T08:31:43.047193+00:00",
       "status": "completed",
-      "wall_seconds": 0.012743958999635652
+      "wall_seconds": 0.013065646999166347
     },
     {
       "argv": [
@@ -219,8 +219,8 @@
         "Reset.aig",
         "Reset.cnf"
       ],
-      "cpu_system_seconds": 0.0008339999999999997,
-      "cpu_user_seconds": 0.0007010000000000002,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0015380000000000046,
       "name": "Reset_cnf",
       "process": {
         "command": [
@@ -228,12 +228,12 @@
           "Reset.aig",
           "Reset.cnf"
         ],
-        "cpu_system_seconds": 0.0007459999999999997,
-        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0007039999999999998,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.105827+00:00",
+        "started_utc": "2026-09-27T08:31:43.062152+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_cnf.stderr.txt",
@@ -241,12 +241,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.01124205500309472
+        "wall_seconds": 0.011230986001464771
       },
-      "start_offset_seconds": 0.03221432999998797,
-      "started_utc": "2026-09-27T08:12:10.105330+00:00",
+      "start_offset_seconds": 0.043898553998587886,
+      "started_utc": "2026-09-27T08:31:43.060625+00:00",
       "status": "completed",
-      "wall_seconds": 0.011767591000534594
+      "wall_seconds": 0.01278721500057145
     },
     {
       "argv": [
@@ -259,8 +259,8 @@
         "Reset.cnf",
         "Reset.lrat"
       ],
-      "cpu_system_seconds": 0.0018259999999999995,
-      "cpu_user_seconds": 0.0007150000000000004,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.002617000000000008,
       "name": "Reset_solve",
       "process": {
         "command": [
@@ -273,12 +273,12 @@
           "Reset.cnf",
           "Reset.lrat"
         ],
-        "cpu_system_seconds": 0.0017350000000000004,
-        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0,
+        "cpu_user_seconds": 0.0017430000000000002,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.117769+00:00",
+        "started_utc": "2026-09-27T08:31:43.076079+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_solve.stderr.txt",
@@ -286,12 +286,12 @@
         "stdout_bytes": 16,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0021901990003243554
+        "wall_seconds": 0.002271211997140199
       },
-      "start_offset_seconds": 0.044299651999608614,
-      "started_utc": "2026-09-27T08:12:10.117416+00:00",
+      "start_offset_seconds": 0.05699591899974621,
+      "started_utc": "2026-09-27T08:31:43.073722+00:00",
       "status": "completed",
-      "wall_seconds": 0.0025654570017650258
+      "wall_seconds": 0.004642232997866813
     },
     {
       "argv": [
@@ -299,8 +299,8 @@
         "Reset.cnf",
         "Reset.lrat"
       ],
-      "cpu_system_seconds": 0.00011300000000000025,
-      "cpu_user_seconds": 0.0015210000000000015,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0015119999999999995,
       "name": "Reset_replay",
       "process": {
         "command": [
@@ -309,11 +309,11 @@
           "Reset.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.000631,
+        "cpu_user_seconds": 0.0007130000000000001,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.120653+00:00",
+        "started_utc": "2026-09-27T08:31:43.079170+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_replay.stderr.txt",
@@ -321,12 +321,12 @@
         "stdout_bytes": 973,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Reset_replay.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011322295002173632
+        "wall_seconds": 0.0011017389988410287
       },
-      "start_offset_seconds": 0.04718122800113633,
-      "started_utc": "2026-09-27T08:12:10.120297+00:00",
+      "start_offset_seconds": 0.06203320100030396,
+      "started_utc": "2026-09-27T08:31:43.078760+00:00",
       "status": "completed",
-      "wall_seconds": 0.01171123499807436
+      "wall_seconds": 0.0015328729969041888
     },
     {
       "argv": [
@@ -334,8 +334,8 @@
         "Transition.aig",
         "Transition.cnf"
       ],
-      "cpu_system_seconds": 9.299999999999933e-05,
-      "cpu_user_seconds": 0.0014039999999999955,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0014049999999999965,
       "name": "Transition_cnf",
       "process": {
         "command": [
@@ -344,11 +344,11 @@
           "Transition.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.000673,
+        "cpu_user_seconds": 0.0006359999999999994,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.133084+00:00",
+        "started_utc": "2026-09-27T08:31:43.081299+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_cnf.stderr.txt",
@@ -356,12 +356,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011140053997223731
+        "wall_seconds": 0.011078726001869654
       },
-      "start_offset_seconds": 0.05957456699979957,
-      "started_utc": "2026-09-27T08:12:10.132691+00:00",
+      "start_offset_seconds": 0.06420664399774978,
+      "started_utc": "2026-09-27T08:31:43.080932+00:00",
       "status": "completed",
-      "wall_seconds": 0.011572508999961428
+      "wall_seconds": 0.011484140999527881
     },
     {
       "argv": [
@@ -374,8 +374,8 @@
         "Transition.cnf",
         "Transition.lrat"
       ],
-      "cpu_system_seconds": 9.39999999999986e-05,
-      "cpu_user_seconds": 0.0026400000000000035,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.002800000000000004,
       "name": "Transition_solve",
       "process": {
         "command": [
@@ -389,11 +389,11 @@
           "Transition.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0018939999999999999,
+        "cpu_user_seconds": 0.0019519999999999997,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.145087+00:00",
+        "started_utc": "2026-09-27T08:31:43.093206+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_solve.stderr.txt",
@@ -401,12 +401,12 @@
         "stdout_bytes": 16,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0022867040024721064
+        "wall_seconds": 0.013493263999407645
       },
-      "start_offset_seconds": 0.07152810299885459,
-      "started_utc": "2026-09-27T08:12:10.144644+00:00",
+      "start_offset_seconds": 0.0760582209986751,
+      "started_utc": "2026-09-27T08:31:43.092784+00:00",
       "status": "completed",
-      "wall_seconds": 0.0027518500028236303
+      "wall_seconds": 0.013946612001745962
     },
     {
       "argv": [
@@ -414,8 +414,8 @@
         "Transition.cnf",
         "Transition.lrat"
       ],
-      "cpu_system_seconds": 9.599999999999886e-05,
-      "cpu_user_seconds": 0.0016319999999999946,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0016460000000000016,
       "name": "Transition_replay",
       "process": {
         "command": [
@@ -424,24 +424,24 @@
           "Transition.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0008649999999999999,
+        "cpu_user_seconds": 0.0007050000000000008,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.148250+00:00",
+        "started_utc": "2026-09-27T08:31:43.108328+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_replay.stderr.txt",
         "stderr_truncated": false,
-        "stdout_bytes": 989,
+        "stdout_bytes": 990,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Transition_replay.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0025826029996096622
+        "wall_seconds": 0.001128569998400053
       },
-      "start_offset_seconds": 0.07466709900108981,
-      "started_utc": "2026-09-27T08:12:10.147783+00:00",
+      "start_offset_seconds": 0.09044371799973305,
+      "started_utc": "2026-09-27T08:31:43.107170+00:00",
       "status": "completed",
-      "wall_seconds": 0.003074950000154786
+      "wall_seconds": 0.0023025379996397533
     },
     {
       "argv": [
@@ -449,8 +449,8 @@
         "Safety.aig",
         "Safety.cnf"
       ],
-      "cpu_system_seconds": 9.20000000000018e-05,
-      "cpu_user_seconds": 0.0013740000000000002,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0014969999999999983,
       "name": "Safety_cnf",
       "process": {
         "command": [
@@ -459,11 +459,11 @@
           "Safety.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0006509999999999997,
+        "cpu_user_seconds": 0.0006029999999999994,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.152156+00:00",
+        "started_utc": "2026-09-27T08:31:43.110741+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_cnf.stderr.txt",
@@ -471,12 +471,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.001010100000712555
+        "wall_seconds": 0.00099526799749583
       },
-      "start_offset_seconds": 0.07858367399967392,
-      "started_utc": "2026-09-27T08:12:10.151700+00:00",
+      "start_offset_seconds": 0.09351509099724353,
+      "started_utc": "2026-09-27T08:31:43.110241+00:00",
       "status": "completed",
-      "wall_seconds": 0.0014816049988439772
+      "wall_seconds": 0.0015131530017242767
     },
     {
       "argv": [
@@ -489,8 +489,8 @@
         "Safety.cnf",
         "Safety.lrat"
       ],
-      "cpu_system_seconds": 9.39999999999986e-05,
-      "cpu_user_seconds": 0.0025480000000000086,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.0024180000000000035,
       "name": "Safety_solve",
       "process": {
         "command": [
@@ -504,11 +504,11 @@
           "Safety.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0018000000000000004,
+        "cpu_user_seconds": 0.0015480000000000008,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.154050+00:00",
+        "started_utc": "2026-09-27T08:31:43.112630+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_solve.stderr.txt",
@@ -516,12 +516,12 @@
         "stdout_bytes": 16,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0021664830019290093
+        "wall_seconds": 0.012005980999674648
       },
-      "start_offset_seconds": 0.0804652549995808,
-      "started_utc": "2026-09-27T08:12:10.153582+00:00",
+      "start_offset_seconds": 0.09545434000028763,
+      "started_utc": "2026-09-27T08:31:43.112180+00:00",
       "status": "completed",
-      "wall_seconds": 0.002658829002029961
+      "wall_seconds": 0.012495101997046731
     },
     {
       "argv": [
@@ -529,8 +529,8 @@
         "Safety.cnf",
         "Safety.lrat"
       ],
-      "cpu_system_seconds": 0.00011300000000000025,
-      "cpu_user_seconds": 0.0015899999999999942,
+      "cpu_system_seconds": 0.00068,
+      "cpu_user_seconds": 0.0010360000000000022,
       "name": "Safety_replay",
       "process": {
         "command": [
@@ -538,12 +538,12 @@
           "Safety.cnf",
           "Safety.lrat"
         ],
-        "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0006979999999999998,
+        "cpu_system_seconds": 0.0006799999999999999,
+        "cpu_user_seconds": 0.0,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.157261+00:00",
+        "started_utc": "2026-09-27T08:31:43.125705+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_replay.stderr.txt",
@@ -551,12 +551,12 @@
         "stdout_bytes": 977,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Safety_replay.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0010956799997074995
+        "wall_seconds": 0.0011851359995489474
       },
-      "start_offset_seconds": 0.08356695499969646,
-      "started_utc": "2026-09-27T08:12:10.156738+00:00",
+      "start_offset_seconds": 0.10843643000043812,
+      "started_utc": "2026-09-27T08:31:43.125163+00:00",
       "status": "completed",
-      "wall_seconds": 0.0017211179983860347
+      "wall_seconds": 0.0017754899999999907
     },
     {
       "argv": [
@@ -565,7 +565,7 @@
         "Liveness.cnf"
       ],
       "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0015080000000000024,
+      "cpu_user_seconds": 0.0015550000000000008,
       "name": "Liveness_cnf",
       "process": {
         "command": [
@@ -574,11 +574,11 @@
           "Liveness.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0006579999999999997,
+        "cpu_user_seconds": 0.0006569999999999996,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.159886+00:00",
+        "started_utc": "2026-09-27T08:31:43.128312+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_cnf.stderr.txt",
@@ -586,12 +586,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.002296178998221876
+        "wall_seconds": 0.011099688003014307
       },
-      "start_offset_seconds": 0.08626428199931979,
-      "started_utc": "2026-09-27T08:12:10.159381+00:00",
+      "start_offset_seconds": 0.11108925900043687,
+      "started_utc": "2026-09-27T08:31:43.127815+00:00",
       "status": "completed",
-      "wall_seconds": 0.0028042080011800863
+      "wall_seconds": 0.011630822998995427
     },
     {
       "argv": [
@@ -605,7 +605,7 @@
         "Liveness.lrat"
       ],
       "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0025470000000000007,
+      "cpu_user_seconds": 0.0026229999999999934,
       "name": "Liveness_solve",
       "process": {
         "command": [
@@ -619,11 +619,11 @@
           "Liveness.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0015510000000000003,
+        "cpu_user_seconds": 0.0016889999999999995,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.163303+00:00",
+        "started_utc": "2026-09-27T08:31:43.140456+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_solve.stderr.txt",
@@ -631,12 +631,12 @@
         "stdout_bytes": 16,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.01203158000134863
+        "wall_seconds": 0.0034250600001541898
       },
-      "start_offset_seconds": 0.08962753699961468,
-      "started_utc": "2026-09-27T08:12:10.162744+00:00",
+      "start_offset_seconds": 0.12320856199949048,
+      "started_utc": "2026-09-27T08:31:43.139935+00:00",
       "status": "completed",
-      "wall_seconds": 0.012625210001715459
+      "wall_seconds": 0.00399443299829727
     },
     {
       "argv": [
@@ -644,8 +644,8 @@
         "Liveness.cnf",
         "Liveness.lrat"
       ],
-      "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0016710000000000058,
+      "cpu_system_seconds": 0.00020300000000000006,
+      "cpu_user_seconds": 0.001466999999999996,
       "name": "Liveness_replay",
       "process": {
         "command": [
@@ -654,11 +654,11 @@
           "Liveness.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0006429999999999995,
+        "cpu_user_seconds": 0.0006499999999999995,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.176550+00:00",
+        "started_utc": "2026-09-27T08:31:43.145032+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_replay.stderr.txt",
@@ -666,12 +666,12 @@
         "stdout_bytes": 972,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Liveness_replay.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0010528759994485881
+        "wall_seconds": 0.0010567009994701948
       },
-      "start_offset_seconds": 0.1028177730004245,
-      "started_utc": "2026-09-27T08:12:10.175934+00:00",
+      "start_offset_seconds": 0.1276953809974657,
+      "started_utc": "2026-09-27T08:31:43.144421+00:00",
       "status": "completed",
-      "wall_seconds": 0.00169003100018017
+      "wall_seconds": 0.0016872160013008397
     },
     {
       "argv": [
@@ -679,8 +679,8 @@
         "Base.aig",
         "Base.cnf"
       ],
-      "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.0023200000000000026,
+      "cpu_system_seconds": 0.0009619999999999993,
+      "cpu_user_seconds": 0.0006929999999999992,
       "name": "Base_cnf",
       "process": {
         "command": [
@@ -689,11 +689,11 @@
           "Base.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0007870000000000012,
+        "cpu_user_seconds": 0.0006930000000000009,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.179845+00:00",
+        "started_utc": "2026-09-27T08:31:43.147778+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_cnf.stderr.txt",
@@ -701,12 +701,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011351048000506125
+        "wall_seconds": 0.01116048000039882
       },
-      "start_offset_seconds": 0.10571641500064288,
-      "started_utc": "2026-09-27T08:12:10.178834+00:00",
+      "start_offset_seconds": 0.1305118179989222,
+      "started_utc": "2026-09-27T08:31:43.147238+00:00",
       "status": "completed",
-      "wall_seconds": 0.01239689399881172
+      "wall_seconds": 0.01173470999856363
     },
     {
       "argv": [
@@ -719,8 +719,8 @@
         "Base.cnf",
         "Base.lrat"
       ],
-      "cpu_system_seconds": 0.0,
-      "cpu_user_seconds": 0.003381999999999996,
+      "cpu_system_seconds": 0.0009590000000000015,
+      "cpu_user_seconds": 0.0015960000000000002,
       "name": "Base_solve",
       "process": {
         "command": [
@@ -734,11 +734,11 @@
           "Base.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.002097999999999999,
+        "cpu_user_seconds": 0.0015960000000000002,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.192782+00:00",
+        "started_utc": "2026-09-27T08:31:43.160097+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_solve.stderr.txt",
@@ -746,12 +746,12 @@
         "stdout_bytes": 16,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.004372864998003934
+        "wall_seconds": 0.0019741510004678275
       },
-      "start_offset_seconds": 0.11885778700161609,
-      "started_utc": "2026-09-27T08:12:10.191975+00:00",
+      "start_offset_seconds": 0.1427906429998984,
+      "started_utc": "2026-09-27T08:31:43.159516+00:00",
       "status": "completed",
-      "wall_seconds": 0.0050161599974671844
+      "wall_seconds": 0.002577965999080334
     },
     {
       "argv": [
@@ -759,8 +759,8 @@
         "Base.cnf",
         "Base.lrat"
       ],
-      "cpu_system_seconds": 0.001207999999999999,
-      "cpu_user_seconds": 0.0008089999999999903,
+      "cpu_system_seconds": 0.0,
+      "cpu_user_seconds": 0.001695000000000002,
       "name": "Base_replay",
       "process": {
         "command": [
@@ -769,11 +769,11 @@
           "Base.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0008090000000000007,
+        "cpu_user_seconds": 0.0007139999999999994,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 20,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.198282+00:00",
+        "started_utc": "2026-09-27T08:31:43.163275+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_replay.stderr.txt",
@@ -781,12 +781,12 @@
         "stdout_bytes": 973,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Base_replay.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.0013080319986329414
+        "wall_seconds": 0.0010940270003629848
       },
-      "start_offset_seconds": 0.12445450700033689,
-      "started_utc": "2026-09-27T08:12:10.197571+00:00",
+      "start_offset_seconds": 0.14593825199699495,
+      "started_utc": "2026-09-27T08:31:43.162664+00:00",
       "status": "completed",
-      "wall_seconds": 0.002040711999143241
+      "wall_seconds": 0.0017272170007345267
     },
     {
       "argv": [
@@ -794,8 +794,8 @@
         "Inductive.aig",
         "Inductive.cnf"
       ],
-      "cpu_system_seconds": 0.0010900000000000007,
-      "cpu_user_seconds": 0.0007670000000000038,
+      "cpu_system_seconds": 0.00027500000000000094,
+      "cpu_user_seconds": 0.0015190000000000065,
       "name": "Inductive_cnf",
       "process": {
         "command": [
@@ -804,11 +804,11 @@
           "Inductive.cnf"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0007669999999999986,
+        "cpu_user_seconds": 0.0007400000000000011,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 0,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.201385+00:00",
+        "started_utc": "2026-09-27T08:31:43.167079+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Inductive_cnf.stderr.txt",
@@ -816,12 +816,12 @@
         "stdout_bytes": 0,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Inductive_cnf.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.011285520002275007
+        "wall_seconds": 0.011735231000784552
       },
-      "start_offset_seconds": 0.1276464330003364,
-      "started_utc": "2026-09-27T08:12:10.200763+00:00",
+      "start_offset_seconds": 0.14882013799797278,
+      "started_utc": "2026-09-27T08:31:43.165546+00:00",
       "status": "completed",
-      "wall_seconds": 0.011943746998440474
+      "wall_seconds": 0.013299631002155365
     },
     {
       "argv": [
@@ -834,8 +834,8 @@
         "Inductive.cnf",
         "Inductive.lrat"
       ],
-      "cpu_system_seconds": 0.0005479999999999981,
-      "cpu_user_seconds": 0.0035350000000000104,
+      "cpu_system_seconds": 0.0002930000000000016,
+      "cpu_user_seconds": 0.0034019999999999884,
       "name": "Inductive_solve",
       "process": {
         "command": [
@@ -849,11 +849,11 @@
           "Inductive.lrat"
         ],
         "cpu_system_seconds": 0.0,
-        "cpu_user_seconds": 0.0030220000000000004,
+        "cpu_user_seconds": 0.0025679999999999974,
         "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data",
         "exit_code": 10,
         "resource_signal": null,
-        "started_utc": "2026-09-27T08:12:10.214005+00:00",
+        "started_utc": "2026-09-27T08:31:43.180851+00:00",
         "status": "completed",
         "stderr_bytes": 0,
         "stderr_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Inductive_solve.stderr.txt",
@@ -861,21 +861,21 @@
         "stdout_bytes": 717,
         "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/exporter_bad/data/Inductive_solve.stdout.txt",
         "stdout_truncated": false,
-        "wall_seconds": 0.003440873999352334
+        "wall_seconds": 0.003007867999258451
       },
-      "start_offset_seconds": 0.14024392099963734,
-      "started_utc": "2026-09-27T08:12:10.213361+00:00",
+      "start_offset_seconds": 0.162766338999063,
+      "started_utc": "2026-09-27T08:31:43.179493+00:00",
       "status": "completed",
-      "wall_seconds": 0.004118360000575194
+      "wall_seconds": 0.004429431999597
     }
   ],
   "reason": "SAT counterexample to Inductive",
   "route": "exporter",
   "schema": 1,
-  "started_utc": "2026-09-27T08:12:10.073116+00:00",
+  "started_utc": "2026-09-27T08:31:43.016726+00:00",
   "status": "rejected",
   "timing_scope": "Worker phase clock excludes startup; use supervisor total wall time.",
   "witness_bytes": 1861,
   "witness_sha256": "2722c34e85a9948a16221bf13b328768c842241634d5fe0969b791664d8b7415",
-  "worker_wall_seconds": 0.14501800400103093
+  "worker_wall_seconds": 0.167823492000025
 }

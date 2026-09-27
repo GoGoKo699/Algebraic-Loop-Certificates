@@ -15,6 +15,8 @@ gets ``status='completed'``; this is NOT a scientific certificate verdict.
 The supervisor is a Linux child subreaper. It finds descendants through /proc,
 so a native tool's ``setsid`` does not escape cleanup. It kills and reaps them
 on timeout, detected violation, worker exit, and ordinary supervisor exceptions.
+An fd-access permission denial is ignored only after a fresh /proc stat check
+confirms the same process has exited or vanished; live denials fail closed.
 This is a non-hostile research harness, not a security sandbox: programs must
 not deliberately change affinity, alter limits, or write outside the trial.
 
@@ -305,6 +307,21 @@ def _is_raw(path):
             and not name.endswith((".stdout.txt", ".stderr.txt", ".json.tmp")))
 
 
+def _descriptors_closed(pid, expected_starttime):
+    """Confirm an fd-permission race is caused by process exit, not a live denial.
+
+    Linux can deny an unprivileged owner access to /proc/PID/fd after the task
+    exits but before it is reaped. A fresh stat read must identify the same
+    process in zombie/dead state; a reused PID or inaccessible live task must
+    still fail closed. A vanished process also has no remaining descriptors.
+    """
+    try:
+        fields = Path(f"/proc/{pid}/stat").read_text().rsplit(")", 1)[1].split()
+    except (FileNotFoundError, ProcessLookupError):
+        return True
+    return int(fields[19]) == expected_starttime and fields[0] in {"Z", "X", "x"}
+
+
 def _artifact_size(root, descendants):
     total = 0
     raw = 0
@@ -326,11 +343,15 @@ def _artifact_size(root, descendants):
                 raw += info.st_size
             seen.add((info.st_dev, info.st_ino))
     deleted = 0
-    for pid in descendants:
+    for pid, process in descendants.items():
         try:
             entries = list(Path(f"/proc/{pid}/fd").iterdir())
         except (FileNotFoundError, ProcessLookupError):
             continue
+        except PermissionError:
+            if _descriptors_closed(pid, process[1]):
+                continue
+            raise
         for entry in entries:
             try:
                 target = os.readlink(entry)
@@ -339,6 +360,10 @@ def _artifact_size(root, descendants):
                 info = entry.stat()
             except (FileNotFoundError, ProcessLookupError):
                 continue
+            except PermissionError:
+                if _descriptors_closed(pid, process[1]):
+                    continue
+                raise
             identity = (info.st_dev, info.st_ino)
             if stat.S_ISREG(info.st_mode) and identity not in seen:
                 total += info.st_size

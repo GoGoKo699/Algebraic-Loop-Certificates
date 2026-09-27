@@ -1,32 +1,32 @@
-[08:12:09 INFO] the model to be checked: /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/model.aag
-[08:12:09 WARN] property not found, moved 1 outputs to bad properties
-[08:12:09 INFO] origin ts has 26 vars, 3 inputs, 7 latches, 0 constraints, 66 clauses and 182 lits in cnf
-[08:12:09 INFO] trivial simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
-[08:12:09 INFO] scorr: eliminates 0 latchs out of 7 in 0.00s
-[08:12:09 INFO] scorr: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
-[08:12:09 INFO] frts: eliminates 0 out of 21 vars in 0.00s
-[08:12:09 INFO] frts: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
-[08:12:09 INFO] preprocessed ts has 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
-[08:12:09 INFO] IC3 found no counterexample up to depth 0
-[08:12:09 INFO] IC3 found no counterexample up to depth 1
-[08:12:09 INFO] IC3 found no counterexample up to depth 2
-[08:12:09 INFO] IC3 found no counterexample up to depth 3
-[08:12:09 INFO] IC3 found no counterexample up to depth 4
-[08:12:09 INFO] IC3 found no counterexample up to depth 5
-[08:12:09 INFO] IC3 found no counterexample up to depth 6
-[08:12:09 INFO] IC3 found no counterexample up to depth 7
-[08:12:09 INFO] IC3 found no counterexample up to depth 8
-[08:12:09 INFO] IC3 proved the property
-[08:12:09 INFO] obligations: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18]
-[08:12:09 INFO] frames [11]: 7 8 11 4 5 9 2 2 0 20 5 
-[08:12:09 INFO] SolverStatistic {
+[08:31:42 INFO] the model to be checked: /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data/model.aag
+[08:31:42 WARN] property not found, moved 1 outputs to bad properties
+[08:31:42 INFO] origin ts has 26 vars, 3 inputs, 7 latches, 0 constraints, 66 clauses and 182 lits in cnf
+[08:31:42 INFO] trivial simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:31:42 INFO] scorr: eliminates 0 latchs out of 7 in 0.00s
+[08:31:42 INFO] scorr: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:31:42 INFO] frts: eliminates 0 out of 21 vars in 0.00s
+[08:31:42 INFO] frts: simplified ts: 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:31:42 INFO] preprocessed ts has 21 vars, 3 inputs, 7 latches, 0 constraints, 59 clauses and 194 lits in cnf
+[08:31:42 INFO] IC3 found no counterexample up to depth 0
+[08:31:42 INFO] IC3 found no counterexample up to depth 1
+[08:31:42 INFO] IC3 found no counterexample up to depth 2
+[08:31:42 INFO] IC3 found no counterexample up to depth 3
+[08:31:42 INFO] IC3 found no counterexample up to depth 4
+[08:31:42 INFO] IC3 found no counterexample up to depth 5
+[08:31:42 INFO] IC3 found no counterexample up to depth 6
+[08:31:42 INFO] IC3 found no counterexample up to depth 7
+[08:31:42 INFO] IC3 found no counterexample up to depth 8
+[08:31:42 INFO] IC3 proved the property
+[08:31:42 INFO] obligations: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18]
+[08:31:42 INFO] frames [11]: 7 8 11 4 5 9 2 2 0 20 5 
+[08:31:42 INFO] SolverStatistic {
     num_solve: 957,
-    avg_solve_time: 1.927µs,
+    avg_solve_time: 1.555µs,
     avg_decide_var: 0.882443,
     num_simplify_subsume: 0,
     num_simplify_self_subsume: 0,
 }
-[08:12:09 INFO] Statistic {
+[08:31:42 INFO] Statistic {
     time: 0.00s,
     num_mic: 71,
     avg_mic_cube_len: 4.549296,
@@ -36,16 +36,16 @@
     num_down_sat: 372,
     ctp: success: 0, fail: 75, success rate: 0.00%,
     block: Block {
-        overall_time: 1.965637ms,
-        get_bad_time: 19 times in 78.408000µs,
-        blocked_time: 67 times in 120.943000µs,
-        get_pred_time: 555.564µs,
-        mic_time: 1.797217ms,
-        push_time: 42.532µs,
+        overall_time: 1.696012ms,
+        get_bad_time: 19 times in 76.933000µs,
+        blocked_time: 67 times in 118.729000µs,
+        get_pred_time: 353.273µs,
+        mic_time: 1.475847ms,
+        push_time: 41.856µs,
     },
     propagate: Propagate {
-        overall_time: 480.098µs,
-        push_inf_time: 275.278µs,
+        overall_time: 487.998µs,
+        push_inf_time: 202.887µs,
     },
     xor_gen: success: 0, fail: 0, success rate: NaN%,
     num_auxiliary_var: 0,

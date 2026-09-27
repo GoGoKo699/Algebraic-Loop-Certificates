@@ -81,3 +81,8 @@ This replays 23 completed CNF proofs and checks two negative SAT assignments,
 without a native executable or network access. It does not formally verify the
 model/witness-to-CNF transformations. The [executable protocol](EXECUTABLE_PROTOCOL.md)
 and its subsequent hash freeze govern the separate comparative experiment.
+
+The current observations were rerun after a CI portability correction to terminal
+process monitoring. The [initial qualification and first freeze](qualification_history/README.md)
+are preserved byte-for-byte in a separate archive; no comparison measurement
+preceded either qualification or the renewed freeze.

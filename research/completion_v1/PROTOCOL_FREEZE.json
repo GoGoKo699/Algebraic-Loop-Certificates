@@ -57,7 +57,7 @@
       "width": 24
     }
   ],
-  "created_utc": "2026-09-27T08:20:49.502989+00:00",
+  "created_utc": "2026-09-27T08:32:33.089566+00:00",
   "environment": {
     "cache_policy": "fresh processes; no cache flushing",
     "cpu_affinity_available": [
@@ -418,7 +418,7 @@
     "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
     "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
   },
-  "qualification_manifest_sha256": "d8c0d0323adab16fe1992892b71679f57b9bd80ae85b54cbae529b4252993f05",
+  "qualification_manifest_sha256": "dc76594e15d0fa0589cad2a7bccfaadd8dda977d1c1b96e827760caeed7d402d",
   "qualification_summary": {
     "boundary": "CNF proofs and SAT controls checked independently; native translations remain trusted",
     "cases": [
@@ -469,7 +469,7 @@
     "research/aiger_lfsr_v1/source_aware.py": "631eae55c1820ea468ebca90109ba1b0b4ee7e70b3bc08469185a5b5225f148a",
     "research/completion_v1/EXECUTABLE_PROTOCOL.md": "3fba0bbf4e6629a509300b251e7c3c1a087932c90bf11093c1df5de7a54c42f2",
     "research/completion_v1/STUDY_DESIGN.md": "ef18b72171ecd8e46f287061373feff17595ffe81875b2eb2d9cd75ef3acf294",
-    "research/completion_v1/resources.py": "4ded7dab9cb1bf3b2b405e8c5048626040afac480e9d5f453b74b3d03ee3cffe",
+    "research/completion_v1/resources.py": "4738fa0585bf81fa885af6eede92625aaea6856e4e28ffa909be0654e5d991a7",
     "research/completion_v1/study.py": "5c7481abf4096a76e7e00c1e9d09babce5348eba3b1cc99c84f22ccaa6f66f48",
     "research/completion_v1/verify_qualification.py": "c03d99793e3c8e14daa9a0b8516b122f2e853729a14acc7bd7561d42a82d1f3d",
     "research/completion_v1/worker.py": "e6f6ca380d111565e5fcfac944909e4692b74592e569b00e1709ecb0717d30e9",

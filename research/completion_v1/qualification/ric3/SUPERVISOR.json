@@ -1,16 +1,16 @@
 {
-  "all_trial_files_bytes": 255869,
-  "artifact_final_bytes": 255869,
-  "artifact_peak_observed_bytes": 255869,
+  "all_trial_files_bytes": 255660,
+  "artifact_final_bytes": 255660,
+  "artifact_peak_observed_bytes": 255660,
   "artifact_policy": "sampled acceptance cap; all regular trial files",
   "artifact_root": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3",
-  "child_cpu_system_seconds": 0.026898,
-  "child_cpu_user_seconds": 0.11738,
+  "child_cpu_system_seconds": 0.024183,
+  "child_cpu_user_seconds": 0.11849,
   "cleanup": {
     "complete": true,
     "terminated_pids": []
   },
-  "cleanup_seconds": 0.0020279529999243096,
+  "cleanup_seconds": 0.002139050997357117,
   "command": [
     "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
     "-m",
@@ -25,8 +25,8 @@
     "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/data"
   ],
   "cpu": 0,
-  "cpu_system_seconds": 0.034324999999999994,
-  "cpu_user_seconds": 0.194189,
+  "cpu_system_seconds": 0.029469,
+  "cpu_user_seconds": 0.197119,
   "cwd": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates",
   "exit_code": 0,
   "instantaneous_aggregate_quota": false,
@@ -38,14 +38,14 @@
     "poll_seconds": 0.01,
     "wall_seconds": 30.0
   },
-  "max_poll_gap_seconds": 0.015405973001179518,
+  "max_poll_gap_seconds": 0.015072337999299634,
   "observed_violations": [],
   "open_deleted_peak_observed_bytes": 0,
   "raw_artifact_bytes": 96627,
   "raw_artifact_peak_observed_bytes": 96627,
   "reason": null,
   "schema": "alc-bounded-workflow-v1",
-  "started_utc": "2026-09-27T08:12:09.654202+00:00",
+  "started_utc": "2026-09-27T08:31:42.577583+00:00",
   "status": "completed",
   "stderr": "",
   "stderr_bytes": 0,
@@ -55,5 +55,5 @@
   "stdout_bytes": 39,
   "stdout_path": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/completion_v1/qualification/ric3/workflow.stdout",
   "stdout_truncated": false,
-  "wall_seconds": 0.34192712899675826
+  "wall_seconds": 0.3647279159995378
 }
