@@ -1,0 +1,27 @@
+Verify properties for AIGER/BTOR files
+
+Usage: ric3 check [OPTIONS] <MODEL> <COMMAND>
+
+Commands:
+  ic3         ic3
+  kind        k-induction
+  bmc         bmc
+  wl-bmc      word level bmc
+  wl-kind     word level k-induction
+  cegar       word level CEGAR with multiplier UF abstraction
+  rlive       rlive (CAV'24 https://doi.org/10.1007/978-3-031-65627-9_12)
+  multi-prop  Multi-Property (DATE'18 https://doi.org/10.23919/DATE.2018.8341977)
+  portfolio   portfolio
+  polynexus   polynexus: multi-property parallel engine
+  help        Print this message or the help of the given subcommand(s)
+
+Arguments:
+  <MODEL>  model file in aiger format or in btor2 format, for aiger model, the file name should be suffixed with .aig or .aag, for btor model, the file name should be suffixed with .btor or .btor2
+
+Options:
+      --cert <CERT>          certificate path
+      --certify              certify with certifaiger or cerbtora
+      --cex                  print counterexample when model is unsafe
+      --ui <UI>              ui [default: true] [possible values: true, false]
+      --interrupt-statistic  interrupt statistic
+  -h, --help                 Print help

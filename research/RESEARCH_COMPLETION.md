@@ -6,43 +6,39 @@ proofs, source assessments and test artifacts, not drafted paper sections.
 ## Current status
 
 **Overall scientific readiness: incomplete.** The
-[bounded comparison gate](BOUNDED_COMPARISON_GATE_16.md) records the exact
-32-trial prefix of the frozen 54-trial sequence. It contains 20 completed
-workflows (six exporter, four rIC3 and ten structural), seven rIC3 deadline
-outcomes, four exporter raw-artifact-limit outcomes and one exporter execution
-issue. The width-16 exporter in repetition 2 reached the all-file storage guard
-because metadata and logs raised the total above the cap while raw artifacts
-remained below their budget. Its Inductive solve was interrupted; the first five
-obligations had completed proofs. This is not a finding of an invalid witness.
+[amended comparison gate](BOUNDED_COMPARISON_GATE_17.md) completes all 54 trials
+under a separately qualified and prospectively frozen storage policy. It records
+nine exporter and six rIC3 accepted witnesses, 18 structural decisions, nine
+exporter raw-artifact limits and twelve rIC3 deadlines. At width 8, the exporter
+passes all nine witness obligations in all three repetitions (4.397–4.713 seconds)
+while rIC3 reaches its 30-second deadline in each repetition. The original
+three-of-three added-coverage criterion is satisfied at this width only.
 
-The remaining 22 trials were not attempted, including all of repetition 3.
-The primary three-of-three criterion is unevaluated. In particular, two exporter
-acceptances and two rIC3 deadlines at width 8 cannot establish the required win.
-This is neither a completed positive nor a completed negative study. The
-[study report](completion_v1/STUDY_REPORT.json) and
-[lossless run archive](completion_v1/study_20260927.tar.xz.parts/manifest.json) retain the outcomes.
-All 115 completed CNF proofs replay independently, including the completed
-obligations before interrupted solves. Native translations remain trusted.
+The [report](completion_v2/STUDY_REPORT.json) independently replays all 180
+completed CNF proofs, including prefixes before interrupted solves. Native
+translations remain trusted. The direct structural decisions have a different
+output contract and do not count as accepted witnesses. This is a scoped
+conventional exporter result, not a benefit for the complete orbit engine or
+a new algebraic theorem.
 
-The [requirement audit](SCIENTIFIC_CLOSURE_GATE_14.md) and
-[qualification gate](BASELINE_QUALIFICATION_GATE_15.md) remain binding. Both
-positive qualification witnesses pass all nine native obligations, both
-corruptions are rejected, and all 23 completed qualification proofs replay
-independently. Ten process controls exercise the resource harness. Earlier
-qualifications and freezes remain in [the portability history](completion_v1/qualification_history/README.md).
-Qualification is distinct from comparative evidence. The direct squarefree
-checker has a different result and trust contract, and this conventional
-exporter integration does not use the complete orbit engine or establish its
-consumer-level benefit.
+The [outcome-informed amendment](completion_v2/STORAGE_AMENDMENT.md) keeps raw
+artifacts at 64 MiB and gives exact allowlisted metadata its own 64 MiB budget.
+The combined allowance is larger; this is not a blind preregistration. All other
+limits, binaries, source models, commands and the complete trial order remain
+unchanged. The [freeze](completion_v2/PROTOCOL_FREEZE.json) was published before
+the fresh measurements. Four fresh qualification controls replay 23 proofs and
+check two SAT counterexamples; these controls are distinct from the study.
 
-Next, separately review a prospective shared storage-policy amendment and decide
-whether a fresh whole 54-trial sequence is warranted. Preserve the original raw
-budget, source models and corpus; do not selectively resume, rerun or reclassify
-the suspended study. Its [design](completion_v1/STUDY_DESIGN.md),
-[executable protocol](completion_v1/EXECUTABLE_PROTOCOL.md) and
-[freeze](completion_v1/PROTOCOL_FREEZE.json) remain unchanged. Contribution and
-assurance review, then evidence freeze, still follow a completed comparison.
-Manuscript work remains on hold.
+The [earlier Gate 16 study](BOUNDED_COMPARISON_GATE_16.md) remains a suspended
+32-trial prefix with its own unevaluated primary criterion and 115 replayed
+proofs. Its remaining trials were not resumed, and no observations were pooled
+into the new study. Both archives and the documented post-run duplicate-file
+observations are retained without changing measured records.
+
+Next, compare the surviving scoped exporter contribution with the closest
+certifying-exporter literature and make its complete assurance boundary explicit.
+Then freeze the scientific assessment and stopping decision. Originality and
+scientific readiness remain unresolved; manuscript work remains on hold.
 
 ## Earlier scientific decisions
 

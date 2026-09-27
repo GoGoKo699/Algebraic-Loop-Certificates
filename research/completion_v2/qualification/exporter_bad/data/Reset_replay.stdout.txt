@@ -1,0 +1,22 @@
+c LRAT-TRIM Version 0.2.1-rc2 trims LRAT proofs
+c Copyright (c) 2023-2026 A. Biere, F. Pollitt, Univ. Freiburg
+c reading CNF and LRAT files
+c backward checking trimmed clauses after trimming proof
+c reading CNF from 'Reset.cnf'
+c found 'p cnf 39 56' header
+c parsed CNF with 56 added clauses
+c parsing original CNF took 0.00 seconds and needed 13 MB memory
+c reading proof from 'Reset.lrat'
+c parsed original proof with 54 added and 0 deleted clauses
+c parsing original proof took 0.00 seconds and needed 13 MB memory
+c trimmed 56 original clauses in CNF to 40 clauses 71%
+c trimmed 54 added clauses in original proof to 54 clauses 100%
+c trimming proof took 0.00 seconds
+c backward checking proof took 0.00 seconds
+s VERIFIED
+c checked 54 clauses 83981 per second
+c resolved 169 clauses 3.13 per checked clause
+c assigned 130 literals 2.41 per checked clause
+c maximum-resident-set-size of 13 MB
+c process-time of 0.00 seconds (590.14 %)
+c wall-clock-time of 0.00 seconds

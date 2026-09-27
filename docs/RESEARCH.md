@@ -4,7 +4,9 @@ Updated 27 September 2026. The project has an executable certificate workflow. I
 
 ## Current decision
 
-The [bounded comparison gate](../research/BOUNDED_COMPARISON_GATE_16.md) records a suspended study. The frozen 54-trial sequence stopped at its 32nd trial, the width-16 exporter in repetition 2, when metadata and logs pushed all-file storage above the shared guard although raw artifacts remained below their budget. This is an execution issue, not an invalid-witness result. The primary three-repetition criterion remains unevaluated; the 22 remaining trials were not attempted. Neither a positive nor a negative completed comparison is established.
+The [amended comparison gate](../research/BOUNDED_COMPARISON_GATE_17.md) completes a fresh 54-trial sequence and meets the original three-of-three added-coverage criterion at width 8. The exporter delivers accepted witnesses in 4.397–4.713 seconds; pinned rIC3 reaches the 30-second limit in all three repetitions. All 180 completed CNF proofs replay independently. This is scoped to the fixed hinted source family and native configuration; it is not a general speedup or a benefit for the complete orbit engine.
+
+The [storage amendment](../research/completion_v2/STORAGE_AMENDMENT.md) keeps the raw budget at 64 MiB and gives exact known metadata a separate 64 MiB allowance. It is explicitly informed by the earlier outcome and increases the possible combined storage. Fresh qualification and a published freeze preceded all new measurements. The [prior suspended experiment](../research/BOUNDED_COMPARISON_GATE_16.md) remains unchanged and separate, with no pooling or selective continuation.
 
 The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) fixes the documented consumer: an accepted hardware-safety certificate for the original circuit. The [qualification gate](../research/BASELINE_QUALIFICATION_GATE_15.md) establishes the compatible pinned rIC3 path, and the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md) remains preserved exactly as executed. The candidate is this scoped conventional exporter integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes.
 
@@ -53,10 +55,10 @@ The producer remains deliberately elementary. A better producer must be compared
 
 ## Finite remaining sequence
 
-1. Review a prospective shared storage-policy amendment separately from the suspended evidence and decide whether a fresh whole 54-trial sequence is warranted. Preserve the original raw budget, sources and corpus; do not selectively restart trials or reclassify recorded outcomes.
-2. If a new complete study is justified and prospectively frozen, evaluate its original primary criterion before reviewing any surviving scoped contribution against the closest exporter work and its complete assurance boundary.
-3. Freeze the scientific evidence after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
+1. Assess the scoped added certified-witness coverage against the closest certifying-exporter literature, preserving the exact consumer, hints and conventional source-aware alternatives.
+2. Complete the assurance assessment: independent CNF proofs do not certify the trusted native transformations or establish a general solver advantage.
+3. Freeze the scientific conclusion after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
 
-The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. The observed execution issue suspends the comparison; it is not a performance win. At width 8, two exporter acceptances and two rIC3 deadline outcomes are partial observations, not satisfaction of the required three-repetition criterion. A completed negative result would close this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
+The original [study design](../research/completion_v1/STUDY_DESIGN.md) and the separate [amended protocol](../research/completion_v2/EXECUTABLE_PROTOCOL.md) govern the completed comparison. Width 8 satisfies its fixed primary criterion; no criterion, corpus or old outcome was revised to obtain that result. Both routes may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
 
 The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result.

@@ -1,6 +1,6 @@
 # Current work: a classical certificate contribution, not a quantum speedup claim
 
-Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/BOUNDED_COMPARISON_GATE_16.md, research/completion_v1/README.md, research/completion_v1/EXECUTABLE_PROTOCOL.md, research/completion_v1/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
+Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/BOUNDED_COMPARISON_GATE_17.md, research/completion_v2/README.md, research/completion_v2/EXECUTABLE_PROTOCOL.md, research/completion_v2/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
 
 ## Established executable baseline
 
@@ -10,7 +10,9 @@ Run `python verify.py` before and after changes. Do not change stored expected e
 
 ## Current scientific decision
 
-The [bounded comparison gate](../research/BOUNDED_COMPARISON_GATE_16.md) records a suspended study. The exact first 32 trials of the frozen 54-trial sequence ended at the width-16 exporter in repetition 2, after metadata and logs triggered the all-file storage guard while raw artifacts remained below budget. The recorded execution issue is not an invalid-witness finding. The 22 remaining trials were not attempted, and the primary three-of-three criterion is unevaluated. Do not treat partial width-8 observations as a completed win or the suspended study as a completed negative result.
+The [amended comparison gate](../research/BOUNDED_COMPARISON_GATE_17.md) completes all 54 trials and meets the original added-coverage criterion at width 8: three accepted exporter witnesses versus three rIC3 deadlines. All 180 completed CNF proofs replay independently. Widths 2 and 4 pass through both witness routes; widths 12, 16 and 24 exhaust both routes' frozen resource budgets. The structural reference passes all cases but has a different output contract.
+
+The amendment is an outcome-informed repair with separate 64 MiB raw and metadata budgets, an exact metadata path allowlist, and unchanged source corpus, native tools, commands, time/memory limits and trial order. Its own qualification and freeze preceded the fresh sequence. Preserve the [original suspended study](../research/BOUNDED_COMPARISON_GATE_16.md), its unevaluated criterion and all historical evidence separately; do not pool or reclassify its trials.
 
 The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) fixes a documented hardware-verification consumer requiring an accepted witness against the original circuit, not just an algebraic safety verdict. The candidate remains the conventional LFSR witness exporter demonstrated at the existing interface. It does not use the complete orbit engine or establish a benefit for that engine.
 
@@ -22,11 +24,9 @@ The algebraic contribution boundary in [assessment 08](../research/CONTRIBUTION_
 
 ## Finite remaining sequence
 
-1. **Review the shared storage policy prospectively.** Preserve the suspended study, its classifications and its exact frozen protocol. Separately assess an amendment that accounts for metadata and logs without changing the original raw-artifact budget, sources or corpus, then decide whether a fresh whole 54-trial sequence is warranted. Do not selectively restart, rerun or reclassify the original trials. Record the rationale before any new measurements.
-2. **Complete any justified new comparison before assessing contribution.** A new sequence needs its own prospective freeze and must retain every accepted, rejected, unknown and failed outcome. Charge source recognition, hint validation, factorization, construction, conversions, native obligations, SAT search and LRAT replay. Evaluate the original primary criterion before comparing a surviving scoped result with the closest certifying-exporter literature. CNF proof replay is not end-to-end formal verification; partial observations cannot substitute for the primary result.
-3. **Freeze the evidence.** Run the integrated verifier, resolve contradictions, and document the final limitations and stopping decision. A completed negative study is a legitimate endpoint; it does not establish research readiness or permit a post-hoc speedup claim. Manuscript drafting remains on hold.
-
-This sequence supersedes the earlier open-ended next-task recommendations. Another equivalent format, broader arithmetic domain or larger synthetic exponent is not an automatic follow-up to a negative result.
+1. **Assess the surviving scoped contribution.** Compare the completed width-8 certified-witness coverage result with the closest certifying-exporter literature, keeping source recognition, supplied exponent/tap hints, conventional algebra and the required accepted witness explicit. A fixed-corpus coverage result is not a general solver or orbit-engine advantage. Do not reopen the closed algebraic or inverse-bit novelty routes.
+2. **Finish the assurance and evidence assessment.** Distinguish independent CNF proof replay from trusted native witness/obligation/CNF transformations and measured resource enforcement. Preserve every completed, unknown and failed observation from both protocols, including the retention notes. Resolve contradictions before making a final scientific claim.
+3. **Freeze the scientific conclusion and stopping decision.** Run integrated verification and document the final scope and limitations. Another format, broader arithmetic domain, larger synthetic exponent or selective rerun is not an automatic follow-up. Manuscript drafting remains on hold.
 
 The production `alc/` semantics remain prime fields, invertible affine maps, one initial state and a full-state target. Research-only extensions have their own specifications and proofs. Do not silently broaden production semantics or treat research support as production integration.
 
