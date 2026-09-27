@@ -1,0 +1,12 @@
+ 0a287285d5e52def2d885f3b16790539dccba372 deps/aig-rs (v0.4.6-15-g0a28728)
+ 322d70b799ffc5e4570093183198abb27cae042a deps/aig-rs/aiger (rel-1.9.20-27-g322d70b)
+ 3743b786048a2f1fb06306b54e890f4f3bdb3b88 deps/bitwuzla-rs (v0.1.0-9-g3743b78)
+ 95e71f3b9322f4892bb54510e72765d32b10b9b1 deps/bitwuzla-rs/bitwuzla (heads/main)
+ 4eaa050a4a207f73a7dabf9fce214dced553154d deps/btor-rs (v0.2.2-14-g4eaa050)
+ 8cd2c73166a8d25f30f6dbeaa1da8629c08caba7 deps/cadical-rs (v0.2.2-8-g8cd2c73)
+ f13d74439a5b5c963ac5b02d05ce93a8098018b8 deps/cadical-rs/cadical (rel-2.1.3)
+ b787d2b64bfa5a2ba9eadd3276d04336297210a2 deps/giputils (v0.3.6-24-gb787d2b)
+ 0ce9de57fb8ff1028a1d84d559d0bf2f59b58d86 deps/kissat-rs (v0.5.2-6-g0ce9de5)
+ 8af8e56f174b778aef3aa45af9f739b2a5f492c2 deps/kissat-rs/kissat (rel-4.0.4)
+ 22a7d0fd16cec8ee816f107fef594457dc1e1802 deps/logicrs (v0.6.1-106-g22a7d0f)
+-4918e4a1f4f43092739d00abe331cd3b14122797 examples/fvbench

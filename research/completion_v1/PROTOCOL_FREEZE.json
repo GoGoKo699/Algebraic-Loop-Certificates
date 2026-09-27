@@ -1,0 +1,480 @@
+{
+  "binary_sha256": {
+    "aigsplit": "af6611a86c0441294b56a7e5160af5a6c7b27e2a23b075159459dfc68dbf930d",
+    "aigtocnf": "00b42876bb8f4478f146642d80831452da039d2c44cdb14732df8fbd85744b71",
+    "cadical": "3ce98a1edd3cfc4c70aa3b548976a80090dba54049637257e9333a6a1ceea342",
+    "certifaiger": "2b1ed7d4b35a0218e32cfecaf04d55b6c6223be9265fc7169b7bb39b509b8b2e",
+    "lrat-trim": "b8cc27ad0baaf11dac1d88f8453a2bedc9aeef1be79f20780d12673d4698abf8",
+    "ric3": "e8ea8072fc76bbfeb002337677292b23557b045464b016fe38fcfddbe7a7ba76"
+  },
+  "cases": [
+    {
+      "git_blob_sha1": "492d5e8ed0f745bb32b9074893cf27d7bf42805a",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-02-0x3.aag",
+      "odd_multiple": 3,
+      "sha256": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+      "taps": 3,
+      "width": 2
+    },
+    {
+      "git_blob_sha1": "908ebd7b513afa29385671c07e71167eaf1df90d",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-04-0xc.aag",
+      "odd_multiple": 15,
+      "sha256": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+      "taps": 12,
+      "width": 4
+    },
+    {
+      "git_blob_sha1": "985b32d80f72464ba83b8eb8c975c6b45eab32f2",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-08-0xb8.aag",
+      "odd_multiple": 255,
+      "sha256": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+      "taps": 184,
+      "width": 8
+    },
+    {
+      "git_blob_sha1": "624d17ea04855265b4ef6a0e6eba4be36f0fb505",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-12-0xe08.aag",
+      "odd_multiple": 4095,
+      "sha256": "165452c70c2579ebf745a3ab972c9c0a682a5bba7f1fed73e0d79ddfeeb2ce8d",
+      "taps": 3592,
+      "width": 12
+    },
+    {
+      "git_blob_sha1": "e15973c9285fb4ea5d7a1e2f10e0a0ebf7e55444",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-16-0xd008.aag",
+      "odd_multiple": 65535,
+      "sha256": "58ff6dbf7878ec3fa80e8810a48eb1830fb9fcebd9706ddee864296d8cb5eaae",
+      "taps": 53256,
+      "width": 16
+    },
+    {
+      "git_blob_sha1": "74414ad7dd0c4ad5fc58345d7b95fa8efcd98666",
+      "model": "research/aiger_lfsr_v1/upstream/fibonacci-24-0xe10000.aag",
+      "odd_multiple": 16777215,
+      "sha256": "a53c8b35a5f4b5d3dfe394c57d36623c94d3600504f742cb0eecfe18a6114add",
+      "taps": 14745600,
+      "width": 24
+    }
+  ],
+  "created_utc": "2026-09-27T08:20:49.502989+00:00",
+  "environment": {
+    "cache_policy": "fresh processes; no cache flushing",
+    "cpu_affinity_available": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "environment_overrides": {
+    "LC_ALL": "C",
+    "PYTHONHASHSEED": "0",
+    "RUST_LOG": "info"
+  },
+  "kind": "fixed_completion_study_before_measurement",
+  "limits": {
+    "address_space_bytes": 1073741824,
+    "artifact_bytes": 67108864,
+    "cpu": 0,
+    "output_bytes": 1048576,
+    "poll_seconds": 0.01,
+    "wall_seconds": 30.0
+  },
+  "order": [
+    {
+      "id": "n02-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 2
+    },
+    {
+      "id": "n02-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 2
+    },
+    {
+      "id": "n02-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 2
+    },
+    {
+      "id": "n04-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 4
+    },
+    {
+      "id": "n04-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 4
+    },
+    {
+      "id": "n04-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 4
+    },
+    {
+      "id": "n08-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 8
+    },
+    {
+      "id": "n08-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 8
+    },
+    {
+      "id": "n08-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 8
+    },
+    {
+      "id": "n12-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 12
+    },
+    {
+      "id": "n12-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 12
+    },
+    {
+      "id": "n12-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 12
+    },
+    {
+      "id": "n16-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 16
+    },
+    {
+      "id": "n16-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 16
+    },
+    {
+      "id": "n16-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 16
+    },
+    {
+      "id": "n24-t1-exporter",
+      "route": "exporter",
+      "trial": 1,
+      "width": 24
+    },
+    {
+      "id": "n24-t1-ric3",
+      "route": "ric3",
+      "trial": 1,
+      "width": 24
+    },
+    {
+      "id": "n24-t1-structural",
+      "route": "structural",
+      "trial": 1,
+      "width": 24
+    },
+    {
+      "id": "n02-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 2
+    },
+    {
+      "id": "n02-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 2
+    },
+    {
+      "id": "n02-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 2
+    },
+    {
+      "id": "n04-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 4
+    },
+    {
+      "id": "n04-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 4
+    },
+    {
+      "id": "n04-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 4
+    },
+    {
+      "id": "n08-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 8
+    },
+    {
+      "id": "n08-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 8
+    },
+    {
+      "id": "n08-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 8
+    },
+    {
+      "id": "n12-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 12
+    },
+    {
+      "id": "n12-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 12
+    },
+    {
+      "id": "n12-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 12
+    },
+    {
+      "id": "n16-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 16
+    },
+    {
+      "id": "n16-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 16
+    },
+    {
+      "id": "n16-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 16
+    },
+    {
+      "id": "n24-t2-ric3",
+      "route": "ric3",
+      "trial": 2,
+      "width": 24
+    },
+    {
+      "id": "n24-t2-exporter",
+      "route": "exporter",
+      "trial": 2,
+      "width": 24
+    },
+    {
+      "id": "n24-t2-structural",
+      "route": "structural",
+      "trial": 2,
+      "width": 24
+    },
+    {
+      "id": "n02-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 2
+    },
+    {
+      "id": "n02-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 2
+    },
+    {
+      "id": "n02-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 2
+    },
+    {
+      "id": "n04-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 4
+    },
+    {
+      "id": "n04-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 4
+    },
+    {
+      "id": "n04-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 4
+    },
+    {
+      "id": "n08-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 8
+    },
+    {
+      "id": "n08-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 8
+    },
+    {
+      "id": "n08-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 8
+    },
+    {
+      "id": "n12-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 12
+    },
+    {
+      "id": "n12-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 12
+    },
+    {
+      "id": "n12-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 12
+    },
+    {
+      "id": "n16-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 16
+    },
+    {
+      "id": "n16-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 16
+    },
+    {
+      "id": "n16-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 16
+    },
+    {
+      "id": "n24-t3-exporter",
+      "route": "exporter",
+      "trial": 3,
+      "width": 24
+    },
+    {
+      "id": "n24-t3-ric3",
+      "route": "ric3",
+      "trial": 3,
+      "width": 24
+    },
+    {
+      "id": "n24-t3-structural",
+      "route": "structural",
+      "trial": 3,
+      "width": 24
+    }
+  ],
+  "python": {
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "qualification_manifest_sha256": "d8c0d0323adab16fe1992892b71679f57b9bd80ae85b54cbae529b4252993f05",
+  "qualification_summary": {
+    "boundary": "CNF proofs and SAT controls checked independently; native translations remain trusted",
+    "cases": [
+      {
+        "case": "exporter",
+        "proofs_replayed": 9,
+        "rejected_obligation": null,
+        "sat_assignment": null,
+        "status": "accepted"
+      },
+      {
+        "case": "ric3",
+        "proofs_replayed": 9,
+        "rejected_obligation": null,
+        "sat_assignment": null,
+        "status": "accepted"
+      },
+      {
+        "case": "exporter_bad",
+        "proofs_replayed": 5,
+        "rejected_obligation": "Inductive",
+        "sat_assignment": {
+          "clauses_checked": 371,
+          "variables": 179
+        },
+        "status": "rejected"
+      },
+      {
+        "case": "ric3_bad",
+        "proofs_replayed": 0,
+        "rejected_obligation": "Reset",
+        "sat_assignment": {
+          "clauses_checked": 56,
+          "variables": 39
+        },
+        "status": "rejected"
+      }
+    ],
+    "checked_artifact_files": 300,
+    "negative_assignments_checked": 2,
+    "proofs_replayed": 23
+  },
+  "schema": 1,
+  "seed": 0,
+  "source_files_sha256": {
+    "research/aiger_lfsr_v1/SOURCE_MANIFEST.json": "3820b487543f3d562b5cfe28d7c855ea22c1fb67ce057ed51be6e064c16794ad",
+    "research/aiger_lfsr_v1/check.py": "d93d963e9a3f6cd38841c4ef36a62ae2177f2cb01afbf04eb8ce00ee7cbb9e6d",
+    "research/aiger_lfsr_v1/source_aware.py": "631eae55c1820ea468ebca90109ba1b0b4ee7e70b3bc08469185a5b5225f148a",
+    "research/completion_v1/EXECUTABLE_PROTOCOL.md": "3fba0bbf4e6629a509300b251e7c3c1a087932c90bf11093c1df5de7a54c42f2",
+    "research/completion_v1/STUDY_DESIGN.md": "ef18b72171ecd8e46f287061373feff17595ffe81875b2eb2d9cd75ef3acf294",
+    "research/completion_v1/resources.py": "4ded7dab9cb1bf3b2b405e8c5048626040afac480e9d5f453b74b3d03ee3cffe",
+    "research/completion_v1/study.py": "5c7481abf4096a76e7e00c1e9d09babce5348eba3b1cc99c84f22ccaa6f66f48",
+    "research/completion_v1/verify_qualification.py": "c03d99793e3c8e14daa9a0b8516b122f2e853729a14acc7bd7561d42a82d1f3d",
+    "research/completion_v1/worker.py": "e6f6ca380d111565e5fcfac944909e4692b74592e569b00e1709ecb0717d30e9",
+    "research/odd_order_witness_v1/produce.py": "947edba2faedc12aa032470da27cb9fa2c92e736bf1d0820b0f7ff008c860eb6",
+    "research/proof_interface_v1/lrat.py": "7d88171f86d319fcbc9aa06556bb227dd1bd8b8e0cef5659b8e19c837eaf6044",
+    "research/proof_interface_v1/produce.py": "8b1cef472064e05935341af6f15a76c5709a77930dd325a551a75ea3883cd5d1"
+  }
+}

@@ -3,15 +3,15 @@
 Manuscript preparation is on hold. The production `alc/` API remains unchanged.
 These are explicit experimental namespaces, not a silent expansion of its scope.
 
-**Latest:** [bounded scientific completion study](SCIENTIFIC_CLOSURE_GATE_14.md). The requirement audit is complete; the matched native comparison is pending. The candidate is a scoped exporter of conventional LFSR reasoning into the existing hardware-safety certificate interface. It does not use the complete orbit engine or establish its benefit. The [study design](completion_v1/STUDY_DESIGN.md) fixes the intended comparison and stopping rule; [the cost audit](completion_v1/README.md) preserves the limits of earlier observations.
+**Latest:** [baseline qualification and protocol freeze](BASELINE_QUALIFICATION_GATE_15.md). Pinned rIC3 and the conventional LFSR exporter pass the same hardware-safety certificate interface on the qualification input; corrupted witnesses are rejected. The [executable protocol](completion_v1/EXECUTABLE_PROTOCOL.md) is fixed, but the matched native study remains pending. This scoped integration does not use the complete orbit engine or establish its benefit. The [study design](completion_v1/STUDY_DESIGN.md) fixes success and stopping; [the cost audit](completion_v1/README.md) preserves the limits of earlier observations.
 
-The mandatory certifying baseline is rIC3. Earlier ABC observations remain diagnostic, and the direct squarefree checker is a source-aware reference with a different output and trust contract. The remaining sequence is tool qualification and protocol freeze, the bounded study, contribution and assurance review, then evidence freeze. A blocked baseline is not an exporter win. Manuscript preparation remains on hold.
+The mandatory certifying baseline is rIC3. Earlier ABC observations remain diagnostic, and the direct squarefree checker is a source-aware reference with a different output and trust contract. The remaining sequence is the bounded study, contribution and assurance review, then evidence freeze. Qualification smokes are not benchmark measurements, and an execution failure is not an exporter win. Manuscript preparation remains on hold.
 
 Earlier decisions remain binding: the [constructive comparison](CONTRIBUTION_ASSESSMENT_08.md) treats the engine as an implementation of established algebra, the [supplied-invariant gate](VERIFICATION_GATE_09.md) found no capability gap, and the [invariant/history audit](INVARIANT_HISTORY_GATE_13.md) closes its standalone novelty route. The proofs and native integration remain preserved. Originality, useful advantage and scientific readiness are unestablished. [CURRENT.md](../work_orders/CURRENT.md) records the active work order.
 
 | Module | Scientific object | Main boundary |
 |---|---|---|
-| [Completion study and cost audit](completion_v1/README.md) | Documented certificate requirement, bounded comparison design, and accounting of retained observations | Requirement audit complete; matched rIC3 comparison and contribution review pending |
+| [Completion study and cost audit](completion_v1/README.md) | Qualified native interface, frozen bounded comparison, and accounting of retained observations | Matched rIC3 study and contribution review pending; qualification is not performance evidence |
 | [Invariant/history audit](invariant_history_v1/README.md) | Exact forced inverse-bit characterization and conservative-history projection | Established separator pattern; no standalone novelty or general size lower bound |
 | [Odd-order witness integration](odd_order_witness_v1/README.md) | Seed-dependent period circuits preserve the weaker odd-order premise at the existing native interface | Established order extraction; factorization cost and trusted native translations remain explicit |
 | [Hardware witness interface](proof_interface_v1/README.md) | Original circuits and history invariants accepted through Certifaiger with retained SAT proofs | Stronger maximal-period premise; native obligation and CNF translations remain trusted |
@@ -31,7 +31,7 @@ Earlier decisions remain binding: the [constructive comparison](CONTRIBUTION_ASS
 The [completion ledger](RESEARCH_COMPLETION.md) preserves the development record.
 The earlier [scientific work order](SCIENTIFIC_WORK_ORDER.md) and
 [closer-prior comparison](PRIOR_WORK_COMPARISON_02.md) are historical checkpoints;
-Gate 14 supersedes their next-step recommendations.
+Gates 14–15 supersede their next-step recommendations.
 A proved construction is not automatically a new publishable contribution.
 
 Run the standard-library research checks from the repository root:

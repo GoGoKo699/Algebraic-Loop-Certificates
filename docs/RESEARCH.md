@@ -4,11 +4,11 @@ Updated 27 September 2026. The project has an executable certificate workflow. I
 
 ## Current decision
 
-The [scientific closure gate](../research/SCIENTIFIC_CLOSURE_GATE_14.md) completes the requirement audit and fixes a bounded study of a conventional LFSR witness exporter. The documented consumer requires an accepted hardware-safety certificate for the original circuit. The candidate is this scoped integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes. The [study design](../research/completion_v1/STUDY_DESIGN.md) states the inputs, accepted result and stopping rule. The matched native comparison remains pending.
+The [requirement audit](../research/SCIENTIFIC_CLOSURE_GATE_14.md) fixes a bounded study of a conventional LFSR witness exporter. The documented consumer requires an accepted hardware-safety certificate for the original circuit. The candidate is this scoped integration; it does not use the complete orbit engine or reopen the closed algebraic and invariant/history novelty routes. The [baseline qualification gate](../research/BASELINE_QUALIFICATION_GATE_15.md) now establishes a compatible pinned rIC3 witness-output path and freezes the [executable protocol](../research/completion_v1/EXECUTABLE_PROTOCOL.md). The matched native comparison remains pending.
 
 rIC3 is the mandatory certifying baseline, through the same accepted-artifact interface. Earlier ABC observations remain diagnostic; an ABC-only result cannot complete the comparison. The direct squarefree structural checker is a necessary source-aware cost and trust reference with a different output contract: it decides safety without itself supplying the requested standard witness. Conventional reasoning can emit the same witness as the candidate, so the study cannot count that reasoning as a weaker competitor.
 
-The [cost audit](../research/completion_v1/README.md) separates retained native observations into their recorded stages and distinguishes SAT search from LRAT replay. Those observations do not include every construction cost and cannot be relabeled as complete workflow timings. Tool qualification and an executable protocol freeze are still required before the bounded comparison.
+The [cost audit](../research/completion_v1/README.md) separates retained native observations into their recorded stages and distinguishes SAT search from LRAT replay. Those observations do not include every construction cost and cannot be relabeled as complete workflow timings. The new qualification smokes establish compatibility and rejection behavior; they are not benchmark measurements or performance evidence.
 
 ## Earlier decisions and preserved evidence
 
@@ -51,11 +51,10 @@ The producer remains deliberately elementary. A better producer must be compared
 
 ## Finite remaining sequence
 
-1. Qualify a pinned rIC3 witness-output path and freeze the exact executable protocol before timed runs.
-2. Execute the bounded matched study, charging construction, conversions, native obligation generation, SAT search and proof replay; retain every outcome.
-3. Review any surviving scoped contribution against the closest exporter work and state its complete assurance boundary.
-4. Freeze the scientific evidence after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
+1. Execute the bounded matched study under the [frozen protocol](../research/completion_v1/PROTOCOL_FREEZE.json), charging construction, conversions, native obligation generation, SAT search and proof replay; retain every outcome.
+2. Review any surviving scoped contribution against the closest exporter work and state its complete assurance boundary.
+3. Freeze the scientific evidence after integrated verification and resolution of contradictions. Manuscript drafting remains on hold.
 
-The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. A baseline qualification failure leaves the comparison blocked. A completed negative result closes this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
+The [study design](../research/completion_v1/STUDY_DESIGN.md) governs success and stopping. A later execution or compatibility failure suspends the comparison; it is not a performance win. A completed negative result closes this benefit route without changing the corpus or substituting a post-hoc speedup claim. Both sides may exploit conventional algebra, decompositions and compact representations; no competitor is forced to enumerate an orbit.
 
 The separate quantum project retains its own goals. This classical repository need not include a quantum section to justify a useful result.
