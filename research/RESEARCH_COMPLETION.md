@@ -34,6 +34,13 @@ three positive witnesses pass, both false selectors fail induction, and all
 route can produce the same witness. Originality and a consequential advantage
 remain open; this is progress rather than scientific completion.
 
+The [invariant/history audit](INVARIANT_HISTORY_GATE_13.md) then identifies a
+direct generic predecessor for the remaining conceptual claim and closes this
+standalone novelty route. It preserves the exact scoped theorem, distinguishes
+quantified descriptions from deterministic evaluation, and records independent
+finite permutation controls. The native integration is retained; another format
+or history encoding is not a substitute for a new consumer-level benefit.
+
 The remaining sections preserve the earlier development record. Their historical
 access limits and proposed comparisons are superseded by the assessments above;
 their proofs and recorded evidence are retained.

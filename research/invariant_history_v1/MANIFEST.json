@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "scope": "Independent finite controls and exact-scope contribution audit; no new native experiment or novelty claim.",
+  "sha256": {
+    "README.md": "7ccc7ce5f2b27809e13487bbb8c3fc4c33a27fa970ccc69e0147bd13f2099857",
+    "SOURCES.md": "0e9126b05c776f90e0f706221a92260482c825a9f6099d2513021fbe6a693d7e",
+    "THEORY.md": "8dee99944767cf3c4a30a2da7931a10d4c110ae393d6910e55e232a0fef05e12",
+    "verify.py": "daf7c19ac87ec04a820cd3fbd57351a961f71ee05a5231ea890b5dc0e08b8633",
+    "verify_controls.py": "3b502c1af1670c5ea19495d56574d61fddd703502d540e3affbdf53926c15ec5"
+  }
+}
