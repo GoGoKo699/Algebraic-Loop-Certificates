@@ -1,0 +1,59 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    SHR3
+Output size, bits: 32
+Total physical RAM: 9967 MiB
+Free physical RAM:  7478 MiB
+LFSR period checker
+  malloc: nbytes = 4; ptr = 0x94556798675072
+  The PRNG is probably a LFSR
+  The maximal period to be verified: 2**32 - 1
+Beginning the period verification
+  LFSR transition matrix layout:
+    |X....X.......X....X.............|
+    |.X....X.......X....X............|
+    |..X....X.......X....X...........|
+    |...X....X.......X....X..........|
+    |X...XX...X.......X....X.........|
+    |.X...XX...X.......X....X........|
+    |..X...XX...X.......X....X.......|
+    |...X...XX...X.......X....X......|
+    |....X...XX...X.......X....X.....|
+    |.....X...XX...X.......X....X....|
+    |......X...XX...X.......X....X...|
+    |.......X...XX...X.......X....X..|
+    |........X...XX...X.......X....X.|
+    |.........X...XX...X.......X....X|
+    |..........X...XX...X.......X....|
+    |...........X...XX...X.......X...|
+    |............X...XX...X.......X..|
+    |X....X.......X...XX...X.......X.|
+    |.X....X.......X...XX...X.......X|
+    |..X....X...........X....X.......|
+    |...X....X...........X....X......|
+    |....X....X...........X....X.....|
+    |.....X....X...........X....X....|
+    |......X....X...........X....X...|
+    |.......X....X...........X....X..|
+    |........X....X...........X....X.|
+    |.........X....X...........X....X|
+    |..........X....X...........X....|
+    |...........X....X...........X...|
+    |............X....X...........X..|
+    |.............X....X...........X.|
+    |..............X....X...........X|
+  A^period = I: passed
+  Verifying the A^(period/prime) = A^e <> I exponents
+  Exponent (  31 bits): 0000000055555555 OK
+  Exponent (  30 bits): 0000000033333333 OK
+  Exponent (  28 bits): 000000000F0F0F0F OK
+  Exponent (  24 bits): 0000000000FF00FF OK
+  Exponent (  16 bits): 000000000000FFFF OK
+The LFSR has a maximal period
+Characteristic polynomial:
+x^32 + x^21 + x^20 + x^19 + x^18 + x^17 + x^15 + x^14 + x^9 + x^6 + 1 | nterms = 11
+  00000000003EC241
+  uint64_t char_poly[] = {0x00000000003EC241};
+Jump polynomial for the 2^16 jump:
+  0000000080AD6E7A
+  uint64_t jump_poly[] = {0x0000000080AD6E7A};
+Time elapsed: 00:00:00

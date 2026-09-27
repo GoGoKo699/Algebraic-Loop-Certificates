@@ -1,0 +1,847 @@
+{
+  "source_commit": "20f3adab3121b4205a12f06746055551e6504648",
+  "input_description": "32 one-bit basis vectors followed by eight fixed sample words, separately for each recurrence",
+  "not_formal_frontend": true,
+  "commands": [
+    [
+      "gcc",
+      "-std=c99",
+      "-O2",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wl,--gc-sections",
+      "-DHARNESS_SHR3",
+      "-I",
+      "SmokeRand",
+      "-I",
+      "SmokeRand/include",
+      "smokerand_transition_probe.c",
+      "-o",
+      "smokerand-shr3-probe"
+    ],
+    [
+      "gcc",
+      "-std=c99",
+      "-O2",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wl,--gc-sections",
+      "-I",
+      "SmokeRand",
+      "-I",
+      "SmokeRand/include",
+      "smokerand_transition_probe.c",
+      "-o",
+      "smokerand-xorrot32-probe"
+    ]
+  ],
+  "artifacts": {
+    "smokerand-shr3-probe": "da55c8136c996d28c0eb42afb1b9b839eb1702e2f43be9ab03cfe3cbca617979",
+    "smokerand-xorrot32-probe": "c579f21b2e700b871b822a5797ccdeb383d039b0a44e99436dd2cf6b3b57f2eb",
+    "smokerand_transition_probe.c": "4eebba7f634598ec2b237edd0d55730572634a27328adbe5cd1e172a5c6b53de",
+    "SmokeRand/generators/shr3.c": "9f7e3d3aae38edf6b7f5cb13834ad3a8d2aff6bc71d2b25972c7e7036454d263",
+    "SmokeRand/generators/xorrot32.c": "4a8f6f75a3452e352aaf5fe2106a48ccf0bc145757d90611b46623f2b76eb65c"
+  },
+  "rows": [
+    {
+      "name": "shr3",
+      "input": 1,
+      "output": 270369
+    },
+    {
+      "name": "shr3",
+      "input": 2,
+      "output": 540738
+    },
+    {
+      "name": "shr3",
+      "input": 4,
+      "output": 1081476
+    },
+    {
+      "name": "shr3",
+      "input": 8,
+      "output": 2162952
+    },
+    {
+      "name": "shr3",
+      "input": 16,
+      "output": 4325937
+    },
+    {
+      "name": "shr3",
+      "input": 32,
+      "output": 8651874
+    },
+    {
+      "name": "shr3",
+      "input": 64,
+      "output": 17303748
+    },
+    {
+      "name": "shr3",
+      "input": 128,
+      "output": 34607496
+    },
+    {
+      "name": "shr3",
+      "input": 256,
+      "output": 69214992
+    },
+    {
+      "name": "shr3",
+      "input": 512,
+      "output": 138429984
+    },
+    {
+      "name": "shr3",
+      "input": 1024,
+      "output": 276859968
+    },
+    {
+      "name": "shr3",
+      "input": 2048,
+      "output": 553719936
+    },
+    {
+      "name": "shr3",
+      "input": 4096,
+      "output": 1107439872
+    },
+    {
+      "name": "shr3",
+      "input": 8192,
+      "output": 2214879744
+    },
+    {
+      "name": "shr3",
+      "input": 16384,
+      "output": 134792192
+    },
+    {
+      "name": "shr3",
+      "input": 32768,
+      "output": 269584384
+    },
+    {
+      "name": "shr3",
+      "input": 65536,
+      "output": 539168768
+    },
+    {
+      "name": "shr3",
+      "input": 131072,
+      "output": 1078337569
+    },
+    {
+      "name": "shr3",
+      "input": 262144,
+      "output": 2156675138
+    },
+    {
+      "name": "shr3",
+      "input": 524288,
+      "output": 17301636
+    },
+    {
+      "name": "shr3",
+      "input": 1048576,
+      "output": 34603272
+    },
+    {
+      "name": "shr3",
+      "input": 2097152,
+      "output": 69206544
+    },
+    {
+      "name": "shr3",
+      "input": 4194304,
+      "output": 138413088
+    },
+    {
+      "name": "shr3",
+      "input": 8388608,
+      "output": 276826176
+    },
+    {
+      "name": "shr3",
+      "input": 16777216,
+      "output": 553652352
+    },
+    {
+      "name": "shr3",
+      "input": 33554432,
+      "output": 1107304704
+    },
+    {
+      "name": "shr3",
+      "input": 67108864,
+      "output": 2214609408
+    },
+    {
+      "name": "shr3",
+      "input": 134217728,
+      "output": 134251520
+    },
+    {
+      "name": "shr3",
+      "input": 268435456,
+      "output": 268503040
+    },
+    {
+      "name": "shr3",
+      "input": 536870912,
+      "output": 537006080
+    },
+    {
+      "name": "shr3",
+      "input": 1073741824,
+      "output": 1074012160
+    },
+    {
+      "name": "shr3",
+      "input": 2147483648,
+      "output": 2148024320
+    },
+    {
+      "name": "shr3",
+      "input": 0,
+      "output": 0
+    },
+    {
+      "name": "shr3",
+      "input": 4294967295,
+      "output": 253983
+    },
+    {
+      "name": "shr3",
+      "input": 305419896,
+      "output": 2274908837
+    },
+    {
+      "name": "shr3",
+      "input": 3735928559,
+      "output": 1199382711
+    },
+    {
+      "name": "shr3",
+      "input": 2779096485,
+      "output": 858826893
+    },
+    {
+      "name": "shr3",
+      "input": 1515870810,
+      "output": 858998930
+    },
+    {
+      "name": "shr3",
+      "input": 2147483649,
+      "output": 2148294689
+    },
+    {
+      "name": "shr3",
+      "input": 16843009,
+      "output": 84345777
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 1,
+      "output": 402654723
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 1,
+      "output": 671091205
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 1,
+      "output": 25166019
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2,
+      "output": 805309446
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2,
+      "output": 1342182410
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2,
+      "output": 50332038
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 4,
+      "output": 1610618892
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 4,
+      "output": 2684364820
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 4,
+      "output": 100664076
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 8,
+      "output": 3221237784
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 8,
+      "output": 1073762345
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 8,
+      "output": 201328152
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 16,
+      "output": 2147508273
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 16,
+      "output": 2147524690
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 16,
+      "output": 402656304
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 32,
+      "output": 49251
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 32,
+      "output": 82085
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 32,
+      "output": 805312608
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 64,
+      "output": 98502
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 64,
+      "output": 164170
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 64,
+      "output": 1610625216
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 128,
+      "output": 197004
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 128,
+      "output": 328340
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 128,
+      "output": 3221250432
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 256,
+      "output": 394008
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 256,
+      "output": 656680
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 256,
+      "output": 2147533569
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 512,
+      "output": 788016
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 512,
+      "output": 1313360
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 512,
+      "output": 99843
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 1024,
+      "output": 1576032
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 1024,
+      "output": 2626720
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 1024,
+      "output": 199686
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2048,
+      "output": 3152064
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2048,
+      "output": 5253440
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2048,
+      "output": 399372
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 4096,
+      "output": 6304128
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 4096,
+      "output": 10506880
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 4096,
+      "output": 798744
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 8192,
+      "output": 12608256
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 8192,
+      "output": 21013760
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 8192,
+      "output": 1597488
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 16384,
+      "output": 25216512
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 16384,
+      "output": 42027520
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 16384,
+      "output": 3194976
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 32768,
+      "output": 50433024
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 32768,
+      "output": 84055040
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 32768,
+      "output": 6389952
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 65536,
+      "output": 100866048
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 65536,
+      "output": 168110080
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 65536,
+      "output": 12779904
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 131072,
+      "output": 201732096
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 131072,
+      "output": 336220160
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 131072,
+      "output": 25559808
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 262144,
+      "output": 403464192
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 262144,
+      "output": 672440320
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 262144,
+      "output": 51119616
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 524288,
+      "output": 806928384
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 524288,
+      "output": 1344880640
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 524288,
+      "output": 102239232
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 1048576,
+      "output": 1613856768
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 1048576,
+      "output": 2689761280
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 1048576,
+      "output": 204478464
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2097152,
+      "output": 3227713536
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2097152,
+      "output": 1084555265
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2097152,
+      "output": 408956928
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 4194304,
+      "output": 2160459777
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 4194304,
+      "output": 2169110530
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 4194304,
+      "output": 817913856
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 8388608,
+      "output": 25952259
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 8388608,
+      "output": 43253765
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 8388608,
+      "output": 1635827712
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 16777216,
+      "output": 51904518
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 16777216,
+      "output": 86507530
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 16777216,
+      "output": 3271655424
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 33554432,
+      "output": 103809036
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 33554432,
+      "output": 173015060
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 33554432,
+      "output": 2248343553
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 67108864,
+      "output": 207618072
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 67108864,
+      "output": 346030120
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 67108864,
+      "output": 201719811
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 134217728,
+      "output": 415236144
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 134217728,
+      "output": 692060240
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 134217728,
+      "output": 403439622
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 268435456,
+      "output": 830472288
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 268435456,
+      "output": 1384120480
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 268435456,
+      "output": 806879244
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 536870912,
+      "output": 1660944576
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 536870912,
+      "output": 2768240960
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 536870912,
+      "output": 1613758488
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 1073741824,
+      "output": 3321889152
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 1073741824,
+      "output": 1107296384
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 1073741824,
+      "output": 3227516976
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2147483648,
+      "output": 2214592768
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2147483648,
+      "output": 2214592768
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2147483648,
+      "output": 2151677984
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 0,
+      "output": 0
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 0,
+      "output": 0
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 0,
+      "output": 0
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 4294967295,
+      "output": 134218241
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 4294967295,
+      "output": 402654723
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 4294967295,
+      "output": 8388673
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 305419896,
+      "output": 3457879344
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 305419896,
+      "output": 1378686801
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 305419896,
+      "output": 3849942776
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 3735928559,
+      "output": 91166703
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 3735928559,
+      "output": 263272497
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 3735928559,
+      "output": 116913160
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2779096485,
+      "output": 1279542853
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2779096485,
+      "output": 3704408270
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2779096485,
+      "output": 581050979
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 1515870810,
+      "output": 1145324612
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 1515870810,
+      "output": 3301756621
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 1515870810,
+      "output": 572662306
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 2147483649,
+      "output": 2617247491
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 2147483649,
+      "output": 2885683973
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 2147483649,
+      "output": 2176844003
+    },
+    {
+      "name": "xorrot32_default",
+      "input": 16843009,
+      "output": 488447261
+    },
+    {
+      "name": "xorrot32_bad1",
+      "input": 16843009,
+      "output": 656877351
+    },
+    {
+      "name": "xorrot32_bad2",
+      "input": 16843009,
+      "output": 1111638594
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+aig 253 16 33 1 204
+153
+159
+165
+171
+177
+183
+189
+195
+201
+207
+213
+219
+225
+231
+237
+243
+247
+251
+255
+259
+263
+267
+271
+275
+279
+283
+287
+291
+295
+299
+303
+307
+468
+507
+_]][][[YDENNPP}^{"\%y(Z+w.X1u4V7s:T=q@RCoFPImLNOkRLUiXJ[g^HaedFgcjDmapBt>rx<^|:\€8Z„6Xˆ4VŒ2T0R”.P˜,Nœ*L (J¤&H¨$F¬"D° Bïííëíëëé½SÀQ”"•"š"›"ž"Ÿ"¦"§"ª"«"°"±"´"µ"¾"¿"Â"Ã"È"É"Ì"Í"Ô"Õ"Ø"Ù"Þ"ß"â"ã">}ÑïîÖÆqµµ³µ³³±¥ i0 input_0
+i1 input_1
+i2 input_2
+i3 input_3
+i4 input_4
+i5 input_5
+i6 input_6
+i7 input_7
+i8 input_8
+i9 input_9
+i10 input_10
+i11 input_11
+i12 input_12
+i13 input_13
+i14 input_14
+i15 input_15
+l0 register_bit_0
+l1 register_bit_1
+l2 register_bit_2
+l3 register_bit_3
+l4 register_bit_4
+l5 register_bit_5
+l6 register_bit_6
+l7 register_bit_7
+l8 register_bit_8
+l9 register_bit_9
+l10 register_bit_10
+l11 register_bit_11
+l12 register_bit_12
+l13 register_bit_13
+l14 register_bit_14
+l15 register_bit_15
+l16 copy_bit_0
+l17 copy_bit_1
+l18 copy_bit_2
+l19 copy_bit_3
+l20 copy_bit_4
+l21 copy_bit_5
+l22 copy_bit_6
+l23 copy_bit_7
+l24 copy_bit_8
+l25 copy_bit_9
+l26 copy_bit_10
+l27 copy_bit_11
+l28 copy_bit_12
+l29 copy_bit_13
+l30 copy_bit_14
+l31 copy_bit_15
+l32 counter_bit_0
+o0 bad_state_detector
+c
+--------------------------------------------------------------------------------
+This circuit computes the period (modulo 2) of a Fibonacci linear feedback shift
+register with 16 bits and taps 0xD008, corresponding to the feedback polynomial
+x^16 + x^15 + x^13 + x^4 + 1 with period 65,535.
+---
+The circuit has 16 input bits. If any of them are set, the computation is
+(re)started: the value of the input bits is copied into the 16-bit LFSR and into
+a second 16-bit register that acts as an immutable copy of the initial value.
+Otherwise, the register performs its regular operation and increments the period
+(modulo 2) in each step. Once the register value reaches the initial value,
+which is stored in the second register, the period is reset to zero. Setting any
+input to one starts a new computation.
+---
+The output bit is set if one of the following conditions is true, neither of
+which is possible:
+* the register value becomes zero during its regular operation, or
+* the register value reaches the initial value again, but the period is even.
+--------------------------------------------------------------------------------
+This file is part of https://github.com/tniessen/aiger-safety-properties.
+---
+The output variable is UNSATISFIABLE.

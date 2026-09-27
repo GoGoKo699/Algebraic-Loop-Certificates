@@ -1,0 +1,52 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    xorrot32:bad2
+Output size, bits: 32
+Total physical RAM: 9967 MiB
+Free physical RAM:  7471 MiB
+LFSR period checker
+  malloc: nbytes = 4; ptr = 0x94430296000640
+  The PRNG is probably a LFSR
+  The maximal period to be verified: 2**32 - 1
+Beginning the period verification
+  LFSR transition matrix layout:
+    |XX....XX...............XX.......|
+    |.XX....XX...............XX......|
+    |..XX....XX...............XX.....|
+    |...XX....XX...............XX....|
+    |....XX....XX...............XX...|
+    |.....XX....XX...............XX..|
+    |......XX....XX...............XX.|
+    |.......XX....XX...............XX|
+    |X.......XX....XX...............X|
+    |XX.......XX....XX...............|
+    |.XX.......XX....XX..............|
+    |..XX.......XX....XX.............|
+    |...XX.......XX....XX............|
+    |....XX.......XX....XX...........|
+    |.....XX.......XX....XX..........|
+    |......XX.......XX....XX.........|
+    |.......XX.......XX....XX........|
+    |........XX.......XX....XX.......|
+    |.........XX.......XX....XX......|
+    |..........XX.......XX....XX.....|
+    |...........XX.......XX....XX....|
+    |............XX.......XX....XX...|
+    |.............XX.......XX....XX..|
+    |..............XX.......XX....XX.|
+    |...............XX.......XX....XX|
+    |X...............XX.......XX....X|
+    |XX...............XX.......XX....|
+    |.XX...............XX.......XX...|
+    |..XX...............XX.......XX..|
+    |...XX...............XX.......XX.|
+    |....XX...............XX.......XX|
+    |.....X................X........X|
+  A^period = I: passed
+  Verifying the A^(period/prime) = A^e <> I exponents
+  Exponent (  31 bits): 0000000055555555 OK
+  Exponent (  30 bits): 0000000033333333 <<< FAIL
+  Exponent (  28 bits): 000000000F0F0F0F OK
+  Exponent (  24 bits): 0000000000FF00FF OK
+  Exponent (  16 bits): 000000000000FFFF OK
+The LFSR period is not maximal
+Time elapsed: 00:00:00

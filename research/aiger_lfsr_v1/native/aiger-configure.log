@@ -1,0 +1,7 @@
+[configure.sh] using gcc as default compiler
+[configure.sh] using default compilation flags
+./configure.sh: 56: [: =: unexpected operator
+[configure.sh] WARNING: can not find '../picosat' directory (no 'aigbmc' target)
+[configure.sh] WARNING: can not find '../lingeling' directory
+[configure.sh] WARNING: no proper '../lingeling' nor '../picosat' (will not build 'aigbmc' nor 'aigdep')
+[configure.sh] compiling with: gcc -O3 -DNDEBUG

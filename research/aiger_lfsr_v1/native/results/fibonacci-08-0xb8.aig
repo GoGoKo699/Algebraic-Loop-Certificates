@@ -1,0 +1,67 @@
+aig 133 8 17 1 108
+89
+95
+101
+107
+113
+119
+125
+131
+135
+139
+143
+147
+151
+155
+159
+163
+244
+267
+/--+?$%	..22=.;",%9(*+7.(154&73:$=1@"DBH.L,P*T(X&\$`"}}{]3`1”•š›žŸ¦§ª«°±´µ=±¿¾¶¦AååãUi0 input_0
+i1 input_1
+i2 input_2
+i3 input_3
+i4 input_4
+i5 input_5
+i6 input_6
+i7 input_7
+l0 register_bit_0
+l1 register_bit_1
+l2 register_bit_2
+l3 register_bit_3
+l4 register_bit_4
+l5 register_bit_5
+l6 register_bit_6
+l7 register_bit_7
+l8 copy_bit_0
+l9 copy_bit_1
+l10 copy_bit_2
+l11 copy_bit_3
+l12 copy_bit_4
+l13 copy_bit_5
+l14 copy_bit_6
+l15 copy_bit_7
+l16 counter_bit_0
+o0 bad_state_detector
+c
+--------------------------------------------------------------------------------
+This circuit computes the period (modulo 2) of a Fibonacci linear feedback shift
+register with 8 bits and taps 0xB8, corresponding to the feedback polynomial
+x^8 + x^6 + x^5 + x^4 + 1 with period 255.
+---
+The circuit has 8 input bits. If any of them are set, the computation is
+(re)started: the value of the input bits is copied into the 8-bit LFSR and into
+a second 8-bit register that acts as an immutable copy of the initial value.
+Otherwise, the register performs its regular operation and increments the period
+(modulo 2) in each step. Once the register value reaches the initial value,
+which is stored in the second register, the period is reset to zero. Setting any
+input to one starts a new computation.
+---
+The output bit is set if one of the following conditions is true, neither of
+which is possible:
+* the register value becomes zero during its regular operation, or
+* the register value reaches the initial value again, but the period is even.
+--------------------------------------------------------------------------------
+This file is part of https://github.com/tniessen/aiger-safety-properties.
+---
+The output variable is UNSATISFIABLE.

@@ -1,0 +1,106 @@
+{
+  "repository": "https://github.com/tniessen/aiger-safety-properties",
+  "commit": "c8efd0251c0548dd46168db8410e6777c5f82b73",
+  "files": [
+    {
+      "file": "fibonacci-02-0x3.aag",
+      "git_blob_sha1": "492d5e8ed0f745bb32b9074893cf27d7bf42805a"
+    },
+    {
+      "file": "fibonacci-03-0x6.aag",
+      "git_blob_sha1": "9ba82348cbd784b2a084ec7ae7037180ed8d974f"
+    },
+    {
+      "file": "fibonacci-04-0xc.aag",
+      "git_blob_sha1": "908ebd7b513afa29385671c07e71167eaf1df90d"
+    },
+    {
+      "file": "fibonacci-05-0x14.aag",
+      "git_blob_sha1": "467a121c4b311e0d79b3fa9127ae7d2f46af3372"
+    },
+    {
+      "file": "fibonacci-06-0x30.aag",
+      "git_blob_sha1": "7a710244c41ecbca792eb8b50c68e1b8315fb72d"
+    },
+    {
+      "file": "fibonacci-07-0x60.aag",
+      "git_blob_sha1": "3936e17fec087b20216b1a65f044415cd11e5a12"
+    },
+    {
+      "file": "fibonacci-08-0xb8.aag",
+      "git_blob_sha1": "985b32d80f72464ba83b8eb8c975c6b45eab32f2"
+    },
+    {
+      "file": "fibonacci-09-0x110.aag",
+      "git_blob_sha1": "a434faf40941cf6e7a5883fa66368f5e5770c18a"
+    },
+    {
+      "file": "fibonacci-10-0x240.aag",
+      "git_blob_sha1": "b04df172818f2c99569dc96d5d5c08ca7c113bd4"
+    },
+    {
+      "file": "fibonacci-11-0x500.aag",
+      "git_blob_sha1": "83883a9daf269566d43e9ed5b9261727fca0ed67"
+    },
+    {
+      "file": "fibonacci-12-0xe08.aag",
+      "git_blob_sha1": "624d17ea04855265b4ef6a0e6eba4be36f0fb505"
+    },
+    {
+      "file": "fibonacci-13-0x1c80.aag",
+      "git_blob_sha1": "77c952643e3bfc658efb17169a4f97f203ae7664"
+    },
+    {
+      "file": "fibonacci-14-0x3802.aag",
+      "git_blob_sha1": "c845d9fff139eae6d0c348fcf363d04af811a90e"
+    },
+    {
+      "file": "fibonacci-15-0x6000.aag",
+      "git_blob_sha1": "a1303ff9708554d50e76d016e1d7fc95659d94c6"
+    },
+    {
+      "file": "fibonacci-16-0xd008.aag",
+      "git_blob_sha1": "e15973c9285fb4ea5d7a1e2f10e0a0ebf7e55444"
+    },
+    {
+      "file": "fibonacci-17-0x12000.aag",
+      "git_blob_sha1": "9d750d5dd0b72dc3eb0b1ac8ce2be80232e6810a"
+    },
+    {
+      "file": "fibonacci-18-0x20400.aag",
+      "git_blob_sha1": "e3e99200db3b080c7d89f5af77c0763e8a49c007"
+    },
+    {
+      "file": "fibonacci-19-0x72000.aag",
+      "git_blob_sha1": "bced5898737db47fca2b3f16fa075832fca349fc"
+    },
+    {
+      "file": "fibonacci-20-0x90000.aag",
+      "git_blob_sha1": "6aab31fd6beec998f1d2b436d653de0b5bffbf7e"
+    },
+    {
+      "file": "fibonacci-21-0x140000.aag",
+      "git_blob_sha1": "21b1a3030dc66689215f9d82abbf1313daeffd97"
+    },
+    {
+      "file": "fibonacci-22-0x300000.aag",
+      "git_blob_sha1": "b42859e0d5118f6e9ebbdc8dff30e1051caeb2e5"
+    },
+    {
+      "file": "fibonacci-23-0x420000.aag",
+      "git_blob_sha1": "ddff28af6905a3ba0e535517724d0cbf354f206a"
+    },
+    {
+      "file": "fibonacci-24-0xe10000.aag",
+      "git_blob_sha1": "74414ad7dd0c4ad5fc58345d7b95fa8efcd98666"
+    },
+    {
+      "file": "LICENSE",
+      "git_blob_sha1": "4c0d77c7d975de62f3669173446629ba25896d61"
+    },
+    {
+      "file": "README.md",
+      "git_blob_sha1": "baeb3516ac7ec8c8b3640df8875562d341d09483"
+    }
+  ]
+}

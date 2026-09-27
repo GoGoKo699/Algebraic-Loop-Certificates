@@ -1,15 +1,39 @@
 # Scientific completion record
 
-26 September 2026. Manuscript writing is on hold. These are results, proofs,
-source assessments and test artifacts, not drafted paper sections.
+Updated 27 September 2026. Manuscript writing is on hold. These are results,
+proofs, source assessments and test artifacts, not drafted paper sections.
 
-**Overall scientific readiness: incomplete.** The core coverage gap has a proved,
-implemented candidate solution, and the modular composition gives it an explicit
+## Current status
+
+**Overall scientific readiness: incomplete.** The
+[constructive contribution assessment](CONTRIBUTION_ASSESSMENT_08.md) closes the
+specified algebraic comparison at the representation/guarantee level. The direct
+matrix-logarithm paper has now been read, and a conventional character/Taylor
+construction reaches the same source-recognition contract at comparable coarse
+polynomial bounds. The engine is treated as a certifying implementation of
+established structure, not a cleared original theorem.
+
+The [native-verifier gate](VERIFICATION_GATE_09.md) also fails to establish the
+proposed supplied-invariant benefit: cvc5 discharged all ten valid obligations
+directly. No matched checker timing or proof-assistant replay was run. The next
+scientific task is an independently specified verification workload, an executed
+native baseline and a falsifiable cost or assurance improvement; see the
+[current work order](../work_orders/CURRENT.md). Broader domains or another
+equivalent format are not substitutes.
+
+The remaining sections preserve the earlier development record. Their historical
+access limits and proposed comparisons are superseded by the two assessments
+above; their proofs and recorded evidence are retained.
+
+## Initial completion assessment (26 September 2026)
+
+At that checkpoint, the core coverage gap had a proved,
+implemented candidate solution, and the modular composition gave it an explicit
 computational-logic consumer. The precise originality and a matched practical
-comparison still need to be established. Neither the test count nor packaging
+comparison remained to be established. Neither the test count nor packaging
 can substitute for those two scientific obligations.
 
-## Technical results now supported
+## Technical results supported at the initial checkpoint
 
 | Result | Proof | Executed evidence |
 |---|---|---|
@@ -27,10 +51,11 @@ The new decision schemas live under `research/`. Default parser/resource limits
 can reject mathematically valid large instances; the parameterized theorem is
 not a claim that every such input is accepted with those fixed defaults.
 
-## What has not been established
+## Gaps recorded at the initial checkpoint
 
 1. **Priority beyond a certifying reformulation.** The direct finite-field
-   matrix-logarithm predecessor is only partly accessible here. Scalar lifting,
+   matrix-logarithm predecessor was then only partly accessible. That access
+   limitation is resolved in assessment 08. Scalar lifting,
    finite-ring cycle algorithms, and algebraic certification all predate this
    work. The whole combination must be compared at theorem and cost level.
 2. **A consequential matched advantage.** No native full matrix-orbit analyzer,
@@ -71,13 +96,19 @@ Use these as evidence maps, not paragraphs to paste into a manuscript.
   native comparisons cover only primitives/scalars; semantic extraction,
   arbitrary guards, singular maps and untrusted proof hardening remain outside.
 
-Read depth is explicit: some sources were inspected in full at the relevant
-sections, others only at abstract/metadata level. The scan-only 1997 matrix-log
-paper could not be fully read after repeated screenshot failures. No missing
-result is treated as evidence of originality. The 2016 finite-ring article's
+Read depth is explicit in each dated source dossier: some sources were inspected
+in full at the relevant sections, others only at abstract/metadata level. At the
+initial checkpoint, the scan-only 1997 matrix-log paper could not be fully read
+after repeated screenshot failures. A readable author copy was subsequently
+found and inspected; see the [current source dossier](../audits/character_taylor_v1/SOURCES.md).
+No missing result is treated as evidence of originality. The 2016 finite-ring article's
 arXiv deposit in2017 is not its publication year.
 
-## Concrete next scientific decision
+## Next decision proposed at the initial checkpoint
+
+The comparison proposed below has since been advanced by
+[assessment 08](CONTRIBUTION_ASSESSMENT_08.md). It is retained as the original
+decision record, not the active work order.
 
 Compare the precision-fiber composition and static negative certificate against
 Menezes-Wu1997, Wei-Xu-Zou2016, Viglietta-Kachi2025, and Kantic-et-al2026 at the

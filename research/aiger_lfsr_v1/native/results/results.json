@@ -1,0 +1,134 @@
+{
+  "plan_sha256": "37c56f85a9ab4b590d6e24f300576d3572f4075de0c363f68d6074e0b6c1ab8f",
+  "abc_binary_sha256": "529038bd1acc76ec906a42ad6a3fc7dea3e11dcd9d517aa2d299ff14f62d3fcb",
+  "aigtoaig_binary_sha256": "e4c8ee8defaa35dc0d1be4488be434c5024d31fe008be3dded8a7ced2a2867a4",
+  "runner_sha256": "f1261217af3512629db7234a6e2c6f48143e65f848a2b50858578d7b508eb673",
+  "results": [
+    {
+      "n": 2,
+      "input_filename": "fibonacci-02-0x3.aag",
+      "input_sha256": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+      "binary_filename": "fibonacci-02-0x3.aig",
+      "binary_sha256": "4e1664626fb9f9734fe59948f85ccb2f2920b97b6c801dbc24a3b3ddfae1219e",
+      "roundtrip_sha256": "8f88e9d86411d50828190c2bf6842e2ae8ce0fbd0452fee8f4d90b6a0df68547",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-02-0x3.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": 0,
+      "wall_seconds_including_wrapper": 0.041567799999029376,
+      "status": "solver_reported_safe"
+    },
+    {
+      "n": 4,
+      "input_filename": "fibonacci-04-0xc.aag",
+      "input_sha256": "abdca5574a5237d4c6a2a6738b0a7263c58dc03c8ff91f09e1ac0e7178e68a6f",
+      "binary_filename": "fibonacci-04-0xc.aig",
+      "binary_sha256": "c1e5281ec69fb6906ebd6a3fdd50ebf60d17c29d0267a9deaa13ebf914d68d60",
+      "roundtrip_sha256": "7e653b7410769cd8a873c390a7442c29b279408c534838cf2838a6cd318687ee",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-04-0xc.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": 0,
+      "wall_seconds_including_wrapper": 0.3848370840005373,
+      "status": "solver_reported_safe"
+    },
+    {
+      "n": 8,
+      "input_filename": "fibonacci-08-0xb8.aag",
+      "input_sha256": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+      "binary_filename": "fibonacci-08-0xb8.aig",
+      "binary_sha256": "f2383acd4516e34d94f299ac2027fb8d09ef4a095cc8c332405ef49e6b2cb75c",
+      "roundtrip_sha256": "252063731c7f311944fc3e85a7ce2f21f4f3e940fc105742364c493669b6e367",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-08-0xb8.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": -9,
+      "wall_seconds_including_wrapper": 10.006605810998735,
+      "status": "wall_timeout_unknown"
+    },
+    {
+      "n": 12,
+      "input_filename": "fibonacci-12-0xe08.aag",
+      "input_sha256": "165452c70c2579ebf745a3ab972c9c0a682a5bba7f1fed73e0d79ddfeeb2ce8d",
+      "binary_filename": "fibonacci-12-0xe08.aig",
+      "binary_sha256": "4a2ac7740218b1b73af769b9d5e4c384d948d3137052a01d4c8dd4a914533a40",
+      "roundtrip_sha256": "3496f3a66d663c65bf662d2ba295b7203c87ee5de0946825aec10689b75dd4fe",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-12-0xe08.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": -9,
+      "wall_seconds_including_wrapper": 10.006280986999627,
+      "status": "wall_timeout_unknown"
+    },
+    {
+      "n": 16,
+      "input_filename": "fibonacci-16-0xd008.aag",
+      "input_sha256": "58ff6dbf7878ec3fa80e8810a48eb1830fb9fcebd9706ddee864296d8cb5eaae",
+      "binary_filename": "fibonacci-16-0xd008.aig",
+      "binary_sha256": "a10aaaaf7555592237bad93dd989265b1f146ea4c4486d18ab36afeda442abe7",
+      "roundtrip_sha256": "ea46b8b7f24f6a79be3594ec85e3a318b57a30f5967330ff8451631643abbcb0",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-16-0xd008.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": -9,
+      "wall_seconds_including_wrapper": 10.006147674999738,
+      "status": "wall_timeout_unknown"
+    },
+    {
+      "n": 24,
+      "input_filename": "fibonacci-24-0xe10000.aag",
+      "input_sha256": "a53c8b35a5f4b5d3dfe394c57d36623c94d3600504f742cb0eecfe18a6114add",
+      "binary_filename": "fibonacci-24-0xe10000.aig",
+      "binary_sha256": "83fa2a9f2e4ccbd45bd523761f5363605110638e4d6ac8f7f15534ebc6414acd",
+      "roundtrip_sha256": "6b55a5a556b99ff09feac20582d83e72ee45245f2311a2a00808e821878d8574",
+      "aiger_roundtrip_identical_transition_structure": true,
+      "command": [
+        "/usr/bin/stdbuf",
+        "-oL",
+        "-eL",
+        "/workspace/scratch/9781207fd51b/abc-native-src/abc",
+        "-s",
+        "-c",
+        "read_aiger /workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/native/results/fibonacci-24-0xe10000.aig; pdr -S 91648253; print_status"
+      ],
+      "returncode": -9,
+      "wall_seconds_including_wrapper": 10.012459106001188,
+      "status": "wall_timeout_unknown"
+    }
+  ]
+}

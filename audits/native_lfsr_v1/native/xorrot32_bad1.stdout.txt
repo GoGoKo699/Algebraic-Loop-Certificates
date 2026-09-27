@@ -1,0 +1,46 @@
+SmokeRand 0.51-gcc-linux64
+Generator name:    xorrot32:bad1
+Output size, bits: 32
+Total physical RAM: 9967 MiB
+Free physical RAM:  7471 MiB
+LFSR period checker
+  malloc: nbytes = 4; ptr = 0x94111962445952
+  The PRNG is probably a LFSR
+  The maximal period to be verified: 2**32 - 1
+Beginning the period verification
+  LFSR transition matrix layout:
+    |X.X......X.X...............X.X..|
+    |.X.X......X.X...............X.X.|
+    |..X.X......X.X...............X.X|
+    |X..X.X......X.X...............X.|
+    |.X..X.X......X.X...............X|
+    |X.X..X.X......X.X...............|
+    |.X.X..X.X......X.X..............|
+    |..X.X..X.X......X.X.............|
+    |...X.X..X.X......X.X............|
+    |....X.X..X.X......X.X...........|
+    |.....X.X..X.X......X.X..........|
+    |......X.X..X.X......X.X.........|
+    |.......X.X..X.X......X.X........|
+    |........X.X..X.X......X.X.......|
+    |.........X.X..X.X......X.X......|
+    |..........X.X..X.X......X.X.....|
+    |...........X.X..X.X......X.X....|
+    |............X.X..X.X......X.X...|
+    |.............X.X..X.X......X.X..|
+    |..............X.X..X.X......X.X.|
+    |...............X.X..X.X......X.X|
+    |X...............X.X..X.X......X.|
+    |.X...............X.X..X.X......X|
+    |X.X...............X.X..X.X......|
+    |.X.X...............X.X..X.X.....|
+    |..X.X...............X.X..X.X....|
+    |...X.X...............X.X..X.X...|
+    |....X.X...............X.X..X.X..|
+    |.....X.X...............X.X..X.X.|
+    |......X.X...............X.X..X.X|
+    |.......X.................X....X.|
+    |........X.................X....X|
+  A^period = I: failed
+The LFSR period is not maximal
+Time elapsed: 00:00:00
