@@ -1,0 +1,6 @@
+Certify Model Checking Witnesses in AIGER
+10.3.0 27d526e3e979074c3e92582768f577dc6eddb0da
+Reading shared literal mapping
+Found symbol table mapping = for 25 literals
+Reading transition literal mapping
+No intervention mapping found, using default

@@ -6,7 +6,7 @@
     ".gitignore": "25dd9ed3d850e8e889c7a43c1051c47d62d41e1b8c03163cef7593bff791e800",
     "AGENTS.md": "b87dca25b6d9892f89c8b577f79ed842526ad70c261c20ba93f26ee1c577cdc0",
     "LICENSE": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
-    "README.md": "3f6a8f1c8cfe5ce6d0d21eb33df9e18fec5d4e1c674b7b3eb2c853586ff8e7e7",
+    "README.md": "a614c5ff98d8e117d18ce54986d7579ae107be671ede9a402800a8622665fc89",
     "alc/__init__.py": "26ae64059167e28496209998ffe6c1714c85bd7a7a8f9b753c00e2c151a80d2d",
     "alc/__main__.py": "902f58f96caf76c5778015eba63cb571f76b3f27f6e165fe5794381119760189",
     "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
@@ -14,7 +14,7 @@
     "alc/producer.py": "908a9ef96bf66498e46105770f04402027a6c64199322fe993f63d3cfdd05b2b",
     "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
     "docs/FORMAT.md": "adebcd9e44abf6c9c642e253575c3d7ec55bdaf0de42daf6668ffd6a1df55208",
-    "docs/RESEARCH.md": "4d78f3d75fe8c93cd02650a628e58e1a5663932f7f8b8bc393def9376d7cea02",
+    "docs/RESEARCH.md": "4e0482766dace5d4a0049e293d08ba202f8a7dc69aec07cbccd4992bf9065e6a",
     "docs/SPECIFICATION.md": "8a6c9ae4dfdbaacc1e48fd1c63db54815aed01f49af82dc15d1ee3260e51ff77",
     "evidence/README.md": "62e9433eb33a010bf1ce0c058712dde82d8449a7fba2961c41f5767e6da110eb",
     "evidence/exhaustive.json": "412818ed6dd5932674974b0f17a4f712f051b22b6980f3ab64d975360b257ba8",
@@ -24,13 +24,13 @@
     "examples/fibonacci_f7/problem.json": "8676e7b8c091f85be164e8ab03e6b8b73dcbea32a29400718c45ef31e0745395",
     "examples/fixed_point/certificate.json": "98097c7d0b8f057f2225ba66decfc55844f8920b94a569b698953fff557f2739",
     "examples/fixed_point/problem.json": "970833dd82e00179195c75b506aa53bde0d31f64fe80aa42d805dc9fe1812366",
-    "provenance/ORIGIN.md": "7978a366dff93f73645a8216efb98f4ea67f0cfa2cc5252b8760da68f78944ae",
+    "provenance/ORIGIN.md": "b08879918c19bf561bdd2614884b595b465c71f855eaebd686b00ca5afa7aec2",
     "pyproject.toml": "e28ff2c32c3a262024ae3cb8d24eb9b61efdf9496735e591bc4ff8399b9adbdb",
     "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "tests/exhaustive.py": "95ab0f38a8b6e6c2a426c21c2692a2c3fd618cd0891753b7d4b53d34bb604963",
     "tests/test_cli.py": "6df0cdd65ed7d6d7c52de7974a4087bc18dfa23a0a9d0746aaff133e8cc1e2c8",
     "tests/test_security.py": "f061213dc8e76ee03ce8b08541ea54ffdeff3f53c0d10504f96635712d079b2e",
     "verify.py": "1833777ed62052560e64d77cc300dbe2c981ac911d1e9aa5327292197bc0ccdf",
-    "work_orders/CURRENT.md": "c96692fcff9224d9c36c34a858e27bd2a19728081fa6a5d731210d4c302e9af9"
+    "work_orders/CURRENT.md": "3f184d364df0e4bd55404beec08c82e26bf5d18a336847f557136495c65fde0d"
   }
 }

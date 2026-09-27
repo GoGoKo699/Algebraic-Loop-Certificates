@@ -26,9 +26,13 @@ argument to 23 original reseeding circuits. The [proof-interface gate](PROOF_INT
 then passes three history witnesses and two ABC invariants through Certifaiger
 with native SAT-proof replay. Exact state-set and phase-recovery arguments,
 independent finite controls and retained proof artifacts support this integration.
-The construction needs a stronger maximal-period premise, and the conventional
-source-aware route can produce the same witness. Originality and a consequential
-advantage remain open; this is progress rather than scientific completion.
+That construction needed a stronger maximal-period premise. The subsequent
+[odd-order gate](ODD_ORDER_WITNESS_GATE_12.md) removes it with an exact
+seed-period circuit obtained from a factored odd annihilating exponent. All
+three positive witnesses pass, both false selectors fail induction, and all
+37 completed CNF proofs independently replay. The conventional source-aware
+route can produce the same witness. Originality and a consequential advantage
+remain open; this is progress rather than scientific completion.
 
 The remaining sections preserve the earlier development record. Their historical
 access limits and proposed comparisons are superseded by the assessments above;

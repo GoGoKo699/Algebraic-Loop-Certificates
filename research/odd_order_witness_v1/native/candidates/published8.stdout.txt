@@ -1,0 +1,119 @@
+{
+  "bits": 8,
+  "distinct_kernel_predicates": 1,
+  "factorization": [
+    [
+      3,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      17,
+      1
+    ]
+  ],
+  "factorization_algorithm": "complete deterministic trial division, M < 2^24",
+  "factorization_trial_divisors": 4,
+  "ghost_literals": [
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66
+  ],
+  "invariant_literal": 1815,
+  "kernel_factors": [
+    {
+      "fixes_seed_literal": 294,
+      "kernel_rank": 8,
+      "kernel_rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "level": 1,
+      "matrix_exponent": 85,
+      "prime": 3,
+      "skipped": false
+    },
+    {
+      "fixes_seed_literal": 294,
+      "kernel_rank": 8,
+      "kernel_rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "level": 1,
+      "matrix_exponent": 51,
+      "prime": 5,
+      "skipped": false
+    },
+    {
+      "fixes_seed_literal": 294,
+      "kernel_rank": 8,
+      "kernel_rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "level": 1,
+      "matrix_exponent": 15,
+      "prime": 17,
+      "skipped": false
+    }
+  ],
+  "matrix_order_identity_checked": true,
+  "model_sha256": "15adc05950f77a9b9dfc04e84ecc6d113cfd78fa7b08d57a158d098079ac2520",
+  "mutation": null,
+  "odd_multiple": 255,
+  "original_ands": 108,
+  "original_bad_literal": 283,
+  "original_latches": 17,
+  "period_literals": [
+    1,
+    295,
+    295,
+    295,
+    295,
+    295,
+    295,
+    295
+  ],
+  "phase_bits": 8,
+  "phase_next_literals": [
+    394,
+    402,
+    412,
+    422,
+    432,
+    442,
+    452,
+    462
+  ],
+  "variant": "canonical_rref_shared_kernels_fixed_prime_shift_add",
+  "witness_ands": 875,
+  "witness_bytes": 11872,
+  "witness_sha256": "76e18de136b487a562284b7452578b464ff45c1e821b001c48fbf3584c87e5aa"
+}
