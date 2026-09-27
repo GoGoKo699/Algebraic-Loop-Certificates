@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "interface": "existing Certifaiger AIGER witness circuits",
+  "input_paths": {
+    "model": "/workspace/scratch/9781207fd51b/phase-witnesses/n02-model.aag",
+    "witness": "/workspace/scratch/9781207fd51b/phase-witnesses/n02-reset-flipped.aag"
+  },
+  "input_sha256": {
+    "model": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+    "witness": "640ccec759d77cdc8a11c0ab97b7eeabd8d13d55fd50e5042af49e24708ace92"
+  },
+  "binary_sha256": {
+    "certifaiger": "2b1ed7d4b35a0218e32cfecaf04d55b6c6223be9265fc7169b7bb39b509b8b2e",
+    "aigsplit": "af6611a86c0441294b56a7e5160af5a6c7b27e2a23b075159459dfc68dbf930d",
+    "aigtocnf": "00b42876bb8f4478f146642d80831452da039d2c44cdb14732df8fbd85744b71",
+    "cadical": "3ce98a1edd3cfc4c70aa3b548976a80090dba54049637257e9333a6a1ceea342",
+    "lrat-trim": "b8cc27ad0baaf11dac1d88f8453a2bedc9aeef1be79f20780d12673d4698abf8"
+  },
+  "limits": {
+    "seconds_per_process": 10,
+    "address_space_bytes": 1073741824,
+    "artifact_bytes_per_case": 67108864
+  },
+  "stages": [
+    {
+      "name": "generate",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/certifaiger",
+        "model.aag",
+        "witness.aag",
+        "check.aig"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0028919440010213293
+    },
+    {
+      "name": "split",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigsplit",
+        "-n",
+        "check.aig",
+        "obligation_"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0017342690007353667
+    },
+    {
+      "name": "Reset_cnf",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/aigtocnf",
+        "Reset.aig",
+        "Reset.cnf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.0014223050002328819
+    },
+    {
+      "name": "Reset_solve",
+      "argv": [
+        "/workspace/scratch/9781207fd51b/certifaiger-native-bin/cadical",
+        "--quiet",
+        "--unsat",
+        "--lrat",
+        "--no-binary",
+        "--no-factor",
+        "Reset.cnf",
+        "Reset.lrat"
+      ],
+      "exit_code": 10,
+      "timed_out": false,
+      "elapsed_seconds": 0.0023938790000102017
+    }
+  ],
+  "obligations": [
+    {
+      "name": "Reset",
+      "status": "sat"
+    }
+  ],
+  "status": "rejected",
+  "elapsed_seconds": 0.010015582000050927,
+  "artifact_bytes": 16835,
+  "reason": "SAT counterexample to Reset"
+}

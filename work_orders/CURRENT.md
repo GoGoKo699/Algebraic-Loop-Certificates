@@ -1,6 +1,6 @@
 # Current work: a classical certificate contribution, not a quantum speedup claim
 
-Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/CONTRIBUTION_ASSESSMENT_08.md, research/VERIFICATION_GATE_09.md, research/NATIVE_WORKLOAD_GATE_10.md, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
+Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/CONTRIBUTION_ASSESSMENT_08.md, research/VERIFICATION_GATE_09.md, research/NATIVE_WORKLOAD_GATE_10.md, research/PROOF_INTERFACE_GATE_11.md, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
 
 ## Established executable baseline
 
@@ -16,7 +16,9 @@ The supplied-invariant feasibility gate is complete: native cvc5 discharged all 
 
 ## Next research task
 
-The [existing-workload pass](../research/NATIVE_WORKLOAD_GATE_10.md) now supplies a concrete candidate: checked odd-order safety proofs for 23 published AIGER circuits with arbitrary reseeding. SmokeRand already resolves the separate maximal-period workload. Prioritize the actual circuit-to-safety proof interface: compare structural LFSR recognition and ordinary squarefree-polynomial reasoning, then determine whether a useful independently checked integration survives that comparison. Do not treat the familiar odd-order argument as the novelty.
+The [existing-workload pass](../research/NATIVE_WORKLOAD_GATE_10.md) supplies checked odd-order safety proofs for 23 published AIGER circuits with arbitrary reseeding. SmokeRand already resolves the separate maximal-period workload. The [proof-interface gate](../research/PROOF_INTERFACE_GATE_11.md) now passes three history witnesses and two ABC-exported invariants through Certifaiger with retained, independently replayed SAT proofs. The phase-parity reduction is a precise interface constraint, not an invariant-size or cryptographic lower bound.
+
+Prioritize the remaining premise and comparison gap: the history predicate needs a common exact maximal period, while the safety theorem only needs odd order. Determine whether an existing checked algebraic interface can preserve the weaker premise at useful cost, or justify a consequential benefit for the measured stronger contract. Compare the strongest structural/squarefree/primitive-polynomial method at exactly the same proof interface; it can emit the same current witness. Inspect direct predecessors before enlarging the corpus. Do not treat familiar odd-order algebra or witness circuits as novel, and do not infer end-to-end formal assurance from CNF proof replay alone.
 
 Start from an independently specified verification workload or documented requirement. Retain its natural input/output contract, identify the strongest source-aware baseline, and state a falsifiable cost or assurance improvement. Execute that baseline before building more source machinery. Proof-producing finite-field verification already has direct predecessors, so independent checkability alone is not a sufficient gap. A useful integration or a strictly justified checker cost/assurance result must survive equally compact representations and matched assumptions.
 

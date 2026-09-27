@@ -21,9 +21,18 @@ native baseline and a falsifiable cost or assurance improvement; see the
 [current work order](../work_orders/CURRENT.md). Broader domains or another
 equivalent format are not substitutes.
 
+The later [existing-workload gate](NATIVE_WORKLOAD_GATE_10.md) binds an odd-order
+argument to 23 original reseeding circuits. The [proof-interface gate](PROOF_INTERFACE_GATE_11.md)
+then passes three history witnesses and two ABC invariants through Certifaiger
+with native SAT-proof replay. Exact state-set and phase-recovery arguments,
+independent finite controls and retained proof artifacts support this integration.
+The construction needs a stronger maximal-period premise, and the conventional
+source-aware route can produce the same witness. Originality and a consequential
+advantage remain open; this is progress rather than scientific completion.
+
 The remaining sections preserve the earlier development record. Their historical
-access limits and proposed comparisons are superseded by the two assessments
-above; their proofs and recorded evidence are retained.
+access limits and proposed comparisons are superseded by the assessments above;
+their proofs and recorded evidence are retained.
 
 ## Initial completion assessment (26 September 2026)
 

@@ -1,0 +1,13 @@
+{
+  "cases": [
+    2,
+    4
+  ],
+  "source_corpus_commit": "c8efd0251c0548dd46168db8410e6777c5f82b73",
+  "abc_commit": "ab2139ee0c418f54136deb4e8e89eeea3b87efc8",
+  "command": "abc -s -c \"read_aiger INPUT.aig; pdr -S 91648253 -d -e -I OUTPUT.pla; print_status\"",
+  "wall_seconds_each": 10,
+  "address_space_bytes": 1073741824,
+  "purpose": "Export native generic inductive invariants for replay through an existing independent checker; not a new benchmark or speedup comparison",
+  "contract": "ABC PLA on-set contains forbidden latch cubes; complement is invariant. Full original latch order/names, all-zero initial states; no preprocessing. Replay checker still to be selected from existing interfaces."
+}

@@ -1,0 +1,12 @@
+{
+  "model": "/workspace/scratch/9781207fd51b/Algebraic-Loop-Certificates/research/aiger_lfsr_v1/upstream/fibonacci-02-0x3.aag",
+  "model_sha256": "db74ccf6a9dc6312cd0eb69964c10e5fa88da8ea54c6e7a4fff252efe36aa8ad",
+  "pla": "/workspace/scratch/9781207fd51b/aiger-native-proof-export/n02.pla",
+  "pla_sha256": "5156df717260501e6209025e91bdba3a635079cc7d611586b38127b73616aaa1",
+  "witness": "/workspace/scratch/9781207fd51b/aiger-native-proof-export/n02-witness.aag",
+  "witness_sha256": "741c6f25067b7795357324b1a670287bf1afa132e648867ba83d245f4158b9be",
+  "latches": 5,
+  "blocked_cubes": 10,
+  "original_gates": 30,
+  "added_gates": 37
+}

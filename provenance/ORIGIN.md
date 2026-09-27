@@ -31,6 +31,11 @@ with pinned commit and per-file Git blob hashes. That dataset's license and
 attribution are retained under its own directory; the root license is unchanged.
 Native SmokeRand, ABC and AIGER solver/converter sources and executables are not
 vendored. Their commands, hashes and observed outputs are recorded separately.
+The later [proof-interface checkpoint](../research/proof_interface_v1/README.md)
+also preserves generated witness circuits, CNF obligations and LRAT traces,
+with source pins for Certifaiger, CaDiCaL and lrat-trim. Those external tools'
+source code and executables are not vendored. Original-model copies retain the
+benchmark attribution and license recorded by the AIGER workload.
 The local checker implementations use the Python standard library. Primary
 mathematical sources and their limits are listed in
 [the research assessment](../docs/RESEARCH.md). Merely citing the Archive of

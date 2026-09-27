@@ -3,14 +3,15 @@
 Manuscript preparation is on hold. The production `alc/` API remains unchanged.
 These are explicit experimental namespaces, not a silent expansion of its scope.
 
-**Latest:** [existing workloads and raw-circuit safety](NATIVE_WORKLOAD_GATE_10.md). A native LFSR analyzer resolves the eight advertised controls; a scoped checker verifies an odd-order safety argument against 23 original reseeding circuits. The algebra has a simpler conventional comparator, so the next question concerns a useful checked integration.
+**Latest:** [existing hardware proof-interface replay](PROOF_INTERFACE_GATE_11.md). History witnesses for widths 2, 4 and 8, plus two ABC-exported invariants, pass Certifaiger's native obligations with LRAT proof replay. A phase-parity reduction explains the distinction between original-state invariants and added history. The construction requires a stronger maximal-period premise than the earlier odd-order safety proof; conventional source-aware algebra can produce the same artifact.
 
 **Current decision (27 September 2026):** the [constructive contribution assessment](CONTRIBUTION_ASSESSMENT_08.md) treats the engine as a certifying implementation of established algebra. A conventional character/Taylor route reaches the same recognition contract at comparable coarse bounds, and the formerly inaccessible direct paper has now been read. The [native-verifier gate](VERIFICATION_GATE_09.md) found no capability gap on its supplied-invariant corpus: cvc5 solved every valid case directly. Originality, useful advantage and scientific readiness remain unestablished.
 
-The next task starts with an existing verification workload, a native baseline, and a falsifiable cost or assurance improvement. More algebraic formats or broader domains alone do not satisfy that gate. [CURRENT.md](../work_orders/CURRENT.md) records the active work order; earlier work orders and assessments retain their historical context.
+The [existing-workload pass](NATIVE_WORKLOAD_GATE_10.md) and this interface experiment now supply a concrete verification consumer and native baseline. The next task is to establish a consequential benefit over the strongest source-aware method at the same proof interface, while resolving the stronger premise spent by the history construction. More algebraic formats or broader domains alone do not satisfy that gate. [CURRENT.md](../work_orders/CURRENT.md) records the active work order; earlier work orders and assessments retain their historical context.
 
 | Module | Scientific object | Main boundary |
 |---|---|---|
+| [Hardware witness interface](proof_interface_v1/README.md) | Original circuits and history invariants accepted through Certifaiger with retained SAT proofs | Stronger maximal-period premise; native obligation and CNF translations remain trusted |
 | [Raw AIGER safety](aiger_lfsr_v1/README.md) | Source-bound odd-order proof for the published reseeding wrapper | Restricted structural recognition; no general HDL frontend or novelty claim |
 | [Native LFSR workload](../audits/native_lfsr_v1/README.md) | Eight existing native controls and four matched root certificates | Established native algebra already resolves maximality |
 | [Complete field certificates](complete_orbits_v1/README.md) | Complete yes/no point-orbit certificates, including repeated factors | Algebraic witnesses may be expensive to find; originality unresolved |

@@ -1,0 +1,107 @@
+{
+  "cases": [
+    {
+      "case": "abc02",
+      "status": "accepted",
+      "reason": null,
+      "witness_bytes": 833,
+      "cnf_bytes": 15236,
+      "proof_bytes": 9695,
+      "artifact_bytes": 38102,
+      "elapsed_seconds": 0.10196893399916007,
+      "obligations_replayed": 9
+    },
+    {
+      "case": "abc04",
+      "status": "accepted",
+      "reason": null,
+      "witness_bytes": 12393,
+      "cnf_bytes": 243126,
+      "proof_bytes": 367471,
+      "artifact_bytes": 719699,
+      "elapsed_seconds": 0.12185365599907527,
+      "obligations_replayed": 9
+    },
+    {
+      "case": "phase02",
+      "status": "accepted",
+      "reason": null,
+      "witness_bytes": 1146,
+      "cnf_bytes": 21191,
+      "proof_bytes": 13787,
+      "artifact_bytes": 50572,
+      "elapsed_seconds": 0.07804557399867917,
+      "obligations_replayed": 9
+    },
+    {
+      "case": "phase04",
+      "status": "accepted",
+      "reason": null,
+      "witness_bytes": 2802,
+      "cnf_bytes": 56844,
+      "proof_bytes": 230169,
+      "artifact_bytes": 318052,
+      "elapsed_seconds": 0.10283904999960214,
+      "obligations_replayed": 9
+    },
+    {
+      "case": "phase08",
+      "status": "accepted",
+      "reason": null,
+      "witness_bytes": 11211,
+      "cnf_bytes": 232399,
+      "proof_bytes": 25813066,
+      "artifact_bytes": 26140858,
+      "elapsed_seconds": 3.4174395440004446,
+      "obligations_replayed": 9
+    },
+    {
+      "case": "bad_zero02",
+      "status": "rejected",
+      "reason": "SAT counterexample to Safety",
+      "witness_bytes": 1144,
+      "cnf_bytes": 2242,
+      "proof_bytes": 4281,
+      "artifact_bytes": 18285,
+      "elapsed_seconds": 0.026291103000403382,
+      "obligations_replayed": 2
+    },
+    {
+      "case": "reset_flipped02",
+      "status": "rejected",
+      "reason": "SAT counterexample to Reset",
+      "witness_bytes": 1146,
+      "cnf_bytes": 423,
+      "proof_bytes": 818,
+      "artifact_bytes": 16835,
+      "elapsed_seconds": 0.010015582000050927,
+      "obligations_replayed": 0
+    },
+    {
+      "case": "freeze_phase04",
+      "status": "rejected",
+      "reason": "SAT counterexample to Inductive",
+      "witness_bytes": 2794,
+      "cnf_bytes": 23307,
+      "proof_bytes": 15615,
+      "artifact_bytes": 68103,
+      "elapsed_seconds": 0.0517490740003268,
+      "obligations_replayed": 5
+    },
+    {
+      "case": "inverted_phase04",
+      "status": "rejected",
+      "reason": "SAT counterexample to Inductive",
+      "witness_bytes": 2802,
+      "cnf_bytes": 25047,
+      "proof_bytes": 38298,
+      "artifact_bytes": 94384,
+      "elapsed_seconds": 0.05128287600018666,
+      "obligations_replayed": 5
+    }
+  ],
+  "timing_scope": "Single process observations, no statistical performance ratio. Pipeline total includes process launch, encoding, SAT, LRAT replay, retained file/log output; witness construction and tool build excluded.",
+  "stored_case_artifact_bytes": 9017160,
+  "raw_case_artifact_bytes": 27616737,
+  "compression_scope": "Counts exactly the 633 ARTIFACTS.json entries, excluding source/build/constructor metadata and this summary."
+}

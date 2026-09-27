@@ -12,6 +12,8 @@ The following baseline records the original production implementation. Experimen
 
 The [next existing-workload pass](../research/NATIVE_WORKLOAD_GATE_10.md) executes a native LFSR analyzer and checks a smaller odd-order argument against 23 published AIGER safety circuits. This gives a concrete source-to-safety integration candidate; source-aware squarefree-polynomial reasoning reaches the same algebraic decision, so originality remains unresolved.
 
+The [proof-interface gate](../research/PROOF_INTERFACE_GATE_11.md) now delivers history witnesses through Certifaiger's existing AIGER interface. Three history witnesses and two exported ABC invariants passed all native obligations with SAT-proof replay. The phase-parity reduction clarifies why adding history matters, without claiming a size lower bound. This establishes a measured integration, while its stronger maximal-period premise and the equally available conventional algebraic route still limit the contribution claim.
+
 ## Current separation
 
 The producer performs bounded discovery; the checker verifies supplied witnesses; the consumer uses the verified arithmetic progression. The first implementation hardens this separation by including primality proofs and binding the claim to a separately supplied problem. A counterfeit composite-factor example is retained as a regression test. This is sound engineering around established mathematics, not a priority claim.
