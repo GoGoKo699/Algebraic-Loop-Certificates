@@ -1,0 +1,51 @@
+{
+  "author_copy_index_control": {
+    "block_size": 4,
+    "characteristic": 3,
+    "correct_exponent_residue": 1,
+    "eigenvalue": 2,
+    "exponent": 1,
+    "literal_index_residue": 0,
+    "primary_period": 9,
+    "scalar_order": 2,
+    "search_index": 0,
+    "search_start": 1
+  },
+  "counts": {
+    "author_copy_index_conversion_controls": 18,
+    "author_copy_literal_index_discrepancies": 16,
+    "bad_queries_rejected_by_both": 4,
+    "base_source_count": 650,
+    "binomial_controls": 13440,
+    "changed_source_rejected": 1,
+    "compiled_sources": 661,
+    "extension_field_sources": 172,
+    "full_domain_sources": 660,
+    "independent_compilation_path_control": 1,
+    "large_characteristic_queries": 240,
+    "malformed_certificates_rejected_by_both": 18,
+    "non_base_field_digit_counterexample": 1,
+    "non_digit_coefficient_counterexample": 1,
+    "reachable": 2418,
+    "repeated_factor_sources": 180,
+    "target_queries": 7209,
+    "taylor_formula_and_product_checks": 320,
+    "unreachable": 4791
+  },
+  "full_report": {
+    "path": "expected.json.gz",
+    "uncompressed_bytes": 31257,
+    "uncompressed_sha256": "bb134b5797b814e0f5aaf6f303860e0765495af0daa959fbc2d94f12656fa611"
+  },
+  "outcomes_sha256": "616c1d900aed739c5e5df91fa4d9d6094a52803fe28c2def8f43c477d806dcb0",
+  "reasons": {
+    "character_and_taylor_conditions": 2418,
+    "character_relation_obstruction": 45,
+    "local_subgroup_obstruction": 1294,
+    "non_base_field_digit": 60,
+    "outside_cyclic_span": 3004,
+    "taylor_coefficient_obstruction": 388
+  },
+  "schema": 1,
+  "scope": "Same untrusted certificate and full prime-field membership contract; alternative rechecks the source without old compiler/coordinate/unipotent routines. Parser, primality and elementary polynomial arithmetic are shared. Classical character/Jordan-Taylor construction; no first-hit recovery, timing advantage or priority claim."
+}

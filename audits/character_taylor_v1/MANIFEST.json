@@ -1,0 +1,26 @@
+{
+  "base_commit": "cacaaca9e246330eada2ff5f94c388a5f6e0af3b",
+  "schema": 1,
+  "scope": "Complete character/Taylor comparison; old compilers/decoder are NOT used by the alternative path. Shared parser, prime checks, elementary arithmetic; test producer is common.",
+  "sha256": {
+    "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
+    "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
+    "audits/character_taylor_v1/README.md": "b3ae93eea9e39e8622e4fbdd7a4a52580abfcbfe14a2000666023df4429a013d",
+    "audits/character_taylor_v1/RESULTS_SUMMARY.json": "3556edf70daf67256dfb26ab74b2826e60d3db644ce6e0024d2d8f88794b9926",
+    "audits/character_taylor_v1/SOURCES.md": "89060f20d8a8307a80e8f929c563e2d266ec0ad5593a2a33ed8b3802216d4695",
+    "audits/character_taylor_v1/THEORY.md": "d07cbda91e3c300031279802a1c51c80c18075ef1249875a72852052ce253ba1",
+    "audits/character_taylor_v1/baseline.py": "e176afbfbd0816600465527f88b5b2f68ab1b5883e6bbd266599ea9c96b85346",
+    "audits/character_taylor_v1/check.py": "9c459d016afaed51f3b66cfbb1bea29c78cb440fcf06b2e8893e11a34e41f1a8",
+    "audits/character_taylor_v1/expected.json.gz": "77122258a4316a3b1adde01ed90e8cf26eb3791146f97d7712a8c056103f1934",
+    "audits/character_taylor_v1/verify.py": "4729f706f6c3bfc367fea259fdafe06a016443b7e5be2b642728ee243d5423e2",
+    "research/CONTRIBUTION_ASSESSMENT_08.md": "ddfa650a29858122fb6248899e6887aa5d7fffa7cddb5794d83d3564e1156c05",
+    "research/compiled_orbits_v1/checker.py": "1336e982c8a43159cf6fca9f0e815839d5b51c8cff4ca6767eb74210f1159f23",
+    "research/compiled_orbits_v1/expected.json.gz": "9e7aa9a8d820dae94177058ffd2afa94d13db25bf70fd8fe27d83ba2faf8d300",
+    "research/compiled_orbits_v1/producer.py": "8f0ddba5efee03a4a86199fac3645a9a7252aff990591ab390e13f1f24e3c6cd",
+    "research/complete_orbits_v1/algebra.py": "65442e5dd8818ae342d162d0da356d7c3163b560ab303e787cd7648416e24d32",
+    "research/complete_orbits_v1/producer.py": "319e452f0af79138f09faaa2888cba4629df3aaf11caed3cd364d47d32b67d19",
+    "research/separating_invariants_v1/checker.py": "b7aae0a1540224de4e6c6357689a7abe0bc438cee0bd926e01cb24b51eb04420",
+    "research/separating_invariants_v1/producer.py": "1377b8351a79ddd8b554b9d40ef30d01c90cf7759c4ae7d47c35dfa408bdf553",
+    "tests/test_character_taylor_audit.py": "d1c471b7a9acb94701c6bd5efe33cc9aa9e1628d6c1334c49b1446c09aa21ce1"
+  }
+}
