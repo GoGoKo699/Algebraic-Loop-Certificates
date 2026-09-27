@@ -6,7 +6,7 @@
     ".gitignore": "25dd9ed3d850e8e889c7a43c1051c47d62d41e1b8c03163cef7593bff791e800",
     "AGENTS.md": "b87dca25b6d9892f89c8b577f79ed842526ad70c261c20ba93f26ee1c577cdc0",
     "LICENSE": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
-    "README.md": "486f74deb9443b46ce66baa95bb14a269c8e7e760431283885705a6bc13a0d82",
+    "README.md": "8015bcac3407022a141d316759d29f86ec56ea69186e0e15c434e3a77e935cc6",
     "alc/__init__.py": "26ae64059167e28496209998ffe6c1714c85bd7a7a8f9b753c00e2c151a80d2d",
     "alc/__main__.py": "902f58f96caf76c5778015eba63cb571f76b3f27f6e165fe5794381119760189",
     "alc/checker.py": "fdda1cb12f9ef2600d4fe6490935cb6aa33dbd8d0c4c2cbd151f0c946db7059c",
@@ -14,8 +14,11 @@
     "alc/producer.py": "908a9ef96bf66498e46105770f04402027a6c64199322fe993f63d3cfdd05b2b",
     "alc/schema.py": "7b4c0839f76a0ffb9cadccb87d20ef316ea12b8fcdff538d6187e0b2c6791671",
     "docs/FORMAT.md": "adebcd9e44abf6c9c642e253575c3d7ec55bdaf0de42daf6668ffd6a1df55208",
-    "docs/RESEARCH.md": "e5d3f022e339568e880c4531435645f840fa071c724ea82b6d8efaedae2367f1",
+    "docs/LEARNING_PATH.md": "50b64cc7fc4c82ecdfdaef654e7e007620cfe0dd0c73639b812606a4561c072c",
+    "docs/REPRODUCING.md": "6028da8e114e5d7c693cbc3ab4f906d39efa534d8fcb299e0b3702e6ef734ed3",
+    "docs/RESEARCH.md": "0ef5a52c8f1300f3b531de859b4f4c16b5a2d84aca69558295c5fff105c5617d",
     "docs/SPECIFICATION.md": "8a6c9ae4dfdbaacc1e48fd1c63db54815aed01f49af82dc15d1ee3260e51ff77",
+    "docs/TUTORIAL.md": "c0dfaa037feed6619e6fbc2e5d207f772f51e063a0122a48999cee439d12c590",
     "evidence/README.md": "62e9433eb33a010bf1ce0c058712dde82d8449a7fba2961c41f5767e6da110eb",
     "evidence/exhaustive.json": "412818ed6dd5932674974b0f17a4f712f051b22b6980f3ab64d975360b257ba8",
     "examples/affine_f5/certificate.json": "668cce7f89f6bf4176251db6ef2a74851ca1162e5f049890761d7c9cb8fcd077",
@@ -30,10 +33,10 @@
     "research/BOUNDED_COMPARISON_GATE_16.md": "32ca53801cef9dfe132d4a1bafc571e22e414a82a692bccc1efa6199524e78d3",
     "research/BOUNDED_COMPARISON_GATE_17.md": "ebb7acdb9018069617fc0f5ce225cf094f491c41c099c26ab6f58ac443e51eb2",
     "research/CONTRIBUTION_ASSESSMENT_18.md": "b81800001cb6ad3e65160952ee1bd5c89184286bda862194849c79637fda5ed3",
-    "research/README.md": "10196810e3dd5579398cdc59d8267ad2c6b60b2a25e9cad0532417e00cabc43b",
+    "research/README.md": "c0a2324e73aac4384aa8c0f74050361832b51469c86ab9fb91b7fe43d7e4a00f",
     "research/RESEARCH_COMPLETION.md": "cd5a48334815ff6cbc6684e95a928081a286c941c9ab4039659d01df4249e1e2",
     "research/SCIENTIFIC_CLOSURE_GATE_14.md": "dad4f79aec624d1896808e936f02564fa4973763b1004ba67b83206ddb06c5e3",
-    "research/complete_orbits_v1/MANIFEST.json": "ff92f4a2a45d0350141370e20ba6c8293d0dbeb71daa5432284adf34b768f3b8",
+    "research/complete_orbits_v1/MANIFEST.json": "38bff3de4dd8bb24ddc6168a0f15876ada1b8c9c7b4b676e8f478bf1432f85ef",
     "research/completion_v1/BASELINE_QUALIFICATION.md": "b9b1d65ec48c6381f438df1b59574e5e671167201a1895406e749d98c4704c70",
     "research/completion_v1/COST_AUDIT.json": "46ba51cd9b31ae6f2ed728fec84d9a49813ba1f2695fc4b6f2836419c009a670",
     "research/completion_v1/EXECUTABLE_PROTOCOL.md": "ad9aa6b56fa3ebb46350574c5c333f53461a2837f0c9573466d1c546a663f0d2",
@@ -717,6 +720,6 @@
     "tests/test_completion_worker.py": "00a73e1282be984bcc6dd7993e632a35ccc2ea17334f567be6187442057e8cf5",
     "tests/test_security.py": "f061213dc8e76ee03ce8b08541ea54ffdeff3f53c0d10504f96635712d079b2e",
     "verify.py": "1833777ed62052560e64d77cc300dbe2c981ac911d1e9aa5327292197bc0ccdf",
-    "work_orders/CURRENT.md": "1aab93c9c9c040cdf9301859e55c5aa5005562bc7e077573fa68fb699b040629"
+    "work_orders/CURRENT.md": "cc71ed5c63485ba9abb536df3fef67f9a6a038542e3fc86342b2d66477eafa9a"
   }
 }

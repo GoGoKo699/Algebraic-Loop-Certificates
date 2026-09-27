@@ -1,5 +1,9 @@
 # Research assessment
 
+For a first reading, use the [Manna–Pnueli learning path](LEARNING_PATH.md),
+the [worked safety tutorial](TUTORIAL.md), and the [reproduction guide](REPRODUCING.md).
+They introduce the existing results; this page records the research claims and their limits.
+
 Updated 27 September 2026. The project has an executable certificate workflow and a completed scoped witness-export comparison. It does **not** yet have an established new research contribution, a fast general classical discrete-log solver, or a general advantage over existing tools. Manuscript work is on hold.
 
 ## Current decision

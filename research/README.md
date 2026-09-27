@@ -1,5 +1,12 @@
 # Scientific research checkpoint
 
+New readers can start with the [Manna–Pnueli learning path](../docs/LEARNING_PATH.md),
+the [worked safety tutorial](../docs/TUTORIAL.md), and the
+[reproduction guide](../docs/REPRODUCING.md). They connect the book's safety
+framework to the exact construction, code and retained evidence below.
+Historical checkpoint recommendations reflect their dates; the Gate 18 decision
+and current work order govern the present scope.
+
 Manuscript preparation is on hold. The production `alc/` API remains unchanged.
 These are explicit experimental namespaces, not a silent expansion of its scope.
 

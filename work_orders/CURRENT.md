@@ -2,6 +2,21 @@
 
 Read README.md, docs/SPECIFICATION.md, docs/FORMAT.md, docs/RESEARCH.md, research/CONTRIBUTION_ASSESSMENT_18.md, research/contribution_v1/SOURCES.md, research/BOUNDED_COMPARISON_GATE_17.md, research/completion_v2/README.md, research/completion_v2/EXECUTABLE_PROTOCOL.md, research/completion_v2/PROTOCOL_FREEZE.json, and provenance/ORIGIN.md first. The manuscript is on hold. The original quantum project must not be modified as part of this work.
 
+## Teaching and repository furnishing
+
+The reader path is anchored in Manna and Pnueli's *Temporal Verification of
+Reactive Systems: Safety* (1995). Start with [the learning path](../docs/LEARNING_PATH.md),
+continue through [the original worked tutorial](../docs/TUTORIAL.md), and use
+[the reproduction guide](../docs/REPRODUCING.md) to connect proof, implementation
+and evidence. The book is the single background anchor; the repository supplies
+the finite-field and certificate-interface bridge without requiring a second text.
+
+Maintain this teaching route alongside the exact specifications. Keep the
+production target-hit contract distinct from the research safety-witness contract,
+and the mathematical proof distinct from native checking and retained proof replay.
+This documentation work explains the completed science and does not reopen the
+frozen studies, broaden the corpus or authorize manuscript drafting.
+
 ## Established executable baseline
 
 The package supplies a bounded prime-field affine-orbit producer, an independent positive certificate checker, and an arithmetic consumer. The checker validates primality and complete period factorization, an inverse witness, least point period, canonical hit offset, and problem binding. It does not import or run the producer. The producer is an enumerator, not a fast orbit/discrete-log algorithm. The mathematics is established; no novelty or practical speedup is claimed.
