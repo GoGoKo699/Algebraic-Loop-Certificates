@@ -1,0 +1,41 @@
+name: Native invariant verification gate
+on:
+  pull_request:
+    paths:
+      - 'audits/invariant_validation_v1/**'
+      - '.github/workflows/invariant-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify local controls
+        run: python audits/invariant_validation_v1/verify.py
+      - name: Fetch pinned official finite-field solver
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 2 --max-time 120 'https://github.com/cvc5/cvc5/releases/download/cvc5-1.4.1/cvc5-Linux-x86_64-static-gpl.zip' -o "$RUNNER_TEMP/cvc5.zip"
+          echo "d0b54324ec2129697975da8753767fd255309947b87832917d32a78da7d16666  $RUNNER_TEMP/cvc5.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/cvc5.zip" -d "$RUNNER_TEMP/cvc5-release"
+          SOLVER=$(find "$RUNNER_TEMP/cvc5-release" -type f -path '*/bin/cvc5' -print -quit)
+          test -n "$SOLVER"
+          chmod +x "$SOLVER"
+          echo "CVC5_BINARY=$SOLVER" >> "$GITHUB_ENV"
+      - name: Run frozen native protocol
+        run: python audits/invariant_validation_v1/gate.py --solver "$CVC5_BINARY" --output "$RUNNER_TEMP/invariant-native" --timeout-ms 2000
+      - name: Retain native inputs and observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: invariant-gate-native
+          path: ${{ runner.temp }}/invariant-native/
+          if-no-files-found: warn
+          retention-days: 30
