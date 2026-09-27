@@ -1,0 +1,58 @@
+name: Native rIC3 qualification
+on:
+  pull_request:
+    paths:
+      - 'research/completion_v1/qualify_native.py'
+      - 'tests/test_native_qualification.py'
+      - '.github/workflows/ric3-qualification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Baseline and new record controls
+        run: |
+          set -euo pipefail
+          python verify.py 2>&1 | tee "$RUNNER_TEMP/q15-before.log"
+          python -m unittest discover -s tests -p 'test_native_qualification.py' -v
+      - name: Retain exact checkout
+        run: git archive --format=tar.gz --output="$RUNNER_TEMP/q15-checkout.tar.gz" HEAD
+      - name: Install native build prerequisites
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y libmpfr-dev meson ninja-build cmake pkg-config libclang-dev
+          rustup toolchain install stable --profile minimal
+          rustup override set stable
+          dpkg-query -W > "$RUNNER_TEMP/q15-system-packages.txt"
+          rustup show > "$RUNNER_TEMP/q15-rustup.txt"
+      - name: Build and qualify the pinned baseline
+        run: python research/completion_v1/qualify_native.py --work "$RUNNER_TEMP/q15-work" --output "$RUNNER_TEMP/q15-evidence"
+      - name: Verify repository again
+        if: always()
+        run: |
+          set -euo pipefail
+          python verify.py 2>&1 | tee "$RUNNER_TEMP/q15-after.log"
+      - name: Preserve successful and blocked observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ric3-qualification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/q15-evidence/
+            ${{ runner.temp }}/q15-before.log
+            ${{ runner.temp }}/q15-after.log
+            ${{ runner.temp }}/q15-system-packages.txt
+            ${{ runner.temp }}/q15-rustup.txt
+            ${{ runner.temp }}/q15-checkout.tar.gz
+          if-no-files-found: error
+          retention-days: 30
