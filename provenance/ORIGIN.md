@@ -1,26 +1,24 @@
-# Origin and import status
-
-This classical spinoff was requested by Ruge Lin after the algebraic-loop exploration in `GoGoKo699/Quantum-Assisted-Algorithm-Discovery`.
+# Source and import record
 
 ## Repository baseline
 
-The new repository was inspected at commit `2f71cf48ccc64f50adbd5878998db8adcee2eea1`. It contained only `LICENSE` and the 29-byte title README. The MIT license Git blob is `e17a781bf47c4aadf18b68fc593846a1193b86c1`; that file remains byte-for-byte unchanged. No changes were made to the original quantum repository.
+The repository was inspected at commit `2f71cf48ccc64f50adbd5878998db8adcee2eea1`. It contained only `LICENSE` and the 29-byte title README. The MIT license Git blob is `e17a781bf47c4aadf18b68fc593846a1193b86c1`; that file remains byte-for-byte unchanged.
 
-## Source record that was recovered
+## Pinned external source
 
-The original repository's branch was read at `8a722797910873557fd6af9dd69e67b04c55a30e`. Its immutable source note is:
+The following external mathematical note was read at commit `8a722797910873557fd6af9dd69e67b04c55a30e`:
 
 [ALGEBRAIC_ORBIT_INDEXING_17.md](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery/blob/8a722797910873557fd6af9dd69e67b04c55a30e/exploration/phase_2/ALGEBRAIC_ORBIT_INDEXING_17.md), Git blob `18a2bd4b39077a6b4a32e8b299b133796e6bf6fb`.
 
-It was read through the GitHub connection. It is pinned externally, not represented as copied byte-for-byte into this repository. Its quantum research agenda and earlier experimental counts are historical context, not this spinoff's current claims.
+It is pinned externally, not represented as copied byte-for-byte into this repository. Its earlier experimental counts are not evidence for the current implementation.
 
-## Original portable checkpoint remains to be imported
+## Unrecovered historical files
 
 The earlier conversation linked `Quantum_Discovery_Algebraic_Loop_Scout.zip` and `Quantum_Discovery_Algebraic_Loop_Note.md`. Their raw bytes were not present in this execution environment. An exact-name search and a second broader search of accessible conversation/Library files did not recover them. The original source tree also did not provide that ZIP as an imported artifact.
 
 Accordingly, this repository **does not claim a byte-for-byte migration or replay of that checkpoint**. Do not fabricate its hash, reconstruct a purported historical archive, or replace it with this implementation under the old name. When the original becomes available, preserve its raw bytes unchanged under a historical-artifact directory, verify its own manifest, and record any differences separately.
 
-The current Python package is a newly written implementation of the mathematical contract discussed in the conversation, with an independent finite audit. It is not described as a patch to code whose bytes were unavailable. The baseline is useful without blocking on that recovery, but preservation of the original ZIP remains an explicit open import item.
+The current Python package is an independently written implementation with its own finite audit. It does not depend on these unavailable files, and their contents are not used as validation evidence.
 
 ## External material
 
