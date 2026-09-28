@@ -32,7 +32,7 @@ The `schema` key is also mandatory. See the [complete example certificate](../ex
 
 `python -m alc query --problem P --certificate C --from L --through H` first verifies the certificate, then counts hits in the **inclusive** interval `[L,H]`. It reports the next hit at or after `L`, even if it lies beyond `H`. Time arguments must be nonnegative, with `H >= L`.
 
-The optional `--schedule RESIDUE PERIOD` intersects the verified progression with an ordinary supplied arithmetic schedule by the generalized Chinese remainder theorem. A null intersection is certified only as an arithmetic intersection of those supplied progressions; the second schedule is not automatically a certified recurrence. The generalization to synchronization of independently certified loops is future API work, not a new theorem.
+The optional `--schedule RESIDUE PERIOD` intersects the verified progression with an ordinary supplied arithmetic schedule by the generalized Chinese remainder theorem. A null intersection is certified only as an arithmetic intersection of those supplied progressions; the second schedule is not automatically a certified recurrence. Synchronization of independently certified loops is not supported by this API.
 
 | Exit code | Meaning |
 |---:|---|

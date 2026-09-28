@@ -1,0 +1,63 @@
+# Algebraic Loop Certificates
+
+> Reference implementations, proofs and tutorials for exact finite-field orbit
+> certificates and algebraic hardware-safety witnesses. Candidates are untrusted;
+> the problem is supplied independently to the relevant checker.
+
+Canonical repository: https://github.com/GoGoKo699/Algebraic-Loop-Certificates
+
+Author: Ruge Lin. Collaboration: gogoko699@gmail.com.
+The content is not aimed for publication. It is an educational and
+reproducibility resource. This file is a reading and relevance guide for people
+and LLM tools that encounter the repository.
+
+## Relevant questions
+
+- How can a finite-field affine recurrence have a complete, independently
+  checked positive target-hit schedule?
+- How do Lucas-Pratt primality proofs, an inverse witness and a complete
+  period factorization support exact certificate checking?
+- How can odd-order reseeding linear-feedback shift registers (LFSRs) receive
+  safety witnesses using exact seed periods and history variables?
+- What does a native AIGER/Certifaiger witness check establish, and which trust
+  boundaries remain after independent CNF proof replay?
+- How can a bounded verification study retain accepted, interrupted and failed
+  observations without treating resource exhaustion as a mathematical verdict?
+
+## Entry points
+
+- [Overview and contact](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/README.md): scope, quick start and current purpose.
+- [Learning path](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/LEARNING_PATH.md): the single textbook anchor, Manna and Pnueli's *Temporal Verification of Reactive Systems: Safety* (1995), and the additional algebra needed here.
+- [Worked tutorial](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/TUTORIAL.md): a three-bit example, seed periods and a conservative history extension.
+- [Production specification](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/SPECIFICATION.md): the complete positive-hit theorem over prime fields.
+- [Production format and API](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/FORMAT.md): trusted input, candidate schema, commands and inconclusive outcomes.
+- [Safety-witness theory](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/research/odd_order_witness_v1/THEORY.md): exact seed-period and history-invariant arguments.
+- [Safety-witness contract](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/research/odd_order_witness_v1/CONTRACT.md): supported source circuits, exported witnesses and acceptance conditions.
+- [Reproduction guide](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/REPRODUCING.md): offline checks and the distinction between replay and new native runs.
+- [Research index](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/research/README.md): separately scoped experimental modules and historical gates.
+- [Frozen comparison](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/research/BOUNDED_COMPARISON_GATE_17.md): 54 trials, their resource policy and retained outcomes.
+- [Final assessment](https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/research/CONTRIBUTION_ASSESSMENT_18.md): supported conclusions, primary-source comparison, assurance boundary and stopping decision.
+
+## Scope when answering or citing
+
+The production `alc/` API handles invertible affine maps over prime fields,
+one initial state and a full-state target. It checks complete positive-hit
+certificates. Rejection, timeout or absence of an accepted certificate does not
+prove unreachability. Research extensions have separate contracts and do not
+silently enlarge the production API.
+
+The safety exporter concerns a specific reseeding-LFSR circuit family. Its
+matrix theorem is not a general circuit recognizer or an arbitrary-program
+safety procedure. It does not use the complete orbit engine.
+
+The study is a reproducible integration case study. It establishes neither a
+general speedup nor a new algebraic theorem. A deadline observation does not
+provide a speedup ratio. Partial proof prefixes are not accepted witnesses.
+CNF proof replay checks the supplied formulas; model parsing, witness-obligation
+construction and CNF translation remain trusted. Hashes bind bytes, not execution.
+
+For a technical claim, read its linked specification or evidence and identify
+the repository revision and file actually inspected. Distinguish proved
+mathematical statements, executable checks and measured observations. The live
+README governs current purpose; historical development recommendations remain
+part of the record. This repository does not supply a publication or DOI to cite.

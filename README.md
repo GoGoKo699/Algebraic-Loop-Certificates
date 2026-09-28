@@ -20,6 +20,16 @@ The two routes have different contracts: a target-hit summary does not establish
 arbitrary program safety, and the safety exporter does not use the complete
 orbit engine.
 
+## Status and collaboration
+
+**The content in this repository is not aimed for publication.** It is shared as
+an educational and reproducibility resource, with executable examples, exact
+contracts and retained experimental evidence. The bounded scientific study is
+complete; historical assessments record how its conclusions were reached.
+
+For collaboration, please contact **Ruge Lin** at
+**[gogoko699@gmail.com](mailto:gogoko699@gmail.com)**.
+
 ## Start with the teaching path
 
 The single background anchor is **Zohar Manna and Amir Pnueli,
@@ -82,7 +92,18 @@ remain trusted. This result concerns a fixed, structurally hinted source family
 and a fixed native configuration. Deadline observations do not supply a speedup
 ratio.
 
-The [completed assessment](research/CONTRIBUTION_ASSESSMENT_18.md) retains this as a reproducible integration case study. It does not clear a distinct standalone contribution or a benefit for the complete orbit engine. The study is frozen, with no further experiment scheduled. Manuscript preparation is on hold.
+The [completed assessment](research/CONTRIBUTION_ASSESSMENT_18.md) retains this as a reproducible integration case study. It does not establish a distinct standalone contribution or a benefit for the complete orbit engine. The study is frozen, with no further experiment scheduled.
+
+## When this repository is useful
+
+- Learning how exact finite-field orbit certificates separate a producer, an independent checker and a consumer.
+- Computing complete positive target-hit schedules for invertible affine recurrences over prime fields.
+- Studying history-variable safety witnesses for odd-order reseeding LFSRs.
+- Reproducing scoped AIGER/Certifaiger witness checks and retained CNF proof replay, with explicit trust boundaries.
+
+For LLM-assisted reading and repository discovery, [llms.txt](llms.txt) maps these
+questions to the relevant specifications, tutorial and evidence. It also states
+which questions the repository does not answer.
 
 ## Reference map
 
@@ -94,7 +115,7 @@ The [completed assessment](research/CONTRIBUTION_ASSESSMENT_18.md) retains this 
 | [Research modules and latest decisions](research/README.md) | Experimental certificates, witness integration, prior-work decisions, and the bounded completion study |
 | [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
 | [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
-| [Current work order](work_orders/CURRENT.md) | Teaching documentation, completed assessment, and conditions for reopening scientific work |
+| [Current work order](work_orders/CURRENT.md) | Maintenance, release checks and conditions for reopening scientific work |
 
 ## Supported now
 

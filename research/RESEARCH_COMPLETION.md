@@ -1,7 +1,10 @@
 # Scientific completion record
 
-Updated 27 September 2026. Manuscript writing is on hold. These are results,
-proofs, source assessments and test artifacts, not drafted paper sections.
+Current status updated 28 September 2026. The repository's content is not aimed
+for publication; see the [purpose and collaboration contact](../README.md#status-and-collaboration).
+These results, proofs, source assessments and test artifacts are retained as an
+educational and reproducibility resource. Earlier sections preserve the
+development record, including the aims and recommendations at those checkpoints.
 
 ## Current status
 
@@ -10,8 +13,8 @@ The [Gate 18 assessment](CONTRIBUTION_ASSESSMENT_18.md) records the surviving
 core argument, primary-source comparison, assurance boundary and stopping
 decision. The result is retained as a reproducible integration case study.
 The exact exporter's priority remains unresolved; the evidence does not
-establish a sufficiently distinct standalone contribution. Manuscript work
-remains on hold, and no further experiment is scheduled.
+establish a sufficiently distinct standalone contribution. No further experiment
+is scheduled.
 
 The
 [amended comparison gate](BOUNDED_COMPARISON_GATE_17.md) completes all 54 trials
@@ -22,8 +25,9 @@ passes all nine witness obligations in all three repetitions (4.397–4.713 seco
 while rIC3 reaches its 30-second deadline in each repetition. The original
 three-of-three added-coverage criterion is satisfied at this width only.
 
-The [report](completion_v2/STUDY_REPORT.json) independently replays all 180
-completed CNF proofs, including prefixes before interrupted solves. Native
+The [offline verifier](completion_v2/verify_study.py) independently replays all
+180 completed CNF proofs, including prefixes before interrupted solves, and
+checks the [retained report](completion_v2/STUDY_REPORT.json). Native
 translations remain trusted. The direct structural decisions have a different
 output contract and do not count as accepted witnesses. This is a scoped
 conventional exporter result, not a benefit for the complete orbit engine or

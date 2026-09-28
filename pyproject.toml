@@ -9,8 +9,13 @@ description = "Exact positive-hit certificates for prime-field affine recurrence
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
-authors = [{name = "Ruge Lin"}]
+authors = [{name = "Ruge Lin", email = "gogoko699@gmail.com"}]
 dependencies = []
+
+[project.urls]
+Repository = "https://github.com/GoGoKo699/Algebraic-Loop-Certificates"
+Documentation = "https://github.com/GoGoKo699/Algebraic-Loop-Certificates/blob/main/docs/LEARNING_PATH.md"
+Issues = "https://github.com/GoGoKo699/Algebraic-Loop-Certificates/issues"
 
 [project.scripts]
 alc = "alc.__main__:main"

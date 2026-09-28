@@ -7,14 +7,24 @@ framework to the exact construction, code and retained evidence below.
 Historical checkpoint recommendations reflect their dates; the Gate 18 decision
 and current work order govern the present scope.
 
-Manuscript preparation is on hold. The production `alc/` API remains unchanged.
-These are explicit experimental namespaces, not a silent expansion of its scope.
+The repository is an educational and reproducibility resource; its content is
+not aimed for publication. See [status and collaboration](../README.md#status-and-collaboration)
+for contact information. These experimental namespaces leave the production
+`alc/` API unchanged.
 
-**Latest:** [contribution and assurance assessment completed](CONTRIBUTION_ASSESSMENT_18.md). The retained result is a reproducible integration case study; a distinct standalone contribution remains uncleared after the bounded primary-source audit. The [54-trial comparison](BOUNDED_COMPARISON_GATE_17.md) remains fixed: nine exporter and six rIC3 accepted witnesses, 18 structural decisions, nine exporter raw-artifact limits and twelve rIC3 deadlines. Its added-coverage criterion is met at width 8. All 180 completed CNF proofs replay independently; native translations remain trusted.
+**Latest:** the [completed assessment](CONTRIBUTION_ASSESSMENT_18.md) retains a
+reproducible integration case study, with exact priority unresolved and no
+established standalone contribution, general solver advantage or benefit for
+the complete orbit engine. The [54-trial comparison](BOUNDED_COMPARISON_GATE_17.md)
+met its added-coverage criterion at width 8. All 180 completed CNF proofs replay
+independently; native translations remain trusted.
 
-The outcome-informed [storage amendment](completion_v2/STORAGE_AMENDMENT.md) preserves the 64 MiB raw budget and adds a separate 64 MiB allowance for exact known metadata paths. The source corpus, commands, binaries and trial order are unchanged. Its [prospective freeze](completion_v2/PROTOCOL_FREEZE.json) preceded the fresh sequence. The [suspended Gate 16 experiment](BOUNDED_COMPARISON_GATE_16.md) is preserved without pooling, resuming or reclassifying its trials.
-
-The finite assessment is closed with an explicit stopping decision. No further experiment or manuscript task is scheduled. The [constructive comparison](CONTRIBUTION_ASSESSMENT_08.md), [supplied-invariant gate](VERIFICATION_GATE_09.md) and [invariant/history audit](INVARIANT_HISTORY_GATE_13.md) remain binding. No new algebraic contribution, general solver advantage or complete-orbit-engine benefit is established. [CURRENT.md](../work_orders/CURRENT.md) records the conditions for reopening scientific work.
+The [claims and boundaries guide](../docs/RESEARCH.md) explains the comparator
+roles, outcome-informed storage amendment and earlier decisions. The suspended
+Gate 16 study remains separate; its observations were not pooled into the
+completed study. No further experiment is scheduled.
+[CURRENT.md](../work_orders/CURRENT.md) records the conditions for reopening
+scientific work.
 
 | Module | Scientific object | Main boundary |
 |---|---|---|
@@ -41,7 +51,6 @@ The [completion ledger](RESEARCH_COMPLETION.md) preserves the development record
 The earlier [scientific work order](SCIENTIFIC_WORK_ORDER.md) and
 [closer-prior comparison](PRIOR_WORK_COMPARISON_02.md) are historical checkpoints;
 Gates 14–18 supersede their next-step recommendations.
-A proved construction is not automatically a new publishable contribution.
 
 Run the standard-library research checks from the repository root:
 
@@ -51,7 +60,7 @@ python research/modular_lifting_v1/verify.py
 python research/direct_modular_hits_v1/verify.py
 ```
 
-The new root regression tests also run these checks through `python verify.py`.
+The root regression tests also run these checks through `python verify.py`.
 Optional comparisons use an already installed SymPy and never install it:
 
 ```sh
@@ -67,8 +76,5 @@ the uncompressed hash. Timing observations are retained separately and are not
 expected to match across runs or machines. No historical fixture has been
 changed to conceal a mathematical discrepancy.
 
-No quantum backend, verified source-language frontend, general guard support,
-proof-assistant certification, or native full matrix-orbit performance advantage
-has been established. The scalar comparison, smaller direct positive proof,
-constructive algebraic comparison and native invariant gate constrain the claims
-without supplying a speedup result.
+These modules do not supply a quantum backend, verified source-language
+frontend, general guard solver or proof-assistant certification.

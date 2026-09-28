@@ -132,7 +132,10 @@ The [source dossier](../research/contribution_v1/SOURCES.md) records the separat
 priority assessment. Classical methods support a valid construction; they do not
 by themselves settle the exact combination's originality or significance. The
 current checkpoint is a completed integration study, with standalone research
-readiness uncleared and manuscript preparation on hold.
+readiness uncleared. The repository is an educational and reproducibility
+resource; its content is not aimed for publication. See
+[status and collaboration](../README.md#status-and-collaboration) for contact
+information.
 
 ---
 

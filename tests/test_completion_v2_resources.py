@@ -180,25 +180,95 @@ print(json.dumps({'worker_as':resource.getrlimit(resource.RLIMIT_AS), 'stage':st
             self.assertGreater(result["wall_seconds"], stage["wall_seconds"])
 
     def test_deadline_cleans_detached_descendants_and_clock_is_shared(self):
-        code = r'''
+        # Setup must precede the deadline being tested, independent of host load.
+        # Only this fixture's inner supervisor uses virtual elapsed time; the
+        # outer production supervisor retains a real 30-second cleanup watchdog.
+        stage = r'''
+import json, os, pathlib, sys, time
+number = sys.argv[1]
+record = {'origin': os.environ['ALC_TEST_WORKFLOW_ORIGIN'],
+          'budget': os.environ['ALC_TEST_WORKFLOW_BUDGET']}
+ready = pathlib.Path('data/stage-' + number + '.json')
+ready.with_suffix('.tmp').write_text(json.dumps(record))
+ready.with_suffix('.tmp').replace(ready)
+if number == '1':
+    while not pathlib.Path('data/clock-ack').exists(): time.sleep(.001)
+else:
+    while True: time.sleep(.01)
+'''
+        worker = r'''
 import os, pathlib, sys, time
 from research.completion_v1.resources import run_stage
-run_stage([sys.executable, '-c', 'import time; time.sleep(.1)'])
+pathlib.Path('data').mkdir()
+read_fd, write_fd = os.pipe()
 pid = os.fork()
 if pid == 0:
+    os.close(read_fd)
     os.setsid()
     if os.fork(): os._exit(0)
     pathlib.Path('escaped.pid').write_text(str(os.getpid()))
+    os.write(write_fd, b'1')
+    os.close(write_fd)
     while True: time.sleep(.02)
+os.close(write_fd)
+if os.read(read_fd, 1) != b'1': raise RuntimeError('Detached child not ready')
+os.close(read_fd)
 os.waitpid(pid, 0)
-time.sleep(10)
+''' + f"\nfor number in ('1', '2'):\n    run_stage([sys.executable, '-c', {stage!r}, number], record_path='data/STAGES.jsonl')\n"
+        driver = r'''
+import time
+origin = time.monotonic()
+import json, os, pathlib, sys, types
+from dataclasses import asdict
+from research.completion_v2 import resources
+inner = pathlib.Path('inner').resolve()
+inner.mkdir()
+limits = resources.Limits()
+advances = []
+offset = 0
+stopped_at = None
+def monotonic():
+    global offset, stopped_at
+    if offset == 0 and (inner / 'data/stage-1.json').exists():
+        offset = limits.wall_seconds / 2
+        advances.append(offset)
+        (inner / 'data/clock-ack').write_text('first stage charged')
+    elif offset == limits.wall_seconds / 2 and (inner / 'data/stage-2.json').exists():
+        offset = limits.wall_seconds
+        advances.append(offset)
+        stopped_at = time.monotonic() + offset
+    # A reset deadline must not eventually pass merely through real-time drift.
+    return stopped_at if stopped_at is not None else time.monotonic() + offset
+# Replace the module reference, not the shared time module used by cleanup.
+resources.time = types.SimpleNamespace(monotonic=monotonic)
+''' + f"\ncommand = [sys.executable, '-c', {worker!r}]\n" + r'''
+report = resources._supervise({
+    'command': command, 'cwd': str(inner), 'artifact_root': str(inner),
+    'limits': asdict(limits), 'start_monotonic': origin,
+    'started_utc': resources._utc(),
+    'env': {'ALC_TEST_WORKFLOW_ORIGIN': str(origin),
+            'ALC_TEST_WORKFLOW_BUDGET': str(limits.wall_seconds)}})
+print(json.dumps({'report': report, 'advances': advances, 'origin': str(origin)}))
 '''
         with tempfile.TemporaryDirectory() as directory:
-            result = self.trial(code, directory, wall_seconds=0.5)
+            watchdog = self.trial(driver, directory)
+            self.assertEqual(watchdog["status"], "completed", watchdog)
+            self.assertTrue(watchdog["cleanup"]["complete"], watchdog)
+            fixture = json.loads(watchdog["stdout"])
+            result = fixture["report"]
+            budget = result["limits"]["wall_seconds"]
+            self.assertEqual(fixture["advances"], [budget / 2, budget])
             self.assertEqual(result["reason"], "deadline", result)
             self.assertTrue(result["cleanup"]["complete"], result)
-            self.assertLess(result["wall_seconds"], 1.5)
-            pid = int((Path(directory) / "escaped.pid").read_text())
+            self.assertGreaterEqual(result["wall_seconds"], budget)
+            inner = Path(directory) / 'inner'
+            for number in (1, 2):
+                stage_record = json.loads((inner / f'data/stage-{number}.json').read_text())
+                self.assertEqual(stage_record, {'origin': fixture['origin'], 'budget': str(budget)})
+            events = [json.loads(line) for line in (inner / 'data/STAGES.jsonl').read_text().splitlines()]
+            self.assertEqual([event['event'] for event in events], ['start', 'finish', 'start'])
+            self.assertEqual(events[1]['exit_code'], 0)
+            pid = int((inner / 'escaped.pid').read_text())
             with self.assertRaises(ProcessLookupError):
                 os.kill(pid, 0)
 
