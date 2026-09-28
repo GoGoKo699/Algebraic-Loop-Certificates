@@ -1,41 +1,66 @@
 # Algebraic Loop Certificates
 
-**From algebraic loop structure to independently checkable certificates.**
+### From algebraic loop structure to independently checkable certificates
 
 This repository studies two ways to turn a finite-state loop into a reusable proof:
 
-| Question | Checked result | Implementation |
-|---|---|---|
-| When does this recurrence visit a specified state? | The complete set of target-hit times | Production [`alc/`](alc/) |
-| Can this reseeding binary register reach a bad output? | A safety witness checked against the original circuit | Research [odd-order exporter](research/odd_order_witness_v1/README.md) |
+| Question | Checked result |
+|---|---|
+| When does a recurrence visit a specified state? | All target-hit times, through the production [`alc/`](alc/) checker |
+| Can a reseeding binary register reach a bad output? | A witness checked against the original circuit, through the research [safety exporter](research/odd_order_witness_v1/README.md) |
 
-Both separate finding a proof from checking it. They have different contracts: a target-hit summary does not establish arbitrary program safety, and the retained safety exporter does not use the complete orbit engine.
+Both separate finding a proof from checking it. The problem is supplied
+independently of the candidate, so a proof cannot substitute an easier problem.
+
+<p align="center">
+  <img src="assets/certificate-boundary.svg" width="600" alt="An independently supplied problem and an untrusted candidate proof enter the relevant checker separately. Acceptance establishes only the checked claim." />
+</p>
+
+The two routes have different contracts: a target-hit summary does not establish
+arbitrary program safety, and the safety exporter does not use the complete
+orbit engine.
 
 ## Start with the teaching path
 
-The single background anchor is **Zohar Manna and Amir Pnueli, _Temporal Verification of Reactive Systems: Safety_ (1995)**. Its transition-system, inductive-invariant and history-variable perspective leads into the safety construction here. The repository supplies the additional algebra and executable-certificate bridge.
+The single background anchor is **Zohar Manna and Amir Pnueli,
+_Temporal Verification of Reactive Systems: Safety_ (1995)**. Its transition-system,
+inductive-invariant and history-variable perspective leads into the safety
+construction here. The repository supplies the additional algebra and
+executable-certificate bridge.
 
-1. **[Learning path](docs/LEARNING_PATH.md):** selected book sections, prerequisites, and a map from familiar concepts to this project.
-2. **[Worked tutorial](docs/TUTORIAL.md):** a three-bit example, exact seed periods, and a history variable that makes the safety proof inductive.
-3. **[Reproduction guide](docs/REPRODUCING.md):** run the examples, inspect the implementation, and replay the retained evidence.
+Read the repository in three passes:
 
-These guides explain the existing construction. The precise [theorems](research/odd_order_witness_v1/THEORY.md), [interface contract](research/odd_order_witness_v1/CONTRACT.md), and [contribution assessment](research/CONTRIBUTION_ASSESSMENT_18.md) remain the references for its guarantees and limits.
+| Pass | Route and purpose |
+|---|---|
+| **Orient** | This page, then the **[book route](docs/LEARNING_PATH.md)**: questions, prerequisites and selected sections |
+| **Understand** | The **[worked tutorial](docs/TUTORIAL.md)**: a three-bit example, seed periods and the history invariant |
+| **Check** | The **[reproduction lab](docs/REPRODUCING.md)**, [exact theory](research/odd_order_witness_v1/THEORY.md) and [interface contract](research/odd_order_witness_v1/CONTRACT.md): code, proof and retained evidence |
+
+The [contribution assessment](research/CONTRIBUTION_ASSESSMENT_18.md) states
+what the completed study supports and where its claims stop.
 
 ## Try a complete target-hit example
 
 A loop may run for an enormous number of iterations while its visits to one target have a short description:
 
-$$
+```math
 \{t\geq0:x_t=b\}=\{t_0+jr:j\geq0\}.
-$$
+```
 
 The production checker does not enumerate the orbit, search for a discrete logarithm, or factor an integer: it checks supplied witnesses using exact arithmetic. A verified summary supports time-window and schedule calculations without replaying the loop.
 
 Requires Python 3.10 or later. The commands run directly from a checkout with no third-party runtime dependencies.
 
 ```sh
-python -m alc verify --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json
-python -m alc query --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json --from 1000000000000000000000000000000 --through 1000000000000000000000000000100
+python -m alc verify \
+  --problem examples/fibonacci_f7/problem.json \
+  --certificate examples/fibonacci_f7/certificate.json
+
+python -m alc query \
+  --problem examples/fibonacci_f7/problem.json \
+  --certificate examples/fibonacci_f7/certificate.json \
+  --from 1000000000000000000000000000000 \
+  --through 1000000000000000000000000000100
 ```
 
 The recurrence is `(x,y) -> (x+y,x) mod 7`, starting at `(1,0)`, with target `(4,5)`. The checker establishes the **complete** hit set `11 + 16j`, not just one observed hit. The second command reports six hits in the inclusive interval: the first is `10^30 + 11` and the last is `10^30 + 91`.
@@ -44,7 +69,18 @@ Run `python verify.py` on Linux for the full offline verification. The [reproduc
 
 ## What the completed study establishes
 
-The [54-trial comparison](research/BOUNDED_COMPARISON_GATE_17.md) meets its added-coverage criterion at width 8: three accepted exporter witnesses (4.397–4.713 seconds) versus three pinned-rIC3 deadlines. All 180 completed CNF proofs replay independently; native translations remain trusted. This result concerns a fixed, structurally hinted source family and a fixed native configuration. Deadline observations do not supply a speedup ratio.
+The [54-trial comparison](research/BOUNDED_COMPARISON_GATE_17.md) meets its
+added-coverage criterion at width 8:
+
+| Fixed width-8 route | Three repetitions |
+|---|---|
+| Algebraic witness exporter | Three accepted witnesses; 4.397–4.713 seconds |
+| Pinned rIC3 configuration | Three deadline outcomes |
+
+All 180 completed study CNF proofs replay independently; native translations
+remain trusted. This result concerns a fixed, structurally hinted source family
+and a fixed native configuration. Deadline observations do not supply a speedup
+ratio.
 
 The [completed assessment](research/CONTRIBUTION_ASSESSMENT_18.md) retains this as a reproducible integration case study. It does not clear a distinct standalone contribution or a benefit for the complete orbit engine. The study is frozen, with no further experiment scheduled. Manuscript preparation is on hold.
 
