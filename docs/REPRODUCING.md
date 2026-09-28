@@ -1,5 +1,7 @@
 # A reader's reproducibility lab
 
+[Overview](../README.md) · [Book route](LEARNING_PATH.md) · [Tutorial](TUTORIAL.md) · [Lab](REPRODUCING.md)
+
 Use this lab alongside Manna and Pnueli's *Temporal Verification of Reactive
 Systems: Safety*. For each example, identify the state, initial condition,
 transition relation and claimed property before inspecting its certificate.
@@ -46,7 +48,9 @@ The recurrence is `(x,y) -> (x+y,x) mod 7`, with initial state `(1,0)`
 and full-state target `(4,5)`.
 
 ```sh
-python -m alc verify --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json
+python -m alc verify \
+  --problem examples/fibonacci_f7/problem.json \
+  --certificate examples/fibonacci_f7/certificate.json
 ```
 
 Expected JSON includes `status: "valid"`, `claim: "complete_positive_hit_set"`,
@@ -61,7 +65,11 @@ factorization matters. A return alone need not be the least return.
 Now ask about a distant inclusive time window:
 
 ```sh
-python -m alc query --problem examples/fibonacci_f7/problem.json --certificate examples/fibonacci_f7/certificate.json --from 1000000000000000000000000000000 --through 1000000000000000000000000000100
+python -m alc query \
+  --problem examples/fibonacci_f7/problem.json \
+  --certificate examples/fibonacci_f7/certificate.json \
+  --from 1000000000000000000000000000000 \
+  --through 1000000000000000000000000000100
 ```
 
 Expect `window.count: 6`, first hit `10^30 + 11` and last hit `10^30 + 91`.
@@ -80,10 +88,19 @@ import tempfile
 with tempfile.TemporaryDirectory(prefix="alc-reader-") as directory:
     candidate = str(Path(directory) / "candidate.json")
     problem = "examples/fibonacci_f7/problem.json"
-    subprocess.run([sys.executable, "-m", "alc", "produce", "--problem", problem,
-                    "--output", candidate, "--max-steps", "1000"], check=True)
-    subprocess.run([sys.executable, "-m", "alc", "verify", "--problem", problem,
-                    "--certificate", candidate], check=True)
+    subprocess.run(
+        [sys.executable, "-m", "alc", "produce",
+         "--problem", problem,
+         "--output", candidate,
+         "--max-steps", "1000"],
+        check=True,
+    )
+    subprocess.run(
+        [sys.executable, "-m", "alc", "verify",
+         "--problem", problem,
+         "--certificate", candidate],
+        check=True,
+    )
 PY
 ```
 
@@ -149,13 +166,28 @@ study; priority and significance for a standalone contribution remain uncleared.
 
 ## 5. Connect the claims, implementation and evidence
 
-| Claim or proof task | Code to inspect | Theorem or retained evidence |
-|---|---|---|
-| Complete positive hit set for one prime-field affine recurrence | [`alc/checker.py`](../alc/checker.py), especially `verify` and `prime_proofs` | [Specification](SPECIFICATION.md); [finite audit](../evidence/README.md) |
-| Inclusive window over an accepted progression | [`alc/consumer.py`](../alc/consumer.py), `window` | [Format contract](FORMAT.md); the six-hit example above |
-| Exact seed period and an inductive history extension | [`odd_order_witness_v1/produce.py`](../research/odd_order_witness_v1/produce.py) | [Theory](../research/odd_order_witness_v1/THEORY.md); checkpoint controls |
-| Independent checking of retained CNF proofs | [`proof_interface_v1/lrat.py`](../research/proof_interface_v1/lrat.py) | [Native replay](../research/odd_order_witness_v1/verify_native.py) |
-| Accepted-witness coverage under a fixed resource policy | [`completion_v2/verify_study.py`](../research/completion_v2/verify_study.py) | [Gate 17 report](../research/completion_v2/STUDY_REPORT.json) and [assessment](../research/CONTRIBUTION_ASSESSMENT_18.md) |
+1. **Complete positive hit set for one prime-field affine recurrence.**
+   Inspect [`alc/checker.py`](../alc/checker.py), especially `verify` and
+   `prime_proofs`. Read the [specification](SPECIFICATION.md) and
+   [finite audit](../evidence/README.md).
+
+2. **Inclusive window over an accepted progression.**
+   Inspect `window` in [`alc/consumer.py`](../alc/consumer.py).
+   Read the [format contract](FORMAT.md) and the six-hit example above.
+
+3. **Exact seed period and an inductive history extension.**
+   Inspect the [witness producer](../research/odd_order_witness_v1/produce.py).
+   Read the [theory](../research/odd_order_witness_v1/THEORY.md) and checkpoint
+   controls.
+
+4. **Independent checking of retained CNF proofs.**
+   Inspect the [LRAT checker](../research/proof_interface_v1/lrat.py) and
+   [native replay](../research/odd_order_witness_v1/verify_native.py).
+
+5. **Accepted-witness coverage under a fixed resource policy.**
+   Inspect the [study verifier](../research/completion_v2/verify_study.py).
+   Read the [Gate 17 report](../research/completion_v2/STUDY_REPORT.json) and
+   [assessment](../research/CONTRIBUTION_ASSESSMENT_18.md).
 
 The production checker trusts the supplied recurrence, Python and its own exact
 arithmetic implementation. It does not prove that a larger program was correctly
@@ -179,3 +211,7 @@ output directories. They are not prerequisites for this lab and are not what
 the replay commands reproduce. Preserve the frozen sources, protocols and
 artifacts; the current [work order](../work_orders/CURRENT.md) schedules no
 new experiment. A local replay's elapsed time is not a new benchmark observation.
+
+---
+
+[Overview](../README.md) · [Book route](LEARNING_PATH.md) · [Tutorial](TUTORIAL.md) · [Lab](REPRODUCING.md)

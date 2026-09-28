@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Odd cycles and a history phase</title>
+  <desc id="desc">With saved seed (1,0,0), zero inputs advance the register through (1,0,0), (0,1,0), and (0,0,1). Their history phases are 0, 1, 2 and their parity bits are 0, 1, 0. At phase 2 the imminent return is safe because parity is zero; the next phase resets to zero. Seed (1,1,1) instead has period one, with phase and parity always zero. Tuples are in coordinate order.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 Z" fill="#61788d"/></marker>
+    <style>
+      text {font-family:system-ui,-apple-system,"Segoe UI",sans-serif;fill:#243746;text-anchor:middle}
+      .title {font-size:28px;font-weight:650}
+      .label {font-size:24px;font-weight:600}
+      .body {font-size:22px}
+      .state {font-size:32px;font-family:ui-monospace,"DejaVu Sans Mono",monospace}
+      .line {fill:none;stroke:#61788d;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="600" height="800" rx="18" fill="#f8fbfd"/>
+  <text x="300" y="40" class="title">Odd cycles, safe returns</text>
+  <text x="300" y="73" class="body">An exact phase bound for each seed</text>
+  <rect x="24" y="95" width="552" height="500" rx="16" fill="#fff" stroke="#91a8b9" stroke-width="2"/>
+  <text x="300" y="130" class="label">Seed (1,0,0): period 3</text>
+  <rect x="172" y="157" width="256" height="94" rx="12" fill="#e8f1f7" stroke="#91a8b9" stroke-width="2"/>
+  <text x="300" y="198" class="state">(1,0,0)</text>
+  <text x="300" y="233" class="body">t = 0 · c = 0</text>
+  <path d="M300,253 V283" class="line"/>
+  <rect x="172" y="290" width="256" height="94" rx="12" fill="#e8f1f7" stroke="#91a8b9" stroke-width="2"/>
+  <text x="300" y="331" class="state">(0,1,0)</text>
+  <text x="300" y="366" class="body">t = 1 · c = 1</text>
+  <path d="M300,386 V416" class="line"/>
+  <rect x="172" y="423" width="256" height="94" rx="12" fill="#d9e8f2" stroke="#61788d" stroke-width="2.5"/>
+  <text x="300" y="464" class="state">(0,0,1)</text>
+  <text x="300" y="499" class="body">t = 2 · c = 0</text>
+  <path d="M170,470 H112 Q90,470 90,448 V226 Q90,204 112,204 H164" class="line"/>
+  <text x="66" y="337" class="body" transform="rotate(-90 66 337)">return</text>
+  <text x="300" y="552" class="label">Return: phase 2 is even</text>
+  <text x="300" y="581" class="body">Zero input on every arrow</text>
+  <rect x="24" y="615" width="552" height="141" rx="16" fill="#fff" stroke="#91a8b9" stroke-width="2"/>
+  <text x="300" y="651" class="label">Seed (1,1,1): period 1</text>
+  <text x="273" y="697" class="state">(1,1,1)</text>
+  <path d="M376,675 C464,643 480,709 382,706" class="line"/>
+  <text x="300" y="742" class="body">t = 0 · c = 0 at every return</text>
+  <text x="300" y="785" class="body">Tuples use coordinate order (x₀, x₁, x₂).</text>
+</svg>
