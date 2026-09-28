@@ -2,7 +2,7 @@
 
 ### From algebraic loop structure to independently checkable certificates
 
-This repository studies two ways to turn a finite-state loop into a reusable proof:
+Algebraic Loop Certificates studies two ways to turn a finite-state loop into a reusable proof:
 
 | Question | Checked result |
 |---|---|
@@ -11,10 +11,6 @@ This repository studies two ways to turn a finite-state loop into a reusable pro
 
 Both separate finding a proof from checking it. The problem is supplied
 independently of the candidate, so a proof cannot substitute an easier problem.
-
-<p align="center">
-  <img src="assets/certificate-boundary.svg" width="600" alt="An independently supplied problem and an untrusted candidate proof enter the relevant checker separately. Acceptance establishes only the checked claim." />
-</p>
 
 The two routes have different contracts: a target-hit summary does not establish
 arbitrary program safety, and the safety exporter does not use the complete
@@ -114,7 +110,6 @@ which questions the repository does not answer.
 | [Research assessment](docs/RESEARCH.md) | Prior work, supported claims, and the bounded stopping decision |
 | [Research modules and latest decisions](research/README.md) | Experimental certificates, witness integration, prior-work decisions, and the bounded completion study |
 | [Verification record](evidence/README.md) | Finite families actually checked and what was not tested |
-| [Origin and import status](provenance/ORIGIN.md) | Relationship to the quantum project and the unavailable earlier ZIP |
 | [Current work order](work_orders/CURRENT.md) | Maintenance, release checks and conditions for reopening scientific work |
 
 ## Supported now
@@ -132,9 +127,5 @@ A positive certificate says nothing about whether the recurrence was faithfully 
 `alc/producer.py` creates candidate proofs. `alc/checker.py` is independent of the producer and performs no discovery. `alc/consumer.py` uses accepted summaries. `tests/` includes independently stepped orbits and deliberately false proofs. `examples/` contains linear, affine, and fixed-point cases. GitHub Actions runs the same local verifier.
 
 The finite-field orbit reduction, inductive safety proofs and history-variable methods precede this project. The [source-by-source assessment](docs/RESEARCH.md) distinguishes these foundations from the implementation and measured integration result.
-
-## Relationship to the original project
-
-This is an independent classical spinoff of [Quantum-Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery). A quantum producer could supply certificates later, but neither the checker nor the consumer requires quantum hardware. The original project and its research branches are unchanged.
 
 [MIT license](LICENSE), Copyright (c) 2026 Ruge Lin. The license supplied when this repository was created is preserved byte-for-byte.

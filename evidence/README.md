@@ -15,4 +15,4 @@ Separate regression tests cover fixed points, point period versus matrix order, 
 
 `python verify.py` checks the source manifest, runs the regression suite, and regenerates the exhaustive report in temporary storage. The manifest records integrity, not independent proof of mathematical correctness. The simple reference orbit routine and checker use different approaches: scalar iteration versus modular homogeneous-matrix powering.
 
-The first validation contains no random cases, floating-point comparisons, native algebra solver, quantum execution, or application-level timing claim. No historical verifier from the quantum repository or unavailable source ZIP was rerun. Continuous-integration status is separate from a local pass and should be read from the actual GitHub run.
+The first validation contains no random cases, floating-point comparisons, native algebra solver, quantum execution, or application-level timing claim. This finite audit checks the current implementation; no unavailable historical archive was replayed. Continuous-integration status is separate from a local pass and should be read from the actual GitHub run.

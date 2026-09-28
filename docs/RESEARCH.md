@@ -101,5 +101,4 @@ simplification or established finite-field and matrix-order routines.
 
 The arithmetic-progression consumer and Chinese remainder combination are
 elementary. This source review records direct predecessors, not an exhaustive
-novelty audit. No quantum backend was run, and the separate quantum project's
-results have not been imported as evidence for this repository.
+novelty audit. No quantum backend was run.

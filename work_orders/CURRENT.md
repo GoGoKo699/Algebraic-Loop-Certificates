@@ -5,7 +5,7 @@ Start with [README.md](../README.md), [the production specification](../docs/SPE
 and [the final bounded assessment](../research/CONTRIBUTION_ASSESSMENT_18.md).
 The content is not aimed for publication. Its public purpose and collaboration
 contact are in [the README](../README.md#status-and-collaboration).
-The original quantum project must not be modified as part of this work.
+Present this as a standalone project, centered on its own contracts and results.
 
 ## Teaching and repository maintenance
 
@@ -79,6 +79,5 @@ specifications and proofs; do not silently broaden production semantics.
 
 Preserve LICENSE byte-for-byte, both study protocols, all completed, unknown and
 failed observations, and retention notes. Do not remove retained proof artifacts
-as duplicates of summaries. The predecessor portable ZIP remains unavailable;
-recover it verbatim if it becomes accessible rather than re-creating it from the
-new code. The upstream orbit note is pinned in [the origin record](../provenance/ORIGIN.md).
+as duplicates of summaries. Keep external source attribution and historical
+import status accurate; see [the source record](../provenance/ORIGIN.md).
