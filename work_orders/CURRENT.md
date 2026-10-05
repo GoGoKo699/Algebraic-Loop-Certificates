@@ -3,8 +3,9 @@
 Start with [README.md](../README.md), [the production specification](../docs/SPECIFICATION.md),
 [the interface contract](../docs/FORMAT.md), [the research assessment](../docs/RESEARCH.md)
 and [the final bounded assessment](../research/CONTRIBUTION_ASSESSMENT_18.md).
-The content is not aimed for publication. Its public purpose and collaboration
-contact are in [the README](../README.md#status-and-collaboration).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+See [Purpose and contact](../README.md#purpose-and-contact) in the README.
 Present this as a standalone project, centered on its own contracts and results.
 
 ## Teaching and repository maintenance
