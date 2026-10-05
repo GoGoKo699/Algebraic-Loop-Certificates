@@ -4,9 +4,9 @@ For a first reading, use the [Manna–Pnueli learning path](LEARNING_PATH.md),
 the [worked safety tutorial](TUTORIAL.md), and the [reproduction guide](REPRODUCING.md).
 They introduce the existing results; this page records the claims and their limits.
 
-The repository is an educational and reproducibility resource. Its content is
-not aimed for publication. See [status and collaboration](../README.md#status-and-collaboration)
-for the current purpose and contact information.
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+See [Purpose and contact](../README.md#purpose-and-contact) in the README.
 
 ## Current assessment
 

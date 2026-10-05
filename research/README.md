@@ -7,10 +7,10 @@ framework to the exact construction, code and retained evidence below.
 Historical checkpoint recommendations reflect their dates; the Gate 18 decision
 and current work order govern the present scope.
 
-The repository is an educational and reproducibility resource; its content is
-not aimed for publication. See [status and collaboration](../README.md#status-and-collaboration)
-for contact information. These experimental namespaces leave the production
-`alc/` API unchanged.
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+See [Purpose and contact](../README.md#purpose-and-contact) in the README.
+These experimental namespaces leave the production `alc/` API unchanged.
 
 **Latest:** the [completed assessment](CONTRIBUTION_ASSESSMENT_18.md) retains a
 reproducible integration case study, with exact priority unresolved and no

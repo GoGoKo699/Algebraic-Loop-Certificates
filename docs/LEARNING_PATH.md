@@ -132,10 +132,11 @@ The [source dossier](../research/contribution_v1/SOURCES.md) records the separat
 priority assessment. Classical methods support a valid construction; they do not
 by themselves settle the exact combination's originality or significance. The
 current checkpoint is a completed integration study, with standalone research
-readiness uncleared. The repository is an educational and reproducibility
-resource; its content is not aimed for publication. See
-[status and collaboration](../README.md#status-and-collaboration) for contact
-information.
+readiness uncleared.
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+See [Purpose and contact](../README.md#purpose-and-contact) in the README.
 
 ---
 

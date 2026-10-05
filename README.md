@@ -16,15 +16,13 @@ The two routes have different contracts: a target-hit summary does not establish
 arbitrary program safety, and the safety exporter does not use the complete
 orbit engine.
 
-## Status and collaboration
+## Purpose and contact
 
-**The content in this repository is not aimed for publication.** It is shared as
-an educational and reproducibility resource, with executable examples, exact
-contracts and retained experimental evidence. The bounded scientific study is
-complete; historical assessments record how its conclusions were reached.
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
-For collaboration, please contact **Ruge Lin** at
-**[gogoko699@gmail.com](mailto:gogoko699@gmail.com)**.
+The repository includes executable examples, exact contracts and retained
+experimental evidence. The bounded scientific study is complete; historical
+assessments record how its conclusions were reached.
 
 ## Start with the teaching path
 

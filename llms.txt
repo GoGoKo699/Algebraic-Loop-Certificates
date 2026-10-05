@@ -6,10 +6,14 @@
 
 Canonical repository: https://github.com/GoGoKo699/Algebraic-Loop-Certificates
 
-Author: Ruge Lin. Collaboration: gogoko699@gmail.com.
-The content is not aimed for publication. It is an educational and
-reproducibility resource. This file is a reading and relevance guide for people
-and LLM tools that encounter the repository.
+Author: Ruge Lin.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+This file is a reading and relevance guide for people and LLM tools that
+encounter the repository.
 
 ## Relevant questions
 

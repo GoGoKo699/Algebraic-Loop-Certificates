@@ -1,10 +1,12 @@
 # Scientific completion record
 
-Current status updated 28 September 2026. The repository's content is not aimed
-for publication; see the [purpose and collaboration contact](../README.md#status-and-collaboration).
-These results, proofs, source assessments and test artifacts are retained as an
-educational and reproducibility resource. Earlier sections preserve the
-development record, including the aims and recommendations at those checkpoints.
+Current status updated 28 September 2026.
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+See [Purpose and contact](../README.md#purpose-and-contact) in the README.
+Earlier sections preserve the development record, including the aims and
+recommendations at those checkpoints.
 
 ## Current status
 
